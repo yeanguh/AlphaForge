@@ -4,11 +4,14 @@ import json
 import os
 import shutil
 import subprocess
+import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 from typing import Any
 
 
-VALID_AGENT_MODES = {"deterministic", "codex", "claude", "auto"}
+VALID_AGENT_MODES = {"deterministic", "codex", "claude", "openai_compatible", "auto"}
 
 
 def build_deterministic_review(data: dict[str, Any]) -> dict[str, Any]:
@@ -65,18 +68,108 @@ def build_deterministic_review(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _truncate_text(value: Any, max_chars: int = 240) -> Any:
+    if not isinstance(value, str):
+        return value
+    normalized = " ".join(value.split())
+    if len(normalized) <= max_chars:
+        return normalized
+    return normalized[: max_chars - 1] + "…"
+
+
+def _compact_records(records: Any, fields: tuple[str, ...], *, limit: int, max_chars: int = 240) -> list[dict[str, Any]]:
+    if not isinstance(records, list):
+        return []
+    compacted: list[dict[str, Any]] = []
+    for record in records[:limit]:
+        if not isinstance(record, dict):
+            continue
+        item = {}
+        for field in fields:
+            if field in record and record[field] is not None:
+                item[field] = _truncate_text(record[field], max_chars=max_chars)
+        compacted.append(item)
+    return compacted
+
+
+def _compact_stock_analyzer(items: Any) -> list[dict[str, Any]]:
+    if not isinstance(items, list):
+        return []
+    compacted = []
+    for item in items[:5]:
+        if not isinstance(item, dict):
+            continue
+        compacted.append(
+            {
+                "symbol": item.get("symbol"),
+                "name": item.get("name"),
+                "business_model": _truncate_text(item.get("business_model"), 180),
+                "financial": item.get("financial"),
+                "valuation": item.get("valuation"),
+                "technical": item.get("technical"),
+                "catalyst": item.get("catalyst", [])[:3] if isinstance(item.get("catalyst"), list) else item.get("catalyst"),
+                "risk": item.get("risk", [])[:3] if isinstance(item.get("risk"), list) else item.get("risk"),
+                "a_stock_data_coverage": item.get("a_stock_data_coverage"),
+            }
+        )
+    return compacted
+
+
+def _compact_selected_chain(chain: Any) -> dict[str, Any]:
+    if not isinstance(chain, dict):
+        return {}
+    return {
+        "stage": chain.get("stage"),
+        "mode": chain.get("mode"),
+        "selected_theme": chain.get("selected_theme"),
+        "score": chain.get("score"),
+        "chain_map": chain.get("chain_map"),
+        "core_value_distribution": chain.get("core_value_distribution", [])[:3]
+        if isinstance(chain.get("core_value_distribution"), list)
+        else [],
+        "company_mapping": chain.get("company_mapping", [])[:5] if isinstance(chain.get("company_mapping"), list) else [],
+        "bottleneck_candidates": chain.get("bottleneck_candidates", [])[:5]
+        if isinstance(chain.get("bottleneck_candidates"), list)
+        else [],
+        "supporting_public_items": _compact_records(
+            chain.get("supporting_public_items"),
+            ("id", "kind", "title", "source", "industry", "published_at", "digest"),
+            limit=5,
+            max_chars=180,
+        ),
+        "next_verifications": chain.get("next_verifications", [])[:5] if isinstance(chain.get("next_verifications"), list) else [],
+        "invalidation_triggers": chain.get("invalidation_triggers", [])[:5]
+        if isinstance(chain.get("invalidation_triggers"), list)
+        else [],
+    }
+
+
 def _compact_input(data: dict[str, Any]) -> dict[str, Any]:
     pipeline = data.get("research_pipeline", {})
     return {
-        "a_share_quotes": data.get("a_share_quotes", [])[:5],
-        "global_charts": data.get("global_charts", [])[:5],
-        "news_headlines": data.get("news", {}).get("headlines", [])[:12],
-        "industry_reports": data.get("industry_reports", [])[:12],
+        "a_share_quotes": _compact_records(
+            data.get("a_share_quotes"),
+            ("symbol", "name", "price", "change_pct", "pe", "pb", "valuation_band", "evidence_id"),
+            limit=5,
+        ),
+        "global_charts": _compact_records(data.get("global_charts"), ("symbol", "change_pct", "evidence_id"), limit=5),
+        "news_headlines": _compact_records(
+            data.get("news", {}).get("headlines", []),
+            ("source", "title", "published_at", "url", "evidence_id"),
+            limit=12,
+            max_chars=180,
+        ),
+        "industry_reports": _compact_records(
+            data.get("industry_reports", []),
+            ("title", "org", "industry_name", "rating", "publish_date", "url", "evidence_id"),
+            limit=12,
+            max_chars=180,
+        ),
         "industry_analysis": data.get("industry_analysis", {}),
         "research_pipeline": {
             "hotspot_scoring": pipeline.get("hotspot_scoring", {}),
-            "selected_industry_chain": pipeline.get("selected_industry_chain", {}),
-            "stock_analyzer": pipeline.get("stock_analyzer", [])[:5],
+            "selected_industry_chain": _compact_selected_chain(pipeline.get("selected_industry_chain", {})),
+            "stock_analyzer": _compact_stock_analyzer(pipeline.get("stock_analyzer", [])),
             "trade_decision_engine": pipeline.get("trade_decision_engine", {}),
         },
     }
@@ -203,6 +296,80 @@ def _run_claude(prompt: str, root: Path, artifacts_dir: Path, timeout_seconds: i
     return _normalize_review(_extract_json(proc.stdout), "claude")
 
 
+def _llm_config() -> tuple[str, str, str]:
+    base_url = os.environ.get("BASE_URL") or os.environ.get("OPENAI_BASE_URL")
+    api_key = os.environ.get("API_KEY") or os.environ.get("OPENAI_API_KEY")
+    model = os.environ.get("MODEL_NAME") or os.environ.get("OPENAI_MODEL")
+    missing = [
+        name
+        for name, value in [
+            ("BASE_URL/OPENAI_BASE_URL", base_url),
+            ("API_KEY/OPENAI_API_KEY", api_key),
+            ("MODEL_NAME/OPENAI_MODEL", model),
+        ]
+        if not value
+    ]
+    if missing:
+        raise RuntimeError(f"missing OpenAI-compatible env: {', '.join(missing)}")
+    return str(base_url).rstrip("/"), str(api_key), str(model)
+
+
+def _run_openai_compatible(prompt: str, root: Path, artifacts_dir: Path, timeout_seconds: int) -> dict[str, Any]:
+    base_url, api_key, model = _llm_config()
+    url = f"{base_url}/chat/completions"
+    body = json.dumps(
+        {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": "你是 Research OS 的本地投研 Agent。只输出用户要求的 JSON。"},
+                {"role": "user", "content": prompt},
+            ],
+            "temperature": 0.2,
+            "max_tokens": int(os.environ.get("OPENAI_MAX_TOKENS", "4096")),
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        url,
+        data=body,
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        method="POST",
+    )
+    attempts = max(1, int(os.environ.get("OPENAI_RETRY_ATTEMPTS", "3")))
+    retry_statuses = {429, 502, 503, 504}
+    raw = ""
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+                raw = response.read().decode("utf-8")
+            break
+        except urllib.error.HTTPError as exc:
+            raw_error = exc.read().decode("utf-8", errors="replace")
+            (artifacts_dir / f"openai-compatible-review.stderr.attempt-{attempt}.txt").write_text(raw_error, encoding="utf-8")
+            if exc.code not in retry_statuses or attempt >= attempts:
+                (artifacts_dir / "openai-compatible-review.stderr.txt").write_text(raw_error, encoding="utf-8")
+                raise RuntimeError(f"openai-compatible chat failed http={exc.code}: {raw_error[-1000:]}") from exc
+        except urllib.error.URLError as exc:
+            if attempt >= attempts:
+                raise RuntimeError(f"openai-compatible chat network failed: {exc.reason}") from exc
+        time.sleep(min(2 ** (attempt - 1), 8))
+
+    (artifacts_dir / "openai-compatible-review.response.json").write_text(raw, encoding="utf-8")
+    payload = json.loads(raw)
+    choices = payload.get("choices") if isinstance(payload, dict) else None
+    if not isinstance(choices, list) or not choices:
+        raise RuntimeError("openai-compatible response missing choices")
+    message = choices[0].get("message", {}) if isinstance(choices[0], dict) else {}
+    content = message.get("content")
+    if not isinstance(content, str):
+        raise RuntimeError("openai-compatible response missing message content")
+    (artifacts_dir / "openai-compatible-review.raw.txt").write_text(content, encoding="utf-8")
+    if not content.strip():
+        finish_reason = choices[0].get("finish_reason") if isinstance(choices[0], dict) else None
+        raise RuntimeError(f"openai-compatible response content empty; finish_reason={finish_reason}")
+    return _normalize_review(_extract_json(content), "openai_compatible")
+
+
 def build_review(
     data: dict[str, Any],
     *,
@@ -224,13 +391,15 @@ def build_review(
     (artifacts_dir / "agent-review.prompt.txt").write_text(prompt, encoding="utf-8")
 
     errors: list[str] = []
-    providers = ["codex", "claude"] if selected == "auto" else [selected]
+    providers = ["openai_compatible", "codex", "claude"] if selected == "auto" else [selected]
     for provider in providers:
         try:
             if provider == "codex":
                 review = _run_codex(prompt, root, artifacts_dir, timeout_seconds)
-            else:
+            elif provider == "claude":
                 review = _run_claude(prompt, root, artifacts_dir, timeout_seconds)
+            else:
+                review = _run_openai_compatible(prompt, root, artifacts_dir, timeout_seconds)
             review["artifact_dir"] = str(artifacts_dir)
             return review
         except Exception as exc:

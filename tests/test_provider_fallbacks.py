@@ -53,3 +53,17 @@ class ProviderFallbackTest(unittest.TestCase):
         rows = wen_cai.summarize_enrichment(enrichment)
         self.assertEqual(rows[0]["count"], 1)
         self.assertEqual(rows[0]["sample"], "绿的谐波")
+
+    def test_wen_cai_live_quota_exhausted_is_warn(self) -> None:
+        with (
+            mock.patch.object(wen_cai, "skill_available", return_value=True),
+            mock.patch.object(wen_cai, "is_configured", return_value=True),
+            mock.patch.object(
+                wen_cai,
+                "query",
+                return_value={"status": "error", "stderr": "您今天的次数已用完"},
+            ),
+        ):
+            result = wen_cai.smoke(live=True)
+
+        self.assertEqual(result.status, "warn")

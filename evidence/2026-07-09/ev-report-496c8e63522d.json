@@ -1,0 +1,34 @@
+{
+  "id": "ev-report-496c8e63522d",
+  "source_name": "eastmoney_industry_report/国元证券",
+  "source_type": "industry_research_report",
+  "title": "人工智能重点新闻2026年6月报：商业应用持续落地，国产模型价值凸显",
+  "url": null,
+  "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826839886_1.pdf",
+  "raw_path": null,
+  "claim_id": "ev-report-496c8e63522d:claim:0",
+  "freshness": "2026-07-09",
+  "related_companies": [],
+  "related_themes": [
+    "IT服务Ⅱ"
+  ],
+  "observed_at": "2026-07-09T06:56:09.684226+00:00",
+  "created_at": "2026-07-09T06:56:09.684229+00:00",
+  "claims": [
+    "industry=IT服务Ⅱ",
+    "rating=增持",
+    "publish_date=2026-07-09"
+  ],
+  "raw": {
+    "title": "人工智能重点新闻2026年6月报：商业应用持续落地，国产模型价值凸显",
+    "industry_name": "IT服务Ⅱ",
+    "industry_code": "1238",
+    "org": "国元证券",
+    "rating": "增持",
+    "publish_date": "2026-07-09",
+    "info_code": "AP202607091826839886",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826839886_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826839886_1.pdf",
+    "report_type": 3
+  }
+}

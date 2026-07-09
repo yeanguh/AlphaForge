@@ -8,7 +8,7 @@
     },
     "agent_provider": {
       "type": "string",
-      "enum": ["codex", "claude"]
+      "enum": ["codex", "claude", "openai_compatible"]
     },
     "roles": {
       "type": "object",

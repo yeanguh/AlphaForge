@@ -1,0 +1,37 @@
+{
+  "id": "ev-market-cn-b0de9f3be0bd",
+  "source_name": "a-stock-data/tencent_finance",
+  "source_type": "market_snapshot",
+  "title": "A股行情快照：688017 绿的谐波",
+  "url": null,
+  "source_url": null,
+  "raw_path": null,
+  "claim_id": "ev-market-cn-b0de9f3be0bd:claim:0",
+  "freshness": "intraday_or_latest_available",
+  "related_companies": [
+    "688017"
+  ],
+  "related_themes": [],
+  "observed_at": "2026-07-09T06:21:17.939296+00:00",
+  "created_at": "2026-07-09T06:21:17.939300+00:00",
+  "claims": [
+    "绿的谐波 最新价 405.09",
+    "绿的谐波 PE 543.06 PB 20.81",
+    "绿的谐波 valuation_band=high"
+  ],
+  "raw": {
+    "symbol": "688017",
+    "name": "绿的谐波",
+    "price": 405.09,
+    "prev_close": 391.0,
+    "change_pct": 3.6036,
+    "volume": "11863998",
+    "turnover": "470457",
+    "pe": 543.06,
+    "pb": 20.81,
+    "valuation_band": "high",
+    "source": "tencent_finance",
+    "provider": "a-stock-data",
+    "provider_submodule": "skills/a-stock-data"
+  }
+}

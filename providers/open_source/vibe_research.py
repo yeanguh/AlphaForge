@@ -9,8 +9,12 @@ ROOT = Path(__file__).resolve().parents[2]
 SUBMODULE = ROOT / "external" / "Vibe-Research"
 
 
+def _display_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
 def smoke(live: bool = False) -> ProviderResult:
     readme = SUBMODULE / "README.md"
     if not readme.exists():
-        return ProviderResult("Vibe-Research", "error", "README missing", errors=[str(readme)])
-    return ProviderResult("Vibe-Research", "ok", "UI/reference provider submodule readable", {"path": str(SUBMODULE)})
+        return ProviderResult("Vibe-Research", "error", "README missing", errors=[_display_path(readme)])
+    return ProviderResult("Vibe-Research", "ok", "UI/reference provider submodule readable", {"path": _display_path(SUBMODULE)})

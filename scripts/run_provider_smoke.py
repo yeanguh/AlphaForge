@@ -33,7 +33,7 @@ def run(live: bool = False) -> dict:
         ("wen-cai", wen_cai.smoke),
     ]
     results = [fn(live).to_dict() for _, fn in providers]
-    status = "ok" if all(item["status"] == "ok" for item in results) else "error"
+    status = "ok" if all(item["status"] in {"ok", "warn"} for item in results) else "error"
     payload = {"status": status, "live": live, "results": results}
     run_dir = ROOT / "runs" / datetime.now().strftime("%Y-%m-%d")
     run_dir.mkdir(parents=True, exist_ok=True)

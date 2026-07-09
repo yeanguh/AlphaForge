@@ -13,6 +13,10 @@ ROOT = Path(__file__).resolve().parents[2]
 SUBMODULE = ROOT / "skills" / "global-stock-data"
 
 
+def _display_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
 def _yahoo_chart(symbol: str = "AAPL") -> dict:
     data = get_json(
         f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
@@ -107,9 +111,9 @@ def fetch_charts(symbols: tuple[str, ...] = ("AAPL", "NVDA", "TSLA")) -> list[di
 
 def smoke(live: bool = False) -> ProviderResult:
     if not SUBMODULE.exists():
-        return ProviderResult("global-stock-data", "error", "submodule missing", errors=[str(SUBMODULE)])
+        return ProviderResult("global-stock-data", "error", "submodule missing", errors=[_display_path(SUBMODULE)])
     if not live:
-        return ProviderResult("global-stock-data", "ok", "submodule readable", {"path": str(SUBMODULE)})
+        return ProviderResult("global-stock-data", "ok", "submodule readable", {"path": _display_path(SUBMODULE)})
     try:
         chart = fetch_chart("AAPL")
         return ProviderResult(

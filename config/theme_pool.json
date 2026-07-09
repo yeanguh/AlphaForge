@@ -1,0 +1,356 @@
+{
+  "_comment": "Theme pool. Loaded by loop_os/report_router.py (routing) and loop_os/domain/capability_chain.py (discovery/scoring), both with hardcoded fallbacks. tier drives whether a cycle's evidence enters the main report body or only the watch pool: 'core' always eligible, 'watch' weekly cadence, 'emerging' watch-pool by default until an event clears the strength gate. discovery_keywords are title-match tokens used by article_reader / score_hot_industries so daily mining is organized AROUND the theme pool, not just archived by it.",
+  "themes": {
+    "ai-compute-infra": {
+      "tier": "core",
+      "aliases": [
+        "ai_compute_infra",
+        "算力",
+        "gpu",
+        "asic",
+        "hbm",
+        "光模块",
+        "先进封装",
+        "交换芯片",
+        "服务器",
+        "液冷"
+      ],
+      "discovery_keywords": [
+        "AI",
+        "算力",
+        "GPU",
+        "ASIC",
+        "HBM",
+        "光模块",
+        "先进封装",
+        "交换芯片",
+        "服务器",
+        "液冷",
+        "大模型",
+        "推理芯片"
+      ],
+      "label": "AI 算力基础设施"
+    },
+    "datacenter-power": {
+      "tier": "core",
+      "aliases": [
+        "datacenter_power",
+        "数据中心电力",
+        "电网",
+        "变压器",
+        "储能",
+        "燃气轮机",
+        "燃料电池",
+        "ups",
+        "温控"
+      ],
+      "discovery_keywords": [
+        "数据中心",
+        "电力",
+        "电网",
+        "变压器",
+        "储能",
+        "燃气轮机",
+        "燃料电池",
+        "UPS",
+        "温控",
+        "供电",
+        "能耗"
+      ],
+      "label": "数据中心电力与能源约束"
+    },
+    "physical-ai": {
+      "tier": "core",
+      "aliases": [
+        "ai_physical_ai",
+        "physical_ai",
+        "physical-ai-chain-analysis",
+        "人形机器人",
+        "具身智能",
+        "减速器",
+        "丝杠",
+        "伺服",
+        "灵巧手"
+      ],
+      "discovery_keywords": [
+        "人形机器人",
+        "具身智能",
+        "物理AI",
+        "机器人",
+        "减速器",
+        "丝杠",
+        "伺服",
+        "灵巧手",
+        "关节",
+        "本体"
+      ],
+      "label": "Physical AI / 人形机器人 / 具身智能"
+    },
+    "agentic-ai": {
+      "tier": "core",
+      "aliases": [
+        "agentic_ai",
+        "多智能体",
+        "agent",
+        "工作流自动化",
+        "ai-native"
+      ],
+      "discovery_keywords": [
+        "智能体",
+        "Agent",
+        "多智能体",
+        "工作流自动化",
+        "AI-native",
+        "自动化",
+        "编排"
+      ],
+      "label": "Agentic AI / 多智能体系统"
+    },
+    "sovereign-ai": {
+      "tier": "core",
+      "aliases": [
+        "sovereign_ai",
+        "国产算力",
+        "自主可控",
+        "信创",
+        "国产gpu",
+        "国产cpu",
+        "私有化"
+      ],
+      "discovery_keywords": [
+        "国产算力",
+        "自主可控",
+        "信创",
+        "国产GPU",
+        "国产CPU",
+        "私有化",
+        "国产替代"
+      ],
+      "label": "Sovereign AI / 国产算力与自主可控"
+    },
+    "ai-security-governance": {
+      "tier": "core",
+      "aliases": [
+        "ai_security",
+        "ai治理",
+        "身份",
+        "权限",
+        "审计",
+        "数字水印",
+        "内容溯源",
+        "模型安全",
+        "数据合规"
+      ],
+      "discovery_keywords": [
+        "AI安全",
+        "AI治理",
+        "身份",
+        "权限",
+        "审计",
+        "数字水印",
+        "内容溯源",
+        "模型安全",
+        "数据合规",
+        "可信"
+      ],
+      "label": "AI 安全、身份、治理与可信来源"
+    },
+    "edge-ai": {
+      "tier": "watch",
+      "aliases": [
+        "edge_ai",
+        "端侧",
+        "ai pc",
+        "ai手机",
+        "车端",
+        "边缘推理",
+        "npu"
+      ],
+      "discovery_keywords": [
+        "端侧",
+        "AI PC",
+        "AI手机",
+        "车端",
+        "边缘推理",
+        "NPU",
+        "端侧模型"
+      ],
+      "label": "Edge AI / 端侧智能"
+    },
+    "ai-healthcare": {
+      "tier": "watch",
+      "aliases": [
+        "ai_healthcare",
+        "ai医疗",
+        "ai制药",
+        "医疗影像",
+        "蛋白设计",
+        "多组学",
+        "合成生物"
+      ],
+      "discovery_keywords": [
+        "AI医疗",
+        "AI制药",
+        "医疗影像",
+        "蛋白设计",
+        "多组学",
+        "合成生物",
+        "生物制造"
+      ],
+      "label": "AI + 医疗 / 多组学 / 生物制造"
+    },
+    "ai-industrial-software": {
+      "tier": "watch",
+      "aliases": [
+        "ai_industrial",
+        "工业软件",
+        "工业copilot",
+        "数字孪生",
+        "cad",
+        "cae",
+        "mes",
+        "plc",
+        "机器视觉",
+        "预测性维护"
+      ],
+      "discovery_keywords": [
+        "工业软件",
+        "工业Copilot",
+        "数字孪生",
+        "CAD",
+        "CAE",
+        "MES",
+        "PLC",
+        "机器视觉",
+        "预测性维护",
+        "工业自动化"
+      ],
+      "label": "AI + 工业软件 / 工业自动化"
+    },
+    "ai-commercialization": {
+      "tier": "watch",
+      "aliases": [
+        "ai_commercialization",
+        "ai应用商业化",
+        "垂直行业模型",
+        "roi",
+        "留存",
+        "毛利率"
+      ],
+      "discovery_keywords": [
+        "AI应用",
+        "商业化",
+        "垂直行业模型",
+        "ROI",
+        "留存",
+        "毛利率",
+        "变现"
+      ],
+      "label": "AI 应用商业化与垂直行业模型"
+    },
+    "autonomous-low-altitude": {
+      "tier": "watch",
+      "aliases": [
+        "autonomous_driving",
+        "自动驾驶",
+        "低空智能",
+        "低空经济",
+        "evtol"
+      ],
+      "discovery_keywords": [
+        "自动驾驶",
+        "智能驾驶",
+        "低空智能",
+        "低空经济",
+        "eVTOL",
+        "无人机"
+      ],
+      "label": "自动驾驶 / 低空智能"
+    },
+    "quantum-computing": {
+      "tier": "emerging",
+      "aliases": [
+        "quantum",
+        "量子计算",
+        "量子"
+      ],
+      "discovery_keywords": [
+        "量子计算",
+        "量子",
+        "量子比特",
+        "超导量子"
+      ],
+      "label": "量子计算"
+    },
+    "space-defense-ai": {
+      "tier": "emerging",
+      "aliases": [
+        "space_ai",
+        "defense_ai",
+        "空间",
+        "国防ai",
+        "卫星"
+      ],
+      "discovery_keywords": [
+        "空间",
+        "国防AI",
+        "卫星",
+        "商业航天",
+        "军工AI"
+      ],
+      "label": "空间 / 国防 AI"
+    },
+    "ai-fintech-infra": {
+      "tier": "emerging",
+      "aliases": [
+        "ai_fintech",
+        "ai金融基础设施",
+        "金融基础设施"
+      ],
+      "discovery_keywords": [
+        "AI金融",
+        "金融基础设施",
+        "金融科技",
+        "智能投研",
+        "风控"
+      ],
+      "label": "AI 金融基础设施"
+    },
+    "blockchain-ai-payments": {
+      "tier": "emerging",
+      "aliases": [
+        "ai_payments",
+        "区块链",
+        "代理支付",
+        "agent支付",
+        "agentic payments"
+      ],
+      "discovery_keywords": [
+        "区块链",
+        "代理支付",
+        "Agent支付",
+        "Agentic payments",
+        "稳定币",
+        "链上"
+      ],
+      "label": "区块链 / AI 代理支付"
+    }
+  },
+  "tier_policy": {
+    "core": {
+      "cadence": "daily",
+      "watch_pool_default": false,
+      "_note": "每天必扫,证据按 strength 阈值正常进正文/观察池"
+    },
+    "watch": {
+      "cadence": "weekly",
+      "watch_pool_default": false,
+      "_note": "每周更新,strength 达标进正文"
+    },
+    "emerging": {
+      "cadence": "event",
+      "watch_pool_default": true,
+      "_note": "默认只进观察池,只有 strength 越过阈值(有实质事件)才升进正文"
+    }
+  }
+}

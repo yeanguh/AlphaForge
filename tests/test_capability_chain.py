@@ -50,7 +50,9 @@ class CapabilityChainTest(unittest.TestCase):
             {"cash": 1_000_000, "positions": [], "reviews": []},
             {"decision": "watchlist_candidate"},
         )
-        self.assertEqual(pipeline["hotspot_scoring"]["selected"]["theme"], "semiconductor")
+        # 发现/打分现在围绕 config/theme_pool.json 主题池组织(方案 A):
+        # "半导体/先进封装/算力" 命中 theme_pool 的 ai-compute-infra 主题键。
+        self.assertEqual(pipeline["hotspot_scoring"]["selected"]["theme"], "ai-compute-infra")
         self.assertTrue(pipeline["selected_industry_chain"]["skill_manifest"]["files_used"])
         decisions = {item["symbol"]: item for item in pipeline["trade_decision_engine"]["decisions"]}
         self.assertEqual(decisions["600519"]["action"], "paper_candidate")
@@ -97,6 +99,26 @@ class CapabilityChainTest(unittest.TestCase):
         self.assertIn("买点框架", text)
         self.assertIn("公开来源", text)
         self.assertIn("https://example.com/news", text)
+
+    def test_theme_keywords_loaded_from_theme_pool(self) -> None:
+        # F3: 发现/打分的 THEME_KEYWORDS 由 config/theme_pool.json 的 discovery_keywords 驱动,
+        # 键为规范主题目录键(如 physical-ai),而不是旧的 industry 命名。
+        kw = capability_chain._load_theme_keywords()
+        self.assertIn("physical-ai", kw)
+        self.assertIn("ai-compute-infra", kw)
+        self.assertTrue(any("人形机器人" in t for t in kw["physical-ai"]))
+        # 与仓库真实 theme_pool 主题数一致(15 个),证明确实来自配置而非 7 键回退。
+        self.assertEqual(len(kw), 15)
+
+    def test_theme_keywords_fallback_when_config_missing(self) -> None:
+        # 配置缺失/损坏时回退到硬编码, 保证离线可跑。
+        with patch(
+            "loop_os.domain.capability_chain._theme_pool_path",
+            return_value=Path("/nonexistent/theme_pool.json"),
+        ):
+            kw = capability_chain._load_theme_keywords()
+        self.assertEqual(kw, capability_chain._FALLBACK_THEME_KEYWORDS)
+
 
 
 if __name__ == "__main__":

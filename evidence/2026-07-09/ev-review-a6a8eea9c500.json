@@ -1,0 +1,54 @@
+{
+  "id": "ev-review-a6a8eea9c500",
+  "source_name": "loop_os/deterministic_fallback",
+  "source_type": "agent_review",
+  "title": "Agent评审：cycle 1 decision=hold_or_reject",
+  "url": null,
+  "source_url": null,
+  "raw_path": null,
+  "claim_id": "ev-review-a6a8eea9c500:claim:0",
+  "freshness": "current_cycle",
+  "related_companies": [],
+  "related_themes": [],
+  "observed_at": "2026-07-09T05:07:55.330654+00:00",
+  "created_at": "2026-07-09T05:07:55.330655+00:00",
+  "claims": [
+    "decision=hold_or_reject",
+    "agent_provider=deterministic_fallback",
+    "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过 TradingAgents-astock adapter 接入。"
+  ],
+  "raw": {
+    "review_type": "fallback_deterministic_agent_summary",
+    "agent_provider": "deterministic_fallback",
+    "roles": {
+      "bull": [
+        "宁德时代上涨 1.8726%，短线风险偏好尚可。",
+        "绿的谐波上涨 0.3018%，短线风险偏好尚可。",
+        "主题桶 ai 在研报/资讯中出现 24 次，值得进入产业链验证。",
+        "主题桶 equipment 在研报/资讯中出现 3 次，值得进入产业链验证。",
+        "主题桶 new_energy 在研报/资讯中出现 3 次，值得进入产业链验证。"
+      ],
+      "bear": [
+        "绿的谐波估值处于 high band，需要更强业绩证据。",
+        "TSLA 5日样本最新变动偏弱，可能压制跨市场情绪。"
+      ],
+      "risk": [
+        "绿的谐波PB=20.15，安全边际需要复核。"
+      ],
+      "policy_news": [
+        "资讯跟踪：OpenAI - Our approach to government and national security partnerships",
+        "资讯跟踪：OpenAI - Separating signal from noise in coding evaluations",
+        "资讯跟踪：OpenAI - Helping K–12 educators build practical AI skills"
+      ],
+      "hot_money": [
+        "行业研报催化已形成候选池，但需要成交量、资金流和A股暴露二次验证。"
+      ]
+    },
+    "decision": "hold_or_reject",
+    "reason": "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过 TradingAgents-astock adapter 接入。",
+    "agent_errors": [
+      "openai_compatible: RuntimeError('missing OpenAI-compatible env: BASE_URL, API_KEY')"
+    ],
+    "artifact_dir": "/Users/bytedance/Documents/a-analysis/research-os/runs/2026-07-09/full-loop-130645/cycle-001/agent-review"
+  }
+}

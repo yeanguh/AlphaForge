@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import os
 import re
 import time
 from datetime import datetime, timedelta
@@ -15,10 +16,16 @@ from .http_utils import get_json, get_text
 
 ROOT = Path(__file__).resolve().parents[2]
 SUBMODULE = ROOT / "skills" / "a-stock-data"
-WORKSPACE_ROOT = ROOT.parent
-LOCAL_A_DATA = WORKSPACE_ROOT / "a-data"
+LOCAL_A_DATA = Path(os.environ.get("RESEARCH_OS_A_DATA_DIR", ROOT / "data" / "local" / "a-data")).expanduser()
 PROVIDER_NAME = "a-stock-data"
 PROVIDER_SUBMODULE = "skills/a-stock-data"
+
+
+def _display_path(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT.resolve()))
+    except ValueError:
+        return "$RESEARCH_OS_A_DATA_DIR"
 
 
 def _get_json_retry(url: str, params: dict[str, str], *, timeout: int = 15, retries: int = 1) -> dict:
@@ -567,13 +574,18 @@ def fetch_industry_reports(max_pages: int = 1, begin: str = "2024-01-01") -> lis
 def smoke(live: bool = False) -> ProviderResult:
     skill_path = SUBMODULE / "SKILL.md"
     if not SUBMODULE.exists() or not skill_path.exists():
-        return ProviderResult("a-stock-data", "error", "submodule or SKILL.md missing", errors=[str(skill_path)])
+        return ProviderResult("a-stock-data", "error", "submodule or SKILL.md missing", errors=[_display_path(skill_path)])
     if not live:
         return ProviderResult(
             "a-stock-data",
             "ok",
             "submodule readable and adapter available",
-            {"path": str(SUBMODULE), "skill": str(skill_path), "adapter_strategy": "tencent -> eastmoney -> local a-data"},
+            {
+                "path": _display_path(SUBMODULE),
+                "skill": _display_path(skill_path),
+                "adapter_strategy": "tencent -> eastmoney -> configured local a-data",
+                "local_data_dir": _display_path(LOCAL_A_DATA),
+            },
         )
     try:
         quote = fetch_quote("600519")

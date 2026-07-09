@@ -5,6 +5,8 @@ Use this reference whenever the output is a formal report or an archived
 document stable, evidence-grounded, visually readable, and useful for investment
 opportunity discovery.
 
+> **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。research-os loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
+
 ## Quality Principles
 
 1. **Stable structure before style.** A reader should always know where to find

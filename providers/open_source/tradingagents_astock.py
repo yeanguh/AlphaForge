@@ -11,6 +11,10 @@ SUBMODULE = ROOT / "external" / "TradingAgents-astock"
 SCHEMA_FILE = SUBMODULE / "tradingagents" / "agents" / "schemas.py"
 
 
+def _display_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
 def review_packet(packet: dict[str, Any]) -> dict[str, Any]:
     """TradingAgents-astock style structured committee review.
 
@@ -63,10 +67,10 @@ def review_packet(packet: dict[str, Any]) -> dict[str, Any]:
 def smoke(live: bool = False) -> ProviderResult:
     readme = SUBMODULE / "README.md"
     if not readme.exists():
-        return ProviderResult("TradingAgents-astock", "error", "README missing", errors=[str(readme)])
+        return ProviderResult("TradingAgents-astock", "error", "README missing", errors=[_display_path(readme)])
     return ProviderResult(
         "TradingAgents-astock",
         "ok",
         "review provider submodule readable; adapter can produce TradingAgents-style ReviewReport",
-        {"path": str(SUBMODULE), "live_invoked": False},
+        {"path": _display_path(SUBMODULE), "live_invoked": False},
     )

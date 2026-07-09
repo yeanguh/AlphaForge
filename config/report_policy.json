@@ -1,0 +1,35 @@
+{
+  "_comment": "Report/harness policy externalized from loop_os/harness/checks.py. Loaded by check_theme_reports (canonical gate) / check_industry_analysis_report (legacy, optional) / check_latest_loop_artifact with hardcoded fallbacks for backward compatibility.",
+  "theme_report": {
+    "canonical_required": [
+      "physical-ai"
+    ]
+  },
+  "industry_report": {
+    "dir_glob": "physical-ai-chain-analysis-*",
+    "required_terms": [
+      "核心结论",
+      "产业链全景图谱",
+      "A股公司映射",
+      "买点区间",
+      "目标价/空间",
+      "数据来源"
+    ]
+  },
+  "latest_report": {
+    "forbidden_terms": [
+      "/Users/",
+      "ev-",
+      "data/raw/",
+      "a-stock-data",
+      "决策门禁",
+      "补充覆盖",
+      "coverage",
+      "TradingAgents",
+      "Underweight",
+      "综合复核",
+      "payload",
+      "明天"
+    ]
+  }
+}

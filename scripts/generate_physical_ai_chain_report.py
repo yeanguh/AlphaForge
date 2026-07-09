@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import argparse
 import json
+import shutil
 import subprocess
 import sys
 from datetime import datetime
@@ -15,8 +17,69 @@ if str(ROOT) not in sys.path:
 from providers.open_source import a_stock_data, wen_cai  # noqa: E402
 
 REPORT_DATE = datetime.now().strftime("%Y-%m-%d")
-OUT = ROOT / "reports" / "industry" / f"physical-ai-chain-analysis-{REPORT_DATE}"
+# 方案 A:physical-ai 生成器产出 canonical theme report 的素材。
+# 旧路径 reports/industry/physical-ai-chain-analysis-<date> 已废弃(legacy 手工快照)。
+# 关键约束:生成器**不整篇覆盖** canonical report.md;它写 cycle draft,
+# canonical 正文由 route_cycle_reports 做增量合并,report.md 仅在首轮 seed。
+OUT = ROOT / "reports" / "themes" / "physical-ai"
 ASSETS = OUT / "assets"
+# draft 写在 theme 根目录(与 report.md 同级),使正文里的相对 assets/ 链接在质检时可解析;
+# draft 命名 report.cycle-draft-<run_id>-cycle-NNN.md(明确非 canonical),同一天多轮不覆盖;归档到 drafts/。
+DRAFTS = OUT / "drafts"
+
+
+def draft_slug_from_payload(payload_file: Path) -> str:
+    """从 cycle 的 payload_file 路径推导唯一草稿 slug。
+
+    full loop 的 payload 落在 runs/<date>/<run_id>/cycle-<NNN>/result.json,
+    其中 <run_id> 形如 full-loop-<HHMMSS>,<cycle> 形如 cycle-001。
+    因此用 "<run_id>-<cycle>" 作为 slug,同一天多轮 loop 不会互相覆盖草稿。
+    路径不符合该布局时(例如手动指定 payload)回退到时间戳,保证唯一。
+    """
+    try:
+        cycle_dir = payload_file.resolve().parent
+        cycle = cycle_dir.name          # cycle-001
+        run_id = cycle_dir.parent.name  # full-loop-181606
+        if cycle.startswith("cycle-") and run_id:
+            return f"{run_id}-{cycle}"
+    except Exception:  # noqa: BLE001
+        pass
+    return f"manual-{datetime.now().strftime('%Y-%m-%d-%H%M%S')}"
+
+
+def write_report_outputs(
+    report: str,
+    payload_file: Path,
+    *,
+    out_dir: Path = OUT,
+    drafts_dir: Path = DRAFTS,
+) -> tuple[Path, Path, bool]:
+    """方案 A 的写入策略(抽成纯函数以便单测)。
+
+    核心不变量:**绝不整篇覆盖已存在的 canonical report.md**。
+    - 每轮把正文写成 cycle draft(theme 根目录,与 report.md 同级,相对 assets/ 链接可解析);
+    - 同一份归档到 drafts/<slug>.md 便于回溯;draft 文件名带 run_id + cycle,不会互相覆盖;
+    - canonical report.md 仅在不存在时 seed,已存在则原样保留,交给 route_cycle_reports 增量合并。
+
+    返回 (canonical_path, draft_path, seeded_canonical)。
+    """
+    slug = draft_slug_from_payload(payload_file)
+    body = report + "\n"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    drafts_dir.mkdir(parents=True, exist_ok=True)
+
+    draft_path = out_dir / f"report.cycle-draft-{slug}.md"
+    draft_path.write_text(body, encoding="utf-8")
+    (drafts_dir / f"{slug}.md").write_text(body, encoding="utf-8")
+
+    canonical_path = out_dir / "report.md"
+    seeded_canonical = False
+    if not canonical_path.exists():
+        canonical_path.write_text(body, encoding="utf-8")
+        seeded_canonical = True
+    return canonical_path, draft_path, seeded_canonical
+
 
 SELECTED_SYMBOLS: dict[str, dict[str, str]] = {
     "688017": {
@@ -116,7 +179,24 @@ def wencai_summary_rows(enrichment: dict[str, Any]) -> list[list[Any]]:
 
 def svg_to_png(svg: Path) -> Path:
     png = svg.with_suffix(".png")
-    subprocess.run(["rsvg-convert", str(svg), "-o", str(png)], check=True)
+    if shutil.which("rsvg-convert"):
+        subprocess.run(["rsvg-convert", str(svg), "-o", str(png)], check=True)
+        return png
+    try:
+        import cairosvg  # type: ignore
+
+        cairosvg.svg2png(url=str(svg), write_to=str(png))
+        return png
+    except Exception:
+        pass
+    from PIL import Image, ImageDraw
+
+    image = Image.new("RGB", (1200, 800), "white")
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((24, 24, 1176, 776), outline=(37, 99, 235), width=4)
+    draw.text((60, 60), "SVG asset generated; PNG rasterizer unavailable.", fill=(17, 24, 39))
+    draw.text((60, 110), f"See sibling SVG: {svg.name}", fill=(55, 65, 81))
+    image.save(png)
     return png
 
 
@@ -421,9 +501,17 @@ def technical_structure(quote: dict[str, Any], supp: dict[str, Any]) -> dict[str
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--payload-file", default="data/raw/latest-full-loop.json")
+    args = parser.parse_args()
+    payload_file = Path(args.payload_file)
+    if not payload_file.is_absolute():
+        payload_file = ROOT / payload_file
+
     OUT.mkdir(parents=True, exist_ok=True)
     ASSETS.mkdir(parents=True, exist_ok=True)
-    payload = json.loads((ROOT / "data/raw/latest-full-loop.json").read_text(encoding="utf-8"))
+    DRAFTS.mkdir(parents=True, exist_ok=True)
+    payload = json.loads(payload_file.read_text(encoding="utf-8"))
     quotes = {q["symbol"]: q for q in payload.get("a_share_quotes", [])}
     supplements = payload.get("stock_supplements", {})
 
@@ -742,10 +830,12 @@ def main() -> None:
         "5. 研报 PDF 对收入预测、EPS 假设和风险提示的原文核验。",
     ])
 
-    (OUT / "report.md").write_text(report + "\n", encoding="utf-8")
+    # 方案 A 写入策略(不整篇覆盖 canonical report.md)。draft 文件名带 run_id+cycle,
+    # 同一天多轮 loop 不会互相覆盖。实现见 write_report_outputs(已抽成纯函数便于单测)。
+    canonical_path, draft_path, seeded_canonical = write_report_outputs(report, payload_file)
     source_data = {
         "generated_at": datetime.now().isoformat(),
-        "payload_file": "data/raw/latest-full-loop.json",
+        "payload_file": str(payload_file.resolve().relative_to(ROOT.resolve())),
         "focus_symbol": focus,
         "selected_symbols": list(SELECTED_SYMBOLS),
         "quotes": quotes,
@@ -765,7 +855,7 @@ def main() -> None:
         [
             sys.executable,
             "skills/industry-chain-analysis/scripts/report_quality.py",
-            str(OUT / "report.md"),
+            str(draft_path),
             "--output",
             str(OUT / "quality_report.json"),
         ],
@@ -783,7 +873,12 @@ def main() -> None:
             "stderr": quality_proc.stderr,
             "returncode": quality_proc.returncode,
         }
-    print(json.dumps({"report": str(OUT / "report.md"), "quality": quality}, ensure_ascii=False, indent=2))
+    print(json.dumps({
+        "report": str(canonical_path.relative_to(ROOT)),
+        "draft": str(draft_path.relative_to(ROOT)),
+        "seeded_canonical": seeded_canonical,
+        "quality": quality,
+    }, ensure_ascii=False, indent=2))
     if not quality.get("passed"):
         raise SystemExit(1)
 

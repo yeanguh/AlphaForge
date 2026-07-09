@@ -1,12 +1,12 @@
 # Research OS Ops Report
 
-- Cycle: `1`
+- Cycle: `8`
 - Status: `ok`
-- Started at: `2026-07-09T03:39:59.975614+00:00`
-- Finished at: `2026-07-09T03:41:46.853399+00:00`
-- Agent: `deterministic` `deterministic_tradingagents_style_review`
+- Started at: `2026-07-09T06:54:31.205453+00:00`
+- Finished at: `2026-07-09T06:56:36.870473+00:00`
+- Agent: `openai_compatible` `openai_compatible_agent_summary`
 - Evidence cards: `37`
-- State transition: `{'themes': 8, 'catalysts': 44, 'watchlist': 3, 'portfolio_reviews': 35, 'validated': True, 'committed': True}`
+- State transition: `{'themes': 8, 'catalysts': 49, 'watchlist': 3, 'portfolio_reviews': 58, 'validated': True, 'committed': True}`
 
 ## Inputs
 - A-share quotes: `3`
@@ -15,7 +15,7 @@
 - Industry reports=50, headlines=24
 
 ## Capability Chain
-- selected_theme=`ai_physical_ai` score=`43`
+- selected_theme=`ai_physical_ai` score=`44`
 - skills_used=`['news-scanner', 'article-reader', 'industry-chain-analysis', 'stock-analyzer', 'valuation-calculator', 'technical-analyzer', 'trade-decision-engine', 'portfolio-analytics', 'trade-reviewer']`
 - stock_supplements=`3`
 - tradingagents_rating=`Underweight`

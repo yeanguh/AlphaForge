@@ -9,7 +9,7 @@
 - `external/` 中存放框架、Agent、资讯等第三方开源 submodule。
 - `skills/` 中存放 skill 型 submodule 和项目级 skill 入口：`a-stock-data`、`global-stock-data`、`industry-chain-analysis`。
 - `loop_os/` 不直接 import `external/*`。
-- 不再保留 `china-stock-analysis`、`china-stock-price-analysis`；个股和行情能力通过 open-source provider adapter 接入。
+- 个股和行情能力通过 open-source provider adapter 接入。
 
 第一轮验证：
 
@@ -20,12 +20,13 @@ python scripts/run_harness.py --live
 
 输出会写入 `runs/YYYY-MM-DD/`。
 
-报告类产物统一写入 `reports/`：
+报告类产物统一写入 `reports/`（方案 A：主题池是 loop 持续沉淀的最终知识库）：
 
-- `reports/daily/`：每日 loop 面向人的摘要和运维摘要。
-- `reports/industry/`：产业链深度研报，目录形如 `<topic>-<YYYY-MM-DD>/`，包含 `report.md`、`source_data.json`、`quality_report.json` 和 `assets/`。
-- `reports/stock/`：预留给单票深度报告。
-- `reports/weekly/`：预留给周度复盘。
+- `reports/themes/<theme>/report.md`：**canonical final reports**——由每日 loop 持续精炼的最终研报，是最终研究资产。每篇可带 `assets/`（图片）。主题键与 `config/theme_pool.json` 一致（如 `physical-ai`）。
+- `reports/stocks/<symbol>/`：单票深度报告（持续沉淀）。
+- `reports/weekly/`：周度复盘。
+- `reports/daily/`：**增量 inbox / 研究日志**，非最终报告——每日 loop 的证据流水与运维摘要，最终结论以 `reports/themes/` 为准。
+- `reports/industry/`：**legacy / 手写快照**——历史产业链深度研报，已迁移到 `reports/themes/`（留 `MOVED.md` 指针）；harness 视为可选检查，不再作为主报告门禁。
 
 ## 持续运行
 
@@ -45,17 +46,17 @@ python scripts/run_full_loop.py --forever --interval-seconds 30 --max-cycles 2 -
 
 Agent 模式：
 
-- `--agent-mode codex`：调用本机 `codex exec`，输出结构化 JSON 评审。
-- `--agent-mode claude`：调用本机 `claude --print`，输出结构化 JSON 评审。
+- `--agent-mode codex`：调用当前环境中的 `codex exec`，输出结构化 JSON 评审。
+- `--agent-mode claude`：调用当前环境中的 `claude --print`，输出结构化 JSON 评审。
 - `--agent-mode auto`：优先 Codex，失败后尝试 Claude，最后降级到 deterministic fallback 并记录 `agent_errors`。
 - `--agent-mode deterministic`：不用外部 LLM，仅用于离线测试和 harness smoke。
 
 ## 数据源降级策略
 
-对齐旧 `stock-analysis` 的本地优先原则，并以 `skills/a-stock-data` 的公开源策略作为 A 股数据 adapter 的主要依据：
+Research OS 默认只依赖仓库内目录、submodule、当前环境 CLI 和公开网络源。以 `skills/a-stock-data` 的公开源策略作为 A 股数据 adapter 的主要依据：
 
-- A 股历史数据优先读取 workspace 级 `../a-data/hist/<code>.csv`；只有后续需要补历史尾部时，才通过 adapter 做增量补齐。
-- A 股实时/估值快照优先级：腾讯公开行情 -> 东方财富 push2 -> 本地 `a-data/hist` 最新收盘价兜底。
+- A 股实时/估值快照优先级：腾讯公开行情 -> 东方财富 push2 -> 仓库内或显式配置的本地历史数据兜底。
+- 本地历史数据默认目录是 `data/local/a-data/hist/<code>.csv`；如需复用外部缓存，必须显式设置 `RESEARCH_OS_A_DATA_DIR`。
 - 全球股票快照优先级：Yahoo chart -> 腾讯美股行情 -> 其他公开源兜底。
 - 资讯/研报抓取允许部分源失败，loop 记录错误但不因少数源不可用中断主流程。
 - 需要 key 的能力只能作为增强项，缺失时必须降级到公开数据、本地归档或标记 evidence gap。

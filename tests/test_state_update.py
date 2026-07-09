@@ -21,6 +21,23 @@ def _write_evidence_index(root: Path, evidence_ids: list[str]) -> None:
     _write_json(evidence_dir / "raw-index.json", {"schema_version": "1.0", "evidence_ids": evidence_ids})
 
 
+def _write_policy(root: Path, *, allow_real_trading: bool = False) -> None:
+    config_dir = root / "config"
+    config_dir.mkdir()
+    config_dir.joinpath("policy.yaml").write_text(
+        "\n".join(
+            [
+                "policy:",
+                "  mode: research_only",
+                f"  allow_real_trading: {str(allow_real_trading).lower()}",
+                "  require_evidence_for_state_change: true",
+                "  require_harness_before_state_write: true",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 class StateUpdateTest(unittest.TestCase):
     def test_transition_is_validated_before_commit(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -32,6 +49,7 @@ class StateUpdateTest(unittest.TestCase):
             _write_json(state / "watchlist.json", {"schema_version": "1.0", "watchlist": []})
             _write_json(state / "paper-portfolio.json", {"schema_version": "1.0", "cash": None, "positions": [], "reviews": []})
             _write_json(state / "system-health.json", {"schema_version": "1.0"})
+            _write_policy(root)
 
             payload = {
                 "status": "ok",
@@ -59,6 +77,31 @@ class StateUpdateTest(unittest.TestCase):
             self.assertTrue(summary["committed"])
             committed = json.loads((state / "research-state.json").read_text(encoding="utf-8"))
             self.assertEqual(committed["loops"]["full_loop"]["last_run_id"], "run-1")
+
+    def test_precommit_harness_rejects_policy_that_allows_real_trading(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state = root / "state"
+            state.mkdir()
+            _write_json(state / "research-state.json", {"schema_version": "1.0", "themes": []})
+            _write_json(state / "catalysts.json", {"schema_version": "1.0", "catalysts": []})
+            _write_json(state / "watchlist.json", {"schema_version": "1.0", "watchlist": []})
+            _write_json(state / "paper-portfolio.json", {"schema_version": "1.0", "cash": None, "positions": [], "reviews": []})
+            _write_json(state / "system-health.json", {"schema_version": "1.0"})
+            _write_evidence_index(root, ["ev-1"])
+            _write_policy(root, allow_real_trading=True)
+
+            payload = {
+                "status": "ok",
+                "research_pipeline": {"selected_industry_chain": {"selected_theme": "robotics", "supporting_public_items": [{"title": "催化"}]}},
+                "a_share_quotes": [{"symbol": "688017"}],
+            }
+
+            with self.assertRaises(ValueError) as ctx:
+                apply_state_transition(root, "run-1", 1, payload, ["ev-1"])
+
+            self.assertIn("allow_real_trading must remain false", str(ctx.exception))
+            self.assertIsNone(json.loads((state / "research-state.json").read_text(encoding="utf-8")).get("loops"))
 
     def test_transition_rejects_missing_evidence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

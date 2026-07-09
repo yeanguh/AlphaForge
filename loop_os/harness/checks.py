@@ -13,6 +13,77 @@ from loop_os.schemas.state import REQUIRED_STATE_FILES, load_state_file
 ROOT = Path(__file__).resolve().parents[2]
 
 
+# Report/harness policy is externalized to config/report_policy.json so themes and
+# forbidden terms can change without editing code. Hardcoded fallbacks preserve
+# backward compatibility if the config file is missing or malformed.
+_DEFAULT_INDUSTRY_DIR_GLOB = "physical-ai-chain-analysis-*"
+_DEFAULT_INDUSTRY_REQUIRED_TERMS = [
+    "核心结论",
+    "产业链全景图谱",
+    "A股公司映射",
+    "买点区间",
+    "目标价/空间",
+    "数据来源",
+]
+_DEFAULT_FORBIDDEN_REPORT_TERMS = [
+    "/Users/",
+    "ev-",
+    "data/raw/",
+    "a-stock-data",
+    "决策门禁",
+    "补充覆盖",
+    "coverage",
+    "TradingAgents",
+    "Underweight",
+    "综合复核",
+    "payload",
+    "明天",
+]
+
+# 方案 A: reports/themes/* 是持续沉淀的 canonical final reports, 门禁必须存在的主题键。
+_DEFAULT_THEME_CANONICAL_REQUIRED = ["physical-ai"]
+
+
+def _load_report_policy() -> dict[str, Any]:
+    path = ROOT / "config" / "report_policy.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def get_industry_dir_glob() -> str:
+    policy = _load_report_policy()
+    value = policy.get("industry_report", {}).get("dir_glob")
+    return value if isinstance(value, str) and value.strip() else _DEFAULT_INDUSTRY_DIR_GLOB
+
+
+def get_industry_required_terms() -> list[str]:
+    policy = _load_report_policy()
+    value = policy.get("industry_report", {}).get("required_terms")
+    if isinstance(value, list) and value and all(isinstance(x, str) for x in value):
+        return value
+    return list(_DEFAULT_INDUSTRY_REQUIRED_TERMS)
+
+
+def get_forbidden_report_terms() -> list[str]:
+    policy = _load_report_policy()
+    value = policy.get("latest_report", {}).get("forbidden_terms")
+    if isinstance(value, list) and value and all(isinstance(x, str) for x in value):
+        return value
+    return list(_DEFAULT_FORBIDDEN_REPORT_TERMS)
+
+
+def get_theme_canonical_required() -> list[str]:
+    policy = _load_report_policy()
+    value = policy.get("theme_report", {}).get("canonical_required")
+    if isinstance(value, list) and value and all(isinstance(x, str) for x in value):
+        return value
+    return list(_DEFAULT_THEME_CANONICAL_REQUIRED)
+
+
 EXPECTED_SUBMODULES = {
     "external/investment-news",
     "external/TradingAgents-astock",
@@ -29,6 +100,25 @@ EXPECTED_RETAINED_SKILL_FILES = {
 EXPECTED_PROVIDER_SKILL_FILES = {
     "skills/a-stock-data/SKILL.md",
     "skills/global-stock-data/SKILL.md",
+}
+
+SECRET_SCAN_PATHS = [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "config",
+    "data/raw",
+    "docs",
+    "evidence",
+    "reports",
+    "runs",
+    "state",
+]
+
+SECRET_PATTERNS = {
+    "openai_style_key": re.compile(r"\bsk-[A-Za-z0-9][A-Za-z0-9_-]{16,}\b"),
+    "named_secret_assignment": re.compile(r"(?i)\b(api[_-]?key|secret|token)\b\s*[:=]\s*['\"]?[A-Za-z0-9][A-Za-z0-9_.-]{16,}"),
+    "bearer_token": re.compile(r"(?i)\bauthorization\b\s*[:=]\s*['\"]?bearer\s+[A-Za-z0-9_.-]{16,}"),
 }
 
 
@@ -68,6 +158,41 @@ def check_no_core_external_imports() -> list[dict[str, Any]]:
         if direct_import_pattern.search(text):
             offenders.append(str(path.relative_to(ROOT)))
     return [{"check": "core:no_external_imports", "status": "ok" if not offenders else "error", "offenders": offenders}]
+
+
+def check_no_secret_leaks() -> list[dict[str, Any]]:
+    offenders: list[dict[str, str]] = []
+    for base in SECRET_SCAN_PATHS:
+        path = ROOT / base
+        if not path.exists():
+            continue
+        paths = [path] if path.is_file() else [item for item in path.rglob("*") if item.is_file()]
+        for file_path in paths:
+            if _should_skip_secret_scan_file(file_path):
+                continue
+            try:
+                text = file_path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                continue
+            except Exception as exc:
+                offenders.append({"path": str(file_path.relative_to(ROOT)), "pattern": "read_error", "detail": repr(exc)})
+                continue
+            for name, pattern in SECRET_PATTERNS.items():
+                if pattern.search(text):
+                    offenders.append({"path": str(file_path.relative_to(ROOT)), "pattern": name})
+                    break
+    return [{"check": "secrets:no_leaks", "status": "ok" if not offenders else "error", "offenders": offenders[:20]}]
+
+
+def _should_skip_secret_scan_file(path: Path) -> bool:
+    if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".pdf", ".duckdb", ".parquet", ".pyc"}:
+        return True
+    try:
+        if path.stat().st_size > 2_000_000:
+            return True
+    except OSError:
+        return True
+    return False
 
 
 def _check_skill_files(kind: str, files: set[str]) -> list[dict[str, Any]]:
@@ -151,20 +276,7 @@ def check_latest_loop_artifact() -> list[dict[str, Any]]:
         and isinstance(item.get("research_reports"), dict)
         for item in supplements.values()
     )
-    forbidden_report_terms = [
-        "/Users/",
-        "ev-",
-        "data/raw/",
-        "a-stock-data",
-        "决策门禁",
-        "补充覆盖",
-        "coverage",
-        "TradingAgents",
-        "Underweight",
-        "综合复核",
-        "payload",
-        "明天",
-    ]
+    forbidden_report_terms = get_forbidden_report_terms()
     checks = [
         {"check": "latest_loop:artifact", "status": "ok"},
         {"check": "latest_loop:agent_review_present", "status": "ok" if isinstance(review, dict) and review.get("roles") else "error"},
@@ -196,33 +308,97 @@ def check_latest_loop_artifact() -> list[dict[str, Any]]:
     return checks
 
 
+def _image_refs(markdown_text: str) -> list[str]:
+    """抽取 markdown 里的图片引用(![](path) 与 <img src=...>)。"""
+    refs = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", markdown_text)
+    refs += re.findall(r"<img[^>]*\bsrc=[\"\']([^\"\']+)[\"\']", markdown_text)
+    cleaned: list[str] = []
+    for raw in refs:
+        ref = raw.strip().split()[0].strip("<>") if raw.strip() else ""
+        if ref:
+            cleaned.append(ref)
+    return cleaned
+
+
+def check_theme_reports() -> list[dict[str, Any]]:
+    """canonical 主题报告门禁(方案 A)。
+
+    - reports/themes/<key>/report.md 必须存在(canonical_required 列出的核心主题);
+    - 每篇主题报告里的本地图片引用必须能解析到真实文件(F1: 断链检查)。
+    远程 http(s) 引用跳过。
+    """
+    checks: list[dict[str, Any]] = []
+    themes_root = ROOT / "reports" / "themes"
+
+    # 1) canonical 核心主题必须存在 report.md
+    for key in get_theme_canonical_required():
+        report = themes_root / key / "report.md"
+        checks.append(
+            {
+                "check": f"theme_report:canonical:{key}",
+                "status": "ok" if report.exists() else "error",
+                "path": str(report.relative_to(ROOT)),
+            }
+        )
+
+    # 2) 全部主题报告的本地图片断链检查
+    broken: list[str] = []
+    report_files = sorted(themes_root.glob("*/report.md")) if themes_root.exists() else []
+    for report in report_files:
+        try:
+            text = report.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        for ref in _image_refs(text):
+            if ref.startswith(("http://", "https://", "data:")):
+                continue
+            target = (report.parent / ref).resolve()
+            if not target.exists():
+                broken.append(f"{report.relative_to(ROOT)} -> {ref}")
+    checks.append(
+        {
+            "check": "theme_report:image_links",
+            "status": "ok" if not broken else "error",
+            **({"broken": broken} if broken else {}),
+            "reports_scanned": len(report_files),
+        }
+    )
+    return checks
+
+
 def check_industry_analysis_report() -> list[dict[str, Any]]:
+    """LEGACY(方案 A): reports/industry 是历史/手写深度快照, 不再是主报告门禁。
+
+    canonical final reports 已迁移到 reports/themes/(见 check_theme_reports)。
+    这里保留为可选检查: 目录缺失只 warn(skip), 目录存在时才校验其内部完整性,
+    以免 legacy 快照缺失阻塞整个 loop。
+    """
     root = ROOT / "reports" / "industry"
-    dirs = sorted(root.glob("physical-ai-chain-analysis-*")) if root.exists() else []
+    dirs = sorted(root.glob(get_industry_dir_glob())) if root.exists() else []
     if not dirs:
-        return [{"check": "industry_report:artifact", "status": "error", "error": "missing reports/industry/physical-ai-chain-analysis report"}]
+        return [{"check": "industry_report:legacy_snapshot", "status": "warn", "reason": f"no legacy reports/industry/{get_industry_dir_glob()} (migrated to reports/themes/)"}]
     report_dir = dirs[-1]
     report = report_dir / "report.md"
     quality_path = report_dir / "quality_report.json"
     source_path = report_dir / "source_data.json"
     assets_dir = report_dir / "assets"
     checks: list[dict[str, Any]] = [
-        {"check": "industry_report:artifact", "status": "ok" if report.exists() else "error", "path": str(report.relative_to(ROOT))},
-        {"check": "industry_report:source_data", "status": "ok" if source_path.exists() else "error"},
-        {"check": "industry_report:assets", "status": "ok" if assets_dir.exists() and any(assets_dir.glob("*.png")) else "error"},
+        {"check": "industry_report:legacy_artifact", "status": "ok" if report.exists() else "warn", "path": str(report.relative_to(ROOT))},
+        {"check": "industry_report:legacy_source_data", "status": "ok" if source_path.exists() else "warn"},
+        {"check": "industry_report:legacy_assets", "status": "ok" if assets_dir.exists() and any(assets_dir.glob("*.png")) else "warn"},
     ]
     try:
         quality = json.loads(quality_path.read_text(encoding="utf-8"))
     except Exception as exc:
-        checks.append({"check": "industry_report:quality", "status": "error", "error": repr(exc)})
+        checks.append({"check": "industry_report:legacy_quality", "status": "warn", "error": repr(exc)})
         return checks
-    checks.append({"check": "industry_report:quality", "status": "ok" if quality.get("passed") is True else "error", "score": quality.get("score"), "total": quality.get("total")})
+    checks.append({"check": "industry_report:legacy_quality", "status": "ok" if quality.get("passed") is True else "warn", "score": quality.get("score"), "total": quality.get("total")})
     text = report.read_text(encoding="utf-8") if report.exists() else ""
-    required_terms = ["核心结论", "产业链全景图谱", "A股公司映射", "买点区间", "目标价/空间", "数据来源"]
+    required_terms = get_industry_required_terms()
     checks.append(
         {
-            "check": "industry_report:deep_report_terms",
-            "status": "ok" if all(term in text for term in required_terms) else "error",
+            "check": "industry_report:legacy_deep_report_terms",
+            "status": "ok" if all(term in text for term in required_terms) else "warn",
         }
     )
     return checks
@@ -249,8 +425,10 @@ def run_all(live: bool = False) -> dict[str, Any]:
     checks.extend(check_provider_skill_files())
     checks.extend(check_loop_state_invariants())
     checks.extend(check_latest_loop_artifact())
+    checks.extend(check_theme_reports())
     checks.extend(check_industry_analysis_report())
     checks.extend(check_no_core_external_imports())
+    checks.extend(check_no_secret_leaks())
     provider_payload = run_provider_smoke(live=live)
     provider_ok = provider_payload.get("status") == "ok" and provider_payload.get("returncode") == 0
     checks.append({"check": "providers:smoke", "status": "ok" if provider_ok else "error", "details": provider_payload})

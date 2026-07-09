@@ -16,6 +16,10 @@ SUBMODULE = ROOT / "external" / "investment-news"
 SOURCES = SUBMODULE / "sources.json"
 
 
+def _display_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
 def _local(tag: str) -> str:
     return tag.split("}")[-1]
 
@@ -74,7 +78,7 @@ def fetch_headlines(max_sources: int = 24, max_items: int = 24) -> dict:
 
 def smoke(live: bool = False) -> ProviderResult:
     if not SUBMODULE.exists() or not SOURCES.exists():
-        return ProviderResult("investment-news", "error", "submodule or sources.json missing", errors=[str(SOURCES)])
+        return ProviderResult("investment-news", "error", "submodule or sources.json missing", errors=[_display_path(SOURCES)])
     cfg = json.loads(SOURCES.read_text(encoding="utf-8"))
     sources = cfg.get("sources", [])
     if not live:

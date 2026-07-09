@@ -1,24 +1,24 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-09T03:41:46.922570+00:00",
+  "updated_at": "2026-07-09T06:59:41.443949+00:00",
   "last_harness": null,
   "last_provider_smoke": null,
   "last_full_loop": {
-    "run_id": "full-loop-113959",
-    "cycle": 1,
+    "run_id": "full-loop-141931",
+    "cycle": 8,
     "status": "ok",
     "errors": [],
-    "finished_at": "2026-07-09T03:41:22.084419+00:00"
+    "finished_at": "2026-07-09T06:56:09.683817+00:00"
   },
   "supervisor": {
-    "mode": "forever",
-    "status": "ok",
-    "run_id": "full-loop-113959",
-    "current_cycle": 1,
-    "last_heartbeat_at": "2026-07-09T03:41:46.922570+00:00",
+    "mode": "bounded",
+    "status": "interrupted",
+    "run_id": "full-loop-141931",
+    "current_cycle": 9,
+    "last_heartbeat_at": "2026-07-09T06:59:41.443949+00:00",
     "consecutive_errors": 0,
     "next_wake_at": null,
-    "last_error": null,
-    "run_dir": "/Users/bytedance/Documents/a-analysis/research-os/runs/2026-07-09/full-loop-113959"
+    "last_error": "interrupted",
+    "run_dir": "runs/2026-07-09/full-loop-141931"
   }
 }

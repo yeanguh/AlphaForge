@@ -11,15 +11,47 @@ from pathlib import Path
 from typing import Any
 
 
-THEME_KEYWORDS = {
-    "ai_physical_ai": ["AI", "人工智能", "大模型", "算力", "机器人", "物理AI", "智能体"],
-    "semiconductor": ["半导体", "芯片", "封装", "CPU", "GPU", "晶圆", "先进制程"],
-    "equipment": ["设备", "机械", "工程机械", "机床", "工业", "通用设备"],
-    "new_energy": ["新能源", "锂电", "电池", "光伏", "储能", "风电"],
-    "auto": ["汽车", "新能源车", "智能驾驶", "零部件", "车载"],
-    "consumer": ["消费", "酒店", "餐饮", "服饰", "旅游", "零售"],
-    "financial": ["银行", "证券", "保险", "理财", "券商"],
+# 发现/打分链路的主题命中词。
+# 语义(方案 A):每日挖掘围绕 config/theme_pool.json 的主题池组织,而不是围绕旧的
+# industry 分类。THEME_KEYWORDS 由 theme_pool 的 discovery_keywords 驱动(键为规范主题
+# 目录键,如 "physical-ai"),配置缺失/损坏时回退到下面的硬编码字典,保证离线可跑。
+_FALLBACK_THEME_KEYWORDS = {
+    "physical-ai": ["AI", "人工智能", "大模型", "算力", "机器人", "物理AI", "智能体"],
+    "ai-compute-infra": ["半导体", "芯片", "封装", "CPU", "GPU", "晶圆", "先进制程"],
+    "ai-industrial-software": ["设备", "机械", "工程机械", "机床", "工业", "通用设备"],
+    "datacenter-power": ["新能源", "锂电", "电池", "光伏", "储能", "风电"],
+    "autonomous-low-altitude": ["汽车", "新能源车", "智能驾驶", "零部件", "车载"],
+    "ai-commercialization": ["消费", "酒店", "餐饮", "服饰", "旅游", "零售"],
+    "ai-fintech-infra": ["银行", "证券", "保险", "理财", "券商"],
 }
+
+
+def _theme_pool_path() -> Path:
+    # capability_chain.py 位于 loop_os/domain/, 仓库根为 parents[2]
+    return Path(__file__).resolve().parents[2] / "config" / "theme_pool.json"
+
+
+def _load_theme_keywords() -> dict[str, list[str]]:
+    """从 theme_pool.json 的 discovery_keywords 构造主题命中词表, 失败时回退硬编码。"""
+    path = _theme_pool_path()
+    try:
+        pool = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return dict(_FALLBACK_THEME_KEYWORDS)
+    themes = pool.get("themes")
+    if not isinstance(themes, dict):
+        return dict(_FALLBACK_THEME_KEYWORDS)
+    keywords: dict[str, list[str]] = {}
+    for key, meta in themes.items():
+        if not isinstance(meta, dict):
+            continue
+        dk = meta.get("discovery_keywords")
+        if isinstance(dk, list) and dk:
+            keywords[str(key)] = [str(t) for t in dk if str(t).strip()]
+    return keywords or dict(_FALLBACK_THEME_KEYWORDS)
+
+
+THEME_KEYWORDS = _load_theme_keywords()
 
 _SKILL_HEALTH_CACHE: dict[str, Any] | None = None
 
@@ -231,7 +263,10 @@ def _source_trail_from_health(root: Path, health: dict[str, Any]) -> dict[str, A
 
 
 def _chain_tables(theme: str) -> dict[str, Any]:
-    if "semiconductor" in theme:
+    # theme 现在是 theme_pool 规范键(如 physical-ai / ai-compute-infra), 也兼容旧的
+    # semiconductor / equipment / ai_physical_ai 命名, 保持链路稳健。
+    theme = str(theme or "").lower()
+    if "semiconductor" in theme or "compute-infra" in theme or "compute_infra" in theme:
         upstream = ["高端基板材料", "光刻/刻蚀/检测设备", "EDA/IP", "晶圆代工", "先进封装产线"]
         midstream = ["IC封装基板", "芯片设计", "封测", "算力服务器部件"]
         downstream = ["AI服务器", "数据中心", "国产CPU/GPU替代", "云厂商资本开支"]
@@ -244,7 +279,7 @@ def _chain_tables(theme: str) -> dict[str, Any]:
             {"产业链环节": "上游", "细分领域/关键产品": "先进封装材料与设备", "BOM成本占比/价值占比": "定性高", "核心技术壁垒": "客户认证/制程良率/材料配方", "卡脖子程度": "High", "代表A股公司": "兴森科技、安集科技", "公司环节地位": "重要配套/待验证核心", "证据口径/备注": "需研报正文和公告验证收入占比"},
             {"产业链环节": "中游", "细分领域/关键产品": "封测/芯片设计", "BOM成本占比/价值占比": "高", "核心技术壁垒": "设计/IP/封装工艺", "卡脖子程度": "Medium", "代表A股公司": "通富微电、寒武纪", "公司环节地位": "核心/挑战者", "证据口径/备注": "公开报告标题级信号，待财报交叉验证"},
         ]
-    elif "equipment" in theme or "ai_physical_ai" in theme:
+    elif "equipment" in theme or "ai_physical_ai" in theme or "physical-ai" in theme or "physical_ai" in theme:
         upstream = ["减速器", "伺服电机", "控制器", "传感器", "核心材料与加工设备"]
         midstream = ["人形机器人本体", "工程机械", "通用设备", "系统集成"]
         downstream = ["工厂自动化", "物流搬运", "工程施工", "服务机器人场景"]

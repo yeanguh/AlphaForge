@@ -1,0 +1,31 @@
+{
+  "id": "ev-market-global-b39149aa0d7d",
+  "source_name": "global-stock-data/yahoo_chart",
+  "source_type": "global_market_snapshot",
+  "title": "全球股票行情快照：AAPL",
+  "url": null,
+  "source_url": null,
+  "raw_path": null,
+  "claim_id": "ev-market-global-b39149aa0d7d:claim:0",
+  "freshness": "intraday_or_latest_available",
+  "related_companies": [
+    "AAPL"
+  ],
+  "related_themes": [],
+  "observed_at": "2026-07-09T05:07:55.330472+00:00",
+  "created_at": "2026-07-09T05:07:55.330473+00:00",
+  "claims": [
+    "AAPL latest_close=313.3900146484375",
+    "AAPL change_pct=0.8788"
+  ],
+  "raw": {
+    "symbol": "AAPL",
+    "currency": "USD",
+    "exchange": "NMS",
+    "latest_close": 313.3900146484375,
+    "previous_close": 310.6600036621094,
+    "change_pct": 0.8788,
+    "bars": 5,
+    "source": "yahoo_chart"
+  }
+}

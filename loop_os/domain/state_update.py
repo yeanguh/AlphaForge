@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from loop_os.harness.precommit import run_precommit_state_harness
 from loop_os.state_machine.catalyst_state import can_transition
 
 
@@ -346,6 +347,7 @@ def commit_state_transition(root: Path, draft: StateTransitionDraft) -> dict[str
 def apply_state_transition(root: Path, run_id: str, cycle: int, payload: dict[str, Any], evidence_ids: list[str]) -> dict[str, Any]:
     draft = build_state_transition_draft(root, run_id, cycle, payload, evidence_ids)
     errors = validate_state_transition(root, draft)
+    errors.extend(run_precommit_state_harness(root, draft))
     if errors:
         raise ValueError(f"state transition validation failed: {errors}")
     return commit_state_transition(root, draft)

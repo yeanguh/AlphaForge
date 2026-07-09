@@ -80,17 +80,41 @@ def _primary_theme(industry: dict[str, Any]) -> tuple[str, int]:
     return "待确认主线", 0
 
 
+# 旧命名 -> 中文标签(回退用);新的规范主题键从 config/theme_pool.json 的 label 读取。
+_FALLBACK_THEME_CN = {
+    "ai_physical_ai": "AI/物理AI",
+    "ai": "AI/物理AI",
+    "semiconductor": "半导体",
+    "equipment": "高端设备/机器人",
+    "new_energy": "新能源",
+    "auto": "汽车链",
+    "medical": "医药医疗",
+}
+
+
+def _theme_pool_labels() -> dict[str, str]:
+    path = Path(__file__).resolve().parents[1] / "config" / "theme_pool.json"
+    try:
+        pool = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    themes = pool.get("themes")
+    if not isinstance(themes, dict):
+        return {}
+    labels: dict[str, str] = {}
+    for key, meta in themes.items():
+        if isinstance(meta, dict) and isinstance(meta.get("label"), str) and meta["label"]:
+            labels[str(key)] = meta["label"]
+    return labels
+
+
 def _theme_cn(theme: str) -> str:
-    mapping = {
-        "ai_physical_ai": "AI/物理AI",
-        "ai": "AI/物理AI",
-        "semiconductor": "半导体",
-        "equipment": "高端设备/机器人",
-        "new_energy": "新能源",
-        "auto": "汽车链",
-        "medical": "医药医疗",
-    }
-    return mapping.get(theme, theme)
+    # 优先用 theme_pool 的规范 label(theme 现在多为 physical-ai 之类的规范键),
+    # 找不到再回退旧映射, 最后回退原始字符串。
+    labels = _theme_pool_labels()
+    if theme in labels:
+        return labels[theme]
+    return _FALLBACK_THEME_CN.get(theme, theme)
 
 
 def _public_source_summary(payload: dict[str, Any]) -> list[str]:

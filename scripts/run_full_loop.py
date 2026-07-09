@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 import time
@@ -17,6 +18,7 @@ from loop_os.domain.capability_chain import build_research_pipeline
 from loop_os.domain.evidence_service import write_evidence
 from loop_os.domain.industry_chain import analyze_industry_reports
 from loop_os.domain.state_update import apply_state_transition
+from loop_os.report_router import route_cycle_reports
 from loop_os.reporting import write_json, write_markdown_report, write_ops_report
 from providers.open_source import a_stock_data, global_stock_data, investment_news, tradingagents_astock
 
@@ -54,9 +56,14 @@ def run_harness() -> dict[str, Any]:
     return payload
 
 
-def run_industry_chain_report() -> dict[str, Any]:
+def run_theme_deep_report(payload_file: Path | None = None) -> dict[str, Any]:
+    cmd = ["uv", "run", "python", "scripts/generate_physical_ai_chain_report.py"]
+    if shutil.which("uv") is None:
+        cmd = [sys.executable, "scripts/generate_physical_ai_chain_report.py"]
+    if payload_file is not None:
+        cmd.extend(["--payload-file", rel_path(payload_file)])
     proc = subprocess.run(
-        ["uv", "run", "python", "scripts/generate_physical_ai_chain_report.py"],
+        cmd,
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -78,6 +85,85 @@ def read_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
     except Exception:
         return default
     return data if isinstance(data, dict) else default
+
+
+def rel_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
+def _has_items(value: Any) -> bool:
+    return isinstance(value, list) and len(value) > 0
+
+
+def _input_quality_issues(payload: dict[str, Any]) -> list[str]:
+    issues: list[str] = []
+    if payload.get("status") != "ok":
+        issues.append(f"status={payload.get('status')}")
+    if payload.get("errors"):
+        issues.append("cycle_errors_present")
+    if not _has_items(payload.get("a_share_quotes")):
+        issues.append("missing_a_share_quotes")
+    if not _has_items(payload.get("global_charts")):
+        issues.append("missing_global_charts")
+    news = payload.get("news", {})
+    if not isinstance(news, dict) or not _has_items(news.get("headlines")):
+        issues.append("missing_news_headlines")
+    if not _has_items(payload.get("industry_reports")):
+        issues.append("missing_industry_reports")
+    pipeline = payload.get("research_pipeline", {})
+    pipeline = pipeline if isinstance(pipeline, dict) else {}
+    if not pipeline.get("hotspot_scoring", {}).get("selected", {}).get("theme"):
+        issues.append("missing_hotspot_selection")
+    if not _has_items(pipeline.get("stock_analyzer")):
+        issues.append("missing_stock_analyzer")
+    if not pipeline.get("trade_decision_engine", {}).get("decisions"):
+        issues.append("missing_trade_decisions")
+    review = payload.get("agent_review", {})
+    if not isinstance(review, dict) or not review.get("roles") or review.get("agent_errors"):
+        issues.append("agent_review_not_usable")
+    return issues
+
+
+def _latest_publish_issues(payload: dict[str, Any]) -> list[str]:
+    issues = _input_quality_issues(payload)
+    if not payload.get("evidence_ids"):
+        issues.append("missing_evidence_ids")
+    transition = payload.get("state_transition", {})
+    if not isinstance(transition, dict) or not transition.get("validated") or not transition.get("committed"):
+        issues.append("state_transition_not_committed")
+    if payload.get("harness", {}).get("status") != "ok":
+        issues.append("harness_not_ok")
+    return issues
+
+
+def write_cycle_artifacts(cycle_dir: Path, payload: dict[str, Any]) -> None:
+    write_json(cycle_dir / "result.json", payload)
+    write_markdown_report(cycle_dir / "report.md", payload)
+    write_ops_report(cycle_dir / "ops-report.md", payload)
+
+
+def publish_latest_artifacts(payload: dict[str, Any], cycle_dir: Path) -> bool:
+    issues = _latest_publish_issues(payload)
+    write_json(ROOT / "data" / "raw" / "latest-observed-full-loop.json", payload)
+    # 内容类型路由:把本轮 loop 证据沉淀到对应最终报告(产业链/个股/周报),
+    # 同时降级维护 daily 增量 inbox。失败轮次由 route_cycle_reports 内部拦截,只留在 runs/。
+    curation = route_cycle_reports(
+        root=ROOT,
+        payload=payload,
+        cycle_dir=cycle_dir,
+        issues=issues,
+    )
+    payload["latest_publish"] = {
+        "eligible": not issues,
+        "issues": issues,
+        "curation": curation,
+        "checked_at": utc_now(),
+    }
+    if issues:
+        return False
+    write_json(ROOT / "data" / "raw" / "latest-full-loop.json", payload)
+    write_ops_report(ROOT / "reports" / "daily" / "latest-ops.md", payload)
+    return True
 
 
 def fetch_stock_supplements(quotes: list[dict[str, Any]], errors: list[str]) -> dict[str, dict[str, Any]]:
@@ -131,7 +217,7 @@ def write_supervisor_health(
         "consecutive_errors": consecutive_errors,
         "next_wake_at": next_wake_at,
         "last_error": last_error,
-        "run_dir": str(run_dir),
+        "run_dir": rel_path(run_dir),
     }
     write_json(path, health)
 
@@ -258,24 +344,37 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
         "submodule_dirty_before": before_dirty,
         "submodule_dirty_after": None,
     }
-    evidence_ids = write_evidence(ROOT, cycle, payload)
-    state_transition = apply_state_transition(ROOT, run_id, cycle, payload, evidence_ids)
+    input_quality_issues = _input_quality_issues(payload)
+    if input_quality_issues:
+        evidence_ids = []
+        state_transition = {
+            "validated": False,
+            "committed": False,
+            "reason": "cycle input quality gate failed; state update skipped",
+            "issues": input_quality_issues,
+        }
+    else:
+        evidence_ids = write_evidence(ROOT, cycle, payload)
+        state_transition = apply_state_transition(ROOT, run_id, cycle, payload, evidence_ids)
     payload["evidence_ids"] = evidence_ids
     payload["state_transition"] = state_transition
     payload["finished_at"] = utc_now()
-    write_json(cycle_dir / "result.json", payload)
-    write_markdown_report(cycle_dir / "report.md", payload)
-    write_ops_report(cycle_dir / "ops-report.md", payload)
-    write_json(ROOT / "data" / "raw" / "latest-full-loop.json", payload)
-    write_markdown_report(ROOT / "reports" / "daily" / "latest-full-loop.md", payload)
-    write_ops_report(ROOT / "reports" / "daily" / "latest-ops.md", payload)
-    industry_chain_report = run_industry_chain_report()
-    payload["industry_chain_report"] = industry_chain_report
-    if industry_chain_report.get("returncode") != 0:
-        payload["errors"].append(f"industry_chain_report: {industry_chain_report}")
+    write_cycle_artifacts(cycle_dir, payload)
+    theme_report_input_issues = _input_quality_issues(payload)
+    if theme_report_input_issues:
+        theme_deep_report = {
+            "status": "skipped",
+            "returncode": 0,
+            "reason": "cycle input quality gate failed; preserving previous canonical theme report",
+            "issues": theme_report_input_issues,
+        }
+    else:
+        theme_deep_report = run_theme_deep_report(cycle_dir / "result.json")
+    payload["theme_deep_report"] = theme_deep_report
+    if theme_deep_report.get("returncode") != 0:
+        payload["errors"].append(f"theme_deep_report: {theme_deep_report}")
         payload["status"] = "error"
-    write_json(cycle_dir / "result.json", payload)
-    write_json(ROOT / "data" / "raw" / "latest-full-loop.json", payload)
+    write_cycle_artifacts(cycle_dir, payload)
     harness = run_harness()
     after_dirty = submodule_dirty_counts()
     if harness.get("status") != "ok" or any(v != 0 for v in after_dirty.values()):
@@ -283,12 +382,8 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
     payload["harness"] = harness
     payload["submodule_dirty_after"] = after_dirty
     payload["finished_at"] = utc_now()
-    write_json(cycle_dir / "result.json", payload)
-    write_markdown_report(cycle_dir / "report.md", payload)
-    write_ops_report(cycle_dir / "ops-report.md", payload)
-    write_json(ROOT / "data" / "raw" / "latest-full-loop.json", payload)
-    write_markdown_report(ROOT / "reports" / "daily" / "latest-full-loop.md", payload)
-    write_ops_report(ROOT / "reports" / "daily" / "latest-ops.md", payload)
+    publish_latest_artifacts(payload, cycle_dir)
+    write_cycle_artifacts(cycle_dir, payload)
     return payload
 
 
@@ -301,7 +396,7 @@ def main() -> None:
     parser.add_argument("--max-cycles", type=int, default=None, help="optional cap, useful for daemon smoke tests")
     parser.add_argument("--continue-on-error", action="store_true", help="continue after a failed cycle with backoff")
     parser.add_argument("--error-backoff-seconds", type=int, default=60)
-    parser.add_argument("--agent-mode", choices=["deterministic", "codex", "claude", "auto"], default="deterministic")
+    parser.add_argument("--agent-mode", choices=["deterministic", "codex", "claude", "openai_compatible", "auto"], default="deterministic")
     parser.add_argument("--agent-timeout-seconds", type=int, default=180)
     args = parser.parse_args()
 
@@ -315,11 +410,11 @@ def main() -> None:
     summary: dict[str, Any] = {
         "status": "running",
         "mode": mode,
-        "run_dir": str(run_dir),
+        "run_dir": rel_path(run_dir),
         "cycles": [],
         "continue_on_error": keep_going_on_error,
     }
-    print(f"[full-loop] run_dir={run_dir}", flush=True)
+    print(f"[full-loop] run_dir={rel_path(run_dir)}", flush=True)
     if args.forever:
         print(f"[full-loop] mode=forever interval={args.interval_seconds}s", flush=True)
     else:
@@ -369,7 +464,7 @@ def main() -> None:
                 "cycle": cycle,
                 "status": payload["status"],
                 "errors": payload["errors"],
-                "report": str(run_dir / f"cycle-{cycle:03d}" / "report.md"),
+                "report": rel_path(run_dir / f"cycle-{cycle:03d}" / "report.md"),
             }
         )
         write_json(run_dir / "summary.json", summary)
@@ -379,7 +474,7 @@ def main() -> None:
             consecutive_errors += 1
         print(
             f"[full-loop] cycle={cycle} status={payload['status']} "
-            f"errors={len(payload['errors'])} report={run_dir / f'cycle-{cycle:03d}' / 'report.md'}",
+            f"errors={len(payload['errors'])} report={rel_path(run_dir / f'cycle-{cycle:03d}' / 'report.md')}",
             flush=True,
         )
         if payload["status"] != "ok" and not keep_going_on_error:

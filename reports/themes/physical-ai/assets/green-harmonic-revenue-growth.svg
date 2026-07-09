@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="35" y="36" font-size="22" font-weight="800" fill="#111827">绿的谐波营收同比变化</text>
+<text x="35" y="93" font-size="15" fill="#374151">2026一季报</text>
+<rect x="240" y="70" width="653.0" height="34" rx="6" fill="#16a34a" opacity="0.85"/>
+<text x="905.0" y="93" font-size="15" fill="#111827">营收同比 43.0%</text>
+<text x="35" y="149" font-size="15" fill="#374151">2025年报</text>
+<rect x="240" y="126" width="719.3" height="34" rx="6" fill="#16a34a" opacity="0.85"/>
+<text x="971.3" y="149" font-size="15" fill="#111827">营收同比 47.3%</text>
+<text x="35" y="205" font-size="15" fill="#374151">2025三季报</text>
+<rect x="240" y="182" width="720.0" height="34" rx="6" fill="#16a34a" opacity="0.85"/>
+<text x="972.0" y="205" font-size="15" fill="#111827">营收同比 47.4%</text>
+<text x="35" y="261" font-size="15" fill="#374151">2025中报</text>
+<rect x="240" y="238" width="696.6" height="34" rx="6" fill="#16a34a" opacity="0.85"/>
+<text x="948.6" y="261" font-size="15" fill="#111827">营收同比 45.8%</text>
+</svg>

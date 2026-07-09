@@ -1,0 +1,24 @@
+{
+  "id": "ev-news-60ba348afe36",
+  "source_name": "量子位",
+  "source_type": "news",
+  "title": "刚刚，全球首个具身专属的MoE视频模型，开源了！",
+  "url": "https://www.qbitai.com/2026/07/446568.html",
+  "source_url": "https://www.qbitai.com/2026/07/446568.html",
+  "raw_path": null,
+  "claim_id": "ev-news-60ba348afe36:claim:0",
+  "freshness": "2026-07-09T05:47:05+00:00",
+  "related_companies": [],
+  "related_themes": [],
+  "observed_at": "2026-07-09T06:56:09.684179+00:00",
+  "created_at": "2026-07-09T06:56:09.684182+00:00",
+  "claims": [
+    "刚刚，全球首个具身专属的MoE视频模型，开源了！"
+  ],
+  "raw": {
+    "title": "刚刚，全球首个具身专属的MoE视频模型，开源了！",
+    "url": "https://www.qbitai.com/2026/07/446568.html",
+    "published_at": "2026-07-09T05:47:05+00:00",
+    "source": "量子位"
+  }
+}

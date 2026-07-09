@@ -22,6 +22,10 @@ BASE_URL = "https://openapi.iwencai.com"
 COMPREHENSIVE_TYPES = {"report": "report", "announcement": "announcement", "news": "news"}
 
 
+def _display_path(path: Path) -> str:
+    return str(path.resolve().relative_to(ROOT.resolve()))
+
+
 def is_configured() -> bool:
     return bool(os.environ.get("IWENCAI_API_KEY"))
 
@@ -70,7 +74,7 @@ def query(qtype: str, query_text: str, *, page: int = 1, limit: int = 10, timeou
             "reason": "wen-cai skill CLI missing",
             "qtype": qtype,
             "query": query_text,
-            "skill_dir": str(SKILL_DIR),
+            "skill_dir": _display_path(SKILL_DIR),
         }
     if not is_configured():
         return {
@@ -78,7 +82,7 @@ def query(qtype: str, query_text: str, *, page: int = 1, limit: int = 10, timeou
             "reason": "IWENCAI_API_KEY missing in current process",
             "qtype": qtype,
             "query": query_text,
-            "skill_dir": str(SKILL_DIR),
+            "skill_dir": _display_path(SKILL_DIR),
         }
 
     if qtype in COMPREHENSIVE_TYPES:
@@ -112,7 +116,7 @@ def query(qtype: str, query_text: str, *, page: int = 1, limit: int = 10, timeou
         "returncode": 0 if ok else 1,
         "stdout": payload,
         "stderr": payload.get("_error_body") or payload.get("_network_error") or payload.get("status_msg", ""),
-        "skill_dir": str(SKILL_DIR),
+        "skill_dir": _display_path(SKILL_DIR),
     }
 
 
@@ -136,7 +140,7 @@ def fetch_research_enrichment(symbols: dict[str, str]) -> dict[str, Any]:
     skipped = all(item.get("status") == "skipped" for item in results.values())
     return {
         "provider": PROVIDER_NAME,
-        "skill_dir": str(SKILL_DIR),
+        "skill_dir": _display_path(SKILL_DIR),
         "configured": is_configured(),
         "enabled": enabled,
         "skipped": skipped,
@@ -182,23 +186,32 @@ def summarize_enrichment(enrichment: dict[str, Any]) -> list[dict[str, Any]]:
 
 def smoke(live: bool = False) -> ProviderResult:
     if not skill_available():
-        return ProviderResult(PROVIDER_NAME, "error", "wen-cai skill CLI missing", errors=[str(CLI)])
+        return ProviderResult(PROVIDER_NAME, "error", "wen-cai skill CLI missing", errors=[_display_path(CLI)])
     if not live:
         return ProviderResult(
             PROVIDER_NAME,
             "ok",
             "wen-cai skill readable; live calls require IWENCAI_API_KEY",
-            {"path": str(SKILL_DIR), "configured": is_configured()},
+            {"path": _display_path(SKILL_DIR), "configured": is_configured()},
         )
     if not is_configured():
         return ProviderResult(
             PROVIDER_NAME,
             "error",
             "IWENCAI_API_KEY missing in current process",
-            {"path": str(SKILL_DIR)},
+            {"path": _display_path(SKILL_DIR)},
             errors=["export IWENCAI_API_KEY=... before live smoke"],
         )
     result = query("report", "人形机器人 研报", limit=1, timeout=45)
     if result.get("status") == "ok":
         return ProviderResult(PROVIDER_NAME, "ok", "wen-cai live query succeeded", {"sample": result})
+    stderr = str(result.get("stderr") or "")
+    if "次数已用完" in stderr or "额度" in stderr:
+        return ProviderResult(
+            PROVIDER_NAME,
+            "warn",
+            "wen-cai live quota exhausted; provider is configured but unavailable for more calls today",
+            {"sample": result},
+            errors=[stderr],
+        )
     return ProviderResult(PROVIDER_NAME, "error", "wen-cai live query failed", {"sample": result}, errors=[str(result.get("stderr"))])
