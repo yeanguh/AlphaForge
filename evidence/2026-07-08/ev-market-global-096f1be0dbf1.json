@@ -1,0 +1,22 @@
+{
+  "id": "ev-market-global-096f1be0dbf1",
+  "source_name": "global-stock-data/yahoo_chart",
+  "source_type": "global_market_snapshot",
+  "title": "全球股票行情快照：AAPL",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719544+00:00",
+  "claims": [
+    "AAPL latest_close=310.4849853515625",
+    "AAPL change_pct=-0.0563"
+  ],
+  "raw": {
+    "symbol": "AAPL",
+    "currency": "USD",
+    "exchange": "NMS",
+    "latest_close": 310.4849853515625,
+    "previous_close": 310.6600036621094,
+    "change_pct": -0.0563,
+    "bars": 5,
+    "source": "yahoo_chart"
+  }
+}

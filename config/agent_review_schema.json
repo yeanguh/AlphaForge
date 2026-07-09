@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["review_type", "agent_provider", "roles", "decision", "reason", "next_actions"],
+  "properties": {
+    "review_type": {
+      "type": "string"
+    },
+    "agent_provider": {
+      "type": "string",
+      "enum": ["codex", "claude"]
+    },
+    "roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bull", "bear", "risk", "policy_news", "hot_money"],
+      "properties": {
+        "bull": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bear": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risk": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policy_news": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hot_money": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["watchlist_candidate", "needs_more_evidence", "hold_or_reject"]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

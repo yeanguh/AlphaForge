@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-d52303b9afed",
+  "source_name": "eastmoney_industry_report/华源证券",
+  "source_type": "industry_research_report",
+  "title": "6月工程机械行业主要产品销售点评：销量延续高增，内外需共振支撑增长",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719615+00:00",
+  "claims": [
+    "industry=工程机械",
+    "rating=增持",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "6月工程机械行业主要产品销售点评：销量延续高增，内外需共振支撑增长",
+    "industry_name": "工程机械",
+    "industry_code": "739",
+    "org": "华源证券",
+    "rating": "增持",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826821062",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826821062_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826821062_1.pdf",
+    "report_type": 3
+  }
+}

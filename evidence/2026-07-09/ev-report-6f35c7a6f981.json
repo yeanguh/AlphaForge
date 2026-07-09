@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-6f35c7a6f981",
+  "source_name": "eastmoney_industry_report/金融街证券",
+  "source_type": "industry_research_report",
+  "title": "非银金融行业专题研究报告：非方向性业务正在崛起，头部券商抢占市场先机",
+  "url": null,
+  "observed_at": "2026-07-09T00:43:59.933548+00:00",
+  "claims": [
+    "industry=证券Ⅱ",
+    "rating=持有",
+    "publish_date=2026-07-09"
+  ],
+  "raw": {
+    "title": "非银金融行业专题研究报告：非方向性业务正在崛起，头部券商抢占市场先机",
+    "industry_name": "证券Ⅱ",
+    "industry_code": "473",
+    "org": "金融街证券",
+    "rating": "持有",
+    "publish_date": "2026-07-09",
+    "info_code": "AP202607091826830266",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826830266_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826830266_1.pdf",
+    "report_type": 3
+  }
+}

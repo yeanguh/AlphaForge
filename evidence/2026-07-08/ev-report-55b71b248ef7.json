@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-55b71b248ef7",
+  "source_name": "eastmoney_industry_report/开源证券",
+  "source_type": "industry_research_report",
+  "title": "上市券商中报前瞻：预计中报全业务线增长，科创直投跟投放大弹性",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719629+00:00",
+  "claims": [
+    "industry=证券Ⅱ",
+    "rating=持有",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "上市券商中报前瞻：预计中报全业务线增长，科创直投跟投放大弹性",
+    "industry_name": "证券Ⅱ",
+    "industry_code": "473",
+    "org": "开源证券",
+    "rating": "持有",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826818531",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826818531_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826818531_1.pdf",
+    "report_type": 3
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ev-news-9b824a000fdc",
+  "source_name": "OpenAI",
+  "source_type": "news",
+  "title": "Separating signal from noise in coding evaluations",
+  "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+  "source_url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+  "raw_path": null,
+  "claim_id": "ev-news-9b824a000fdc:claim:0",
+  "freshness": "2026-07-08T13:00:00+00:00",
+  "related_companies": [],
+  "related_themes": [],
+  "observed_at": "2026-07-09T03:41:22.084517+00:00",
+  "created_at": "2026-07-09T03:41:22.084518+00:00",
+  "claims": [
+    "Separating signal from noise in coding evaluations"
+  ],
+  "raw": {
+    "title": "Separating signal from noise in coding evaluations",
+    "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+    "published_at": "2026-07-08T13:00:00+00:00",
+    "source": "OpenAI"
+  }
+}

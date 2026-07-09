@@ -1,0 +1,10 @@
+markets:
+  cn_a:
+    timezone: Asia/Shanghai
+    sample_symbol: "600519"
+  us:
+    timezone: America/New_York
+    sample_symbol: "AAPL"
+  hk:
+    timezone: Asia/Hong_Kong
+    sample_symbol: "00700"

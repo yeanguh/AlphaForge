@@ -1,0 +1,37 @@
+{
+  "id": "ev-market-cn-fde7b3cc3cf5",
+  "source_name": "a-stock-data/tencent_finance",
+  "source_type": "market_snapshot",
+  "title": "A股行情快照：300750 宁德时代",
+  "url": null,
+  "source_url": null,
+  "raw_path": null,
+  "claim_id": "ev-market-cn-fde7b3cc3cf5:claim:0",
+  "freshness": "intraday_or_latest_available",
+  "related_companies": [
+    "300750"
+  ],
+  "related_themes": [],
+  "observed_at": "2026-07-09T03:08:32.356703+00:00",
+  "created_at": "2026-07-09T03:08:32.356705+00:00",
+  "claims": [
+    "宁德时代 最新价 364.0",
+    "宁德时代 PE 21.32 PB 5.15",
+    "宁德时代 valuation_band=normal"
+  ],
+  "raw": {
+    "symbol": "300750",
+    "name": "宁德时代",
+    "price": 364.0,
+    "prev_close": 361.0,
+    "change_pct": 0.831,
+    "volume": "164526",
+    "turnover": "599751",
+    "pe": 21.32,
+    "pb": 5.15,
+    "valuation_band": "normal",
+    "source": "tencent_finance",
+    "provider": "a-stock-data",
+    "provider_submodule": "skills/a-stock-data"
+  }
+}

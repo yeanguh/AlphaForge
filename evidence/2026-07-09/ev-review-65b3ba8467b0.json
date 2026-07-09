@@ -1,0 +1,43 @@
+{
+  "id": "ev-review-65b3ba8467b0",
+  "source_name": "loop_os/deterministic",
+  "source_type": "agent_review",
+  "title": "Agent评审：cycle 1 decision=hold_or_reject",
+  "url": null,
+  "observed_at": "2026-07-09T02:17:52.375635+00:00",
+  "claims": [
+    "decision=hold_or_reject",
+    "agent_provider=deterministic",
+    "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过 TradingAgents-astock adapter 接入。"
+  ],
+  "raw": {
+    "review_type": "deterministic_tradingagents_style_review",
+    "agent_provider": "deterministic",
+    "roles": {
+      "bull": [
+        "宁德时代上涨 1.6177%，短线风险偏好尚可。",
+        "绿的谐波上涨 1.1739%，短线风险偏好尚可。",
+        "主题桶 ai 在研报/资讯中出现 24 次，值得进入产业链验证。",
+        "主题桶 semiconductor 在研报/资讯中出现 4 次，值得进入产业链验证。",
+        "主题桶 new_energy 在研报/资讯中出现 3 次，值得进入产业链验证。"
+      ],
+      "bear": [
+        "绿的谐波估值处于 high band，需要更强业绩证据。",
+        "TSLA 5日样本最新变动偏弱，可能压制跨市场情绪。"
+      ],
+      "risk": [
+        "绿的谐波PB=20.32，安全边际需要复核。"
+      ],
+      "policy_news": [
+        "资讯跟踪：OpenAI - Our approach to government and national security partnerships",
+        "资讯跟踪：OpenAI - Separating signal from noise in coding evaluations",
+        "资讯跟踪：OpenAI - Helping K–12 educators build practical AI skills"
+      ],
+      "hot_money": [
+        "行业研报催化已形成候选池，但需要成交量、资金流和A股暴露二次验证。"
+      ]
+    },
+    "decision": "hold_or_reject",
+    "reason": "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过 TradingAgents-astock adapter 接入。"
+  }
+}

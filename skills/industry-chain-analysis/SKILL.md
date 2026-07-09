@@ -1,0 +1,118 @@
+---
+name: industry-chain-analysis
+description: >-
+  Build evidence-grounded, general-purpose industry-chain and value-chain
+  analysis for any industry, product, technology, commodity, company business,
+  or policy/theme. Use when the user asks for产业链分析, 上下游分析,
+  supply/value-chain mapping, business model and upstream/downstream
+  relationship analysis, chain-link decomposition, demand-to-supply
+  transmission, profit-pool/value-distribution analysis, cost/revenue driver
+  analysis, competitive landscape, key sub-segments, bottleneck/卡脖子
+  technologies, upstream material/component/process discovery, representative
+  A-share company mapping, company exposure/proportion and core-position
+  judgment, Serenity/白毛股神 style bottleneck/chokepoint investing, upstream
+  scarcity research, hidden champion screening, or stock-level
+  valuation/trading follow-through after chain mapping. This skill is
+  industry-neutral: start from the user's research question and industry
+  boundary, then map demand, downstream customers, midstream production/service
+  links, upstream inputs, substitutes, standards, channels, value capture,
+  risks, and investable listed-company exposure.
+---
+
+# Industry Chain Analysis
+
+## Overview
+
+Produce a structured industry-chain report from current sources, company filings, market data, and logical transmission paths. Focus on industry upstream/downstream analysis, bottleneck/chokepoint discovery, and A-share company exposure inside key chain links.
+
+This skill is not tied to any single industry. Treat examples from prior runs as test cases only. For every new task, rebuild the chain from the user's object, question, and decision context.
+
+All industry-chain analysis must apply `references/bottleneck-methodology.md`: 大趋势 -> 供应链 -> 物理约束 -> 瓶颈卡口 -> 稀缺供应商 -> 低配误定价 -> 催化跟踪 -> 反证退出.
+
+## Mode Selection
+
+Choose the mode before collecting data and do not silently upgrade the mode mid-answer.
+
+| Mode | Use For | Query Depth | Output |
+| --- | --- | --- | --- |
+| Light | Quick industry-chain overview or "上下游有哪些" questions | Minimal evidence set, usually 1-2 searches or data pulls | Conclusion list + compact chain table + compact bottleneck judgment + key A-share names if requested |
+| Standard | Key links, sub-segments, bottleneck technologies, value distribution, input/upstream discovery, business-model logic, and company exposure | 2-4 focused pulls for the core chain; for input-heavy themes add a compact upstream/resource/channel/IP expansion pass before company ranking | Chain map + input/upstream table when relevant + value distribution + bottleneck screen + A-share company mapping table |
+| Report | Formal industry-chain research memo or "完整报告" | Organize around a clear industry storyline; avoid unrelated exploration | Single Markdown report with chain map, bottleneck memo, key links, A-share mapping, risks, invalidation triggers, and reader-facing source summary |
+| Trading add-on | User asks for买点、技术面、目标价、估值、操作建议, or stock-level opportunity after company mapping | Run only after chain/company mapping; use related stock skills | Financial quality + valuation + price/technical table for selected A-share names |
+
+Do not start from stock-price momentum. Always complete the chain-link and company-exposure judgment first, then add stock-level valuation, technical, buy-point, or target-price analysis when requested.
+Light and Standard modes must stay Markdown-only. Do not generate HTML, SVG, or interactive charts unless the user explicitly requests a formal rendered report or webpage. When the user has not asked for a report, answer in the lowest sufficient mode and ask whether they want a formal report only after giving the useful result.
+
+## Related Skills
+
+- Use `providers/open_source/a_stock_data.py` after A-share candidates are mapped when the user needs public quote snapshots, price history, financial snapshots, announcements, fund-flow, research-report rows, valuation context, buy zone, stop-loss, target price, or technical/price assessment.
+- Use `providers/open_source/wen_cai.py` when configured to cross-check company business exposure, rating/report/event enrichment, concept membership, and public news/research clues.
+- Use `providers/open_source/global_stock_data.py` for overseas suppliers, global leaders, and cross-market validation.
+- Use `fireworks-tech-graph` for analysis diagrams, including industry-chain maps, value-chain flows, transmission paths, ranking/matrix visuals, or report figures. Generate local SVG and PNG with `rsvg-convert`; do not use Mermaid as the final report figure when the user requests chart/diagram output. For Report-mode figures, prefer the professional投研信息图 style in `references/visual-infographic.md`: large driver cards, central product/process visual, side rails for量价/国产替代/应用主线, company cards, timeline, and bottom conclusion. For industry-chain overview figures, default to Chinese labels and a vertical top-to-bottom layout unless the user explicitly requests English or horizontal layout.
+- When stock-level follow-through is needed, run the sequence: this skill for chain, bottleneck ranking, exposure, and invalidation triggers -> `providers/open_source/a_stock_data.py` for quote, valuation, financial, announcement, fund-flow, and technical setup -> `providers/open_source/wen_cai.py` for business/report/rating/event cross-checks.
+
+## Required Workflow
+
+1. Clarify the industry object. Normalize the target to an industry, product, technology, commodity, or theme. Define what is included and excluded.
+2. Select Light, Standard, or Report mode from the user's wording. If absent, default to Standard for company-mapping requests and Light for simple chain-overview requests.
+3. Establish report date, geography, and market scope. Default to China industry context and A-share company mapping when the user does not specify a market.
+4. Read `references/bottleneck-methodology.md` and apply it as a mandatory pass for every industry-chain analysis. Use `references/analysis-methodology.md` to choose the analysis spine: problem-driven, demand-backward, company-position, profit-pool, bottleneck, cycle, or investment-transmission view. Do not mechanically list every upstream/downstream link at equal depth.
+5. Collect fresh evidence for market size, demand, supply, price/cost indicators, capacity, competition, policy, technical route, bottleneck technologies, and listed-company exposure. Use `references/data-sourcing.md` before source collection and follow the module matrix in `../daily-a-share-news-impact/references/data-source-matrix.md`: quotes use mootdx/Tongdaxin first with Tencent/Eastmoney fallback, research reports use AKShare plus iwencai when configured, news uses AKShare plus authority checks, basic data uses Tongdaxin plus AKShare/CNINFO, and announcements use CNINFO/Giant Tide first. When public market data is needed, use AkShare, baostock, adata, efinance, and SEC EDGAR as low-frequency public-data adapters; prefer the shared helpers in `scripts/public_data.py` and run `scripts/check_data_sources.py` first, then feed the result into `SourceTrail.from_health_check()` to pre-fill the trail. For discovery, use industry-board constituents when the theme maps to a clean industry vertical, and concept-board constituents when the theme is cross-industry (创新药、AI、算力、机器人 etc.); never treat either as proof of industrial exposure. For company main-business checks, use `try_main_business(code)` as the standard entry point. For A-share filings and exposure evidence, use `try_akshare_cninfo_disclosure()` and `try_akshare_cninfo_profile()` before relying on market labels; for quote/base-info backup use `try_efinance_quote_snapshot()` and `try_efinance_base_info()`; for overseas suppliers use `try_sec_submissions()`. Use `render_chain_overview_table()`, `render_upstream_material_table()`, `render_core_value_distribution_table()`, and `render_company_mapping_table()` for consistent Markdown output.
+6. Run upstream/input discovery before company ranking. Use `references/upstream-discovery.md` when the target has physical inputs, process inputs, equipment, consumables, standards, channels, licenses, software/IP, data, logistics, or other enabling resources. Explicitly classify discovered links as core upstream, important upstream, adjacent infrastructure/service, commodity/background input, or out of scope.
+7. Map the industry chain from upstream resources/equipment/materials/services/IP, through midstream production/platform/operations, to downstream applications/customers/channels. Include substitutes, complements, standards, channels, and enabling infrastructure where material. When producing a Report-mode figure, first decide whether the primary visual should be a投研信息图 or a pure chain map. If the user asks for a professional chart, one-page insight, or provides an infographic-style sample, read `references/visual-infographic.md` and make the primary figure a `1分钟拆解产业链`-style infographic: top trigger cards for key numbers, central product/process visual, side rails for量价/替代/应用/风险, company cards, timeline, and conclusion strip. When a pure chain map is needed, draw the full-chain map as a vertical Chinese diagram: 上游资源/原材料/设备 at the top, 中游制造/集成/平台 in the middle, 下游客户/应用/channels at the bottom, with side lanes for 相邻基础设施, 替代路线, or 商品背景. Use short Chinese node labels plus one-line sublabels; avoid English-only nodes in Chinese reports.
+8. Decompose key links into sub-segments. For each material sub-segment, identify value share, cost share, scarcity, technical barriers, customer validation, regulation/standard constraints, bargaining power, import substitution,国产化率 when relevant, and whether it contains卡脖子 bottlenecks. Apply the four hard bottleneck standards from `references/bottleneck-methodology.md`: 不可替代、供给刚性、寡头垄断、机构低配. In Standard and Report modes, add a dedicated "产业链核心环节价值分布" module before the company table. Use the columns: 产业链环节、细分领域/关键产品、BOM成本占比/价值占比、核心技术壁垒、卡脖子程度、代表A股公司、公司环节地位、证据口径/备注. Treat this table as link-level analysis, not a replacement for the company-level 9-column mapping table.
+9. Build an A-share company mapping. For each relevant company, verify its exact chain link, sub-segment, exposure evidence, industry proportion, revenue/capacity/order contribution, technical capability, customer/channel position, and competitive position.
+10. Judge core status. State whether each company is core, important but replaceable, indirect, or concept-only within the sub-segment, and explain the evidence. When bottleneck evidence exists, additionally classify it as 卡口资产、重要配套、普通受益、间接概念, or 需排除.
+11. Analyze catalysts, tracking indicators, risks, and invalidation triggers. Connect each catalyst to the exact chain link, sub-segment, or company exposure it affects. A bottleneck thesis without explicit反证条件 is incomplete.
+12. If the user requests trading indicators or stock-level opportunity, narrow to the most relevant mapped companies, then use `providers/open_source/a_stock_data.py` and `providers/open_source/wen_cai.py` before writing买点、技术面、目标价、估值空间, or操作建议. Only promote a company into an actionable opportunity row when its institutional-trend setup is healthy (`institutional_trend_score >= 3.5` on the same 0-5 K-line/MA/volume rubric used across this repository); below that, keep it watchlist-level and say why.
+13. Produce the final report using `references/report-template.md`. If the report needs figures, read and use `fireworks-tech-graph` to generate SVG+PNG outputs and reference the PNG from the report. For professional report figures, also read `references/visual-infographic.md` and generate a research-infographic figure before or alongside the chain map. Read `references/a-share-screening.md` when the output includes A-share company mapping, exposure ranking, core-position judgment, or stock-level trading follow-through. Read `references/insight-design-constraints.md` when the task involves mode selection, ranking/scoring, report output, or handling unreliable data-source failures.
+14. For every Report-mode artifact, read `references/report-quality.md` and run `scripts/report_quality.py` against the generated `report.md` and `source_data.json`. Save the result as `quality_report.json` beside the report. If the gate fails, fix the report structure, figure assets, evidence base, or investment-opportunity framing before delivery; do not treat a failed gate as a reader-facing appendix.
+
+## Evidence Rules
+
+- Prefer primary and high-authority sources: company annual/interim reports, prospectuses, exchange filings, investor relations records, regulator documents, industry association releases, official statistics, customs data, credible market-data providers, and reputable news wires.
+- Treat AkShare, baostock, adata, efinance, and SEC EDGAR as public-data adapters, not primary proof for A-share operating exposure. Use them sparingly to discover board constituents, market heat, quotes, financial snapshots, main-business text, announcements, overseas filings, and cross-checks; verify decisive claims with filings, official releases, company IR, exchange announcements, or source trails.
+- Verify time-sensitive facts with current sources. Do not rely on memory for market size, prices, capacity, policy status, company executives, or listed-company exposure.
+- Do not infer company exposure from market labels alone. Require filings, product pages, orders/customers, capacity disclosures, patents, certifications, or reputable third-party confirmation.
+- Do not stop at the visible finished-product, platform, or manufacturing link. For each industry, ask what the company buys, sells, controls, depends on, and can be substituted by. For physical products, verify resources, process materials, structural/electronic/package materials, equipment, consumables, and adjacent infrastructure. For services/platforms, verify traffic/data, licenses, channels, brands, infrastructure, software/IP, labor, compliance, and customer acquisition.
+- Treat "产业占比" precisely. State whether it means revenue share, segment revenue share, shipment/capacity share, market share, customer concentration, or qualitative exposure. Mark "未披露" when exact proportions are unavailable.
+- Flag weak evidence. Use terms such as "待验证", "间接相关", or "概念关联" when exposure is not confirmed.
+- Avoid overfitting a stock narrative. Explain the chain and sub-segment value logic before ranking companies.
+
+## Output Standards
+
+- Write in Chinese by default unless the user requests another language.
+- Start with the industry-chain conclusion and bottleneck judgment, then show the evidence and upstream/midstream/downstream map. Every answer should explain "结构是什么、头部是谁、差异在哪、卡口在哪里、意味着什么"; do not output only a raw company list or source table.
+- In methodology-heavy answers, explicitly cover "发现需求、找上游、查中游、看下游、抓龙头" when useful, and explain whether current profit transmission is driven by input shortage, input abundance, end-demand expansion, or end-demand contraction.
+- In Report mode, structure the final output as a reader-facing research memo: 核心结论 -> 研究边界 -> 行业背景/需求驱动 -> 产业链图谱 -> 上游材料/部件发现 -> 产业链核心环节价值分布 -> 四层物理约束校验 -> 竞争格局 -> A股映射/卡口公司评分 -> 可选交易跟踪 -> 催化、风险与反证退出 -> 数据来源、证据强度与待核验事项. Borrow this formal-report pacing, but adapt chapter names to the industry instead of forcing an exact external template.
+- In Report mode, put all static assets under an `assets/` subdirectory beside `report.md` by default. Local chart and image references inside `report.md` must use `assets/...` relative paths, for example `![产业链图谱](assets/chain.png)`. Never write `/Users/...`, `file://...`, remote `http(s)://...`, or bare same-directory image paths in archived Markdown reports.
+- Keep Report-mode structure stable even when evidence is thin. If a section has limited evidence, include a short low-confidence discussion and explicit待核验事项 instead of dropping the section. The final report should be easy to scan and compare across industries.
+- For report-mode analysis charts, use `fireworks-tech-graph` outputs: save `.svg` and `.png` under `assets/`, validate with `rsvg-convert` or the available renderer fallback, and reference the PNG using a relative Markdown image path such as `![产业链投研拆解图](assets/chain-infographic.png)` or `![产业链图谱](assets/chain.png)`. Do not use absolute filesystem paths inside `report.md`. The preferred primary figure is a professional投研信息图 when the report is meant to be shared or when the user asks for更专业: top numeric trigger cards, central product/process visual, side rails for量价/国产替代/应用主线, company cards, core drivers, timeline, and bottom conclusion. Industry-chain overview figures must be vertical Chinese diagrams by default: top-to-bottom layers, visible layer headers, main-chain arrows downward, adjacent-chain arrows dashed/sideways, and a legend explaining 主链、关键上游、相邻基础设施、商品背景、待验证. Do not use dense horizontal swimlanes as the primary report figure unless the chain is naturally time-based or the user requests a horizontal comparison.
+- When generating local report artifacts in a repository, save them under `reports/industry/<topic-slug>-<YYYY-MM-DD>/` by default. Keep `report.md`, `source_data.json`, `quality_report.json`, generation scripts, and an `assets/` directory together in that report directory; put SVG/PNG figures and other static resources under `assets/`. This `reports/industry/` root is the intended, non-hidden archive location for industry-chain products and is an explicit exemption from the daily-skill rule that puts periodic-review artifacts under `local/reviews/`.
+- Always include a key-link A-share mapping table when the user asks for related companies. Use the single canonical 9-column company-mapping table defined in `references/a-share-screening.md` (公司、代码、环节、细分领域、产业占比/暴露度、核心技术/产品、卡脖子相关性、环节地位、证据与备注); do not invent per-mode column variants.
+- In Standard and Report modes, include the "产业链核心环节价值分布" module whenever the task involves value distribution, BOM cost, core barriers, bottlenecks, or company ranking. This table is link-level and must precede the company mapping table. Use BOM cost share when a credible BOM source exists; otherwise use value share, revenue pool, gross-margin pool, capacity/share, or qualitative high/medium/low with an explicit evidence basis.
+- In Standard and Report modes for physical industries, include an upstream-material discovery table or explicitly state why upstream materials are not material to the thesis.
+- For each mapped company, fill chain link, sub-segment, exposure/proportion, key technology/product,卡脖子 relevance, and core-position judgment in that canonical table.
+- Separate "核心环节龙头", "关键技术突破者", "重要配套", "间接相关", and "待验证概念" when evidence supports that distinction.
+- Deeply mine investable chain opportunities by linking each company to a scarce chain link, value-capture mechanism, catalyst path, and evidence strength. Rank opportunities by direct exposure and bottleneck value before market heat; never promote a concept-only company into a core opportunity because its stock is popular.
+- For Standard and Report mode, include bottleneck candidates, four-standard validation, and invalidation triggers when the evidence base supports company ranking. If the evidence does not support a bottleneck conclusion, explicitly say which links are only ordinary beneficiaries or weak concepts.
+- If giving buy points, technical analysis, target prices, or operation suggestions, explicitly label that section as stock-level follow-through and cite/derive it from public provider evidence and retained industry-chain conclusions.
+- End with missing data or next verification steps when source access is incomplete.
+- Do not include "公共数据适配器留痕", raw adapter call logs, health-check tables, endpoint failure tables, or `render_source_trail_table()` output in the reader-facing report. Keep AkShare/baostock/adata call details, retries, failures, row counts, and runtime diagnostics in `source_data.json`. The report may include only a compact claim-level source table and caveats that materially affect conclusions.
+- For reports created across multiple turns, maintain one complete current report. Fold new constraints or evidence into the main structure instead of appending a disconnected supplement, unless the user explicitly asks for an appendix or standalone addendum.
+- Do not include generation-process wording in reader-facing reports, such as "本次补充", "上一版", "重新跑", "根据用户反馈", or "当前优化". Put runtime notes and data-fetch failures in `source_data.json` or the source-trail section only when they affect confidence.
+- For archived reports, include `quality_report.json` in the output directory. It is a generation artifact, not part of the reader-facing report.
+
+## References
+
+- Read `references/data-sourcing.md` before collecting sources or when evidence is thin. It is the single data reference and covers source priority, the evidence checklist, the AkShare/baostock/adata adapters, reusable helpers, and failure handling.
+- Read `references/bottleneck-methodology.md` for every industry-chain analysis. It defines the mandatory bottleneck pass, four hard standards, scoring rubric, output additions, and invalidation discipline.
+- Read `references/analysis-methodology.md` before Standard or Report mode, or whenever the user asks for methodology, business model, chain position, value distribution, why a company makes money, or how to analyze an unfamiliar industry.
+- Read `references/upstream-discovery.md` before finalizing Standard or Report mode outputs for hardware, electronics, semiconductors, energy equipment, chemicals, aerospace, autos, robotics, medical devices, communications, commodities, or any theme where upstream materials/parts may matter. It also includes the evidence checklist for upstream claims and weak-evidence marking rules.
+- Use `scripts/check_data_sources.py` to probe adapter reachability before collecting public data, then feed the result into `SourceTrail.from_health_check()`. Import `scripts/public_data.py` for safe adapter calls, `try_main_business()` auto-fallback, Markdown table renderers, and `source_data.json` source-trail writing instead of re-implementing them per report.
+- Read `references/report-template.md` before drafting the final report. Light mode uses the 4-column chain overview table; Standard and Report modes use the 9-column company mapping table.
+- Use `fireworks-tech-graph` when producing report diagrams or analysis charts; load its default style reference and follow its SVG validation/export workflow.
+- Read `references/visual-infographic.md` when the user asks for a professional chart, provides an infographic sample, or the Report-mode output should include a shareable one-page industry-chain insight figure.
+- Read `references/a-share-screening.md` when the output includes A-share company mapping, exposure ranking, core-technology analysis, sub-segment core-position judgment, valuation, technical analysis, buy points, or target prices. It defines both table schemas and the institutional-trend gate.
+- Read `references/insight-design-constraints.md` when the task involves mode selection, ranking/scoring, report output, performance, or error-handling for unreliable data sources.
+- Read `references/report-quality.md` before finalizing Report-mode outputs, or whenever the user asks for higher data confidence, stable report structure,图文并茂, clearer insight, or deeper investment-opportunity mining.

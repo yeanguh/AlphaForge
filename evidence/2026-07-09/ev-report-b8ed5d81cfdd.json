@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-b8ed5d81cfdd",
+  "source_name": "eastmoney_industry_report/国元证券",
+  "source_type": "industry_research_report",
+  "title": "人形机器人周报：马斯克发布弗里蒙特工厂产线合影，Optimus或进入关键量产准备阶段",
+  "url": null,
+  "observed_at": "2026-07-09T00:43:59.933544+00:00",
+  "claims": [
+    "industry=专用设备",
+    "rating=增持",
+    "publish_date=2026-07-09"
+  ],
+  "raw": {
+    "title": "人形机器人周报：马斯克发布弗里蒙特工厂产线合影，Optimus或进入关键量产准备阶段",
+    "industry_name": "专用设备",
+    "industry_code": "910",
+    "org": "国元证券",
+    "rating": "增持",
+    "publish_date": "2026-07-09",
+    "info_code": "AP202607091826830554",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826830554_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826830554_1.pdf",
+    "report_type": 3
+  }
+}

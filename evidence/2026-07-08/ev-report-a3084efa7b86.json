@@ -1,0 +1,23 @@
+{
+  "id": "ev-report-a3084efa7b86",
+  "source_name": "eastmoney_industry_report/上海证券",
+  "source_type": "industry_research_report",
+  "title": "社会服务行业周报：稳中有升，关注旺季文旅消费",
+  "url": null,
+  "observed_at": "2026-07-08T12:06:34.288639+00:00",
+  "claims": [
+    "industry=酒店餐饮",
+    "rating=增持",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "社会服务行业周报：稳中有升，关注旺季文旅消费",
+    "industry_name": "酒店餐饮",
+    "industry_code": "1271",
+    "org": "上海证券",
+    "rating": "增持",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826814636",
+    "report_type": 3
+  }
+}

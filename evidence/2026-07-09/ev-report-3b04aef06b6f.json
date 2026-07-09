@@ -1,0 +1,34 @@
+{
+  "id": "ev-report-3b04aef06b6f",
+  "source_name": "eastmoney_industry_report/国金证券",
+  "source_type": "industry_research_report",
+  "title": "计算机行业研究：云计算产业更新",
+  "url": null,
+  "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833868_1.pdf",
+  "raw_path": null,
+  "claim_id": "ev-report-3b04aef06b6f:claim:0",
+  "freshness": "2026-07-09",
+  "related_companies": [],
+  "related_themes": [
+    "软件开发"
+  ],
+  "observed_at": "2026-07-09T03:41:22.084599+00:00",
+  "created_at": "2026-07-09T03:41:22.084600+00:00",
+  "claims": [
+    "industry=软件开发",
+    "rating=买入",
+    "publish_date=2026-07-09"
+  ],
+  "raw": {
+    "title": "计算机行业研究：云计算产业更新",
+    "industry_name": "软件开发",
+    "industry_code": "737",
+    "org": "国金证券",
+    "rating": "买入",
+    "publish_date": "2026-07-09",
+    "info_code": "AP202607091826833868",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833868_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833868_1.pdf",
+    "report_type": 3
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ev-review-d0a7a4c63a4c",
+  "source_name": "loop_os/codex",
+  "source_type": "agent_review",
+  "title": "Agent评审：cycle 1 decision=needs_more_evidence",
+  "url": null,
+  "observed_at": "2026-07-08T12:31:44.403886+00:00",
+  "claims": [
+    "decision=needs_more_evidence",
+    "agent_provider=codex",
+    "AI、机器人、半导体和工程机械有密集机构与新闻催化，但核心标的价格和估值分化明显，仍需补足订单、业绩暴露与资金结构证据。"
+  ],
+  "raw": {
+    "review_type": "codex_agent_summary",
+    "agent_provider": "codex",
+    "roles": {
+      "bull": [
+        "行业链分析显示AI为最高频主题桶，出现26次，半导体8次、设备7次，主题集中度较高；证据：industry_analysis/top_theme_buckets。",
+        "机械设备研报明确提出人形机器人进入量产爬坡阶段、看好物理AI中长期机遇，评级增持；证据：AP202607081826816375。",
+        "工程机械两篇研报分别提到销量延续高增、内外需共振，以及6月挖机内销高增长、出口刷新单月历史新高；证据：AP202607081826821062、AP202607081826817336。",
+        "国产CPU与IC封装基板分别出现Intel提价窗口和算力时代国产高端化突围的研究信号；证据：AP202607081826821919、AP202607081826821159。",
+        "贵州茅台600519小幅上涨0.8832且PE 18.13、valuation_band为normal，提供低波动权重资产对照；证据：a_share_quotes/600519/tencent_finance。"
+      ],
+      "bear": [
+        "绿的谐波688017当日下跌15.9266%，且PE 524.17、PB 20.09、valuation_band为high，提示机器人链高估值兑现压力；证据：a_share_quotes/688017/tencent_finance。",
+        "宁德时代300750当日下跌3.0846%，说明新能源主线情绪并非全面扩散；证据：a_share_quotes/300750/tencent_finance。",
+        "运动服饰报告标题显示2Q26整体流水表现环比减弱，消费板块存在景气分化；证据：AP202607081826818974。",
+        "TSLA数据存在fallback_reason为HTTPError 403且字段异常，全球映射参考质量不足；证据：global_charts/TSLA/tencent_us_quote。"
+      ],
+      "risk": [
+        "输入行业分析的catalysts多为hypothesis，明确要求继续验证需求、上游卡口和A股真实暴露，尚未构成闭环证据；证据：industry_analysis/catalysts。",
+        "行业分析next_actions要求补充反证条件和退出条件，说明当前研究仍处于候选筛选阶段；证据：industry_analysis/next_actions。",
+        "部分研报只有标题、评级和元数据，缺少核心财务预测、订单数据和目标价字段；证据：industry_reports/raw中predict字段与indvAimPrice字段为空。",
+        "高估值机器人标的与行业催化同日背离，存在题材拥挤和预期过满风险；证据：AP202607081826816375、a_share_quotes/688017/tencent_finance。"
+      ],
+      "policy_news": [
+        "2026世界机器人大会新闻发布会在京召开，提供机器人主题新闻催化；证据：news_headlines/量子位/2026-07-08T10:04:39+00:00。",
+        "OpenAI连续发布Australian Payments Plus、MUFG和ChatGPT adoption案例，显示企业AI采用新闻流延续；证据：news_headlines/OpenAI/2026-07-07与2026-06-30。",
+        "Hugging Face同日发布与Amazon SageMaker、Microsoft Foundry、SkyPilot相关AI工作负载内容，云端AI生态合作活跃；证据：news_headlines/Hugging Face/2026-07-07。",
+        "Google Research发布交通拥堵协作、热韧性数据扩展和TabFM表格基础模型内容，AI应用与数据基础模型新闻持续；证据：news_headlines/Google Research/2026-07-07与2026-06-30。"
+      ],
+      "hot_money": [
+        "绿的谐波688017成交额804140、成交量19684351且单日跌幅15.9266%，显示机器人高弹性标的短线资金剧烈出清；证据：a_share_quotes/688017/tencent_finance。",
+        "宁德时代300750成交额990274但价格下跌3.0846%，新能源权重资金承压；证据：a_share_quotes/300750/tencent_finance。",
+        "NVDA最新收盘上涨0.7057，而AAPL下跌0.6397、TSLA下跌4.0189，海外科技情绪分化；证据：global_charts/NVDA、global_charts/AAPL、global_charts/TSLA。"
+      ]
+    },
+    "decision": "needs_more_evidence",
+    "reason": "AI、机器人、半导体和工程机械有密集机构与新闻催化，但核心标的价格和估值分化明显，仍需补足订单、业绩暴露与资金结构证据。",
+    "next_actions": [
+      "验证机器人/物理AI主题的真实订单、量产节奏和A股收入暴露，重点对照研报AP202607081826816375与行情600688017。",
+      "验证工程机械6月高增长是否来自持续需求而非短期补库，交叉核对AP202607081826821062与AP202607081826817336。",
+      "验证国产CPU与IC封装基板的上游卡口、客户导入和资本开支兑现，证据源AP202607081826821919与AP202607081826821159。",
+      "补充绿的谐波688017下跌后的成交结构、龙虎榜/机构席位和估值消化证据，当前仅有tencent_finance报价证据。",
+      "剔除只有新闻热度但缺少A股业绩映射的AI概念，要求每个候选主题绑定收入/订单/产能证据。"
+    ],
+    "artifact_dir": "/Users/bytedance/Documents/a-analysis/research-os/runs/2026-07-08/full-loop-203059/cycle-001/agent-review"
+  }
+}

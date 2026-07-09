@@ -1,0 +1,4 @@
+interface:
+  display_name: "产业链分析"
+  short_description: "产业链、瓶颈卡口、低频公共数据源与A股映射"
+  default_prompt: "Use $industry-chain-analysis to map an industry chain, apply the mandatory bottleneck/chokepoint methodology, collect filing-first A-share evidence, use module-specific public-data fallbacks from the data-source matrix, identify key companies and invalidation triggers, and add valuation or trading follow-through when needed."

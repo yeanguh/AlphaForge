@@ -1,0 +1,17 @@
+{
+  "id": "ev-news-a0c06d5f59f7",
+  "source_name": "OpenAI",
+  "source_type": "news",
+  "title": "How ChatGPT adoption has expanded",
+  "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+  "observed_at": "2026-07-08T14:24:44.719564+00:00",
+  "claims": [
+    "How ChatGPT adoption has expanded"
+  ],
+  "raw": {
+    "title": "How ChatGPT adoption has expanded",
+    "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+    "published_at": "2026-06-30T09:00:00+00:00",
+    "source": "OpenAI"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-246207d6d642",
+  "source_name": "eastmoney_industry_report/浦银国际证券",
+  "source_type": "industry_research_report",
+  "title": "运动服饰行业：2Q26整体流水表现环比减弱，聚焦下半年趋势反转的可能性",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719626+00:00",
+  "claims": [
+    "industry=服装家纺",
+    "rating=",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "运动服饰行业：2Q26整体流水表现环比减弱，聚焦下半年趋势反转的可能性",
+    "industry_name": "服装家纺",
+    "industry_code": "1225",
+    "org": "浦银国际证券",
+    "rating": "",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826818974",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826818974_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826818974_1.pdf",
+    "report_type": 3
+  }
+}

@@ -1,0 +1,882 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-09T03:41:22.318686+00:00",
+  "loops": {
+    "full_loop": {
+      "status": "ok",
+      "last_run_id": "full-loop-113959",
+      "last_cycle": 1,
+      "last_run_at": "2026-07-09T03:41:22.318686+00:00",
+      "next_action": "continue_loop",
+      "evidence_count": 37
+    }
+  },
+  "notes": "State machine snapshot root for current research loop status.",
+  "themes": [
+    {
+      "id": "theme-141a92417f71",
+      "name": "ai",
+      "status": "tracking",
+      "last_seen_at": "2026-07-08T12:31:44.432491+00:00",
+      "signal_count": 26,
+      "evidence_ids": [
+        "ev-market-cn-600a0eb57571",
+        "ev-market-cn-0f7723128961",
+        "ev-market-cn-51e2587ce764",
+        "ev-market-global-16670bba8681",
+        "ev-market-global-fac8cda0a8e2",
+        "ev-market-global-e3dab49bb1a2",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T11:44:47.616533+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:45:41.046921+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:46:21.129511+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "signal_count": 27
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "signal_count": 26
+        }
+      ]
+    },
+    {
+      "id": "theme-18474156b570",
+      "name": "semiconductor",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "signal_count": 6,
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "signal_count": 9
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "signal_count": 9
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "signal_count": 9
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        }
+      ]
+    },
+    {
+      "id": "theme-bedcc40ee5df",
+      "name": "equipment",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "signal_count": 15,
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "signal_count": 24
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "signal_count": 15
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "signal_count": 15
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "signal_count": 15
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "signal_count": 15
+        }
+      ]
+    },
+    {
+      "id": "theme-b43f91a7e751",
+      "name": "new_energy",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "signal_count": 3,
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        }
+      ]
+    },
+    {
+      "id": "theme-0d612c12d2ac",
+      "name": "auto",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "signal_count": 3,
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T11:45:41.046921+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T11:46:21.129511+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        }
+      ]
+    },
+    {
+      "id": "theme-3c24eb378bb8",
+      "name": "ai_physical_ai",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "signal_count": 43,
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "signal_count": 34
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "signal_count": 34
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "signal_count": 34
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "signal_count": 34
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "signal_count": 34
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "signal_count": 35
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "signal_count": 35
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "signal_count": 35
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "signal_count": 17
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "signal_count": 17
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "signal_count": 17
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "signal_count": 17
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "signal_count": 41
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "signal_count": 41
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "signal_count": 41
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "signal_count": 41
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "signal_count": 43
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "signal_count": 41
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "signal_count": 43
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "signal_count": 43
+        }
+      ]
+    },
+    {
+      "id": "theme-43d4991437f6",
+      "name": "financial",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "signal_count": 3,
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        }
+      ]
+    },
+    {
+      "id": "theme-cb7a82c31787",
+      "name": "consumer",
+      "status": "tracking",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "signal_count": 7,
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "signal_count": 6
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "signal_count": 7
+        }
+      ]
+    }
+  ]
+}

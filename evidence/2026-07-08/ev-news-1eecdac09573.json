@@ -1,0 +1,17 @@
+{
+  "id": "ev-news-1eecdac09573",
+  "source_name": "Google Research",
+  "source_type": "news",
+  "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
+  "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/",
+  "observed_at": "2026-07-08T14:24:44.719572+00:00",
+  "claims": [
+    "Introducing TabFM: A zero-shot foundation model for tabular data"
+  ],
+  "raw": {
+    "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
+    "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/",
+    "published_at": "2026-06-30T10:26:00+00:00",
+    "source": "Google Research"
+  }
+}

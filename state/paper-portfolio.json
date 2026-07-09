@@ -1,0 +1,564 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-09T03:41:22.318686+00:00",
+  "positions": [],
+  "cash": 1000000.0,
+  "reviews": [
+    {
+      "at": "2026-07-08T11:44:47.616533+00:00",
+      "run_id": "full-loop-194432",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": null,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-edb1208994e4"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:45:41.046921+00:00",
+      "run_id": "full-loop-194525",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-b49d43889537"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:46:21.129511+00:00",
+      "run_id": "full-loop-194602",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-9d0de5703822"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:48:02.977425+00:00",
+      "run_id": "full-loop-194735",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-dee577833dc2"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:49:18.540798+00:00",
+      "run_id": "full-loop-194906",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-e09afb3edac9"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:50:40.331461+00:00",
+      "run_id": "full-loop-195027",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-b962a0b1640e"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T11:58:29.616858+00:00",
+      "run_id": "full-loop-195815",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-983d115379c8"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:01:22.069355+00:00",
+      "run_id": "full-loop-200110",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-31c394d1a071"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:01:34.405110+00:00",
+      "run_id": "full-loop-200110",
+      "cycle": 2,
+      "decision": "hold_or_reject",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-8f161dc5da54"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:04:43.679857+00:00",
+      "run_id": "full-loop-200406",
+      "cycle": 1,
+      "decision": "needs_more_evidence",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-f4526e9c54b1"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:05:52.891442+00:00",
+      "run_id": "full-loop-200510",
+      "cycle": 1,
+      "decision": "needs_more_evidence",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-f96ee359d312"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:06:34.323547+00:00",
+      "run_id": "full-loop-200510",
+      "cycle": 2,
+      "decision": "needs_more_evidence",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-c97912f916e1",
+        "ev-report-a3084efa7b86",
+        "ev-review-01ebf94e72df"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:31:44.432491+00:00",
+      "run_id": "full-loop-203059",
+      "cycle": 1,
+      "decision": "needs_more_evidence",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-report-732a89dc8a2e",
+        "ev-report-c97912f916e1",
+        "ev-review-d0a7a4c63a4c"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:52:03.105036+00:00",
+      "run_id": "full-loop-205146",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-e5b2e158c7e5",
+        "ev-decision-e5b2e158c7e5",
+        "ev-review-e5b2e158c7e5"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:52:49.524976+00:00",
+      "run_id": "full-loop-205228",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-ad6022052059",
+        "ev-decision-ad6022052059",
+        "ev-review-ad6022052059"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:53:13.184274+00:00",
+      "run_id": "research-os-debug-c56_fzpd",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-dfe160e29f72",
+        "ev-decision-dfe160e29f72",
+        "ev-review-dfe160e29f72"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T12:53:42.522086+00:00",
+      "run_id": "full-loop-205325",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-1931adecb688",
+        "ev-decision-1931adecb688",
+        "ev-review-1931adecb688"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T13:01:41.673241+00:00",
+      "run_id": "full-loop-210050",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-0867e7244289",
+        "ev-decision-0867e7244289",
+        "ev-review-0867e7244289"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T13:03:39.458984+00:00",
+      "run_id": "full-loop-210228",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-6eb9ba4e11d6",
+        "ev-decision-6eb9ba4e11d6",
+        "ev-review-6eb9ba4e11d6"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T13:05:25.253376+00:00",
+      "run_id": "full-loop-210426",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-fc4395ecabd5",
+        "ev-decision-fc4395ecabd5",
+        "ev-review-fc4395ecabd5"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T14:16:32.885285+00:00",
+      "run_id": "full-loop-221544",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-e92600d26fb5",
+        "ev-decision-e92600d26fb5",
+        "ev-review-e92600d26fb5"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T14:20:16.308829+00:00",
+      "run_id": "full-loop-221934",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-e9cf7d569da9",
+        "ev-decision-e9cf7d569da9",
+        "ev-review-e9cf7d569da9"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-08T14:24:44.762113+00:00",
+      "run_id": "full-loop-222405",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-aeaa32ce4d4d",
+        "ev-decision-aeaa32ce4d4d",
+        "ev-review-aeaa32ce4d4d"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T00:18:41.596757+00:00",
+      "run_id": "full-loop-081758",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "financial",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-8de8be08a1a0",
+        "ev-decision-8de8be08a1a0",
+        "ev-review-8de8be08a1a0"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T00:39:33.192380+00:00",
+      "run_id": "full-loop-083847",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "financial",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-4b98c711b785",
+        "ev-decision-4b98c711b785",
+        "ev-review-4b98c711b785"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T00:41:22.999511+00:00",
+      "run_id": "full-loop-084038",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "financial",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-ff41dd5c7c4b",
+        "ev-decision-ff41dd5c7c4b",
+        "ev-review-ff41dd5c7c4b"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T00:43:59.966321+00:00",
+      "run_id": "full-loop-084304",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "financial",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-9ac8c7f9e4f7",
+        "ev-decision-9ac8c7f9e4f7",
+        "ev-review-9ac8c7f9e4f7"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T02:17:52.414274+00:00",
+      "run_id": "full-loop-101636",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-65b3ba8467b0",
+        "ev-decision-65b3ba8467b0",
+        "ev-review-65b3ba8467b0"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T02:37:15.796414+00:00",
+      "run_id": "full-loop-103628",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-c65236eae031",
+        "ev-decision-c65236eae031",
+        "ev-review-c65236eae031"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T02:52:38.797227+00:00",
+      "run_id": "full-loop-105110",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-b0a608ad6f8b",
+        "ev-decision-b0a608ad6f8b",
+        "ev-review-b0a608ad6f8b"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T02:56:24.471492+00:00",
+      "run_id": "full-loop-105454",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-tradingagents-feca70f842f1",
+        "ev-decision-feca70f842f1",
+        "ev-review-feca70f842f1"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T03:08:32.400212+00:00",
+      "run_id": "full-loop-110716",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-dd67166ee9cd",
+        "ev-decision-dd67166ee9cd",
+        "ev-tradingagents-dd67166ee9cd"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T03:11:44.999540+00:00",
+      "run_id": "full-loop-111031",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-039425a6a14f",
+        "ev-decision-039425a6a14f",
+        "ev-tradingagents-039425a6a14f"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T03:20:35.336599+00:00",
+      "run_id": "full-loop-111928",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-f90dcf3fef7f",
+        "ev-decision-f90dcf3fef7f",
+        "ev-tradingagents-f90dcf3fef7f"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-09T03:41:22.318686+00:00",
+      "run_id": "full-loop-113959",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai_physical_ai",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-d90f3982eadb",
+        "ev-decision-d90f3982eadb",
+        "ev-tradingagents-d90f3982eadb"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    }
+  ]
+}

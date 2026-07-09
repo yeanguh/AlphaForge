@@ -1,0 +1,5 @@
+policy:
+  mode: research_only
+  allow_real_trading: false
+  require_evidence_for_state_change: true
+  require_harness_before_state_write: true

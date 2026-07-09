@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-2126334ec6c3",
+  "source_name": "eastmoney_industry_report/华源证券",
+  "source_type": "industry_research_report",
+  "title": "计算机行业点评：Meta仍在大模型“牌桌”上",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719594+00:00",
+  "claims": [
+    "industry=IT服务Ⅱ",
+    "rating=增持",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "计算机行业点评：Meta仍在大模型“牌桌”上",
+    "industry_name": "IT服务Ⅱ",
+    "industry_code": "1238",
+    "org": "华源证券",
+    "rating": "增持",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826823146",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826823146_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826823146_1.pdf",
+    "report_type": 3
+  }
+}

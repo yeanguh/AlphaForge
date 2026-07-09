@@ -1,0 +1,22 @@
+{
+  "id": "ev-market-global-f5d0024913c0",
+  "source_name": "global-stock-data/yahoo_chart",
+  "source_type": "global_market_snapshot",
+  "title": "全球股票行情快照：TSLA",
+  "url": null,
+  "observed_at": "2026-07-08T14:16:32.850831+00:00",
+  "claims": [
+    "TSLA latest_close=393.5799865722656",
+    "TSLA change_pct=-2.3132"
+  ],
+  "raw": {
+    "symbol": "TSLA",
+    "currency": "USD",
+    "exchange": "NMS",
+    "latest_close": 393.5799865722656,
+    "previous_close": 402.8999938964844,
+    "change_pct": -2.3132,
+    "bars": 5,
+    "source": "yahoo_chart"
+  }
+}

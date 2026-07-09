@@ -1,0 +1,34 @@
+providers:
+  a_stock_data:
+    type: active_provider
+    submodule: skills/a-stock-data
+    adapter: providers/open_source/a_stock_data.py
+  investment_news:
+    type: active_provider
+    submodule: external/investment-news
+    adapter: providers/open_source/investment_news.py
+  global_stock_data:
+    type: active_provider
+    submodule: skills/global-stock-data
+    adapter: providers/open_source/global_stock_data.py
+  tradingagents_astock:
+    type: review_provider_smoke_only
+    submodule: external/TradingAgents-astock
+    adapter: providers/open_source/tradingagents_astock.py
+  vibe_research:
+    type: ui_reference_smoke_only
+    submodule: external/Vibe-Research
+    adapter: providers/open_source/vibe_research.py
+  vibe_trading:
+    type: strategy_sandbox_smoke_only
+    submodule: external/Vibe-Trading
+    adapter: providers/open_source/vibe_trading.py
+references:
+  hermes_agent:
+    type: note_only
+    upstream: https://github.com/NousResearch/hermes-agent
+    note: providers/reference/hermes_agent_notes.md
+  tradingagents_upstream:
+    type: note_only
+    upstream: https://github.com/TauricResearch/TradingAgents
+    note: providers/reference/tradingagents_upstream_notes.md

@@ -1,0 +1,24 @@
+{
+  "id": "ev-news-d1ab609c1779",
+  "source_name": "Google Research",
+  "source_type": "news",
+  "title": "Expanding our Heat Resilience data to 50+ global cities",
+  "url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities/",
+  "source_url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities/",
+  "raw_path": null,
+  "claim_id": "ev-news-d1ab609c1779:claim:0",
+  "freshness": "2026-06-30T17:03:00+00:00",
+  "related_companies": [],
+  "related_themes": [],
+  "observed_at": "2026-07-09T03:41:22.084532+00:00",
+  "created_at": "2026-07-09T03:41:22.084533+00:00",
+  "claims": [
+    "Expanding our Heat Resilience data to 50+ global cities"
+  ],
+  "raw": {
+    "title": "Expanding our Heat Resilience data to 50+ global cities",
+    "url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities/",
+    "published_at": "2026-06-30T17:03:00+00:00",
+    "source": "Google Research"
+  }
+}

@@ -1,0 +1,3343 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-09T03:41:22.318686+00:00",
+  "catalysts": [
+    {
+      "id": "cat-f82e2cf86c74",
+      "theme_id": "theme-a8387cbaf837",
+      "status": "validating",
+      "title": "2026年中国IC封装基板行业概览：算力时代下国产IC封装基板的高端化突围",
+      "source": "eastmoney_industry_report",
+      "industry": "元件",
+      "publish_date": "2026-07-08",
+      "hypothesis": "元件出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-0478db2b8b69",
+      "theme_id": "theme-861c36e9c498",
+      "status": "validating",
+      "title": "零碳搬运力——新能源装载机驱动工程机械绿色跃迁 头豹词条报告系列",
+      "source": "eastmoney_industry_report",
+      "industry": "电机Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "电机Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-a4829f6d5b83",
+      "theme_id": "theme-b0b9b76beef4",
+      "status": "validating",
+      "title": "6月工程机械行业主要产品销售点评：销量延续高增，内外需共振支撑增长",
+      "source": "eastmoney_industry_report",
+      "industry": "工程机械",
+      "publish_date": "2026-07-08",
+      "hypothesis": "工程机械出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-f46e836c39a7",
+      "theme_id": "theme-43d4991437f6",
+      "status": "validating",
+      "title": "银行业理财2026年7月月报：弱化的回表，他行代销如何影响理财展业",
+      "source": "国信证券",
+      "industry": "银行Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-e945ac12c097",
+      "theme_id": "theme-7eb71e8ad999",
+      "status": "validating",
+      "title": "社会服务行业双周报（第133期）：国内寿司赛道观察，跨周期性价比模型的高线渗透",
+      "source": "eastmoney_industry_report",
+      "industry": "酒店餐饮",
+      "publish_date": "2026-07-08",
+      "hypothesis": "酒店餐饮出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-8988b54d5f14",
+      "theme_id": "theme-b9e23f34337f",
+      "status": "validating",
+      "title": "运动服饰行业：2Q26整体流水表现环比减弱，聚焦下半年趋势反转的可能性",
+      "source": "eastmoney_industry_report",
+      "industry": "服装家纺",
+      "publish_date": "2026-07-08",
+      "hypothesis": "服装家纺出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-e7811ae1bd4c",
+        "ev-market-cn-987a9df9e172",
+        "ev-market-cn-181b4053a27e",
+        "ev-market-global-e450bbbbf584",
+        "ev-market-global-22378b5d6dd9",
+        "ev-market-global-9be58359e125",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T13:05:25.253376+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:44:47.616533+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:45:41.046921+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:46:21.129511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-3595a3b78131",
+      "theme_id": "theme-43d4991437f6",
+      "status": "validating",
+      "title": "上市券商中报前瞻：预计中报全业务线增长，科创直投跟投放大弹性",
+      "source": "开源证券",
+      "industry": "证券Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-b20d0fd03d4e",
+      "theme_id": "theme-b0b9b76beef4",
+      "status": "validating",
+      "title": "机械行业点评报告：6月挖机内销维持高增长，出口刷新单月历史新高",
+      "source": "eastmoney_industry_report",
+      "industry": "工程机械",
+      "publish_date": "2026-07-08",
+      "hypothesis": "工程机械出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8e99506429c9",
+        "ev-market-cn-6ae3a2b63cea",
+        "ev-market-cn-75d18b6e2a10",
+        "ev-market-global-e608248d8855",
+        "ev-market-global-4b68bee3e917",
+        "ev-market-global-73733d199e5d",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T12:06:34.323547+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T11:44:47.616533+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:45:41.046921+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:46:21.129511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:48:02.977425+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:49:18.540798+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:50:40.331461+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T11:58:29.616858+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:22.069355+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:01:34.405110+00:00",
+          "cycle": 2,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:04:43.679857+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:05:52.891442+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:06:34.323547+00:00",
+          "cycle": 2,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-5a7a4fd656b4",
+      "theme_id": "theme-56af37d7fde2",
+      "status": "validating",
+      "title": "计算机行业点评报告：Intel再度提价，国产CPU迎来历史性窗口",
+      "source": "eastmoney_industry_report",
+      "industry": "IT服务Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "IT服务Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:31:44.432491+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-bb964af71885",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "MUFG aims to become AI-native with OpenAI",
+      "source": "OpenAI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-07T00:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-7ecce0db848d",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot",
+      "source": "Hugging Face",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-07T00:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-20238982a7a8",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "横跨淘天与ATH事业群，硬核少年技术节下周京杭同步开幕，四项AIGX硬核成果齐发",
+      "source": "量子位",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T10:15:43+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-6d824de19e87",
+        "ev-market-cn-ee2b25293c25",
+        "ev-market-cn-87670828f426",
+        "ev-market-global-bea238e07819",
+        "ev-market-global-598c47e206d2",
+        "ev-market-global-7ea254284b85",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:11:44.999540+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-a4a09343238e",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "“人机共生，产需共融”——2026世界机器人大会新闻发布会在京召开",
+      "source": "量子位",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T10:04:39+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-e7811ae1bd4c",
+        "ev-market-cn-987a9df9e172",
+        "ev-market-cn-181b4053a27e",
+        "ev-market-global-e450bbbbf584",
+        "ev-market-global-22378b5d6dd9",
+        "ev-market-global-9be58359e125",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T13:05:25.253376+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-98d14a4dc815",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "别让AI一上来就“进厂打螺丝”：智源悟界·Orca要先教模型理解世界如何变化",
+      "source": "量子位",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T09:08:31+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-e7811ae1bd4c",
+        "ev-market-cn-987a9df9e172",
+        "ev-market-cn-181b4053a27e",
+        "ev-market-global-e450bbbbf584",
+        "ev-market-global-22378b5d6dd9",
+        "ev-market-global-9be58359e125",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T13:05:25.253376+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-3875b9f4dbc5",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "The foundational elements of AI architecture that IT leaders need to scale",
+      "source": "MIT Tech Review AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-07T11:10:52+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-7f7fc2cb6005",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Your family’s $300 stake in OpenAI",
+      "source": "MIT Tech Review AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-06T18:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-1344aa1de5cf",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Achieving operational excellence with AI",
+      "source": "MIT Tech Review AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-02T15:37:08+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:52:03.105036+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:52:49.524976+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-75bc73989df9",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Meta’s new Muse Image model can pull other Instagram users into AI photos",
+      "source": "The Verge AI",
+      "industry": "ai_physical_ai",
+      "publish_date": null,
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-b39e3ddc27fd",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Former OpenAI exec Kevin Weil is now on the board of Stoke Space",
+      "source": "TechCrunch AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T12:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-62cce41fdd07",
+      "theme_id": "theme-56af37d7fde2",
+      "status": "validating",
+      "title": "计算机行业点评：Meta仍在大模型“牌桌”上",
+      "source": "eastmoney_industry_report",
+      "industry": "IT服务Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "IT服务Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-18dbaedb89db",
+      "theme_id": "theme-a1a0ce113a7e",
+      "status": "validating",
+      "title": "电子行业周报：三星和SK有望在未来十年投资超1000万亿韩元",
+      "source": "eastmoney_industry_report",
+      "industry": "半导体",
+      "publish_date": "2026-07-08",
+      "hypothesis": "半导体出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-030882a9fbb3",
+        "ev-market-cn-32148bcd16bf",
+        "ev-market-cn-feb3a5602008",
+        "ev-market-global-096f1be0dbf1",
+        "ev-market-global-036b49e77839",
+        "ev-market-global-333d781d49fa",
+        "ev-news-1efd9acc2669",
+        "ev-news-cdaefacd0083",
+        "ev-news-a0c06d5f59f7",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-08T14:24:44.762113+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-0d2ca4137fc6",
+      "theme_id": "theme-aba9467becc3",
+      "status": "validating",
+      "title": "非银行金融：主动ETF业务指引落地，公募产品端创新驱动头部集中",
+      "source": "eastmoney_industry_report",
+      "industry": "证券Ⅱ",
+      "publish_date": "2026-07-09",
+      "hypothesis": "证券Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-ff10dcbb14bf",
+      "theme_id": "theme-aba9467becc3",
+      "status": "validating",
+      "title": "非银金融行业专题研究报告：非方向性业务正在崛起，头部券商抢占市场先机",
+      "source": "eastmoney_industry_report",
+      "industry": "证券Ⅱ",
+      "publish_date": "2026-07-09",
+      "hypothesis": "证券Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-a2aa5f906469",
+      "theme_id": "theme-5b8e524f09c9",
+      "status": "validating",
+      "title": "中国涉外保险理赔管理行业白皮书",
+      "source": "eastmoney_industry_report",
+      "industry": "保险Ⅱ",
+      "publish_date": "2026-07-08",
+      "hypothesis": "保险Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-2bf3ba72d7ec",
+      "theme_id": "theme-5633f6063d2e",
+      "status": "validating",
+      "title": "人形机器人周报：马斯克发布弗里蒙特工厂产线合影，Optimus或进入关键量产准备阶段",
+      "source": "eastmoney_industry_report",
+      "industry": "专用设备",
+      "publish_date": "2026-07-09",
+      "hypothesis": "专用设备出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-c9513e049cdd",
+      "theme_id": "theme-70040637ffbf",
+      "status": "validating",
+      "title": "欧洲房地产市场动态更新",
+      "source": "eastmoney_industry_report",
+      "industry": "房地产开发",
+      "publish_date": "2026-07-09",
+      "hypothesis": "房地产开发出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-31af44d6f24e",
+      "theme_id": "theme-de2b40c8f7f5",
+      "status": "validating",
+      "title": "医药生物行业点评报告：诺华15亿美元收购Myricx Bio，布局差异化ADC载荷平台",
+      "source": "eastmoney_industry_report",
+      "industry": "化学制药",
+      "publish_date": "2026-07-09",
+      "hypothesis": "化学制药出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-fe29eb7bf251",
+      "theme_id": "theme-969eb44f2a85",
+      "status": "validating",
+      "title": "化工行业周报：看好磷化工估值提升，本周甲酸、碳酸锂、丙烷、新加坡柴油、新加坡石脑油涨幅居前",
+      "source": "eastmoney_industry_report",
+      "industry": "化学制品",
+      "publish_date": "2026-07-08",
+      "hypothesis": "化学制品出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-50f415795b63",
+      "theme_id": "theme-a126b0da5431",
+      "status": "validating",
+      "title": "2026年1-5月移动端在线视频平台播放表现分析报告",
+      "source": "eastmoney_industry_report",
+      "industry": "数字媒体",
+      "publish_date": "2026-07-08",
+      "hypothesis": "数字媒体出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-8236aa24de0c",
+        "ev-market-cn-15817e07b012",
+        "ev-market-cn-c37ba896fd14",
+        "ev-market-global-2ee8a894a48f",
+        "ev-market-global-57c016a9bfef",
+        "ev-market-global-e0dfe49c77d3",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T00:43:59.966321+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-df0c5e1be961",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Helping K–12 educators build practical AI skills",
+      "source": "OpenAI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T10:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-826116b36aa6",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus-class model’",
+      "source": "TechCrunch AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T19:30:16+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-a3f3708b5000",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "Prompt-to-Paper: Agentic AI System for Bioinformatics",
+      "source": "arXiv cs.AI",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-08T04:00:00+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-6d824de19e87",
+        "ev-market-cn-ee2b25293c25",
+        "ev-market-cn-87670828f426",
+        "ev-market-global-bea238e07819",
+        "ev-market-global-598c47e206d2",
+        "ev-market-global-7ea254284b85",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:11:44.999540+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-8d26b12a071d",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "SQL vs Pandas vs AI Agents: Which Solves Analytics Problems Best?",
+      "source": "KDnuggets",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-07T16:00:29+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-65c79ff78dd3",
+        "ev-market-cn-75088eb7e8bd",
+        "ev-market-cn-3bd45e8e39cf",
+        "ev-market-global-23163cb8fd86",
+        "ev-market-global-3c7cccd9c139",
+        "ev-market-global-43e6fb78e3bc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T02:56:24.471492+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-df49c27379a2",
+      "theme_id": "theme-56af37d7fde2",
+      "status": "validating",
+      "title": "计算机行业周报：大模型持续迭代，AI企业资本化加速",
+      "source": "eastmoney_industry_report",
+      "industry": "IT服务Ⅱ",
+      "publish_date": "2026-07-09",
+      "hypothesis": "IT服务Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-76a6718e84ab",
+      "theme_id": "theme-0bac57f5b838",
+      "status": "validating",
+      "title": "2026年新消费行业中期策略：科技消费，创技思新",
+      "source": "eastmoney_industry_report",
+      "industry": "一般零售",
+      "publish_date": "2026-07-09",
+      "hypothesis": "一般零售出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-be0aafa02218",
+      "theme_id": "theme-c5b51d71e7a6",
+      "status": "validating",
+      "title": "计算机行业研究：云计算产业更新",
+      "source": "eastmoney_industry_report",
+      "industry": "软件开发",
+      "publish_date": "2026-07-09",
+      "hypothesis": "软件开发出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-39c6eeacd0d6",
+      "theme_id": "theme-b9e23f34337f",
+      "status": "validating",
+      "title": "中国企业置装白皮书：2026团服职业装采购指南",
+      "source": "eastmoney_industry_report",
+      "industry": "服装家纺",
+      "publish_date": "2026-07-09",
+      "hypothesis": "服装家纺出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-6a381266a122",
+      "theme_id": "theme-dc72e53c12bc",
+      "status": "validating",
+      "title": "中国医院创新转化报告2026",
+      "source": "eastmoney_industry_report",
+      "industry": "医疗服务",
+      "publish_date": "2026-07-09",
+      "hypothesis": "医疗服务出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-516686cfdd6a",
+      "theme_id": "theme-56af37d7fde2",
+      "status": "validating",
+      "title": "人工智能入门指南：面向公众投资者-从AI意识到AI准备",
+      "source": "eastmoney_industry_report",
+      "industry": "IT服务Ⅱ",
+      "publish_date": "2026-07-09",
+      "hypothesis": "IT服务Ⅱ出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-bae26f2e5ab3",
+      "theme_id": "theme-23404f5b84ae",
+      "status": "validating",
+      "title": "电动汽车驱动系统关键技术",
+      "source": "eastmoney_industry_report",
+      "industry": "汽车零部件",
+      "publish_date": "2026-07-09",
+      "hypothesis": "汽车零部件出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-19e310aa5ef1",
+      "theme_id": "theme-5633f6063d2e",
+      "status": "validating",
+      "title": "全球人形机器人行业研究报告（2026）：人形机器人市场规模和竞争格局",
+      "source": "eastmoney_industry_report",
+      "industry": "专用设备",
+      "publish_date": "2026-07-09",
+      "hypothesis": "专用设备出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-b926aff8aada",
+        "ev-market-cn-7da1ed1b3fd2",
+        "ev-market-cn-5cafe3dcf132",
+        "ev-market-global-b6ee3a55d509",
+        "ev-market-global-0f915b528cc9",
+        "ev-market-global-1cc34303b1a1",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T02:17:52.414274+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-93bcadd5617f",
+      "theme_id": "theme-0fd38c306e3c",
+      "status": "validating",
+      "title": "有色金属行业未来材料巡礼之深海采矿新材料2：经济性、资本开支结构特征与产业价值量",
+      "source": "eastmoney_industry_report",
+      "industry": "工业金属",
+      "publish_date": "2026-07-09",
+      "hypothesis": "工业金属出现新的机构研究信号，需要验证需求、上游卡口和A股真实暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-cacdebd43d9f",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "从餐饮后厨到物理世界基础模型：量化派的物理AI，走的是卖能力的路",
+      "source": "量子位",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-09T02:32:01+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    },
+    {
+      "id": "cat-f29b92f3570b",
+      "theme_id": "theme-3c24eb378bb8",
+      "status": "validating",
+      "title": "同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网",
+      "source": "量子位",
+      "industry": "ai_physical_ai",
+      "publish_date": "2026-07-09T01:54:44+00:00",
+      "hypothesis": "公开新闻/研报标题形成产业链线索，需验证终端需求、卡口和A股收入暴露。",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc",
+        "ev-news-a06c34a1d70f",
+        "ev-news-4e396b73bccf",
+        "ev-news-d1ab609c1779",
+        "ev-news-1eecdac09573"
+      ],
+      "next_action": "verify_primary_sources_and_a_share_exposure",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "validating"
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "validating"
+        }
+      ]
+    }
+  ]
+}

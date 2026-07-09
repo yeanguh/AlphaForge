@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-09T03:41:22.318686+00:00",
+  "watchlist": [
+    {
+      "id": "watch-fa16fa948a40",
+      "symbol": "600519",
+      "name": "贵州茅台",
+      "status": "watching",
+      "last_price": 1184.98,
+      "valuation_band": "normal",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "collect_fundamental_and_catalyst_evidence",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1199.3
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1186.45
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1185.0
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1185.0
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1186.0
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1187.0
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1184.87
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1185.64
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1184.98
+        }
+      ],
+      "decision_gate": {
+        "symbol": "600519",
+        "name": "贵州茅台",
+        "action": "watch",
+        "passed_conditions": 5,
+        "conditions": {
+          "clear_thesis": true,
+          "public_evidence": true,
+          "valuation_not_extreme": true,
+          "technical_not_broken": true,
+          "risk_reward_ok": true
+        },
+        "six_questions": [
+          "买的是什么产业链环节？",
+          "需求证据来自哪里？",
+          "卡口是否真实存在？",
+          "A股收入/订单暴露是否可验证？",
+          "估值和赔率是否足够？",
+          "什么证据出现就退出？"
+        ],
+        "min_risk_reward": 2.0
+      }
+    },
+    {
+      "id": "watch-e3d2cefa133a",
+      "symbol": "300750",
+      "name": "宁德时代",
+      "status": "watching",
+      "last_price": 363.43,
+      "valuation_band": "normal",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "collect_fundamental_and_catalyst_evidence",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 361.0
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 366.84
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 363.66
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 364.89
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 365.46
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 364.0
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 364.19
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 362.51
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 363.43
+        }
+      ],
+      "decision_gate": {
+        "symbol": "300750",
+        "name": "宁德时代",
+        "action": "watch",
+        "passed_conditions": 5,
+        "conditions": {
+          "clear_thesis": true,
+          "public_evidence": true,
+          "valuation_not_extreme": true,
+          "technical_not_broken": true,
+          "risk_reward_ok": true
+        },
+        "six_questions": [
+          "买的是什么产业链环节？",
+          "需求证据来自哪里？",
+          "卡口是否真实存在？",
+          "A股收入/订单暴露是否可验证？",
+          "估值和赔率是否足够？",
+          "什么证据出现就退出？"
+        ],
+        "min_risk_reward": 2.0
+      }
+    },
+    {
+      "id": "watch-bd36aba207f8",
+      "symbol": "688017",
+      "name": "绿的谐波",
+      "status": "rejected",
+      "last_price": 394.92,
+      "valuation_band": "high",
+      "evidence_ids": [
+        "ev-market-cn-db99ed64c40b",
+        "ev-market-cn-545c4b21b60a",
+        "ev-market-cn-5fff0ccf315c",
+        "ev-market-global-5fa39e338a05",
+        "ev-market-global-314ad4d2d1c8",
+        "ev-market-global-d13b00e0cfdc",
+        "ev-news-e01b4f290840",
+        "ev-news-9b824a000fdc"
+      ],
+      "next_action": "wait_for_valuation_or_fundamental_confirmation",
+      "last_seen_at": "2026-07-09T03:41:22.318686+00:00",
+      "history": [
+        {
+          "at": "2026-07-08T12:53:13.184274+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T12:53:42.522086+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T13:01:41.673241+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T13:03:39.458984+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T13:05:25.253376+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T14:16:32.885285+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T14:20:16.308829+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-08T14:24:44.762113+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-09T00:18:41.596757+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-09T00:39:33.192380+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-09T00:41:22.999511+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-09T00:43:59.966321+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.0
+        },
+        {
+          "at": "2026-07-09T02:17:52.414274+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 395.59
+        },
+        {
+          "at": "2026-07-09T02:37:15.796414+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 395.99
+        },
+        {
+          "at": "2026-07-09T02:52:38.797227+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 394.9
+        },
+        {
+          "at": "2026-07-09T02:56:24.471492+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 396.0
+        },
+        {
+          "at": "2026-07-09T03:08:32.400212+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 393.5
+        },
+        {
+          "at": "2026-07-09T03:11:44.999540+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 394.5
+        },
+        {
+          "at": "2026-07-09T03:20:35.336599+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 391.36
+        },
+        {
+          "at": "2026-07-09T03:41:22.318686+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 394.92
+        }
+      ],
+      "decision_gate": {
+        "symbol": "688017",
+        "name": "绿的谐波",
+        "action": "reject_or_wait",
+        "passed_conditions": 3,
+        "conditions": {
+          "clear_thesis": true,
+          "public_evidence": true,
+          "valuation_not_extreme": false,
+          "technical_not_broken": true,
+          "risk_reward_ok": false
+        },
+        "six_questions": [
+          "买的是什么产业链环节？",
+          "需求证据来自哪里？",
+          "卡口是否真实存在？",
+          "A股收入/订单暴露是否可验证？",
+          "估值和赔率是否足够？",
+          "什么证据出现就退出？"
+        ],
+        "min_risk_reward": 2.0
+      }
+    }
+  ]
+}

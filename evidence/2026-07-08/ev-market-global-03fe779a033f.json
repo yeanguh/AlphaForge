@@ -1,0 +1,22 @@
+{
+  "id": "ev-market-global-03fe779a033f",
+  "source_name": "global-stock-data/yahoo_chart",
+  "source_type": "global_market_snapshot",
+  "title": "全球股票行情快照：NVDA",
+  "url": null,
+  "observed_at": "2026-07-08T14:16:32.850826+00:00",
+  "claims": [
+    "NVDA latest_close=197.1199951171875",
+    "NVDA change_pct=0.0965"
+  ],
+  "raw": {
+    "symbol": "NVDA",
+    "currency": "USD",
+    "exchange": "NMS",
+    "latest_close": 197.1199951171875,
+    "previous_close": 196.92999267578125,
+    "change_pct": 0.0965,
+    "bars": 5,
+    "source": "yahoo_chart"
+  }
+}

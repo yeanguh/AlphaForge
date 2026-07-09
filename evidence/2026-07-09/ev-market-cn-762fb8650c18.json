@@ -1,0 +1,28 @@
+{
+  "id": "ev-market-cn-762fb8650c18",
+  "source_name": "a-stock-data/tencent_finance",
+  "source_type": "market_snapshot",
+  "title": "A股行情快照：600519 贵州茅台",
+  "url": null,
+  "observed_at": "2026-07-09T02:52:38.759023+00:00",
+  "claims": [
+    "贵州茅台 最新价 1185.0",
+    "贵州茅台 PE 17.91 PB 6.36",
+    "贵州茅台 valuation_band=normal"
+  ],
+  "raw": {
+    "symbol": "600519",
+    "name": "贵州茅台",
+    "price": 1185.0,
+    "prev_close": 1199.3,
+    "change_pct": -1.1924,
+    "volume": "13866",
+    "turnover": "164483",
+    "pe": 17.91,
+    "pb": 6.36,
+    "valuation_band": "normal",
+    "source": "tencent_finance",
+    "provider": "a-stock-data",
+    "provider_submodule": "skills/a-stock-data"
+  }
+}

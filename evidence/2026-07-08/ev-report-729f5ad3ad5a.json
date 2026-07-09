@@ -1,0 +1,25 @@
+{
+  "id": "ev-report-729f5ad3ad5a",
+  "source_name": "eastmoney_industry_report/国信证券",
+  "source_type": "industry_research_report",
+  "title": "银行业理财2026年7月月报：弱化的回表，他行代销如何影响理财展业",
+  "url": null,
+  "observed_at": "2026-07-08T14:24:44.719618+00:00",
+  "claims": [
+    "industry=银行Ⅱ",
+    "rating=增持",
+    "publish_date=2026-07-08"
+  ],
+  "raw": {
+    "title": "银行业理财2026年7月月报：弱化的回表，他行代销如何影响理财展业",
+    "industry_name": "银行Ⅱ",
+    "industry_code": "475",
+    "org": "国信证券",
+    "rating": "增持",
+    "publish_date": "2026-07-08",
+    "info_code": "AP202607081826820998",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826820998_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607081826820998_1.pdf",
+    "report_type": 3
+  }
+}

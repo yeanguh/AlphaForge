@@ -1,0 +1,18 @@
+[submodule "skills/a-stock-data"]
+	path = skills/a-stock-data
+	url = https://github.com/simonlin1212/a-stock-data
+[submodule "external/investment-news"]
+	path = external/investment-news
+	url = https://github.com/simonlin1212/investment-news
+[submodule "skills/global-stock-data"]
+	path = skills/global-stock-data
+	url = https://github.com/simonlin1212/global-stock-data
+[submodule "external/TradingAgents-astock"]
+	path = external/TradingAgents-astock
+	url = https://github.com/simonlin1212/TradingAgents-astock
+[submodule "external/Vibe-Research"]
+	path = external/Vibe-Research
+	url = https://github.com/simonlin1212/Vibe-Research
+[submodule "external/Vibe-Trading"]
+	path = external/Vibe-Trading
+	url = https://github.com/HKUDS/Vibe-Trading

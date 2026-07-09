@@ -1,0 +1,57 @@
+{
+  "id": "ev-review-01ebf94e72df",
+  "source_name": "loop_os/codex",
+  "source_type": "agent_review",
+  "title": "Agent评审：cycle 2 decision=needs_more_evidence",
+  "url": null,
+  "observed_at": "2026-07-08T12:06:34.288643+00:00",
+  "claims": [
+    "decision=needs_more_evidence",
+    "agent_provider=codex",
+    "AI/机器人与工程机械报告密集，但核心标的估值和盘面分化明显，仍需订单、收入暴露与反证验证。"
+  ],
+  "raw": {
+    "review_type": "codex_agent_summary",
+    "agent_provider": "codex",
+    "roles": {
+      "bull": [
+        "AI为最大主题桶，industry_analysis显示ai计数27，semiconductor计数8，equipment计数7，说明产业链研究热度集中在AI、半导体和设备方向。",
+        "机械设备/人形机器人报告指出“进入量产爬坡阶段，看好物理AI中长期机遇”，评级增持，证据：industry_reports.AP202607081826816375。",
+        "工程机械有两篇同日报告支撑：华源证券称“销量延续高增，内外需共振支撑增长”且评级增持，太平洋称“6月挖机内销维持高增长，出口刷新单月历史新高”，证据：industry_reports.AP202607081826821062、AP202607081826817336。",
+        "IC封装基板报告聚焦“算力时代下国产IC封装基板的高端化突围”，与AI算力和半导体国产化主题一致，证据：industry_reports.AP202607081826821159。",
+        "贵州茅台600519当日上涨0.8832，PE 18.13且valuation_band为normal，偏防御资产仍有相对稳定盘面，证据：a_share_quotes.600519。"
+      ],
+      "bear": [
+        "宁德时代300750当日下跌-3.0846%，全球TSLA下跌-4.0189%，新能源车链情绪偏弱，证据：a_share_quotes.300750、global_charts.TSLA。",
+        "绿的谐波688017当日下跌-15.9266%，同时PE 524.17、PB 20.09且valuation_band为high，机器人链短线拥挤和估值风险突出，证据：a_share_quotes.688017。",
+        "运动服饰报告标题显示2Q26整体流水表现环比减弱，消费复苏并非全面顺畅，证据：industry_reports.AP202607081826818974。"
+      ],
+      "risk": [
+        "本轮输入只有标题、行情和行业聚合，缺少报告正文、订单数据、业绩弹性和公司收入暴露，industry_analysis也明确要求验证需求、上游卡口和A股真实暴露。",
+        "行业热度集中在AI/机器人/设备，但绿的谐波688017高估值且大跌，说明主题热度不能直接等同为可验证收益，证据：a_share_quotes.688017。",
+        "多篇行业报告为同日发布，可能反映研究覆盖密集而非基本面已经兑现，需要后续用销量、订单、毛利率和现金流验证，证据：industry_reports.publish_date=2026-07-08。",
+        "本评审为research_only，不构成真实交易指令。"
+      ],
+      "policy_news": [
+        "2026世界机器人大会新闻发布会在京召开，叠加机械设备人形机器人量产爬坡研报，机器人/物理AI具备新闻催化，证据：news_headlines.量子位.2026-07-08T10:04:39+00:00、industry_reports.AP202607081826816375。",
+        "OpenAI连续发布企业采用案例，包括Australian Payments Plus和MUFG，企业AI应用扩散仍是全球主线，证据：news_headlines.OpenAI.2026-07-07。",
+        "Hugging Face同日出现SageMaker、Microsoft Foundry Managed Compute、SkyPilot零出站存储等云端AI工作负载新闻，说明AI基础设施生态仍活跃，证据：news_headlines.HuggingFace.2026-07-07。",
+        "Google Research发布TabFM零样本表格基础模型及城市热韧性、交通协作研究，AI应用从模型扩展到数据、城市治理等场景，证据：news_headlines.GoogleResearch.2026-06-30/2026-07-07。"
+      ],
+      "hot_money": [
+        "绿的谐波688017成交量19684351、成交额804140且跌幅-15.9266%，显示机器人链短线资金波动剧烈，证据：a_share_quotes.688017。",
+        "宁德时代300750成交额990274且跌幅-3.0846%，新能源权重承压，可能压制相关主题风险偏好，证据：a_share_quotes.300750。",
+        "NVDA上涨0.7057而AAPL下跌-0.6397、TSLA下跌-4.0189，海外科技内部也呈现AI算力强于消费电子/电动车的分化，证据：global_charts.NVDA、global_charts.AAPL、global_charts.TSLA。"
+      ]
+    },
+    "decision": "needs_more_evidence",
+    "reason": "AI/机器人与工程机械报告密集，但核心标的估值和盘面分化明显，仍需订单、收入暴露与反证验证。",
+    "next_actions": [
+      "按industry_analysis.next_actions验证：从终端需求向上回溯，确认工程机械、机器人/通用设备、IC封装基板增长是否来自真实订单、政策或资本开支。",
+      "将报告主题映射到A股公司真实收入/订单暴露，尤其验证通用设备、人形机器人、IC封装基板、工程机械相关标的，剔除纯概念标签。",
+      "补充绿的谐波688017下跌与高估值的反证条件：订单、毛利率、量产节奏、客户集中度及产业链价格压力。",
+      "跟踪短线资金是否从高估值机器人链切换到工程机械、证券、银行等有业绩或政策线索的方向。"
+    ],
+    "artifact_dir": "/Users/bytedance/Documents/a-analysis/research-os/runs/2026-07-08/full-loop-200510/cycle-002/agent-review"
+  }
+}

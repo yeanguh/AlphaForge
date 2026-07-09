@@ -1,0 +1,34 @@
+{
+  "id": "ev-report-eab426fd21de",
+  "source_name": "eastmoney_industry_report/中国纺织信息中心",
+  "source_type": "industry_research_report",
+  "title": "中国企业置装白皮书：2026团服职业装采购指南",
+  "url": null,
+  "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833152_1.pdf",
+  "raw_path": null,
+  "claim_id": "ev-report-eab426fd21de:claim:0",
+  "freshness": "2026-07-09",
+  "related_companies": [],
+  "related_themes": [
+    "服装家纺"
+  ],
+  "observed_at": "2026-07-09T03:41:22.084606+00:00",
+  "created_at": "2026-07-09T03:41:22.084607+00:00",
+  "claims": [
+    "industry=服装家纺",
+    "rating=",
+    "publish_date=2026-07-09"
+  ],
+  "raw": {
+    "title": "中国企业置装白皮书：2026团服职业装采购指南",
+    "industry_name": "服装家纺",
+    "industry_code": "1225",
+    "org": "中国纺织信息中心",
+    "rating": "",
+    "publish_date": "2026-07-09",
+    "info_code": "AP202607091826833152",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833152_1.pdf",
+    "pdf_url": "https://pdf.dfcfw.com/pdf/H3_AP202607091826833152_1.pdf",
+    "report_type": 3
+  }
+}

@@ -1,0 +1,9 @@
+loops:
+  full_loop_daemon: continuous
+  article_digest: manual
+  industry_chain: manual
+  stock_fundamental: manual
+  stock_price: manual
+  decision_gate: manual
+  daily_postclose: trading_day_postclose
+  weekly_calibration: weekly
