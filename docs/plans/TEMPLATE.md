@@ -3,7 +3,7 @@
 > 状态:proposal | active | completed
 > 创建:YYYY-MM-DD
 > 范围:research-os 仓库(或更具体的模块)
-> 基线(改造前):<可观测事实,如「N 个单测全绿;scripts/run_harness.py 通过,仅 X 为预期 warn」>
+> 基线(改造前):<可观测事实,如「N 个单测全绿;uv run python scripts/run_harness.py 通过,仅 X 为预期 warn」>
 
 <!--
 这是 ExecPlan 模板。每份计划必须同时满足 4 条原则(Harness Engineering 规范):
@@ -27,8 +27,8 @@
 
 ## 验收(整体)
 
-- [ ] 在 .venv 环境下 `python -m pytest -q` 全部 PASS,0 skipped
-- [ ] `python scripts/run_harness.py` 无 error(所有 check 为 ok/warn)
+- [ ] `uv run python -m pytest -q` 全部 PASS,0 skipped
+- [ ] `uv run python scripts/run_harness.py` 无 error(所有 check 为 ok/warn)
 - [ ] pre-commit hook 退出码为 0
 
 ## 进度日志(活文档,倒序追加)

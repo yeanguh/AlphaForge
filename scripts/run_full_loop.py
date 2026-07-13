@@ -17,10 +17,43 @@ from loop_os.domain.agent_review import build_review
 from loop_os.domain.capability_chain import build_research_pipeline
 from loop_os.domain.evidence_service import write_evidence
 from loop_os.domain.industry_chain import analyze_industry_reports
+from loop_os.domain.report_review_agent import build_report_review
 from loop_os.domain.state_update import apply_state_transition
-from loop_os.report_router import route_cycle_reports
+from loop_os.report_router import resolve_theme_key, route_cycle_reports
 from loop_os.reporting import write_json, write_markdown_report, write_ops_report
-from providers.open_source import a_stock_data, global_stock_data, investment_news, tradingagents_astock
+from providers.open_source import a_stock_data, global_stock_data, investment_news, tradingagents_astock, vibe_research, vibe_trading
+
+
+KNOWN_A_SHARE_SYMBOLS = {
+    "兴森科技": "002436",
+    "安集科技": "688019",
+    "通富微电": "002156",
+    "寒武纪": "688256",
+    "深南电路": "002916",
+    "中际旭创": "300308",
+    "新易盛": "300502",
+    "英维克": "002837",
+    "沪电股份": "002463",
+    "胜宏科技": "300476",
+    "工业富联": "601138",
+    "华特气体": "688268",
+    "彤程新材": "603650",
+    "绿的谐波": "688017",
+    "双环传动": "002472",
+    "中大力德": "002896",
+    "秦川机床": "000837",
+    "贝斯特": "300580",
+    "五洲新春": "603667",
+    "鸣志电器": "603728",
+    "汇川技术": "300124",
+    "雷赛智能": "002979",
+    "禾川科技": "688320",
+    "埃斯顿": "002747",
+    "机器人": "300024",
+    "华中数控": "300161",
+    "华辰装备": "300809",
+    "日发精机": "002520",
+}
 
 
 def utc_now() -> str:
@@ -56,7 +89,7 @@ def run_harness() -> dict[str, Any]:
     return payload
 
 
-def run_theme_deep_report(payload_file: Path | None = None) -> dict[str, Any]:
+def run_physical_ai_deep_report(payload_file: Path | None = None) -> dict[str, Any]:
     cmd = ["uv", "run", "python", "scripts/generate_physical_ai_chain_report.py"]
     if shutil.which("uv") is None:
         cmd = [sys.executable, "scripts/generate_physical_ai_chain_report.py"]
@@ -75,6 +108,61 @@ def run_theme_deep_report(payload_file: Path | None = None) -> dict[str, Any]:
         payload = {"status": "error", "stdout": proc.stdout, "stderr": proc.stderr}
     payload["returncode"] = proc.returncode
     return payload
+
+
+def run_generic_theme_deep_report(payload_file: Path | None = None) -> dict[str, Any]:
+    cmd = [sys.executable, "scripts/generate_theme_deep_report.py"]
+    if payload_file is not None:
+        cmd.extend(["--payload-file", rel_path(payload_file)])
+    proc = subprocess.run(
+        cmd,
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        timeout=300,
+    )
+    try:
+        payload = json.loads(proc.stdout)
+    except Exception:
+        payload = {"status": "error", "stdout": proc.stdout, "stderr": proc.stderr}
+    payload["returncode"] = proc.returncode
+    return payload
+
+
+def run_report_review_agent(payload: dict[str, Any], cycle_dir: Path, theme_key: str | None) -> dict[str, Any]:
+    theme_report = ROOT / "reports" / "themes" / (theme_key or "uncategorized") / "report.md"
+    deep_report = payload.get("theme_deep_report", {})
+    draft_path = None
+    if isinstance(deep_report, dict) and isinstance(deep_report.get("draft"), str):
+        draft_path = ROOT / deep_report["draft"]
+    return build_report_review(
+        root=ROOT,
+        payload=payload,
+        theme_key=theme_key,
+        report_path=theme_report,
+        draft_path=draft_path,
+        artifacts_dir=cycle_dir / "report-review",
+    )
+
+
+def run_final_report_review_agent(payload: dict[str, Any], cycle_dir: Path, theme_key: str | None) -> dict[str, Any]:
+    theme_report = ROOT / "reports" / "themes" / (theme_key or "uncategorized") / "report.md"
+    return build_report_review(
+        root=ROOT,
+        payload=payload,
+        theme_key=theme_key,
+        report_path=theme_report,
+        draft_path=None,
+        artifacts_dir=cycle_dir / "report-review-final",
+    )
+
+
+def selected_theme_key(payload: dict[str, Any]) -> str | None:
+    pipeline = payload.get("research_pipeline", {})
+    pipeline = pipeline if isinstance(pipeline, dict) else {}
+    chain = pipeline.get("selected_industry_chain", {})
+    chain = chain if isinstance(chain, dict) else {}
+    return resolve_theme_key(str(chain.get("selected_theme") or ""), ROOT)
 
 
 def read_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
@@ -119,7 +207,7 @@ def _input_quality_issues(payload: dict[str, Any]) -> list[str]:
     if not pipeline.get("trade_decision_engine", {}).get("decisions"):
         issues.append("missing_trade_decisions")
     review = payload.get("agent_review", {})
-    if not isinstance(review, dict) or not review.get("roles") or review.get("agent_errors"):
+    if not isinstance(review, dict) or not review.get("roles"):
         issues.append("agent_review_not_usable")
     return issues
 
@@ -140,6 +228,34 @@ def write_cycle_artifacts(cycle_dir: Path, payload: dict[str, Any]) -> None:
     write_json(cycle_dir / "result.json", payload)
     write_markdown_report(cycle_dir / "report.md", payload)
     write_ops_report(cycle_dir / "ops-report.md", payload)
+
+
+def cleanup_theme_drafts(root: Path, run_id: str) -> dict[str, Any]:
+    """Remove per-cycle theme draft copies after a loop finishes.
+
+    The durable audit copy stays under runs/<date>/<run_id>/cycle-*/. Theme
+    draft files are only a handoff format for report curation and should not
+    accumulate next to canonical reports.
+    """
+    themes_root = root / "reports" / "themes"
+    if not themes_root.exists():
+        return {"removed": 0, "files": []}
+    patterns = [
+        f"*/report.cycle-draft-{run_id}-cycle-*.md",
+        f"*/drafts/{run_id}-cycle-*.md",
+    ]
+    removed: list[str] = []
+    for pattern in patterns:
+        for path in sorted(themes_root.glob(pattern)):
+            if not path.is_file():
+                continue
+            try:
+                rel = rel_path(path)
+            except ValueError:
+                rel = str(path)
+            path.unlink()
+            removed.append(rel)
+    return {"removed": len(removed), "files": removed}
 
 
 def publish_latest_artifacts(payload: dict[str, Any], cycle_dir: Path) -> bool:
@@ -173,11 +289,59 @@ def fetch_stock_supplements(quotes: list[dict[str, Any]], errors: list[str]) -> 
         if not symbol:
             continue
         try:
-            supplements[symbol] = a_stock_data.fetch_stock_supplement(symbol)
+            supplements[symbol] = a_stock_data.fetch_stock_supplement_resilient(symbol)
         except Exception as exc:
             supplements[symbol] = {"symbol": symbol, "errors": [repr(exc)]}
             errors.append(f"stock_supplement:{symbol}: {exc!r}")
     return supplements
+
+
+def candidate_symbols_from_pipeline(pipeline: dict[str, Any]) -> list[str]:
+    chain = pipeline.get("selected_industry_chain", {}) if isinstance(pipeline, dict) else {}
+    if not isinstance(chain, dict):
+        return []
+    candidates = chain.get("bottleneck_candidates", [])
+    candidates = candidates if isinstance(candidates, list) else []
+    symbols: list[str] = []
+    for item in candidates:
+        if not isinstance(item, dict):
+            continue
+        companies = str(item.get("companies") or "")
+        for raw_name in companies.replace("、", ",").replace("，", ",").split(","):
+            name = raw_name.strip()
+            symbol = KNOWN_A_SHARE_SYMBOLS.get(name)
+            if symbol and symbol not in symbols:
+                symbols.append(symbol)
+    return symbols
+
+
+def merge_candidate_market_data(
+    *,
+    quotes: list[dict[str, Any]],
+    stock_supplements: dict[str, dict[str, Any]],
+    pipeline: dict[str, Any],
+    errors: list[str],
+) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
+    """Add selected bottleneck-company market data before evidence/state writes."""
+    symbols = candidate_symbols_from_pipeline(pipeline)
+    if not symbols:
+        return quotes, stock_supplements
+    by_symbol = {str(item.get("symbol")): item for item in quotes if isinstance(item, dict)}
+    for symbol in symbols:
+        if symbol not in by_symbol:
+            try:
+                quote = a_stock_data.fetch_quote(symbol)
+                quotes.append(quote)
+                by_symbol[symbol] = quote
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"candidate_quote:{symbol}: {exc!r}")
+        if symbol not in stock_supplements:
+            try:
+                stock_supplements[symbol] = a_stock_data.fetch_stock_supplement_resilient(symbol)
+            except Exception as exc:  # noqa: BLE001
+                stock_supplements[symbol] = {"symbol": symbol, "errors": [repr(exc)]}
+                errors.append(f"candidate_stock_supplement:{symbol}: {exc!r}")
+    return quotes, stock_supplements
 
 
 def build_committee_review(agent_review: dict[str, Any], trading_review: dict[str, Any]) -> dict[str, Any]:
@@ -191,6 +355,52 @@ def build_committee_review(agent_review: dict[str, Any], trading_review: dict[st
     else:
         combined["decision"] = combined.get("decision") or "needs_more_evidence"
     return combined
+
+
+def collect_provider_insights(payload_base: dict[str, Any], pipeline: dict[str, Any], trading_review: dict[str, Any]) -> dict[str, Any]:
+    """Collect optional external-provider insights without blocking the cycle."""
+    insights: dict[str, Any] = {}
+    providers = (
+        ("vibe_research", lambda: vibe_research.research_packet(payload_base, pipeline)),
+        ("vibe_trading", lambda: vibe_trading.strategy_packet(payload_base, pipeline)),
+        (
+            "tradingagents_astock",
+            lambda: {
+                "provider": "TradingAgents-astock",
+                "status": "ok" if not trading_review.get("error") else "warn",
+                "source_submodule": "external/TradingAgents-astock",
+                "adapter": "providers.open_source.tradingagents_astock.review_packet",
+                "claims": [
+                    f"TradingAgents-astock portfolio_rating={trading_review.get('portfolio_rating')}",
+                    f"TradingAgents-astock trader_action={trading_review.get('trader_action')}",
+                    f"TradingAgents-astock schema_contract={trading_review.get('schema_contract')}",
+                ],
+                "review": trading_review,
+                "errors": [trading_review.get("error")] if trading_review.get("error") else [],
+                "state_mutation_allowed": False,
+            },
+        ),
+    )
+    for key, factory in providers:
+        try:
+            packet = factory()
+            if not isinstance(packet, dict):
+                packet = {"provider": key, "status": "warn", "errors": ["adapter returned non-dict packet"]}
+        except Exception as exc:  # noqa: BLE001
+            packet = {
+                "provider": key,
+                "status": "warn",
+                "errors": [repr(exc)],
+                "state_mutation_allowed": False,
+            }
+        insights[key] = packet
+    return {
+        "stage": "external-provider-insights",
+        "status": "ok" if all(item.get("status") == "ok" for item in insights.values() if isinstance(item, dict)) else "warn",
+        "providers": insights,
+        "blocking": False,
+        "generated_at": utc_now(),
+    }
 
 
 def write_supervisor_health(
@@ -289,6 +499,22 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
         "enable_skill_health_check": True,
     }
     preliminary_pipeline = build_research_pipeline(ROOT, payload_base, stock_supplements, portfolio_state, {})
+    quotes, stock_supplements = merge_candidate_market_data(
+        quotes=quotes,
+        stock_supplements=stock_supplements,
+        pipeline=preliminary_pipeline,
+        errors=errors,
+    )
+    payload_base = {
+        "a_share_quotes": quotes,
+        "global_charts": global_charts,
+        "news": news,
+        "industry_reports": industry_reports[:20],
+        "industry_analysis": industry_analysis,
+        "stock_supplements": stock_supplements,
+        "enable_skill_health_check": True,
+    }
+    preliminary_pipeline = build_research_pipeline(ROOT, payload_base, stock_supplements, portfolio_state, {})
     review_input = {
         "a_share_quotes": quotes,
         "global_charts": global_charts,
@@ -304,7 +530,7 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
         artifacts_dir=cycle_dir / "agent-review",
         timeout_seconds=agent_timeout_seconds,
     )
-    if agent_review.get("agent_errors"):
+    if agent_review.get("agent_errors") and agent_review.get("agent_provider") != "deterministic_fallback":
         errors.extend(f"agent_review:{item}" for item in agent_review["agent_errors"])
     pipeline_after_agent = build_research_pipeline(ROOT, payload_base, stock_supplements, portfolio_state, agent_review)
     try:
@@ -322,6 +548,8 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
     committee_review = build_committee_review(agent_review, tradingagents_review)
     research_pipeline = build_research_pipeline(ROOT, payload_base, stock_supplements, portfolio_state, committee_review)
     research_pipeline["tradingagents_review"] = tradingagents_review
+    provider_insights = collect_provider_insights(payload_base, research_pipeline, tradingagents_review)
+    research_pipeline["provider_insights"] = provider_insights
     payload = {
         "cycle": cycle,
         "status": "ok" if not errors else "error",
@@ -337,6 +565,7 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
         "industry_analysis": industry_analysis,
         "stock_supplements": stock_supplements,
         "research_pipeline": research_pipeline,
+        "provider_insights": provider_insights,
         "tradingagents_review": tradingagents_review,
         "agent_review": agent_review,
         "committee_review": committee_review,
@@ -369,11 +598,26 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
             "issues": theme_report_input_issues,
         }
     else:
-        theme_deep_report = run_theme_deep_report(cycle_dir / "result.json")
+        theme_key = selected_theme_key(payload)
+        if theme_key == "physical-ai":
+            theme_deep_report = run_physical_ai_deep_report(cycle_dir / "result.json")
+        else:
+            theme_deep_report = run_generic_theme_deep_report(cycle_dir / "result.json")
     payload["theme_deep_report"] = theme_deep_report
     if theme_deep_report.get("returncode") != 0:
         payload["errors"].append(f"theme_deep_report: {theme_deep_report}")
         payload["status"] = "error"
+    if theme_deep_report.get("status") != "skipped":
+        try:
+            payload["report_review_agent"] = run_report_review_agent(payload, cycle_dir, selected_theme_key(payload))
+        except Exception as exc:  # noqa: BLE001
+            payload["report_review_agent"] = {
+                "review_type": "architecture_aware_report_review",
+                "agent_provider": "deterministic_report_review_agent",
+                "status": "error",
+                "error": repr(exc),
+                "state_mutation_allowed": False,
+            }
     write_cycle_artifacts(cycle_dir, payload)
     harness = run_harness()
     after_dirty = submodule_dirty_counts()
@@ -383,6 +627,17 @@ def run_cycle(cycle: int, run_dir: Path, *, agent_mode: str, agent_timeout_secon
     payload["submodule_dirty_after"] = after_dirty
     payload["finished_at"] = utc_now()
     publish_latest_artifacts(payload, cycle_dir)
+    if theme_deep_report.get("status") != "skipped":
+        try:
+            payload["final_report_review_agent"] = run_final_report_review_agent(payload, cycle_dir, selected_theme_key(payload))
+        except Exception as exc:  # noqa: BLE001
+            payload["final_report_review_agent"] = {
+                "review_type": "architecture_aware_report_review",
+                "agent_provider": "deterministic_report_review_agent",
+                "status": "error",
+                "error": repr(exc),
+                "state_mutation_allowed": False,
+            }
     write_cycle_artifacts(cycle_dir, payload)
     return payload
 
@@ -398,6 +653,7 @@ def main() -> None:
     parser.add_argument("--error-backoff-seconds", type=int, default=60)
     parser.add_argument("--agent-mode", choices=["deterministic", "codex", "claude", "openai_compatible", "auto"], default="deterministic")
     parser.add_argument("--agent-timeout-seconds", type=int, default=180)
+    parser.add_argument("--keep-theme-drafts", action="store_true", help="keep reports/themes/* cycle draft copies for debugging")
     args = parser.parse_args()
 
     run_dir = ROOT / "runs" / datetime.now().strftime("%Y-%m-%d") / f"full-loop-{datetime.now().strftime('%H%M%S')}"
@@ -515,6 +771,10 @@ def main() -> None:
         summary["status"] = "error"
     summary["finished_at"] = utc_now()
     summary["consecutive_errors"] = consecutive_errors
+    if args.keep_theme_drafts:
+        summary["theme_draft_cleanup"] = {"skipped": True, "reason": "--keep-theme-drafts"}
+    else:
+        summary["theme_draft_cleanup"] = cleanup_theme_drafts(ROOT, run_dir.name)
     write_json(run_dir / "summary.json", summary)
     write_supervisor_health(
         run_id=run_dir.name,

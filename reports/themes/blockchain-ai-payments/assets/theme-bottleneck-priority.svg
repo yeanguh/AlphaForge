@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="46" y="48" font-size="28" font-weight="800" fill="#111827">区块链 / AI 代理支付：卡口候选优先级</text>
+<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；每个状态变化仍需 evidence id 支撑。</text>
+<text x="58" y="161" font-size="18" font-weight="700" fill="#111827">1. 稳定币/支付</text>
+<rect x="280" y="135" width="880.0" height="38" rx="8" fill="#4f46e5" opacity="0.88"/>
+<text x="1180.0" y="161" font-size="16" fill="#111827">优先级 4/4</text>
+<text x="58" y="237" font-size="18" font-weight="700" fill="#111827">2. Agent支付</text>
+<rect x="280" y="211" width="705.0" height="38" rx="8" fill="#059669" opacity="0.88"/>
+<text x="1005.0" y="237" font-size="16" fill="#111827">优先级 3/4</text>
+<text x="58" y="313" font-size="18" font-weight="700" fill="#111827">3. 链上身份</text>
+<rect x="280" y="287" width="530.0" height="38" rx="8" fill="#ea580c" opacity="0.88"/>
+<text x="830.0" y="313" font-size="16" fill="#111827">优先级 2/4</text>
+<text x="58" y="389" font-size="18" font-weight="700" fill="#111827">4. 清结算基础设施</text>
+<rect x="280" y="363" width="355.0" height="38" rx="8" fill="#0891b2" opacity="0.88"/>
+<text x="655.0" y="389" font-size="16" fill="#111827">优先级 1/4</text>
+</svg>

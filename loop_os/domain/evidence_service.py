@@ -159,6 +159,28 @@ def build_evidence_cards(cycle: int, payload: dict[str, Any]) -> list[EvidenceCa
             )
         )
 
+    provider_insights = payload.get("provider_insights", {})
+    providers = provider_insights.get("providers", {}) if isinstance(provider_insights, dict) else {}
+    if isinstance(providers, dict):
+        for key, insight in providers.items():
+            if not isinstance(insight, dict):
+                continue
+            provider = str(insight.get("provider") or key)
+            claims = [str(item) for item in insight.get("claims", []) if str(item).strip()]
+            if not claims:
+                claims = [f"{provider} status={insight.get('status')}"]
+            cards.append(
+                EvidenceCard(
+                    id=_stable_id("ev-provider", provider, str(payload.get("started_at")), str(cycle)),
+                    source_name=str(insight.get("source_submodule") or provider),
+                    source_type="external_provider_insight",
+                    title=f"{provider} runtime insight：{insight.get('status')}",
+                    freshness="current_cycle",
+                    claims=claims[:8],
+                    raw=insight,
+                )
+            )
+
     decisions = pipeline.get("trade_decision_engine", {}) if isinstance(pipeline, dict) else {}
     if decisions:
         cards.append(

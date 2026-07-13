@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="46" y="48" font-size="28" font-weight="800" fill="#111827">AI 算力基础设施：卡口候选优先级</text>
+<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；每个状态变化仍需 evidence id 支撑。</text>
+<text x="58" y="161" font-size="18" font-weight="700" fill="#111827">1. CPO/高速光模块</text>
+<rect x="280" y="135" width="880.0" height="38" rx="8" fill="#4f46e5" opacity="0.88"/>
+<text x="1180.0" y="161" font-size="16" fill="#111827">优先级 5/5</text>
+<text x="58" y="237" font-size="18" font-weight="700" fill="#111827">2. AI服务器PCB/交换机PCB</text>
+<rect x="280" y="211" width="740.0" height="38" rx="8" fill="#059669" opacity="0.88"/>
+<text x="1040.0" y="237" font-size="16" fill="#111827">优先级 4/5</text>
+<text x="58" y="313" font-size="18" font-weight="700" fill="#111827">3. AI服务器组装与供应链管理</text>
+<rect x="280" y="287" width="600.0" height="38" rx="8" fill="#ea580c" opacity="0.88"/>
+<text x="900.0" y="313" font-size="16" fill="#111827">优先级 3/5</text>
+<text x="58" y="389" font-size="18" font-weight="700" fill="#111827">4. 液冷/数据中心温控</text>
+<rect x="280" y="363" width="460.0" height="38" rx="8" fill="#0891b2" opacity="0.88"/>
+<text x="760.0" y="389" font-size="16" fill="#111827">优先级 2/5</text>
+<text x="58" y="465" font-size="18" font-weight="700" fill="#111827">5. 先进封装/封测与材料</text>
+<rect x="280" y="439" width="320.0" height="38" rx="8" fill="#7c3aed" opacity="0.88"/>
+<text x="620.0" y="465" font-size="16" fill="#111827">优先级 1/5</text>
+</svg>

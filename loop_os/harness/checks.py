@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from loop_os.domain.report_review_agent import review_report_text
 from loop_os.schemas.state import REQUIRED_STATE_FILES, load_state_file
 
 
@@ -42,6 +43,12 @@ _DEFAULT_FORBIDDEN_REPORT_TERMS = [
 
 # 方案 A: reports/themes/* 是持续沉淀的 canonical final reports, 门禁必须存在的主题键。
 _DEFAULT_THEME_CANONICAL_REQUIRED = ["physical-ai"]
+FINAL_REPORT_OPERATIONAL_MARKERS = [
+    "## 附录 · Loop 证据增量日志",
+    "### 待验证 / 反证 / 观察池",
+    "### 判断修正 / 已被反证",
+    "<!-- research-os-curation:",
+]
 
 
 def _load_report_policy() -> dict[str, Any]:
@@ -82,6 +89,86 @@ def get_theme_canonical_required() -> list[str]:
     if isinstance(value, list) and value and all(isinstance(x, str) for x in value):
         return value
     return list(_DEFAULT_THEME_CANONICAL_REQUIRED)
+
+
+def get_theme_quality_policy() -> dict[str, Any]:
+    policy = _load_report_policy()
+    theme_report_policy = policy.get("theme_report", {})
+    theme_report_policy = theme_report_policy if isinstance(theme_report_policy, dict) else {}
+    quality = theme_report_policy.get("quality")
+    if not isinstance(quality, dict):
+        quality = {}
+    return {
+        "min_chars": int(quality.get("min_chars", 0) or 0),
+        "min_images": int(quality.get("min_images", 0) or 0),
+        "max_todo_count": int(quality.get("max_todo_count", 9999) or 9999),
+        "required_sections": [str(x) for x in quality.get("required_sections", []) if isinstance(x, str)],
+        "required_terms": [str(x) for x in quality.get("required_terms", []) if isinstance(x, str)],
+        "quality_by_theme": (
+            theme_report_policy.get("quality_by_theme")
+            if isinstance(theme_report_policy.get("quality_by_theme"), dict)
+            else quality.get("quality_by_theme", {})
+        ),
+    }
+
+
+def _theme_quality_policy_for(key: str, base_policy: dict[str, Any]) -> dict[str, Any]:
+    policy = dict(base_policy)
+    by_theme = policy.pop("quality_by_theme", {})
+    override = by_theme.get(key) if isinstance(by_theme, dict) else None
+    if isinstance(override, dict):
+        for name in ("min_chars", "min_images", "max_todo_count"):
+            if name in override:
+                policy[name] = int(override.get(name) or 0)
+        for name in ("required_sections", "required_terms"):
+            if isinstance(override.get(name), list):
+                policy[name] = [str(x) for x in override[name] if isinstance(x, str)]
+    return policy
+
+
+def _main_report_text(text: str) -> str:
+    # 附录/loop 日志用于审计，不应把“待补验证”当作正文占位。
+    for marker in ("## 附录 · Loop 证据增量日志", "## 滚动修订记录"):
+        if marker in text:
+            return text.split(marker, 1)[0]
+    return text
+
+
+def _final_report_files() -> list[Path]:
+    files: list[Path] = []
+    themes_root = ROOT / "reports" / "themes"
+    stocks_root = ROOT / "reports" / "stocks"
+    weekly_root = ROOT / "reports" / "weekly"
+    if themes_root.exists():
+        files.extend(sorted(themes_root.glob("*/report.md")))
+    if stocks_root.exists():
+        files.extend(sorted(stocks_root.glob("*/report.md")))
+    if weekly_root.exists():
+        files.extend(
+            path
+            for path in sorted(weekly_root.glob("*.md"))
+            if not path.name.endswith("_change_log.md")
+        )
+    return files
+
+
+def check_final_reports_no_operational_logs() -> list[dict[str, Any]]:
+    offenders: list[str] = []
+    for path in _final_report_files():
+        try:
+            text = path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if any(marker in text for marker in FINAL_REPORT_OPERATIONAL_MARKERS):
+            offenders.append(str(path.relative_to(ROOT)))
+    return [
+        {
+            "check": "final_reports:no_operational_logs",
+            "status": "ok" if not offenders else "error",
+            "reports_scanned": len(_final_report_files()),
+            **({"offenders": offenders} if offenders else {}),
+        }
+    ]
 
 
 EXPECTED_SUBMODULES = {
@@ -301,7 +388,7 @@ def check_latest_loop_artifact() -> list[dict[str, Any]]:
             "status": "ok" if report_text and not any(term in report_text for term in forbidden_report_terms) else "error",
         },
     ]
-    if review.get("agent_provider") in {"codex", "claude"}:
+    if review.get("agent_provider") in {"codex", "claude", "openai_compatible"}:
         checks.append({"check": "latest_loop:llm_agent_review", "status": "ok"})
     else:
         checks.append({"check": "latest_loop:llm_agent_review", "status": "warn", "provider": review.get("agent_provider")})
@@ -329,9 +416,11 @@ def check_theme_reports() -> list[dict[str, Any]]:
     """
     checks: list[dict[str, Any]] = []
     themes_root = ROOT / "reports" / "themes"
+    required_theme_keys = get_theme_canonical_required()
+    quality_policy = get_theme_quality_policy()
 
     # 1) canonical 核心主题必须存在 report.md
-    for key in get_theme_canonical_required():
+    for key in required_theme_keys:
         report = themes_root / key / "report.md"
         checks.append(
             {
@@ -341,7 +430,66 @@ def check_theme_reports() -> list[dict[str, Any]]:
             }
         )
 
-    # 2) 全部主题报告的本地图片断链检查
+    # 2) 核心主题报告质量门禁:对标深度研究文章,不能只保留空壳/流水日志
+    for key in required_theme_keys:
+        report = themes_root / key / "report.md"
+        if not report.exists():
+            continue
+        try:
+            text = report.read_text(encoding="utf-8")
+        except Exception as exc:
+            checks.append({"check": f"theme_report:quality:{key}", "status": "error", "error": repr(exc)})
+            continue
+        policy_for_theme = _theme_quality_policy_for(key, quality_policy)
+        main_text = _main_report_text(text)
+        missing_sections = [section for section in policy_for_theme["required_sections"] if section not in main_text]
+        missing_terms = [term for term in policy_for_theme["required_terms"] if term not in main_text]
+        image_count = len(_image_refs(text))
+        char_count = len(main_text)
+        todo_count = main_text.count("待补")
+        ok = (
+            char_count >= policy_for_theme["min_chars"]
+            and image_count >= policy_for_theme["min_images"]
+            and todo_count <= policy_for_theme["max_todo_count"]
+            and not missing_sections
+            and not missing_terms
+        )
+        checks.append(
+            {
+                "check": f"theme_report:quality:{key}",
+                "status": "ok" if ok else "error",
+                "path": str(report.relative_to(ROOT)),
+                "char_count": char_count,
+                "image_count": image_count,
+                "todo_count": todo_count,
+                **({"missing_sections": missing_sections} if missing_sections else {}),
+                **({"missing_terms": missing_terms} if missing_terms else {}),
+            }
+        )
+        structure_review = review_report_text(
+            root=ROOT,
+            text=main_text,
+            report_path=report,
+            theme_key=key,
+            policy=policy_for_theme,
+        )
+        summary = structure_review.get("summary", {})
+        findings = structure_review.get("findings", [])
+        checks.append(
+            {
+                "check": f"theme_report:structure:{key}",
+                # New skill-aligned structural checks are intentionally warn-only
+                # until existing canonical reports have been backfilled.
+                "status": "ok" if not findings else "warn",
+                "path": str(report.relative_to(ROOT)),
+                "p1": summary.get("p1", 0),
+                "p2": summary.get("p2", 0),
+                "finding_count": summary.get("finding_count", len(findings)),
+                **({"findings": [item.get("title", "") for item in findings[:8]]} if findings else {}),
+            }
+        )
+
+    # 3) 全部主题报告的本地图片断链检查
     broken: list[str] = []
     report_files = sorted(themes_root.glob("*/report.md")) if themes_root.exists() else []
     for report in report_files:
@@ -363,6 +511,7 @@ def check_theme_reports() -> list[dict[str, Any]]:
             "reports_scanned": len(report_files),
         }
     )
+    checks.extend(check_final_reports_no_operational_logs())
     return checks
 
 

@@ -1,0 +1,105 @@
+{
+  "report": "research-os/reports/themes/ai-server-chain-2026-07-10/report.md",
+  "source_data": "research-os/reports/themes/ai-server-chain-2026-07-10/source_data.json",
+  "passed": true,
+  "score": 16,
+  "total": 16,
+  "checks": [
+    {
+      "name": "stable_report_sections",
+      "passed": true,
+      "evidence": "sections ok",
+      "severity": "error"
+    },
+    {
+      "name": "core_conclusion_depth",
+      "passed": true,
+      "evidence": "numbered_points=5; signal_terms=['价值', '核心', '风险', '弹性', '受益']",
+      "severity": "error"
+    },
+    {
+      "name": "rendered_visual_assets",
+      "passed": true,
+      "evidence": "existing_images=['research-os/reports/themes/ai-server-chain-2026-07-10/assets/ai-server-chain-map.png']; missing_images=[]",
+      "severity": "error"
+    },
+    {
+      "name": "valid_image_files",
+      "passed": true,
+      "evidence": "checked=['research-os/reports/themes/ai-server-chain-2026-07-10/assets/ai-server-chain-map.png: 1200x1600']; failures=[]",
+      "severity": "error"
+    },
+    {
+      "name": "relative_markdown_image_refs",
+      "passed": true,
+      "evidence": "all image refs are relative assets paths",
+      "severity": "error"
+    },
+    {
+      "name": "no_adapter_logs_in_report",
+      "passed": true,
+      "evidence": "no forbidden runtime patterns",
+      "severity": "error"
+    },
+    {
+      "name": "investment_opportunity_framing",
+      "passed": true,
+      "evidence": "found_terms=['投资线索', '受益顺序', '核心环节龙头', '关键技术突破者', '重要配套', '间接受益', '待验证']",
+      "severity": "error"
+    },
+    {
+      "name": "investment_opportunity_table",
+      "passed": true,
+      "evidence": "found=['| 机会类型 | 产业链逻辑 | 代表A股公司 | 验证里程碑 | 风险 |']",
+      "severity": "error"
+    },
+    {
+      "name": "claim_level_source_summary",
+      "passed": true,
+      "evidence": "found=['| 结论/数据 | 来源 | 日期 | 置信度 |']",
+      "severity": "error"
+    },
+    {
+      "name": "canonical_company_mapping_table",
+      "passed": true,
+      "evidence": "9-column A-share mapping header present",
+      "severity": "error"
+    },
+    {
+      "name": "core_value_distribution_table",
+      "passed": true,
+      "evidence": "core value table header present",
+      "severity": "error"
+    },
+    {
+      "name": "upstream_discovery_table",
+      "passed": true,
+      "evidence": "upstream table header present",
+      "severity": "error"
+    },
+    {
+      "name": "source_trail_present",
+      "passed": true,
+      "evidence": "source_entries=10",
+      "severity": "error"
+    },
+    {
+      "name": "high_confidence_sources",
+      "passed": true,
+      "evidence": "high_confidence_ok_sources=7",
+      "severity": "error"
+    },
+    {
+      "name": "medium_or_high_evidence_base",
+      "passed": true,
+      "evidence": "medium_or_high_sources=10",
+      "severity": "error"
+    },
+    {
+      "name": "filing_or_authoritative_evidence",
+      "passed": true,
+      "evidence": "authoritative_like_sources=9",
+      "severity": "error"
+    }
+  ]
+}

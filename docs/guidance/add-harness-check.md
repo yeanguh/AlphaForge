@@ -20,6 +20,6 @@
 
 ## 校验
 ```bash
-.venv/bin/python -m pytest tests/test_harness.py -q
-python scripts/run_harness.py
+uv run python -m pytest tests/test_harness.py -q
+uv run python scripts/run_harness.py
 ```

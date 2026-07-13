@@ -12,7 +12,7 @@
 
 ## 校验
 ```bash
-python scripts/run_harness.py
+uv run python scripts/run_harness.py
 ```
 - `theme_report:canonical:<key>` 为 ok。
 - `theme_report:image_links` 无 error(无坏链)。

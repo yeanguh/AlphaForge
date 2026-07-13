@@ -421,6 +421,21 @@ def stock_analyzer(quotes: list[dict[str, Any]], supplements: dict[str, dict[str
         research_reports = supp.get("research_reports", {}).get("rows", []) if isinstance(supp.get("research_reports"), dict) else []
         fund_flow_rows = supp.get("fund_flow", {}).get("rows", []) if isinstance(supp.get("fund_flow"), dict) else []
         dragon_rows = supp.get("dragon_tiger", {}).get("rows", []) if isinstance(supp.get("dragon_tiger"), dict) else []
+        margin_rows = supp.get("margin_trading", {}).get("rows", []) if isinstance(supp.get("margin_trading"), dict) else []
+        concept_rows = supp.get("concept_blocks", {}).get("rows", []) if isinstance(supp.get("concept_blocks"), dict) else []
+        valuation_percentile = supp.get("valuation_percentile", {}) if isinstance(supp.get("valuation_percentile"), dict) else {}
+        liquidity_rows = fund_flow_rows or margin_rows
+        fund_flow = supp.get("fund_flow", {}) if isinstance(supp.get("fund_flow"), dict) else {}
+        liquidity_note = "资金流"
+        if not fund_flow_rows and margin_rows:
+            liquidity_note = "融资融券代理资金拥挤度"
+        elif fund_flow.get("proxy"):
+            liquidity_note = str(fund_flow.get("method") or "代理资金拥挤度")
+        elif not liquidity_rows:
+            liquidity_note = "资金面待补"
+        valuation_method = "PE/PB current snapshot; historical percentile pending"
+        if valuation_percentile.get("metrics"):
+            valuation_method = "PE/PB current snapshot + Vibe-Research historical valuation percentile"
         out.append(
             {
                 "symbol": symbol,
@@ -442,7 +457,8 @@ def stock_analyzer(quotes: list[dict[str, Any]], supplements: dict[str, dict[str
                     "pb": pb,
                     "band": quote.get("valuation_band"),
                     "score": max(0, min(5, valuation_score)),
-                    "method": "PE/PB current snapshot; historical percentile pending",
+                    "method": valuation_method,
+                    "historical_percentile": valuation_percentile.get("metrics", {}),
                 },
                 "technical": {
                     "change_pct": change,
@@ -451,13 +467,20 @@ def stock_analyzer(quotes: list[dict[str, Any]], supplements: dict[str, dict[str
                     "comment": "技术面只作次要过滤，不替代产业链和基本面验证。",
                 },
                 "catalyst": supp.get("catalysts", []) + [item.get("title") for item in research_reports[:2] if item.get("title")],
-                "risk": supp.get("risks", []) + (["龙虎榜/资金流为空，短线资金确认不足"] if not fund_flow_rows and not dragon_rows else []),
+                "risk": supp.get("risks", [])
+                + (["资金流和融资融券代理均为空，短线资金确认不足"] if not liquidity_rows else [])
+                + (["近30日未上龙虎榜或龙虎榜数据为空，席位确认不足"] if not dragon_rows else []),
                 "a_stock_data_coverage": {
                     "announcements": len(announcements),
                     "fund_flow": len(fund_flow_rows),
+                    "margin_trading": len(margin_rows),
+                    "liquidity_rows": len(liquidity_rows),
+                    "liquidity_source": liquidity_note,
                     "dragon_tiger": len(dragon_rows),
                     "financial_indicator_periods": len(indicators),
                     "research_reports": len(research_reports),
+                    "concept_blocks": len(concept_rows),
+                    "valuation_percentile": 1 if valuation_percentile.get("metrics") else 0,
                 },
                 "public_data": supp,
             }

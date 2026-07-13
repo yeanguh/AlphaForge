@@ -100,5 +100,82 @@ class WriteReportOutputsTest(unittest.TestCase):
             self.assertIn("B 正文", draft2.read_text(encoding="utf-8"))
 
 
+class PhysicalAiDepthContractTest(unittest.TestCase):
+    def _history_rows(self) -> list[dict[str, float | str]]:
+        rows = []
+        for idx in range(80):
+            close = 20 + idx * 0.2
+            rows.append(
+                {
+                    "date": f"2026-04-{(idx % 28) + 1:02d}",
+                    "open": close - 0.1,
+                    "close": close,
+                    "high": close + 0.4,
+                    "low": close - 0.5,
+                    "volume": 10000 + idx * 100,
+                }
+            )
+        return rows
+
+    def test_blueprint_requires_three_core_companies_per_node(self) -> None:
+        for node in gen.PHYSICAL_AI_BLUEPRINT:
+            self.assertGreaterEqual(len(node["companies"]), 3, node["node"])
+            self.assertTrue(node["logic"])
+            self.assertTrue(node["risk"])
+
+    def test_technical_structure_outputs_tradeable_levels(self) -> None:
+        quote = {"price": 35.8}
+        supp = {"price_history": {"rows": self._history_rows()}, "research_reports": {"rows": []}}
+
+        tech = gen.technical_structure(quote, supp)
+
+        for key in ("ma5", "ma10", "ma20", "ma60", "support1", "resistance1", "risk_reward"):
+            self.assertIsInstance(tech[key], float, key)
+        self.assertIn("建议买点", tech["buy_zone"])
+        self.assertNotIn("数据不足", tech["buy_zone"])
+        self.assertNotIn("数据不足", tech["pressure"])
+
+    def test_chain_svg_renders_core_three_company_labels(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            svg = Path(tmp) / "chain.svg"
+            gen.write_chain_svg(svg)
+            text = svg.read_text(encoding="utf-8")
+
+        self.assertIn("核心节点三公司校验", text)
+        for node in gen.PHYSICAL_AI_BLUEPRINT:
+            self.assertIn(node["node"], text)
+            for company in node["companies"]:
+                self.assertIn(company, text)
+
+    def test_candlestick_png_is_not_placeholder(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            png = Path(tmp) / "kline.png"
+            gen.write_candlestick_png(
+                png,
+                self._history_rows(),
+                "绿的谐波 688017 支撑/压力结构",
+                {"support1": 28.5, "support2": 26.8, "resistance1": 36.2, "resistance2": 40.0},
+            )
+
+            self.assertFalse(gen.is_placeholder_png(png))
+
+    def test_candidate_action_does_not_unlock_buy_candidate_kline(self) -> None:
+        item = {
+            "tech": {
+                "risk_reward": 3.0,
+                "institutional_trend_score": 4.0,
+                "position60": 50.0,
+                "price": 35.0,
+                "support1": 32.0,
+                "resistance1": 42.0,
+            },
+            "decision": {"action": "candidate", "min_risk_reward": 1.6},
+            "has_trade_decision": True,
+            "decision_scope_present": True,
+        }
+
+        self.assertFalse(gen.physical_buy_candidate("002472", item))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -228,14 +228,16 @@ def _stock_data_coverage_table(payload: dict[str, Any]) -> list[str]:
                 f"{item.get('name')} `{item.get('symbol')}`",
                 coverage.get("announcements", 0),
                 coverage.get("fund_flow", 0),
+                coverage.get("margin_trading", 0),
                 coverage.get("dragon_tiger", 0),
                 coverage.get("financial_indicator_periods", 0),
                 coverage.get("research_reports", 0),
+                coverage.get("valuation_percentile", 0),
             ]
         )
     if not rows:
         return ["- 本轮未形成个股补充数据。"]
-    return _simple_md_table(["标的", "公告", "资金", "龙虎榜", "财务期数", "研报"], rows)
+    return _simple_md_table(["标的", "公告", "资金流", "两融", "近30日龙虎榜", "财务期数", "研报", "估值分位"], rows)
 
 
 def _report_pick(reports: list[dict[str, Any]], keywords: list[str], limit: int = 4) -> list[dict[str, Any]]:

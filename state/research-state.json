@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-09T06:56:10.223451+00:00",
+  "updated_at": "2026-07-10T10:58:26.640701+00:00",
   "loops": {
     "full_loop": {
       "status": "ok",
-      "last_run_id": "full-loop-141931",
-      "last_cycle": 8,
-      "last_run_at": "2026-07-09T06:56:10.223451+00:00",
+      "last_run_id": "full-loop-185510",
+      "last_cycle": 1,
+      "last_run_at": "2026-07-10T10:58:26.640701+00:00",
       "next_action": "continue_loop",
-      "evidence_count": 37
+      "evidence_count": 48
     }
   },
   "notes": "State machine snapshot root for current research loop status.",
@@ -935,6 +935,636 @@
           "at": "2026-07-09T06:56:10.223451+00:00",
           "cycle": 8,
           "signal_count": 3
+        }
+      ]
+    },
+    {
+      "id": "theme-58d68f50f6c7",
+      "name": "ai-compute-infra",
+      "status": "tracking",
+      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "signal_count": 18,
+      "evidence_ids": [
+        "ev-market-cn-64380868de36",
+        "ev-market-cn-8b7a58b86be6",
+        "ev-market-cn-8d4cc5765363",
+        "ev-market-cn-1b8130643d30",
+        "ev-market-cn-0eecea9949a5",
+        "ev-market-cn-120ccd4002db",
+        "ev-market-cn-0a8062a7163a",
+        "ev-market-global-1ce6b7dbfef4"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-10T01:22:32.570678+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:26:44.413241+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:31:08.385144+00:00",
+          "cycle": 2,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:35:51.844320+00:00",
+          "cycle": 3,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:41:02.596756+00:00",
+          "cycle": 4,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:45:35.389604+00:00",
+          "cycle": 5,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:50:43.969712+00:00",
+          "cycle": 6,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:55:54.116187+00:00",
+          "cycle": 7,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:00:56.897947+00:00",
+          "cycle": 8,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:05:38.366466+00:00",
+          "cycle": 9,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:10:49.690356+00:00",
+          "cycle": 10,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:15:55.289592+00:00",
+          "cycle": 11,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:20:48.220121+00:00",
+          "cycle": 12,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:01:24.430106+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:06:44.814723+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:19:11.825330+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:23:51.847316+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T10:47:02.837655+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        },
+        {
+          "at": "2026-07-10T10:49:27.884920+00:00",
+          "cycle": 2,
+          "signal_count": 17
+        },
+        {
+          "at": "2026-07-10T10:58:26.640701+00:00",
+          "cycle": 1,
+          "signal_count": 18
+        }
+      ]
+    },
+    {
+      "id": "theme-2ef8f81a6858",
+      "name": "agentic-ai",
+      "status": "tracking",
+      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "signal_count": 2,
+      "evidence_ids": [
+        "ev-market-cn-64380868de36",
+        "ev-market-cn-8b7a58b86be6",
+        "ev-market-cn-8d4cc5765363",
+        "ev-market-cn-1b8130643d30",
+        "ev-market-cn-0eecea9949a5",
+        "ev-market-cn-120ccd4002db",
+        "ev-market-cn-0a8062a7163a",
+        "ev-market-global-1ce6b7dbfef4"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-10T01:22:32.570678+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:26:44.413241+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:31:08.385144+00:00",
+          "cycle": 2,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:35:51.844320+00:00",
+          "cycle": 3,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:41:02.596756+00:00",
+          "cycle": 4,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:45:35.389604+00:00",
+          "cycle": 5,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:50:43.969712+00:00",
+          "cycle": 6,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:55:54.116187+00:00",
+          "cycle": 7,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:00:56.897947+00:00",
+          "cycle": 8,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:05:38.366466+00:00",
+          "cycle": 9,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:10:49.690356+00:00",
+          "cycle": 10,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:15:55.289592+00:00",
+          "cycle": 11,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:20:48.220121+00:00",
+          "cycle": 12,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:01:24.430106+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:06:44.814723+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:19:11.825330+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:23:51.847316+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T10:47:02.837655+00:00",
+          "cycle": 1,
+          "signal_count": 2
+        },
+        {
+          "at": "2026-07-10T10:49:27.884920+00:00",
+          "cycle": 2,
+          "signal_count": 2
+        },
+        {
+          "at": "2026-07-10T10:58:26.640701+00:00",
+          "cycle": 1,
+          "signal_count": 2
+        }
+      ]
+    },
+    {
+      "id": "theme-0c4ab3919c34",
+      "name": "ai-industrial-software",
+      "status": "discovered",
+      "last_seen_at": "2026-07-09T21:49:04.875384+00:00",
+      "signal_count": 1,
+      "evidence_ids": [
+        "ev-market-cn-8fd9f00888b7",
+        "ev-market-cn-1586f85025e6",
+        "ev-market-cn-c52a8df55e2f",
+        "ev-market-cn-ca96184a7e68",
+        "ev-market-cn-d31ca00576d0",
+        "ev-market-cn-8210c69dd0fd",
+        "ev-market-cn-c17a59d2bba0",
+        "ev-market-global-0922d575b249"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-09T20:16:49.616446+00:00",
+          "cycle": 62,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:21:41.634080+00:00",
+          "cycle": 63,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:26:51.961940+00:00",
+          "cycle": 64,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:31:54.137465+00:00",
+          "cycle": 65,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:36:46.800528+00:00",
+          "cycle": 66,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:42:01.004605+00:00",
+          "cycle": 67,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:46:43.971882+00:00",
+          "cycle": 68,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:51:49.798748+00:00",
+          "cycle": 69,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T20:56:44.125232+00:00",
+          "cycle": 70,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:01:47.985377+00:00",
+          "cycle": 71,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:06:43.853985+00:00",
+          "cycle": 72,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:11:44.211213+00:00",
+          "cycle": 73,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:16:42.182206+00:00",
+          "cycle": 74,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:21:44.835992+00:00",
+          "cycle": 75,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:26:44.856776+00:00",
+          "cycle": 76,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:31:48.006606+00:00",
+          "cycle": 77,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:36:51.005538+00:00",
+          "cycle": 78,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:42:07.261261+00:00",
+          "cycle": 79,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:47:28.018133+00:00",
+          "cycle": 80,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-09T21:49:04.875384+00:00",
+          "cycle": 1,
+          "signal_count": 1
+        }
+      ]
+    },
+    {
+      "id": "theme-4bce415c9cf8",
+      "name": "datacenter-power",
+      "status": "tracking",
+      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "signal_count": 3,
+      "evidence_ids": [
+        "ev-market-cn-64380868de36",
+        "ev-market-cn-8b7a58b86be6",
+        "ev-market-cn-8d4cc5765363",
+        "ev-market-cn-1b8130643d30",
+        "ev-market-cn-0eecea9949a5",
+        "ev-market-cn-120ccd4002db",
+        "ev-market-cn-0a8062a7163a",
+        "ev-market-global-1ce6b7dbfef4"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-10T01:22:32.570678+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:26:44.413241+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:31:08.385144+00:00",
+          "cycle": 2,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:35:51.844320+00:00",
+          "cycle": 3,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:41:02.596756+00:00",
+          "cycle": 4,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:45:35.389604+00:00",
+          "cycle": 5,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:50:43.969712+00:00",
+          "cycle": 6,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T01:55:54.116187+00:00",
+          "cycle": 7,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:00:56.897947+00:00",
+          "cycle": 8,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:05:38.366466+00:00",
+          "cycle": 9,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:10:49.690356+00:00",
+          "cycle": 10,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:15:55.289592+00:00",
+          "cycle": 11,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T02:20:48.220121+00:00",
+          "cycle": 12,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:01:24.430106+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:06:44.814723+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:19:11.825330+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T03:23:51.847316+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T10:47:02.837655+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T10:49:27.884920+00:00",
+          "cycle": 2,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-10T10:58:26.640701+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        }
+      ]
+    },
+    {
+      "id": "theme-d3619d05b5bf",
+      "name": "physical-ai",
+      "status": "tracking",
+      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "signal_count": 15,
+      "evidence_ids": [
+        "ev-market-cn-64380868de36",
+        "ev-market-cn-8b7a58b86be6",
+        "ev-market-cn-8d4cc5765363",
+        "ev-market-cn-1b8130643d30",
+        "ev-market-cn-0eecea9949a5",
+        "ev-market-cn-120ccd4002db",
+        "ev-market-cn-0a8062a7163a",
+        "ev-market-global-1ce6b7dbfef4"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-10T01:22:32.570678+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:26:44.413241+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:31:08.385144+00:00",
+          "cycle": 2,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:35:51.844320+00:00",
+          "cycle": 3,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:41:02.596756+00:00",
+          "cycle": 4,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:45:35.389604+00:00",
+          "cycle": 5,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:50:43.969712+00:00",
+          "cycle": 6,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T01:55:54.116187+00:00",
+          "cycle": 7,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:00:56.897947+00:00",
+          "cycle": 8,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:05:38.366466+00:00",
+          "cycle": 9,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:10:49.690356+00:00",
+          "cycle": 10,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:15:55.289592+00:00",
+          "cycle": 11,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T02:20:48.220121+00:00",
+          "cycle": 12,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:01:24.430106+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:06:44.814723+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:19:11.825330+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T03:23:51.847316+00:00",
+          "cycle": 1,
+          "signal_count": 12
+        },
+        {
+          "at": "2026-07-10T10:47:02.837655+00:00",
+          "cycle": 1,
+          "signal_count": 16
+        },
+        {
+          "at": "2026-07-10T10:49:27.884920+00:00",
+          "cycle": 2,
+          "signal_count": 15
+        },
+        {
+          "at": "2026-07-10T10:58:26.640701+00:00",
+          "cycle": 1,
+          "signal_count": 15
+        }
+      ]
+    },
+    {
+      "id": "theme-f0514d1483dc",
+      "name": "autonomous-low-altitude",
+      "status": "discovered",
+      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "signal_count": 1,
+      "evidence_ids": [
+        "ev-market-cn-64380868de36",
+        "ev-market-cn-8b7a58b86be6",
+        "ev-market-cn-8d4cc5765363",
+        "ev-market-cn-1b8130643d30",
+        "ev-market-cn-0eecea9949a5",
+        "ev-market-cn-120ccd4002db",
+        "ev-market-cn-0a8062a7163a",
+        "ev-market-global-1ce6b7dbfef4"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-10T10:49:27.884920+00:00",
+          "cycle": 2,
+          "signal_count": 1
+        },
+        {
+          "at": "2026-07-10T10:58:26.640701+00:00",
+          "cycle": 1,
+          "signal_count": 1
         }
       ]
     }

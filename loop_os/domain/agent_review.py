@@ -12,6 +12,7 @@ from typing import Any
 
 
 VALID_AGENT_MODES = {"deterministic", "codex", "claude", "openai_compatible", "auto"}
+DEFAULT_OPENAI_COMPATIBLE_MODEL = "opensource/glm5.2"
 
 
 def build_deterministic_review(data: dict[str, Any]) -> dict[str, Any]:
@@ -64,7 +65,7 @@ def build_deterministic_review(data: dict[str, Any]) -> dict[str, Any]:
             "hot_money": hot_money[:6],
         },
         "decision": decision,
-        "reason": "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过 TradingAgents-astock adapter 接入。",
+        "reason": "本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。",
     }
 
 
@@ -214,10 +215,48 @@ def _extract_json(text: str) -> dict[str, Any]:
     end = text.rfind("}")
     if start < 0 or end <= start:
         raise ValueError("agent output does not contain a JSON object")
-    data = json.loads(text[start : end + 1])
+    json_text = text[start : end + 1]
+    try:
+        data = json.loads(json_text)
+    except json.JSONDecodeError:
+        data = json.loads(_repair_unescaped_inner_quotes(json_text))
     if not isinstance(data, dict):
         raise ValueError("agent output JSON is not an object")
     return data
+
+
+def _repair_unescaped_inner_quotes(text: str) -> str:
+    """Repair common LLM JSON issue: unescaped quotes inside string values."""
+    repaired: list[str] = []
+    in_string = False
+    escaped = False
+    for idx, char in enumerate(text):
+        if escaped:
+            repaired.append(char)
+            escaped = False
+            continue
+        if char == "\\" and in_string:
+            repaired.append(char)
+            escaped = True
+            continue
+        if char == '"':
+            if not in_string:
+                in_string = True
+                repaired.append(char)
+                continue
+            next_nonspace = ""
+            for next_char in text[idx + 1 :]:
+                if not next_char.isspace():
+                    next_nonspace = next_char
+                    break
+            if next_nonspace in {":", ",", "]", "}"}:
+                in_string = False
+                repaired.append(char)
+            else:
+                repaired.append('\\"')
+            continue
+        repaired.append(char)
+    return "".join(repaired)
 
 
 def _normalize_review(raw: dict[str, Any], provider: str) -> dict[str, Any]:
@@ -299,13 +338,12 @@ def _run_claude(prompt: str, root: Path, artifacts_dir: Path, timeout_seconds: i
 def _llm_config() -> tuple[str, str, str]:
     base_url = os.environ.get("BASE_URL") or os.environ.get("OPENAI_BASE_URL")
     api_key = os.environ.get("API_KEY") or os.environ.get("OPENAI_API_KEY")
-    model = os.environ.get("MODEL_NAME") or os.environ.get("OPENAI_MODEL")
+    model = os.environ.get("MODEL_NAME") or os.environ.get("OPENAI_MODEL") or DEFAULT_OPENAI_COMPATIBLE_MODEL
     missing = [
         name
         for name, value in [
             ("BASE_URL/OPENAI_BASE_URL", base_url),
             ("API_KEY/OPENAI_API_KEY", api_key),
-            ("MODEL_NAME/OPENAI_MODEL", model),
         ]
         if not value
     ]
@@ -326,6 +364,7 @@ def _run_openai_compatible(prompt: str, root: Path, artifacts_dir: Path, timeout
             ],
             "temperature": 0.2,
             "max_tokens": int(os.environ.get("OPENAI_MAX_TOKENS", "4096")),
+            "response_format": {"type": "json_object"},
         },
         ensure_ascii=False,
     ).encode("utf-8")

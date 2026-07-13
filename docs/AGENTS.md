@@ -22,6 +22,7 @@
 | 查架构不变式(不能违反的规则) | `reference/architecture-invariants.md` |
 | 查代码地图 / 模块边界 / 依赖方向 | `reference/module-map.md` |
 | 查 evidence / claim / state 数据契约 | `reference/data-contracts.md` |
+| 查数据源 / skill provider / token 权限 / 降级顺序 | `reference/data-access.md` |
 | 查主题池 / 研报路由(方案 A)规则 | `reference/theme-pool-and-reports.md` |
 | 查 harness 全部校验及其含义 | `reference/harness-checks.md` |
 | 跑一次完整研究循环 | `guidance/run-research-loop.md` |

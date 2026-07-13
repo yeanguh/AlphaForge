@@ -2,7 +2,7 @@
 
 > 这不是某个任务的一次性计划(那属于 `docs/plans/`),而是**每次动手前照走的固定流程**。
 > 对齐 Harness Engineering:先建上下文 → 在约束内改 → 结果导向验收 → 用 Problem Taxonomy 归因。
-> 所有命令在仓库根、`.venv` 环境下执行。
+> 所有命令在仓库根执行;默认使用 `uv run python ...` 进入项目依赖环境。
 
 ## 阶段 0:定位上下文(先读,再动手)
 
@@ -12,7 +12,7 @@
 2. 按需读 `docs/reference/`:
    - 改数据形态 → `reference/data-contracts.md`
    - 改主题/研报路由 → `reference/theme-pool-and-reports.md`
-   - 改目录/依赖边界 → `reference/repo-layout.md`
+   - 改目录/依赖边界 → `reference/module-map.md`
    - 改/加校验 → `reference/harness-checks.md`
 3. 需要操作步骤 → 对应 `docs/guidance/*`。
 4. 复杂改动 → 从 `docs/plans/TEMPLATE.md` 开一份 ExecPlan,放 `docs/plans/proposal/`。
@@ -21,8 +21,8 @@
 
 - 先跑一遍,确认当前**可观测**状态,别凭猜测改:
   ```bash
-  python -m pytest -q
-  python scripts/run_harness.py
+  uv run python -m pytest -q
+  uv run python scripts/run_harness.py
   ```
 - 记录基线(几个用例过、harness 有哪些 warn),作为改动前后的对照。
 
@@ -39,8 +39,8 @@
 ## 阶段 3:结果导向验收(缺一不可)
 
 ```bash
-python -m pytest -q                 # 全部 PASS,0 skipped
-python scripts/run_harness.py       # 无 error(所有 check 为 ok/warn)
+uv run python -m pytest -q                 # 全部 PASS,0 skipped
+uv run python scripts/run_harness.py       # 无 error(所有 check 为 ok/warn)
 ```
 提交前跑 pre-commit hook(见 `scripts/install_hooks.sh` 安装),退出码必须为 0。
 若开了 ExecPlan,同步更新其进度日志与验收勾选项(活文档)。

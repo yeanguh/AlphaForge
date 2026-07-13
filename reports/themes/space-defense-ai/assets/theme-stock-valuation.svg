@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="48" y="48" font-size="28" font-weight="800" fill="#111827">空间 / 国防 AI：A股候选估值与证据状态</text>
+<text x="48" y="86" font-size="16" fill="#4b5563">PE/PB来自公开行情或补充数据；缺失时保留为待验证，不用估算值填充。</text>
+<text x="56" y="163" font-size="17" font-weight="700" fill="#111827">航天宏图</text>
+<text x="56" y="189" font-size="14" fill="#6b7280">688066</text>
+<rect x="210" y="138" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="162" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="195" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+<text x="56" y="237" font-size="17" font-weight="700" fill="#111827">中科星图</text>
+<text x="56" y="263" font-size="14" fill="#6b7280">688568</text>
+<rect x="210" y="212" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="236" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="269" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+<text x="56" y="311" font-size="17" font-weight="700" fill="#111827">航天彩虹</text>
+<text x="56" y="337" font-size="14" fill="#6b7280">002389</text>
+<rect x="210" y="286" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="310" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="343" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+<text x="56" y="385" font-size="17" font-weight="700" fill="#111827">中无人机</text>
+<text x="56" y="411" font-size="14" fill="#6b7280">688297</text>
+<rect x="210" y="360" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="384" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="417" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+<text x="56" y="459" font-size="17" font-weight="700" fill="#111827">航天宏图</text>
+<text x="56" y="485" font-size="14" fill="#6b7280">688066</text>
+<rect x="210" y="434" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="458" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="491" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+<text x="56" y="533" font-size="17" font-weight="700" fill="#111827">中科星图</text>
+<text x="56" y="559" font-size="14" fill="#6b7280">688568</text>
+<rect x="210" y="508" width="140.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="365.0" y="532" font-size="15" fill="#111827">PE 待验证 / PB 待验证</text>
+<text x="210" y="565" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
+</svg>

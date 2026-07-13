@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", Arial, sans-serif; fill: #172033; }
+      .title { font-size: 38px; font-weight: 700; }
+      .subtitle { font-size: 20px; fill: #526071; }
+      .layer { font-size: 26px; font-weight: 700; fill: #0f3d66; }
+      .node-title { font-size: 22px; font-weight: 700; }
+      .node-sub { font-size: 17px; fill: #526071; }
+      .small { font-size: 16px; fill: #526071; }
+      .box { fill: #ffffff; stroke: #7ca7c7; stroke-width: 2; rx: 14; }
+      .key { fill: #f4fbff; stroke: #2b79b9; stroke-width: 3; rx: 14; }
+      .adj { fill: #fbf8ff; stroke: #9a79c7; stroke-width: 2; stroke-dasharray: 8 6; rx: 14; }
+      .risk { fill: #fff7f2; stroke: #d47a46; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #2b79b9; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke: #9a79c7; stroke-width: 3; fill: none; stroke-dasharray: 8 6; marker-end: url(#arrow-purple); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2b79b9"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#9a79c7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1600" fill="#f6f8fb"/>
+  <text x="600" y="70" text-anchor="middle" class="title">华为 OPEN NPO 光互连产业链图谱</text>
+  <text x="600" y="108" text-anchor="middle" class="subtitle">AI超节点/GW级AIDC：从可插拔光模块走向近封装光学的过渡路线</text>
+
+  <text x="80" y="172" class="layer">上游：核心芯片、材料、设备与标准</text>
+  <rect x="80" y="200" width="300" height="130" class="key"/>
+  <text x="230" y="245" text-anchor="middle" class="node-title">光电芯片</text>
+  <text x="230" y="282" text-anchor="middle" class="node-sub">InP EML/激光器、硅光PIC</text>
+  <text x="230" y="310" text-anchor="middle" class="node-sub">源杰科技、长光华芯、仕佳光子</text>
+  <rect x="450" y="200" width="300" height="130" class="key"/>
+  <text x="600" y="245" text-anchor="middle" class="node-title">近封装高速连接</text>
+  <text x="600" y="282" text-anchor="middle" class="node-sub">224G信号完整性/连接器/线模组</text>
+  <text x="600" y="310" text-anchor="middle" class="node-sub">华丰科技、立讯精密</text>
+  <rect x="820" y="200" width="300" height="130" class="box"/>
+  <text x="970" y="245" text-anchor="middle" class="node-title">封装与测试设备</text>
+  <text x="970" y="282" text-anchor="middle" class="node-sub">耦合、贴装、ATE、可靠性验证</text>
+  <text x="970" y="310" text-anchor="middle" class="node-sub">罗博特科等待验证</text>
+
+  <rect x="80" y="370" width="300" height="130" class="box"/>
+  <text x="230" y="415" text-anchor="middle" class="node-title">板级/封装材料</text>
+  <text x="230" y="452" text-anchor="middle" class="node-sub">高速PCB、低Dk材料、基板、胶材</text>
+  <text x="230" y="480" text-anchor="middle" class="node-sub">生益科技、沪电股份等相邻链</text>
+  <rect x="450" y="370" width="300" height="130" class="box"/>
+  <text x="600" y="415" text-anchor="middle" class="node-title">标准/IP/EDA</text>
+  <text x="600" y="452" text-anchor="middle" class="node-sub">OPEN NPO MSA、接口与测试规范</text>
+  <text x="600" y="480" text-anchor="middle" class="node-sub">GCC/OAII/产业伙伴</text>
+  <rect x="820" y="370" width="300" height="130" class="risk"/>
+  <text x="970" y="415" text-anchor="middle" class="node-title">外部约束</text>
+  <text x="970" y="452" text-anchor="middle" class="node-sub">高端激光芯片、良率、客户认证</text>
+  <text x="970" y="480" text-anchor="middle" class="node-sub">GPU/XPU供给也会反向制约需求</text>
+
+  <path d="M600 530 L600 615" class="arrow"/>
+  <text x="80" y="590" class="layer">中游：NPO光引擎、光模块与系统集成</text>
+  <rect x="120" y="625" width="300" height="140" class="key"/>
+  <text x="270" y="675" text-anchor="middle" class="node-title">NPO光引擎</text>
+  <text x="270" y="714" text-anchor="middle" class="node-sub">光电近封装、光电协同设计</text>
+  <text x="270" y="742" text-anchor="middle" class="node-sub">光迅科技、华工正源</text>
+  <rect x="450" y="625" width="300" height="140" class="box"/>
+  <text x="600" y="675" text-anchor="middle" class="node-title">800G/1.6T光模块</text>
+  <text x="600" y="714" text-anchor="middle" class="node-sub">LPO/硅光/短距互连升级</text>
+  <text x="600" y="742" text-anchor="middle" class="node-sub">光迅、华工、中际旭创、新易盛</text>
+  <rect x="780" y="625" width="300" height="140" class="box"/>
+  <text x="930" y="675" text-anchor="middle" class="node-title">交换机/XPU适配</text>
+  <text x="930" y="714" text-anchor="middle" class="node-sub">板卡、连接器、散热与测试</text>
+  <text x="930" y="742" text-anchor="middle" class="node-sub">设备商/云厂商联合验证</text>
+
+  <path d="M600 790 L600 875" class="arrow"/>
+  <text x="80" y="850" class="layer">下游：AI算力基础设施与客户验证</text>
+  <rect x="120" y="885" width="300" height="140" class="key"/>
+  <text x="270" y="935" text-anchor="middle" class="node-title">AI超节点</text>
+  <text x="270" y="974" text-anchor="middle" class="node-sub">短距、高密度、低功耗互连</text>
+  <text x="270" y="1002" text-anchor="middle" class="node-sub">昇腾/国产AI集群牵引</text>
+  <rect x="450" y="885" width="300" height="140" class="box"/>
+  <text x="600" y="935" text-anchor="middle" class="node-title">云厂商/运营商</text>
+  <text x="600" y="974" text-anchor="middle" class="node-sub">中国移动、京东云、百度等</text>
+  <text x="600" y="1002" text-anchor="middle" class="node-sub">标准验证与规模采购入口</text>
+  <rect x="780" y="885" width="300" height="140" class="adj"/>
+  <text x="930" y="935" text-anchor="middle" class="node-title">相邻基础设施</text>
+  <text x="930" y="974" text-anchor="middle" class="node-sub">液冷、电源、IDC网络、光纤</text>
+  <text x="930" y="1002" text-anchor="middle" class="node-sub">受益但非NPO核心BOM</text>
+
+  <path d="M420 695 L450 695" class="arrow"/>
+  <path d="M750 695 L780 695" class="arrow"/>
+  <path d="M420 955 L450 955" class="arrow"/>
+  <path d="M750 955 L780 955" class="dashed"/>
+  <path d="M230 500 C230 560 270 575 270 625" class="arrow"/>
+  <path d="M600 500 C600 565 600 575 600 625" class="arrow"/>
+  <path d="M970 500 C970 560 930 575 930 625" class="arrow"/>
+
+  <rect x="80" y="1110" width="1040" height="260" class="box"/>
+  <text x="115" y="1160" class="layer">瓶颈判断</text>
+  <text x="115" y="1204" class="node-sub">1. 光引擎与硅光/InP芯片：决定功耗、带宽密度和良率，是NPO规模化的核心卡口。</text>
+  <text x="115" y="1242" class="node-sub">2. 近封装电连接器：224G信号完整性、空间约束、热管理和整机适配验证抬高门槛。</text>
+  <text x="115" y="1280" class="node-sub">3. 标准与客户验证：2026Q3首版规范、2027H1生态完善是产业兑现节奏。</text>
+  <text x="115" y="1318" class="node-sub">4. 可插拔/LPO/CPO并存：NPO是过渡与补充路线，需跟踪真实订单和客户验证。</text>
+
+  <rect x="80" y="1410" width="1040" height="100" fill="#eef5fb" stroke="#c6d7e6" rx="12"/>
+  <text x="115" y="1450" class="small">图例：蓝色粗边=核心主链/潜在卡口；普通蓝边=重要环节；紫色虚线=相邻基础设施；橙色=风险/约束。</text>
+  <text x="115" y="1485" class="small">资料口径：华为计算/IT之家/第一财经事件披露、OIF/TrendForce/LightCounting、A股公司年报与公开资料；制图日期：2026-07-10。</text>
+</svg>

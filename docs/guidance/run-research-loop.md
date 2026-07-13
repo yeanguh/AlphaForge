@@ -6,22 +6,22 @@
 ## 步骤
 1. (可选)先验证数据源可用:
    ```bash
-   python scripts/run_provider_smoke.py --live
+   uv run python scripts/run_provider_smoke.py --live
    ```
 2. 运行完整循环:
    ```bash
-   python scripts/run_full_loop.py
+   uv run python scripts/run_full_loop.py
    ```
    该循环:拉行情/新闻/研报 → 生成 evidence card 与 claim index → 主题打分选一条产业链 → agent review → 组装 pipeline → 提交 state transition → 写 `runs/`、`reports/daily/`(增量 inbox)、`data/raw/latest-full-loop.json` → 由 `route_cycle_reports` 把最终结论沉淀到 `reports/themes/<theme>/report.md` → 生成产业链深度报告。
 3. 提交任何 state 变更前跑 harness:
    ```bash
-   python scripts/run_harness.py
+   uv run python scripts/run_harness.py
    ```
    status 必须为 ok(所有 check 为 ok/warn)。
 
 ## 校验
 - `reports/themes/<theme>/report.md` 已更新(canonical)。
-- `python scripts/run_harness.py` 无 error。
+- `uv run python scripts/run_harness.py` 无 error。
 
 ## 注意
 - `reports/daily/` 是过程日志,不是最终报告,不要当交付物。

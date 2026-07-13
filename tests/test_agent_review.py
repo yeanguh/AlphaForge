@@ -14,6 +14,13 @@ class AgentReviewTest(unittest.TestCase):
         payload = _extract_json('result:\n{"decision":"needs_more_evidence","roles":{}}\n')
         self.assertEqual(payload["decision"], "needs_more_evidence")
 
+    def test_extract_json_repairs_unescaped_inner_quotes(self) -> None:
+        payload = _extract_json(
+            '{"roles":{"policy_news":["国务院印发《美丽中国建设"十五五"规划》"]},"decision":"needs_more_evidence"}'
+        )
+
+        self.assertIn('"十五五"', payload["roles"]["policy_news"][0])
+
     def test_normalize_review_fills_required_roles(self) -> None:
         review = _normalize_review({"roles": {"bull": "ok"}, "decision": "bad"}, "codex")
         self.assertEqual(review["agent_provider"], "codex")
@@ -50,6 +57,7 @@ class AgentReviewTest(unittest.TestCase):
         body = json.loads(request.data.decode("utf-8"))
         self.assertEqual(request.full_url, "https://example.test/v1/chat/completions")
         self.assertEqual(body["max_tokens"], 4096)
+        self.assertEqual(body["response_format"], {"type": "json_object"})
         self.assertEqual(review["agent_provider"], "openai_compatible")
         self.assertEqual(review["roles"]["bull"], ["ok"])
 
@@ -80,6 +88,31 @@ class AgentReviewTest(unittest.TestCase):
         body = json.loads(request.data.decode("utf-8"))
         self.assertEqual(body["model"], "test-model")
         self.assertEqual(body["max_tokens"], 512)
+        self.assertEqual(review["agent_provider"], "openai_compatible")
+
+    def test_openai_compatible_review_defaults_model_when_only_openai_url_and_key_are_set(self) -> None:
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return None
+
+            def read(self):
+                return b'{"choices":[{"message":{"content":"{\\"roles\\":{},\\"decision\\":\\"needs_more_evidence\\"}"}}]}'
+
+        with TemporaryDirectory() as tmp, mock.patch.dict(
+            "os.environ",
+            {
+                "OPENAI_BASE_URL": "https://example.test/v1",
+                "OPENAI_API_KEY": "test-key",
+            },
+            clear=True,
+        ), mock.patch("urllib.request.urlopen", return_value=FakeResponse()) as urlopen:
+            review = _run_openai_compatible("prompt", Path(tmp), Path(tmp), 5)
+
+        body = json.loads(urlopen.call_args.args[0].data.decode("utf-8"))
+        self.assertEqual(body["model"], "opensource/glm5.2")
         self.assertEqual(review["agent_provider"], "openai_compatible")
 
     def test_openai_compatible_retries_transient_http_errors(self) -> None:

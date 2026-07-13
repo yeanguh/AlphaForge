@@ -15,6 +15,7 @@ from providers.open_source import (
     global_stock_data,
     investment_news,
     tradingagents_astock,
+    tushare_provider,
     vibe_research,
     vibe_trading,
     wen_cai,
@@ -26,6 +27,7 @@ def run(live: bool = False) -> dict:
     providers: list[tuple[str, Callable[[bool], ProviderResult]]] = [
         ("a-stock-data", a_stock_data.smoke),
         ("investment-news", investment_news.smoke),
+        ("tushare", tushare_provider.smoke),
         ("global-stock-data", global_stock_data.smoke),
         ("TradingAgents-astock", tradingagents_astock.smoke),
         ("Vibe-Research", vibe_research.smoke),

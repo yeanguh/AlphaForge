@@ -89,7 +89,7 @@ research-os 的核心资产(证据契约、依赖边界、状态机、Ports&Adap
 
 ## 验收记录
 
-- python scripts/run_harness.py(offline):STATUS ok(providers 全绿)。
+- uv run python scripts/run_harness.py(offline):STATUS ok(providers 全绿)。
 - python -m pytest -q:59 passed(含主题池 + 方案 A 回归;F1-F6 后新增 capability_chain 配置化与 theme_reports 门禁用例,53 -> 59)。
 - pre-commit hook 自测:绿树 -> exit 0;人为破坏 report_policy.json -> 正确 BLOCKED + guidance + exit 1;恢复后复绿。
 

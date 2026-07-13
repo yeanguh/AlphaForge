@@ -19,7 +19,9 @@ loop_os/    系统内核:domain / schemas / state_machine / harness / reporting
    │        ⛔ 禁止 import external/*
 providers/  外部数据唯一入口:ports(抽象)/ open_source(实现)/ retained_skills / reference
    │
-external/*  子模块;只能经 providers/* 访问,禁止进运行时循环
+.codex/skills/ workspace-local Codex 扫描符号链接(ignored),不等于 runtime 依赖
+   │
+external/*  子模块;只能经 providers/* 访问;ch-skills 仅 reference/playbook
 config/     配置驱动源:theme_pool.json / report_policy.json / ...
 reports/    产物:themes/(canonical)· daily/(inbox)· industry/(legacy)· stocks/ · weekly/
 ```
@@ -33,6 +35,7 @@ reports/    产物:themes/(canonical)· daily/(inbox)· industry/(legacy)· stoc
 3. 保留的分析类技能仅 `industry-chain-analysis`(取数类 skill 另计);⛔ 禁止复活 `china-stock-analysis` / `china-stock-price-analysis`。
 4. 研报 canonical 产物 = `reports/themes/<theme>/report.md`(方案 A),已存在则增量合并、绝不整篇覆盖;`reports/industry/` = legacy/manual snapshot。
 5. config-driven + hardcoded fallback:主题池 / 研报口径优先读 `config/*.json`,缺失时回退模块内 `_FALLBACK_*`;新增主题只改 config。
+6. 数据接入契约见 [`docs/reference/data-access.md`](docs/reference/data-access.md):Tushare/AKShare/ch-skills 参考能力不得绕过 provider 边界进入 runtime。
 
 > 完整清单、校验落点、子模块与关键文件见
 > [`docs/reference/architecture-invariants.md`](docs/reference/architecture-invariants.md) 和

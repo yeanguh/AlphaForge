@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="46" y="52" font-size="30" font-weight="800" fill="#111827">Edge AI / 端侧智能：核心标的交易结构</text>
+<text x="46" y="90" font-size="16" fill="#4b5563">横轴为支撑-现价-压力的相对位置；没有完整K线时用现价/前收降级估算，需后续证据校正。</text>
+<line x1="260" y1="132" x2="1130" y2="132" stroke="#cbd5e1" stroke-width="2"/>
+<text x="252" y="118" font-size="14" fill="#64748b">支撑</text><text x="672" y="118" font-size="14" fill="#64748b">现价</text><text x="1112" y="118" font-size="14" fill="#64748b">压力</text>
+<text x="46" y="177" font-size="16" font-weight="700" fill="#111827">工业富联</text>
+<text x="46" y="201" font-size="13" fill="#64748b">601138 · AI PC/手机</text>
+<line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="480.5" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">66.01</text>
+<text x="496.5" y="175" font-size="13" fill="#111827">69.53</text>
+<text x="1090" y="200" font-size="12" fill="#64748b">79.90</text>
+<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">紫光股份</text>
+<text x="46" y="263" font-size="13" fill="#64748b">000938 · AI PC/手机</text>
+<line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="260.0" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">0.00</text>
+<text x="276.0" y="237" font-size="13" fill="#111827">NA</text>
+<text x="1090" y="262" font-size="12" fill="#64748b">1.00</text>
+<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">浪潮信息</text>
+<text x="46" y="325" font-size="13" fill="#64748b">000977 · AI PC/手机</text>
+<line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="1130.0" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">78.17</text>
+<text x="1146.0" y="299" font-size="13" fill="#111827">85.99</text>
+<text x="1090" y="324" font-size="12" fill="#64748b">85.99</text>
+<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
+<text x="46" y="387" font-size="13" fill="#64748b">688047 · AI PC/手机</text>
+<line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="598.8" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">144.35</text>
+<text x="614.8" y="361" font-size="13" fill="#111827">149.91</text>
+<text x="1090" y="386" font-size="12" fill="#64748b">158.63</text>
+<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">工业富联</text>
+<text x="46" y="449" font-size="13" fill="#64748b">601138 · 车端推理</text>
+<line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="480.5" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">66.01</text>
+<text x="496.5" y="423" font-size="13" fill="#111827">69.53</text>
+<text x="1090" y="448" font-size="12" fill="#64748b">79.90</text>
+<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">紫光股份</text>
+<text x="46" y="511" font-size="13" fill="#64748b">000938 · 车端推理</text>
+<line x1="260" y1="480" x2="1130" y2="480" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="260.0" cy="480" r="12" fill="#2563eb"/>
+<text x="260" y="510" font-size="12" fill="#64748b">0.00</text>
+<text x="276.0" y="485" font-size="13" fill="#111827">NA</text>
+<text x="1090" y="510" font-size="12" fill="#64748b">1.00</text>
+<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">浪潮信息</text>
+<text x="46" y="573" font-size="13" fill="#64748b">000977 · 车端推理</text>
+<line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="1130.0" cy="542" r="12" fill="#2563eb"/>
+<text x="260" y="572" font-size="12" fill="#64748b">78.17</text>
+<text x="1146.0" y="547" font-size="13" fill="#111827">85.99</text>
+<text x="1090" y="572" font-size="12" fill="#64748b">85.99</text>
+<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
+<text x="46" y="635" font-size="13" fill="#64748b">688047 · 车端推理</text>
+<line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="598.8" cy="604" r="12" fill="#2563eb"/>
+<text x="260" y="634" font-size="12" fill="#64748b">144.35</text>
+<text x="614.8" y="609" font-size="13" fill="#111827">149.91</text>
+<text x="1090" y="634" font-size="12" fill="#64748b">158.63</text>
+<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">工业富联</text>
+<text x="46" y="697" font-size="13" fill="#64748b">601138 · NPU/SoC</text>
+<line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="480.5" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">66.01</text>
+<text x="496.5" y="671" font-size="13" fill="#111827">69.53</text>
+<text x="1090" y="696" font-size="12" fill="#64748b">79.90</text>
+<text x="46" y="735" font-size="16" font-weight="700" fill="#111827">紫光股份</text>
+<text x="46" y="759" font-size="13" fill="#64748b">000938 · NPU/SoC</text>
+<line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="260.0" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">0.00</text>
+<text x="276.0" y="733" font-size="13" fill="#111827">NA</text>
+<text x="1090" y="758" font-size="12" fill="#64748b">1.00</text>
+<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">浪潮信息</text>
+<text x="46" y="821" font-size="13" fill="#64748b">000977 · NPU/SoC</text>
+<line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="1130.0" cy="790" r="12" fill="#2563eb"/>
+<text x="260" y="820" font-size="12" fill="#64748b">78.17</text>
+<text x="1146.0" y="795" font-size="13" fill="#111827">85.99</text>
+<text x="1090" y="820" font-size="12" fill="#64748b">85.99</text>
+<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
+<text x="46" y="883" font-size="13" fill="#64748b">688047 · NPU/SoC</text>
+<line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+<circle cx="598.8" cy="852" r="12" fill="#2563eb"/>
+<text x="260" y="882" font-size="12" fill="#64748b">144.35</text>
+<text x="614.8" y="857" font-size="13" fill="#111827">149.91</text>
+<text x="1090" y="882" font-size="12" fill="#64748b">158.63</text>
+</svg>

@@ -1,11 +1,13 @@
 # Report Quality Gate
 
-Use this reference whenever the output is a formal report or an archived
-`reports/industry/<topic>-<date>/` artifact. The goal is to make the final
-document stable, evidence-grounded, visually readable, and useful for investment
-opportunity discovery.
+Use this reference whenever the output is a formal report or a canonical
+Research OS theme report under `reports/themes/<theme>/report.md`. The goal is
+to make the final document stable, evidence-grounded, visually readable, and
+useful for investment opportunity discovery.
 
 > **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。research-os loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
+> 数据源、token/key 和外部 reference skill 只能按 `docs/reference/data-access.md`
+> 的可迁移契约使用;不要把某台机器、某个账号或某次 smoke 的环境快照写进报告质量规则。
 
 ## Quality Principles
 
@@ -30,6 +32,10 @@ opportunity discovery.
    contain either the non-trading opportunity table or the trading follow-through
    table so the reader can compare exposure, catalyst, validation milestone, and
    risk across companies.
+7. **Machine-reviewable structure matters.** Reports should use the canonical
+   tables below so the deterministic `report_review_agent` can catch missing
+   value distribution, A-share exposure, evidence strength, and invalidation
+   discipline before the report reaches the reader.
 
 ## Required Reader-Facing Structure
 
@@ -76,6 +82,40 @@ When exact `产业占比` is unavailable, state the closest verified proxy:
 - qualitative exposure only.
 
 Never invent a percentage to make a table look complete.
+
+## Machine-Reviewable Required Tables
+
+The following tables are not decorative. They are the stable shapes that let
+humans compare reports across themes and let Research OS review reports
+deterministically.
+
+### Chain-Level Value Distribution
+
+Use this table before company ranking whenever the report discusses value
+distribution, BOM cost, bottlenecks, card-neck links, or company ranking.
+
+| 产业链环节 | 细分领域/关键产品 | BOM成本占比/价值占比 | 核心技术壁垒 | 卡脖子程度 | 代表A股公司 | 公司环节地位 | 证据口径/备注 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ... | ... | ... | ... | ... | ... | ... | ... |
+
+### A-Share Company Mapping
+
+Use the canonical 9-column mapping table from `a-share-screening.md` for every
+Standard/Report-mode A-share mapping.
+
+| 公司 | 代码 | 环节 | 细分领域 | 产业占比/暴露度 | 核心技术/产品 | 卡脖子相关性 | 环节地位 | 证据与备注 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... |
+
+### Claim-Level Source Summary
+
+In `数据来源、证据强度与待核验事项`, include a compact claim-level table.
+Do not expose adapter retries, endpoint failures, local paths, row counts, or
+raw provider diagnostics in the reader-facing report.
+
+| 结论/数据 | 来源 | 日期 | 置信度 |
+| --- | --- | --- | --- |
+| ... | ... | ... | High/Medium/Low |
 
 ## Investment Opportunity Mining
 
@@ -134,12 +174,12 @@ For report figures:
 
 ## Machine Gate
 
-After generating a report artifact, run:
+After generating or updating a canonical theme report, run the repository-local
+review and harness gates:
 
 ```bash
-/usr/local/bin/uv run python .agents/skills/industry-chain-analysis/scripts/report_quality.py \
-  reports/industry/<topic>-<YYYY-MM-DD>/report.md \
-  --output reports/industry/<topic>-<YYYY-MM-DD>/quality_report.json
+uv run python -m pytest tests/test_report_review_agent.py -q
+uv run python scripts/run_harness.py
 ```
 
 If it fails, fix the report before delivery. Common fixes:
@@ -157,3 +197,12 @@ If it fails, fix the report before delivery. Common fixes:
 - Missing source summary: add a compact claim-level source table in section 11
   with columns `结论/数据、来源、日期、置信度`.
 - Adapter logs in report: move runtime details to `source_data.json`.
+
+For standalone legacy snapshots outside the loop, the skill-local quality script
+may still be used:
+
+```bash
+uv run python skills/industry-chain-analysis/scripts/report_quality.py \
+  reports/industry/<topic>-<YYYY-MM-DD>/report.md \
+  --output reports/industry/<topic>-<YYYY-MM-DD>/quality_report.json
+```

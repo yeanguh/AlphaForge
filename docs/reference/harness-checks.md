@@ -1,7 +1,7 @@
 # 参考:Harness 校验清单(L3)
 
 > 稳定事实。全部校验在 `loop_os/harness/checks.py` 的 `run_all()` 聚合;pre-commit 子集在 `loop_os/harness/precommit.py`。
-> 入口:`python scripts/run_harness.py`。status = ok 当且仅当所有 check 为 ok/warn(无 error)。
+> 入口:`uv run python scripts/run_harness.py`。status = ok 当且仅当所有 check 为 ok/warn(无 error)。
 
 ## run_all() 校验(按执行顺序)
 
@@ -13,7 +13,7 @@
 | `check_provider_skill_files` | `provider_skill:*` | `a-stock-data` / `global-stock-data` 的 `SKILL.md` 存在 |
 | `check_loop_state_invariants` | `loop_state:*` | 状态机不变式 |
 | `check_latest_loop_artifact` | `latest_loop:*` | 最新循环产物完整(含 `llm_agent_review`,无 LLM 时 warn) |
-| `check_theme_reports` | `theme_report:*` | canonical 研报存在 + 图片链接不坏(方案 A 门禁) |
+| `check_theme_reports` | `theme_report:*` | canonical 研报存在 + 章节/图片/skill-aligned 结构复核(方案 A 门禁;`theme_report:structure:*` 暂为 warn) |
 | `check_industry_analysis_report` | `industry_report:legacy_*` | legacy 快照,全部 warn 不阻断 |
 | `check_no_core_external_imports` | `core_imports:*` | `loop_os/*` 未 import `external/*` |
 | `check_no_secret_leaks` | `secret_scan:*` | 扫描敏感路径无密钥 |

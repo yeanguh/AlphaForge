@@ -1,0 +1,80 @@
+{
+  "theme": "ai-server-chain-2026-07-10",
+  "generated_at": "2026-07-10",
+  "scope": "AI算力服务器产业链与A股公司映射",
+  "sources": [
+    {
+      "tool": "web",
+      "function_or_path": "NVIDIA Blackwell/GB200/GB300 official product materials",
+      "subject": "Blackwell机柜级AI系统、NVL72、液冷与网络一体化趋势",
+      "status": "ok",
+      "confidence": "High",
+      "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "TrendForce AI server/HBM/optical transceiver market notes",
+      "subject": "AI服务器、HBM、光互连与液冷需求趋势",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.trendforce.com/"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "Dell/HPE/Supermicro AI server public product pages",
+      "subject": "AI服务器整机、液冷和机柜级交付趋势",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.supermicro.com/en/accelerators/nvidia/gb200-nvl72"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "工业富联2025年报/公告/投关公开资料",
+      "subject": "云计算设备、AI服务器与整柜交付业务映射",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "浪潮信息2025年报/公告/投关公开资料",
+      "subject": "AI服务器、液冷服务器和国内整机业务映射",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "中科曙光2025年报/公告/投关公开资料",
+      "subject": "高性能计算、AI服务器、国产算力与液冷数据中心",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "沪电股份/生益科技/深南电路/胜宏科技2025年报与公告",
+      "subject": "AI服务器/交换机PCB、高速CCL和高层板材料升级",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "中际旭创/新易盛/天孚通信/光迅科技2025年报与公告",
+      "subject": "800G/1.6T光模块、光器件和AI集群网络互连",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "英维克/申菱环境/高澜股份/欧陆通/麦格米特2025年报与公告",
+      "subject": "液冷、热管理、电源与高功率机柜配套",
+      "status": "ok",
+      "confidence": "High"
+    },
+    {
+      "tool": "local-cache",
+      "function_or_path": "stock-analysis/industry-analysis/ai-server-chain-analysis-2026-06-26/report.md",
+      "subject": "既有AI服务器产业链报告底稿与A股映射",
+      "status": "ok",
+      "confidence": "Medium"
+    }
+  ]
+}

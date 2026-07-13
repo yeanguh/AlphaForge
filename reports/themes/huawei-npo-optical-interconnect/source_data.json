@@ -1,0 +1,79 @@
+{
+  "theme": "huawei-npo-optical-interconnect",
+  "generated_at": "2026-07-10",
+  "scope": "中国NPO近封装光互连产业链与A股映射",
+  "sources": [
+    {
+      "tool": "web",
+      "function_or_path": "IT之家 2026-07-09",
+      "subject": "华为联合伙伴启动OPEN NPO项目",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.ithome.com/0/974/717.htm"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "第一财经快讯 2026-07-09",
+      "subject": "国内首个近封装光学NPO光互连MSA",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.yicai.com/brief/103267910.html"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "TrendForce 2026-04-20",
+      "subject": "AI光收发器市场与组件瓶颈",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.trendforce.com/presscenter/news/20260420-13017.html"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "LightCounting April 2026 Market Forecast newsletter",
+      "subject": "以太网光模块增长与InP EML/激光芯片瓶颈",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.lightcounting.com/newsletter/en/april-2026-market-forecast-379"
+    },
+    {
+      "tool": "web",
+      "function_or_path": "OIF Implementation Agreements page",
+      "subject": "CPO/ELSFP等光互连标准化背景",
+      "status": "ok",
+      "confidence": "Medium",
+      "url": "https://www.oiforum.com/technical-work/implementation-agreements-ias/"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "巨潮资讯 光迅科技2025年年度报告摘要",
+      "subject": "光迅科技高速光模块、AOC与数据中心产品",
+      "status": "ok",
+      "confidence": "High",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225148211.PDF"
+    },
+    {
+      "tool": "filing",
+      "function_or_path": "巨潮资讯 华工科技2025年年度报告",
+      "subject": "华工科技/华工正源光模块、硅光、3.2T CPO/NPO相关能力披露",
+      "status": "ok",
+      "confidence": "High",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-26/1225031509.PDF"
+    },
+    {
+      "tool": "company/news",
+      "function_or_path": "东方财富财富号 2026-07-09",
+      "subject": "华丰科技NPO电连接器专题分享",
+      "status": "partial",
+      "confidence": "Medium",
+      "url": "https://caifuhao.eastmoney.com/news/20260709214137521728580"
+    },
+    {
+      "tool": "public-data",
+      "function_or_path": "scripts/check_data_sources.py",
+      "subject": "本地公开行情/公告适配器健康检查",
+      "status": "partial",
+      "confidence": "Medium",
+      "detail": "akshare/baostock/adata/efinance not installed; SEC available. No stock-level valuation or technical follow-through performed."
+    }
+  ]
+}

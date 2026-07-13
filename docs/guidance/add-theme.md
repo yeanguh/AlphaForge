@@ -15,8 +15,8 @@
 
 ## 校验
 ```bash
-.venv/bin/python -m pytest tests/test_capability_chain.py -q
-python scripts/run_harness.py
+uv run python -m pytest tests/test_capability_chain.py -q
+uv run python scripts/run_harness.py
 ```
 - `test_theme_keywords_loaded_from_theme_pool` 应看到新增后的主题数。
 - harness 无 error。

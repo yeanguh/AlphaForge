@@ -12,6 +12,7 @@
 6. 研报 canonical 产物 = `reports/themes/<theme>/report.md`(方案 A);`reports/daily/` = 增量 inbox,`reports/industry/` = legacy/manual snapshot。
 7. **config-driven + hardcoded fallback**:主题池 / 研报口径优先读 `config/theme_pool.json` / `config/report_policy.json`,config 缺失时回退模块内 `_FALLBACK_*`;新增主题只改 config,不硬编码。
 8. 不在仓库外引入隐式本地依赖;外部缓存必须经环境变量显式配置。
+9. `.codex/skills/*` 只允许作为本地 Codex 扫描符号链接;不得把 reference-only skill 因为 symlink 存在而接入 runtime loop。
 
 ## 校验落点
 
@@ -21,3 +22,4 @@
 | 3、4 | `state_machine/*` + `harness` state 检查 |
 | 6 | `harness/checks.py::check_theme_reports`(canonical gate) |
 | 7 | 各模块 `_load_*` + `_FALLBACK_*`(capability_chain / report_router / reporting / checks) |
+| 8、9 | code review + `docs/reference/data-access.md` + import/submodule 检查 |

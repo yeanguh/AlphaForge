@@ -5,8 +5,8 @@
 ## 执行
 
 ```bash
-python scripts/run_harness.py            # 基础校验
-python scripts/run_harness.py --live     # 附带 live provider smoke
+uv run python scripts/run_harness.py            # 基础校验
+uv run python scripts/run_harness.py --live     # 附带 live provider smoke
 ```
 
 - 结果写入 `runs/<date>/harness.json` 并打印。

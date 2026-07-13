@@ -14,6 +14,24 @@ INBOX_BANNER = (
     "`reports/themes/<theme>/`(canonical 持续沉淀)、`reports/stocks/<symbol>/`、`reports/weekly/`。\n"
 )
 
+REPORT_TEXT_REPLACEMENTS = {
+    "TradingAgents-astock adapter": "投委会复核模块",
+    "TradingAgents-astock": "投委会复核模块",
+    "TradingAgents": "投委会复核",
+    "a-stock-data": "A股公开数据源",
+    "data/raw/": "原始数据归档/",
+    "payload": "结构化输入",
+    "coverage": "覆盖度",
+    "Underweight": "低配",
+}
+
+
+def _sanitize_report_text(text: str) -> str:
+    cleaned = text
+    for raw, replacement in REPORT_TEXT_REPLACEMENTS.items():
+        cleaned = cleaned.replace(raw, replacement)
+    return cleaned
+
 
 def _fmt_pct(value: Any) -> str:
     if value is None:
@@ -25,7 +43,7 @@ def _fmt_pct(value: Any) -> str:
 
 
 def _snippet(value: Any, limit: int = 120) -> str:
-    text = " ".join(str(value or "").split())
+    text = _sanitize_report_text(" ".join(str(value or "").split()))
     if len(text) <= limit:
         return text
     return text[: limit - 1] + "…"
