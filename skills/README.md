@@ -1,11 +1,11 @@
-# Research OS Skills
+# AlphaForge Skills
 
 This directory contains the repository-owned Codex-readable skill entries for
-Research OS.
+AlphaForge.
 
 A skill is a named capability with a `SKILL.md` manifest plus optional
 supporting files such as references, scripts, templates, evals, or tools.
-Codex can read these files as task guidance, while Research OS runtime code
+Codex can read these files as task guidance, while AlphaForge runtime code
 must still go through the repository's provider and state boundaries.
 
 ```markdown
@@ -30,7 +30,7 @@ Body content: workflow, constraints, examples, helper commands, and references.
   `wen-cai` are separate from retained analysis skills and are accessed through
   `providers/open_source/*`.
 - External skills under `external/ch-skills/skills/*` are reference/playbook
-  material. They are not retained Research OS skills and must not be wired directly
+  material. They are not retained AlphaForge skills and must not be wired directly
   into `loop_os/` runtime loops.
 - `loop_os/` must not directly import from `external/*` or depend on an
   external skill's internal file layout.
@@ -87,7 +87,7 @@ boundary is added first.
 ```text
 skills/
 ├── README.md
-├── industry-chain-analysis/       # retained Research OS analysis skill
+├── industry-chain-analysis/       # retained AlphaForge analysis skill
 ├── a-stock-data/                  # data-provider skill
 ├── global-stock-data/             # data-provider skill
 └── wen-cai-1.0.0/                 # data-provider skill
@@ -103,7 +103,7 @@ Codex should read the relevant repository-owned or external `SKILL.md` before ap
 skill. If a skill references `references/`, `scripts/`, `templates/`, or
 `tool/`, resolve those paths relative to that skill directory.
 
-For Research OS runtime work, prefer existing adapters and domain services over
+For AlphaForge runtime work, prefer existing adapters and domain services over
 directly executing external skill scripts. If an external skill should become a
 runtime capability, add an explicit adapter under `providers/open_source/*` or,
 only for the retained analysis skill, `providers/retained_skills/*`, then cover
@@ -126,5 +126,5 @@ it with harness checks.
 
 `external/ch-skills` is the upstream reference collection from
 `Haochenhust/ch-skills`. Its README content has been summarized here and
-adjusted from a standalone Claude Code installation guide into Research OS
+adjusted from a standalone Claude Code installation guide into AlphaForge
 Codex guidance.

@@ -5,12 +5,12 @@
 Upstream: https://github.com/NousResearch/hermes-agent
 
 It is intentionally not checked into `external/` as a submodule. Keep only
-the design notes that are useful for Research OS.
+the design notes that are useful for AlphaForge.
 
 Allowed use:
 
 - Read memory and self-improvement design ideas.
-- Compare against Research OS memory/state boundaries.
+- Compare against AlphaForge memory/state boundaries.
 
 Forbidden use:
 

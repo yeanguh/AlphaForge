@@ -2,7 +2,7 @@
 
 Use this structure for industry upstream/downstream analysis. Adapt section names to the target industry, but keep the reader-facing research-report sequence: conclusion first, boundary next, chain map and evidence in the body, then company mapping, trading follow-through when requested, catalysts, risks, and a compact source/missing-data summary.
 
-> **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。research-os loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
+> **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。alpha-forge-research loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
 
 ## Light Mode Template
 

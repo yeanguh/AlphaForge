@@ -2,7 +2,7 @@
 
 > 状态:proposal | active | completed
 > 创建:YYYY-MM-DD
-> 范围:research-os 仓库(或更具体的模块)
+> 范围:alpha-forge-research 仓库(或更具体的模块)
 > 基线(改造前):<可观测事实,如「N 个单测全绿;uv run python scripts/run_harness.py 通过,仅 X 为预期 warn」>
 
 <!--

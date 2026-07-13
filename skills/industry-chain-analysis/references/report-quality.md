@@ -1,11 +1,11 @@
 # Report Quality Gate
 
 Use this reference whenever the output is a formal report or a canonical
-Research OS theme report under `reports/themes/<theme>/report.md`. The goal is
+AlphaForge theme report under `reports/themes/<theme>/report.md`. The goal is
 to make the final document stable, evidence-grounded, visually readable, and
 useful for investment opportunity discovery.
 
-> **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。research-os loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
+> **路径说明**:本文档中的 `reports/industry/<topic>-<date>/` 仅为 legacy / 独立快照示例。alpha-forge-research loop 内生成的 canonical 研报落点是 `reports/themes/<theme>/report.md`(方案 A),见 `SKILL.md` 的报告产物规则;⛔ 不要把 loop 产物写回 `reports/industry/`。
 > 数据源、token/key 和外部 reference skill 只能按 `docs/reference/data-access.md`
 > 的可迁移契约使用;不要把某台机器、某个账号或某次 smoke 的环境快照写进报告质量规则。
 
@@ -86,7 +86,7 @@ Never invent a percentage to make a table look complete.
 ## Machine-Reviewable Required Tables
 
 The following tables are not decorative. They are the stable shapes that let
-humans compare reports across themes and let Research OS review reports
+humans compare reports across themes and let AlphaForge review reports
 deterministically.
 
 ### Chain-Level Value Distribution

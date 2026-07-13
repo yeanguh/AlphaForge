@@ -1,6 +1,6 @@
 # 数据接入契约 (L3 · 稳定事实)
 
-> 本文件记录 Research OS 的可迁移数据入口、权限边界、运行方式和降级顺序。
+> 本文件记录 AlphaForge 的可迁移数据入口、权限边界、运行方式和降级顺序。
 > 运行时代码仍以 `providers/*` 为唯一边界；外部 skill 可作为 Codex 可读参考,
 > 但不能直接进入 `loop_os/` runtime loop。
 > 具体机器、账号、token 的实时可用性以 `scripts/run_provider_smoke.py --live`

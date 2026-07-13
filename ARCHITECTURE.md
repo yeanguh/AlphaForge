@@ -7,7 +7,7 @@
 
 ## 这是什么
 
-research-os 是一个本地优先的 AI 投研 loop OS:围绕主题池持续取数 → 生成/合并研报 → 校验状态。
+AlphaForge 是一个本地优先的 AI 投研 loop OS:围绕主题池持续取数 → 生成/合并研报 → 校验状态。
 方案 A 下,`reports/themes/<theme>/report.md` 是被 loop 持续精修的 canonical 知识库。
 
 ## 顶层结构(速览)

@@ -1,6 +1,6 @@
-# AI 投研 Loop OS
+# AlphaForge
 
-这是一个从 0 到 1 新建的独立投研 Loop 项目。
+AlphaForge 是一个本地优先的 AI 深度投研系统,用于持续挖掘产业链主题、A 股标的和投资机会。
 
 边界：
 
@@ -54,7 +54,7 @@ Agent 模式：
 
 ## 数据源降级策略
 
-Research OS 默认只依赖仓库内目录、submodule、显式环境配置的 CLI/缓存和公开网络源。以 `skills/a-stock-data` 的公开源策略作为 A 股数据 adapter 的主要依据：
+AlphaForge 默认只依赖仓库内目录、submodule、显式环境配置的 CLI/缓存和公开网络源。以 `skills/a-stock-data` 的公开源策略作为 A 股数据 adapter 的主要依据：
 
 - A 股实时/估值快照优先级：腾讯公开行情 -> 东方财富 push2 -> 仓库内或显式配置的历史数据缓存兜底。
 - 仓库内历史数据默认目录是 `data/local/a-data/hist/<code>.csv`；如需复用外部缓存，必须显式设置 `RESEARCH_OS_A_DATA_DIR`。

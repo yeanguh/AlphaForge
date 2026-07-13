@@ -1,8 +1,8 @@
-# ExecPlan: Research OS 优化改造(Harness Engineering 落地)
+# ExecPlan: AlphaForge 优化改造(Harness Engineering 落地)
 
 > 状态:active
 > 创建:2026-07-09
-> 范围:research-os 仓库
+> 范围:alpha-forge-research 仓库
 > 原则:自包含 / 结果导向 / 弱实现细节、强验收门槛。以当前仓库最新实现为准。
 > 基线(改造前):40 个单测全绿;scripts/run_harness.py(offline)通过,仅 latest_loop:llm_agent_review 为预期 warn(deterministic provider)。
 
@@ -12,7 +12,7 @@
 
 ## 总体思路
 
-research-os 的核心资产(证据契约、依赖边界、状态机、Ports&Adapters)方向正确,不推翻。短板在工程约束的可持续性:测试覆盖、提交可追溯性、主题硬编码、运行时文件入 git、健康状态一致性。用 Harness Engineering 把「一次性修复」升级为「自维持系统」。
+alpha-forge-research 的核心资产(证据契约、依赖边界、状态机、Ports&Adapters)方向正确,不推翻。短板在工程约束的可持续性:测试覆盖、提交可追溯性、主题硬编码、运行时文件入 git、健康状态一致性。用 Harness Engineering 把「一次性修复」升级为「自维持系统」。
 
 执行顺序:P0 止血固基 -> P1 架构约束升级 -> P2 资产迁移 + 垃圾回收 -> P3 度量与飞轮。
 
@@ -22,7 +22,7 @@ research-os 的核心资产(证据契约、依赖边界、状态机、Ports&Adap
 
 | 项 | 优先级 | 落地文件 | 验收门槛 | 状态 |
 |---|---|---|---|---|
-| ExecPlan 化本方案 | P0 | docs/plans/active/2026-07-09-research-os-optimization.md | 自包含、结果导向、含验收门槛 | 已完成(本文件) |
+| ExecPlan 化本方案 | P0 | docs/plans/active/2026-07-09-alpha-forge-research-optimization.md | 自包含、结果导向、含验收门槛 | 已完成(本文件) |
 | L0-L4 渐进式文档 | P1 | README(L0)-> AGENTS.md(L1)-> docs/architecture-design.md(L2)-> skills 各 SKILL.md(L3)-> 代码注释(L4) | 每层单一职责,repo 为唯一事实源 | 部分(已有 L0/L1/L2) |
 | 单一事实源治理 | P1 | 运行时状态描述统一由 state/system-health.json 生成 | 文档不手写运行时状态 | 待办 |
 
