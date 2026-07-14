@@ -16,3 +16,6 @@
 [submodule "external/Vibe-Trading"]
 	path = external/Vibe-Trading
 	url = https://github.com/HKUDS/Vibe-Trading
+[submodule "external/ch-skills"]
+	path = external/ch-skills
+	url = https://github.com/Haochenhust/ch-skills.git
