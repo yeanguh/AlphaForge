@@ -6,7 +6,7 @@ import json
 import os
 import re
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, time as dt_time, timedelta
 from pathlib import Path
 from typing import Iterable
 
@@ -78,6 +78,56 @@ def _history_cache_path(symbol: str) -> Path:
 
 def _quote_cache_path(symbol: str) -> Path:
     return LOCAL_A_DATA / "quote" / f"{symbol}.json"
+
+
+def _compact_date(value: object) -> str:
+    return "".join(ch for ch in str(value or "") if ch.isdigit())[:8]
+
+
+def _date_from_compact(value: str) -> datetime | None:
+    try:
+        return datetime.strptime(value, "%Y%m%d")
+    except Exception:
+        return None
+
+
+def latest_expected_trade_date(now: datetime | None = None) -> str:
+    now = now or datetime.now()
+    candidate = now.date()
+    if now.weekday() >= 5 or now.time() < dt_time(15, 30):
+        candidate = candidate - timedelta(days=1)
+    while candidate.weekday() >= 5:
+        candidate = candidate - timedelta(days=1)
+    fallback = candidate.strftime("%Y%m%d")
+    try:
+        cal = tushare_provider.query(
+            "trade_cal",
+            {"exchange": "SSE", "start_date": (candidate - timedelta(days=10)).strftime("%Y%m%d"), "end_date": now.strftime("%Y%m%d")},
+            "cal_date,is_open,pretrade_date",
+            limit=15,
+        )
+        open_dates = sorted(_compact_date(row.get("cal_date")) for row in cal.get("rows", []) if str(row.get("is_open")) in {"1", "1.0", "True", "true"})
+        return open_dates[-1] if open_dates else fallback
+    except Exception:
+        return fallback
+
+
+def _history_latest_date(history: dict) -> str:
+    rows = history.get("rows", []) if isinstance(history, dict) else []
+    dates = sorted(_compact_date(row.get("date")) for row in rows if isinstance(row, dict) and _compact_date(row.get("date")))
+    return dates[-1] if dates else ""
+
+
+def _history_is_stale(history: dict, *, expected_date: str | None = None, max_lag_days: int = 0) -> bool:
+    latest = _date_from_compact(_history_latest_date(history))
+    expected = _date_from_compact(expected_date or latest_expected_trade_date())
+    if latest is None or expected is None:
+        return True
+    return latest < expected and (expected - latest).days > max_lag_days
+
+
+def price_history_is_stale(history: dict, *, expected_date: str | None = None, max_lag_days: int = 0) -> bool:
+    return _history_is_stale(history, expected_date=expected_date, max_lag_days=max_lag_days)
 
 
 def _supplement_cache_path(symbol: str) -> Path:
@@ -818,6 +868,38 @@ def fetch_price_history_fallback(symbol: str, days: int = 120) -> dict:
     if not _history_rows_usable(rows, min_rows=min(5, days)):
         raise RuntimeError(f"local hist unusable for {symbol}: {path}")
     return {"symbol": symbol, "source": "local_a_data_hist", "rows": rows}
+
+
+def fetch_price_history_cached_or_live(symbol: str, days: int = 120, *, max_lag_days: int = 0) -> dict:
+    cached: dict | None = None
+    try:
+        cached = fetch_price_history_fallback(symbol, days=days)
+        if not _history_is_stale(cached, max_lag_days=max_lag_days):
+            return cached
+    except Exception:
+        cached = None
+
+    errors: list[str] = []
+    for label, fetcher in (
+        ("price_history_tushare", fetch_price_history_tushare),
+        ("price_history_tencent", fetch_price_history_tencent),
+        ("price_history_efinance", fetch_price_history_efinance),
+        ("price_history_baostock", fetch_price_history_baostock),
+    ):
+        try:
+            history = fetcher(symbol, days=days)
+            if not _history_is_stale(history, max_lag_days=max_lag_days):
+                history["refreshed_cache"] = True
+                return history
+            errors.append(f"{label}:stale:{_history_latest_date(history)}")
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{label}:{exc!r}")
+
+    if cached is not None:
+        cached["stale_cache"] = True
+        cached["refresh_errors"] = errors
+        return cached
+    raise RuntimeError(f"no usable price history for {symbol}; refresh_errors={errors[:3]}")
 
 
 def fetch_dragon_tiger(symbol: str | None = None, date: str | None = None) -> dict:

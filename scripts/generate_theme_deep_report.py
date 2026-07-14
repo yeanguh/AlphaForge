@@ -13,7 +13,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from loop_os.report_router import BENCHMARK_REPORT_SECTIONS, resolve_theme_key  # noqa: E402
-from providers.open_source import a_stock_data, pdf_text  # noqa: E402
+from providers.open_source import a_stock_data, pdf_text, tushare_provider  # noqa: E402
 
 
 KNOWN_A_SHARE_SYMBOLS = {
@@ -90,7 +90,102 @@ KNOWN_A_SHARE_SYMBOLS = {
     "新大陆": "000997",
     "四方精创": "300468",
     "恒宝股份": "002104",
+    "泰格医药": "300347",
+    "成都先导": "688222",
+    "万东医疗": "600055",
+    "华大智造": "688114",
+    "诺禾致源": "688315",
+    "贝瑞基因": "000710",
+    "凯莱英": "002821",
+    "博腾股份": "300363",
+    "川宁生物": "301301",
+    "银之杰": "300085",
+    "宇信科技": "300674",
+    "长亮科技": "300348",
+    "拓尔思": "300229",
+    "奇安信": "688561",
+    "特变电工": "600089",
+    "思源电气": "002028",
+    "金盘科技": "688676",
+    "科华数据": "002335",
+    "科士达": "002518",
+    "阳光电源": "300274",
+    "润泽科技": "300442",
+    "奥飞数据": "300738",
+    "数据港": "603881",
+    "海天瑞声": "688787",
+    "福昕软件": "688095",
+    "致远互联": "688369",
+    "景嘉微": "300474",
+    "中国软件": "600536",
+    "太极股份": "002368",
+    "麒麟信安": "688152",
+    "数字认证": "300579",
+    "格尔软件": "603232",
+    "人民网": "603000",
+    "新华网": "603888",
+    "闻泰科技": "600745",
+    "传音控股": "688036",
+    "德赛西威": "002920",
+    "中科创达": "300496",
+    "四维图新": "002405",
+    "瑞芯微": "603893",
+    "全志科技": "300458",
+    "宝信软件": "600845",
+    "奥普特": "688686",
+    "凌云光": "688400",
+    "天准科技": "688003",
+    "信捷电气": "603416",
+    "蓝色光标": "300058",
+    "值得买": "300785",
+    "天下秀": "600556",
+    "遥望科技": "002291",
+    "均胜电子": "600699",
+    "保隆科技": "603197",
+    "华测导航": "300627",
+    "莱斯信息": "688631",
+    "四川九洲": "000801",
+    "深城交": "301091",
+    "中兴通讯": "000063",
+    "航宇微": "300053",
+    "上海瀚讯": "300762",
+    "航天电子": "600879",
+    "观典防务": "688287",
+    "新国都": "300130",
+    "吉大正元": "003029",
 }
+
+MARKET_INDEX_BY_LINK = [
+    (("CPO", "光模块", "通信"), "931271.CSI", "通信设备主题"),
+    (("PCB", "印制电路"), "932666.CSI", "PCB"),
+    (("服务器", "组装", "供应链"), "931688.CSI", "中证算力"),
+    (("液冷", "温控"), "931688.CSI", "中证算力"),
+    (("数据中心", "运维"), "932092.CSI", "数据中心"),
+    (("电力接入", "变压器", "供配电"), "931932.CSI", "电力设备"),
+    (("UPS", "储能", "燃气轮机"), "932246.CSI", "储能电池"),
+    (("封装", "封测", "材料"), "931743.CSI", "半导体材料设备"),
+    (("芯片", "国产算力", "CPU", "GPU"), "932040.CSI", "芯片设计"),
+    (("人工智能", "多智能体", "Agent", "RAG", "垂直行业模型"), "931071.CSI", "人工智能"),
+    (("软件", "SaaS", "工作流", "办公自动化", "工业Copilot", "金融IT"), "930601.CSI", "中证软件"),
+    (("计算机", "信创", "软件生态", "模型部署"), "930651.CSI", "CS计算机"),
+    (("云计算", "云平台", "算法", "清结算基础设施"), "930851.CSI", "云计算"),
+    (("数字经济", "内容生产", "ROI", "留存", "数据合规"), "931582.CSI", "数字经济"),
+    (("营销", "传媒", "动漫", "游戏"), "930675.CSI", "500传媒"),
+    (("网络安全", "模型安全", "身份权限", "内容溯源", "水印", "合规审计"), "931726.CSI", "网络安全"),
+    (("AI制药", "医药", "多组学", "合成生物", "医疗服务"), "000808.CSI", "医药生物"),
+    (("医疗影像", "医疗器械", "医疗科技"), "931592.CSI", "医疗科技"),
+    (("工业软件", "PLC", "自动化", "机器视觉"), "000988.CSI", "全指工业"),
+    (("AI PC", "手机", "消费电子"), "931494.CSI", "消费电子"),
+    (("车端", "智能驾驶", "智能汽车", "感知", "控制"), "930721.CSI", "CS智汽车"),
+    (("NPU", "SoC", "端侧"), "932040.CSI", "芯片设计"),
+    (("eVTOL", "无人机", "低空", "航空航天"), "932143.CSI", "航空航天"),
+    (("卫星", "商业航天", "军工AI", "无人系统", "国防"), "932116.CSI", "航空航天与国防行业"),
+    (("量子", "低温", "测控"), "930852.CSI", "量子通信"),
+    (("智能投研", "风控", "反欺诈", "金融科技"), "930986.CSI", "金融科技"),
+    (("稳定币", "支付", "Agent支付"), "930986.CSI", "金融科技"),
+    (("区块链", "链上身份"), "399286.SZ", "区块链50"),
+    (("机器人",), "932438.CSI", "科创创业机器人"),
+]
 
 
 AI_COMPUTE_INFRA_BLUEPRINT = {
@@ -203,6 +298,87 @@ GENERIC_THEME_NODES = {
     "blockchain-ai-payments": ["稳定币/支付", "Agent支付", "链上身份", "清结算基础设施"],
 }
 
+GENERIC_THEME_NODE_COMPANIES = {
+    "datacenter-power": {
+        "电力接入/变压器": "特变电工、思源电气、金盘科技",
+        "液冷/温控": "英维克、申菱环境、高澜股份",
+        "UPS/储能/燃气轮机": "科华数据、科士达、阳光电源",
+        "数据中心运维": "润泽科技、奥飞数据、数据港",
+    },
+    "agentic-ai": {
+        "多智能体编排": "科大讯飞、昆仑万维、拓尔思",
+        "企业工作流": "金山办公、用友网络、泛微网络",
+        "知识库/RAG": "拓尔思、海天瑞声、中科曙光",
+        "办公自动化": "金山办公、福昕软件、致远互联",
+    },
+    "sovereign-ai": {
+        "国产AI芯片": "寒武纪、海光信息、龙芯中科",
+        "国产CPU/GPU": "海光信息、龙芯中科、景嘉微",
+        "服务器整机": "中科曙光、浪潮信息、工业富联",
+        "软件生态适配": "中国软件、太极股份、麒麟信安",
+    },
+    "ai-security-governance": {
+        "身份权限": "启明星辰、数字认证、格尔软件",
+        "模型安全": "三六零、深信服、安恒信息",
+        "内容溯源/水印": "拓尔思、人民网、新华网",
+        "数据合规审计": "启明星辰、奇安信、安恒信息",
+    },
+    "edge-ai": {
+        "AI PC/手机": "工业富联、闻泰科技、传音控股",
+        "车端推理": "德赛西威、中科创达、四维图新",
+        "NPU/SoC": "瑞芯微、全志科技、龙芯中科",
+        "端侧模型部署": "科大讯飞、紫光股份、中科创达",
+    },
+    "ai-healthcare": {
+        "AI制药": "药明康德、泰格医药、成都先导",
+        "医疗影像": "联影医疗、迈瑞医疗、万东医疗",
+        "多组学": "华大智造、诺禾致源、贝瑞基因",
+        "合成生物/医疗服务": "凯莱英、博腾股份、川宁生物",
+    },
+    "ai-industrial-software": {
+        "工业软件": "中控技术、宝信软件、赛意信息",
+        "工业Copilot": "科大讯飞、中控技术、用友网络",
+        "机器视觉": "奥普特、凌云光、天准科技",
+        "PLC/自动化": "汇川技术、信捷电气、雷赛智能",
+    },
+    "ai-commercialization": {
+        "垂直行业模型": "科大讯飞、金山办公、昆仑万维",
+        "企业SaaS": "用友网络、金山办公、泛微网络",
+        "营销/内容生产": "焦点科技、三人行、蓝色光标",
+        "ROI/留存": "值得买、天下秀、遥望科技",
+    },
+    "autonomous-low-altitude": {
+        "智能驾驶": "德赛西威、中科创达、四维图新",
+        "eVTOL/无人机": "中无人机、航天彩虹、万丰奥威",
+        "感知/控制": "均胜电子、保隆科技、华测导航",
+        "低空基础设施": "莱斯信息、四川九洲、深城交",
+    },
+    "quantum-computing": {
+        "量子芯片": "国盾量子、科大国创、光迅科技",
+        "低温/测控": "国盾量子、神州信息、科大国创",
+        "量子通信": "国盾量子、光迅科技、中兴通讯",
+        "算法/云平台": "科大国创、神州信息、中科曙光",
+    },
+    "space-defense-ai": {
+        "卫星遥感": "航天宏图、中科星图、航宇微",
+        "商业航天": "航天彩虹、上海瀚讯、航天电子",
+        "军工AI": "中无人机、中科星图、景嘉微",
+        "无人系统": "中无人机、航天彩虹、观典防务",
+    },
+    "ai-fintech-infra": {
+        "智能投研": "同花顺、东方财富、指南针",
+        "风控/反欺诈": "恒生电子、银之杰、新大陆",
+        "金融IT": "恒生电子、宇信科技、长亮科技",
+        "数据合规": "拓尔思、奇安信、安恒信息",
+    },
+    "blockchain-ai-payments": {
+        "稳定币/支付": "拉卡拉、新大陆、新国都",
+        "Agent支付": "四方精创、恒宝股份、新大陆",
+        "链上身份": "数字认证、格尔软件、吉大正元",
+        "清结算基础设施": "恒生电子、四方精创、宇信科技",
+    },
+}
+
 HARD_FACT_KEYWORDS = {
     "订单/客户": ("订单", "中标", "定点", "客户", "认证", "供应", "交付", "出货", "招标"),
     "价格/涨价": ("涨价", "提价", "价格", "ASP", "报价", "涨幅"),
@@ -266,6 +442,22 @@ def md_table(headers: list[str], rows: list[list[Any]]) -> str:
 def compact(value: Any, limit: int = 54) -> str:
     text = " ".join(str(value or "").split())
     return text if len(text) <= limit else text[: limit - 1] + "…"
+
+
+def slugify(value: Any, fallback: str = "group") -> str:
+    text = str(value or "").strip().lower()
+    out = []
+    for ch in text:
+        if ch.isascii() and ch.isalnum():
+            out.append(ch)
+        elif ch in {"-", "_"}:
+            out.append("-")
+        elif ch.isspace() or ch in {"/", "／", "+", "、", "，", ",", "&"}:
+            out.append("-")
+    slug = "".join(out).strip("-")
+    while "--" in slug:
+        slug = slug.replace("--", "-")
+    return slug or fallback
 
 
 def fmt_pct(value: Any) -> str:
@@ -390,6 +582,7 @@ def theme_blueprint(theme_key: str) -> dict[str, Any]:
     keywords = [str(x) for x in meta.get("discovery_keywords", []) if isinstance(x, str)]
     nodes = GENERIC_THEME_NODES.get(theme_key) or keywords[:4] or [label, "上游基础设施", "中游产品化", "下游场景"]
     companies = GENERIC_THEME_COMPANIES.get(theme_key, "待验证核心公司A、待验证核心公司B、待验证核心公司C")
+    node_companies = GENERIC_THEME_NODE_COMPANIES.get(theme_key, {})
     upstream = nodes[:2] or [label + "上游"]
     midstream = nodes[2:4] or [label + "产品化"]
     downstream = ["客户验证/订单", "收入占比", "监管/合规", "商业化ROI"]
@@ -398,7 +591,7 @@ def theme_blueprint(theme_key: str) -> dict[str, Any]:
         bottlenecks.append(
             {
                 "link": node,
-                "companies": companies,
+                "companies": node_companies.get(node, companies),
                 "catalyst": "订单/客户认证/收入占比/政策或监管里程碑出现公告级证据",
                 "invalidation": "商业化ROI不足、客户验证低于预期、收入暴露不足或监管约束增强",
             }
@@ -409,7 +602,7 @@ def theme_blueprint(theme_key: str) -> dict[str, Any]:
             "细分领域/关键产品": node,
             "核心技术壁垒": "客户认证、数据闭环、工程化交付、合规和成本控制",
             "卡脖子程度": "High" if idx < 2 else "Medium",
-            "代表A股公司": companies,
+            "代表A股公司": node_companies.get(node, companies),
         }
         for idx, node in enumerate(nodes[:6])
     ]
@@ -496,6 +689,46 @@ def technical_snapshot(quote: dict[str, Any], supplement: dict[str, Any]) -> dic
         "target": target,
         "history_points": len(rows),
     }
+
+
+def _numeric_row_value(row: dict[str, Any], keys: tuple[str, ...]) -> float | None:
+    for key in keys:
+        value = _float_or_none(row.get(key))
+        if value is not None:
+            return value
+    return None
+
+
+def fund_trend_text(supplement: dict[str, Any]) -> str:
+    fund_flow = supplement.get("fund_flow", {}) if isinstance(supplement, dict) else {}
+    rows = fund_flow.get("rows", []) if isinstance(fund_flow, dict) else []
+    flow_values = [
+        value
+        for row in rows[-20:]
+        if isinstance(row, dict)
+        for value in [_numeric_row_value(row, ("main_net_inflow", "net_mf_amount", "net_amount"))]
+        if value is not None
+    ]
+    if flow_values:
+        last5 = sum(flow_values[-5:])
+        last20 = sum(flow_values)
+        direction = "净流入" if last5 > 0 else "净流出" if last5 < 0 else "均衡"
+        persistence = "20日同向" if last5 * last20 > 0 else "短线背离"
+        return f"资金趋势：近5样本{direction}，{persistence}"
+
+    margin = supplement.get("margin_trading", {}) if isinstance(supplement, dict) else {}
+    margin_rows = margin.get("rows", []) if isinstance(margin, dict) else []
+    balances = [
+        value
+        for row in margin_rows[-20:]
+        if isinstance(row, dict)
+        for value in [_numeric_row_value(row, ("rzye", "fin_balance", "margin_balance"))]
+        if value is not None
+    ]
+    if len(balances) >= 2:
+        direction = "融资余额上行" if balances[-1] > balances[0] else "融资余额回落" if balances[-1] < balances[0] else "融资余额持平"
+        return f"资金趋势：{direction}，仅作拥挤度代理"
+    return "资金趋势：公开资金流样本不足"
 
 
 def evidence_ref(payload: dict[str, Any], prefix: str, fallback: str = "本轮结构化证据") -> str:
@@ -685,7 +918,7 @@ def write_bottleneck_svg(path: Path, label: str, rows: list[dict[str, Any]]) -> 
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         f'<text x="46" y="48" font-size="28" font-weight="800" fill="#111827">{label}：卡口候选优先级</text>',
-        '<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；每个状态变化仍需 evidence id 支撑。</text>',
+        '<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；状态变化需公开证据支撑。</text>',
     ]
     for idx, name in enumerate(labels):
         y = 135 + idx * 76
@@ -817,7 +1050,7 @@ def write_bottleneck_png(path: Path, label: str, rows: list[dict[str, Any]]) -> 
     title_font = _font(30, bold=True)
     body_font = _font(18)
     draw.text((48, 38), f"{label}：卡口候选优先级", font=title_font, fill="#111827")
-    draw.text((48, 82), "评分为研究优先级，不代表已验证收入弹性；每个状态变化仍需 evidence id 支撑。", font=body_font, fill="#475569")
+    draw.text((48, 82), "评分为研究优先级，不代表已验证收入弹性；状态变化需公开证据支撑。", font=body_font, fill="#475569")
     max_score = max(len(labels), 1)
     palette = ["#4f46e5", "#059669", "#ea580c", "#0891b2", "#7c3aed", "#dc2626"]
     for idx, name in enumerate(labels):
@@ -863,7 +1096,86 @@ def write_stock_snapshot_png(path: Path, label: str, rows: list[dict[str, Any]])
     image.save(path)
 
 
-def _panel_candles(draw: Any, box: tuple[int, int, int, int], row: dict[str, Any]) -> None:
+def market_index_for_link(link: str) -> tuple[str, str] | None:
+    for keywords, code, name in MARKET_INDEX_BY_LINK:
+        if any(keyword in link for keyword in keywords):
+            return code, name
+    return None
+
+
+def _compact_date(value: Any) -> str:
+    return "".join(ch for ch in str(value or "") if ch.isdigit())[:8]
+
+
+def fetch_market_index_history(link: str, records: list[dict[str, Any]], *, limit: int = 90) -> dict[str, Any]:
+    matched = market_index_for_link(link)
+    if matched is None:
+        return {"status": "unmatched", "rows": [], "name": "", "code": ""}
+    code, name = matched
+    dates = [
+        _compact_date(item.get("date"))
+        for record in records
+        for item in price_history_rows(record.get("supplement", {}) if isinstance(record.get("supplement"), dict) else {})[-limit:]
+        if _compact_date(item.get("date"))
+    ]
+    if not dates:
+        return {"status": "no_stock_dates", "rows": [], "name": name, "code": code}
+    result = tushare_provider.query(
+        "index_daily",
+        {"ts_code": code, "start_date": min(dates), "end_date": max(dates)},
+        "ts_code,trade_date,open,high,low,close,vol,amount",
+        limit=limit + 20,
+    )
+    rows = []
+    for row in result.get("rows", []):
+        close = _float_or_none(row.get("close"))
+        date = _compact_date(row.get("trade_date"))
+        if close is None or not date:
+            continue
+        rows.append({"date": f"{date[:4]}-{date[4:6]}-{date[6:8]}", "close": close})
+    rows.sort(key=lambda row: row["date"])
+    return {
+        "status": "ok" if rows else str(result.get("status") or "empty"),
+        "rows": rows[-limit:],
+        "name": name,
+        "code": code,
+        "source": "tushare.index_daily",
+        "error": result.get("error"),
+    }
+
+
+def market_index_caption(index_history: dict[str, Any]) -> str:
+    name = str(index_history.get("name") or "").strip() if isinstance(index_history, dict) else ""
+    code = str(index_history.get("code") or "").strip() if isinstance(index_history, dict) else ""
+    source = str(index_history.get("source") or "tushare.index_daily").strip() if isinstance(index_history, dict) else "tushare.index_daily"
+    status = str(index_history.get("status") or "").strip() if isinstance(index_history, dict) else ""
+    label = " ".join(x for x in (name, code) if x)
+    if normalize_index_rows(index_history):
+        return f"叠加板块指数：{label}；来源：{source}。"
+    if label:
+        return f"叠加板块指数：{label}；来源：{source}；本轮未取得可绘制日线，需刷新后复核。"
+    if status == "unmatched":
+        return "叠加板块指数：未匹配到市场真实指数；需补充主题-指数映射后复核。"
+    return "叠加板块指数：本轮未取得市场真实指数日线；需刷新后复核。"
+
+
+def normalize_index_rows(index_history: dict[str, Any]) -> dict[str, float]:
+    rows = index_history.get("rows", []) if isinstance(index_history, dict) else []
+    clean = [
+        (str(row.get("date")), _float_or_none(row.get("close")))
+        for row in rows
+        if isinstance(row, dict)
+    ]
+    clean = [(date, close) for date, close in clean if date and close is not None]
+    if len(clean) < 2:
+        return {}
+    base = clean[0][1]
+    if not base:
+        return {}
+    return {date: close / base * 100 for date, close in clean}
+
+
+def _panel_candles(draw: Any, box: tuple[int, int, int, int], row: dict[str, Any], market_index: dict[str, float] | None = None, index_label: str = "") -> None:
     x0, y0, x1, y1 = box
     tech = row.get("technical", {}) if isinstance(row.get("technical"), dict) else {}
     supplement = row.get("supplement", {}) if isinstance(row.get("supplement"), dict) else {}
@@ -920,30 +1232,58 @@ def _panel_candles(draw: Any, box: tuple[int, int, int, int], row: dict[str, Any
             y = yy(value)
             draw.line((inner_left, y, inner_right, y), fill=color, width=2)
             draw.text((inner_right - 78, y - 15), f"{label} {value:.2f}", font=small_font, fill=color)
+    if market_index:
+        index_points = [(idx, market_index.get(str(item.get("date")))) for idx, item in enumerate(clean)]
+        index_points = [(idx, value) for idx, value in index_points if value is not None]
+        if len(index_points) >= 2:
+            values = [float(value) for _, value in index_points]
+            lo, hi = min(values), max(values)
+            span_i = max(hi - lo, 1e-9)
+
+            def iy(v: float) -> float:
+                return inner_top + (hi - v) / span_i * (inner_bottom - inner_top)
+
+            pts = [
+                (
+                    inner_left + idx * candle_gap + candle_gap / 2,
+                    iy(float(value)),
+                )
+                for idx, value in index_points
+            ]
+            draw.line(pts, fill="#f97316", width=3)
+            draw.text((inner_left + 130, y1 - 25), f"橙={index_label or '市场指数'} {values[-1]:.1f}", font=small_font, fill="#c2410c")
     draw.text((inner_left, y1 - 25), str(clean[0].get("date", "")), font=small_font, fill="#64748b")
     draw.text((inner_right - 68, y1 - 25), str(clean[-1].get("date", "")), font=small_font, fill="#64748b")
     draw.text((x0 + 8, y0 + 10), f"{max_v:.2f}", font=small_font, fill="#64748b")
     draw.text((x0 + 8, y1 - 54), f"{min_v:.2f}", font=small_font, fill="#64748b")
     draw.text((x0 + 8, y1 - 24), f"最新 {closes[-1]:.2f}", font=small_font, fill="#111827")
+    draw.text((x0 + 110, y0 - 24), str(row.get("fund_trend") or fund_trend_text(supplement)), font=small_font, fill="#475569")
 
 
-def write_trade_kline_png(path: Path, label: str, rows: list[dict[str, Any]]) -> None:
+def write_trade_kline_png(path: Path, label: str, rows: list[dict[str, Any]], index_history: dict[str, Any] | None = None) -> None:
     from PIL import Image, ImageDraw
 
-    width, height = 1500, 1100
+    chart_rows = rows[:3]
+    width = 1500
+    height = 190 + len(chart_rows) * 300
     image = Image.new("RGB", (width, height), "white")
     draw = ImageDraw.Draw(image)
     title_font = _font(30, bold=True)
     body_font = _font(16)
-    draw.text((48, 34), f"{label}：现阶段买入候选K线与关键位", font=title_font, fill="#111827")
-    draw.text((48, 78), "仅展示通过交易决策和风险收益比门槛的候选；每个面板为近90个交易日OHLC、支撑和压力。", font=body_font, fill="#475569")
-    chart_rows = rows[:6]
+    index_history = index_history or {}
+    index_name = str(index_history.get("name") or "")
+    index_code = str(index_history.get("code") or "")
+    index_label = f"{index_name} {index_code}".strip()
+    draw.text((48, 34), f"{label}：核心标的K线、关键位与市场指数", font=title_font, fill="#111827")
+    if normalize_index_rows(index_history):
+        subtitle = f"每个面板为近90个交易日OHLC、支撑/压力、资金趋势；橙线为市场指数 {index_label}。"
+    else:
+        subtitle = "每个面板为近90个交易日OHLC、支撑/压力、资金趋势；本节点未取得可用市场指数日线，橙线不绘制。"
+    draw.text((48, 78), subtitle, font=body_font, fill="#475569")
+    market_index = normalize_index_rows(index_history)
     for idx, row in enumerate(chart_rows):
-        col = idx % 2
-        r = idx // 2
-        x0 = 70 + col * 710
-        y0 = 150 + r * 300
-        _panel_candles(draw, (x0, y0, x0 + 650, y0 + 235), row)
+        y0 = 150 + idx * 300
+        _panel_candles(draw, (90, y0, 1410, y0 + 235), row, market_index, index_label)
     image.save(path)
 
 
@@ -1292,12 +1632,15 @@ def supplement_from_payload(payload: dict[str, Any], symbol: str) -> dict[str, A
 def ensure_price_history(supplement: dict[str, Any], symbol: str, *, live_fetch: bool) -> None:
     if not symbol:
         return
+    expected_date = a_stock_data.latest_expected_trade_date()
     if price_history_rows(supplement):
-        return
+        history = {"rows": price_history_rows(supplement)}
+        if not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
+            return
     errors = supplement.setdefault("errors", [])
     if not live_fetch:
         try:
-            history = a_stock_data.fetch_price_history_fallback(symbol)
+            history = a_stock_data.fetch_price_history_cached_or_live(symbol)
             if isinstance(history, dict) and history.get("rows"):
                 supplement["price_history"] = history
         except Exception as exc:  # noqa: BLE001
@@ -1314,8 +1657,11 @@ def ensure_price_history(supplement: dict[str, Any], symbol: str, *, live_fetch:
         try:
             history = fetcher(symbol)
             if isinstance(history, dict) and history.get("rows"):
-                supplement["price_history"] = history
-                return
+                if not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
+                    supplement["price_history"] = history
+                    return
+                if isinstance(errors, list):
+                    errors.append(f"{label}:{symbol}:stale_before_{expected_date}")
         except Exception as exc:  # noqa: BLE001
             if isinstance(errors, list):
                 errors.append(f"{label}:{symbol}:{exc!r}")
@@ -1380,6 +1726,7 @@ def bottleneck_company_records(selected: dict[str, Any], payload: dict[str, Any]
             pe = valuation.get("pe", quote.get("pe"))
             pb = valuation.get("pb", quote.get("pb"))
             technical = technical_snapshot(quote, supplement)
+            fund_trend = fund_trend_text(supplement)
             records.append(
                 {
                     "name": name,
@@ -1394,6 +1741,7 @@ def bottleneck_company_records(selected: dict[str, Any], payload: dict[str, Any]
                     "valuation": f"PE {pe if pe is not None else '未取得可靠公开数据'} / PB {pb if pb is not None else '未取得可靠公开数据'}",
                     "financial_note": latest_financial_note(supplement),
                     "research_note": latest_research_note(supplement),
+                    "fund_trend": fund_trend,
                     "catalyst": item.get("catalyst", "订单/公告/研报正文或客户验证"),
                     "entry": f"{technical['entry']}；同时需要订单、价格或客户认证增量证据",
                     "invalidation": item.get("invalidation", "收入暴露不足"),
@@ -1434,7 +1782,7 @@ def bottleneck_records_to_rows(records: list[dict[str, Any]]) -> list[list[Any]]
     ]
 
 
-def company_mapping_rows_from_records(records: list[dict[str, Any]], evidence_id: str) -> list[list[Any]]:
+def company_mapping_rows_from_records(records: list[dict[str, Any]], evidence_id: str = "") -> list[list[Any]]:
     rows: list[list[Any]] = []
     seen: set[tuple[str, str, str]] = set()
     for item in records:
@@ -1457,7 +1805,7 @@ def company_mapping_rows_from_records(records: list[dict[str, Any]], evidence_id
                 link,
                 "High/待验证" if any(term in link for term in ("液冷", "电力", "变压器", "UPS", "储能", "CPO", "PCB", "芯片", "封装")) else "Medium/待验证",
                 "核心卡口候选" if any(term in link for term in ("液冷", "电力", "变压器", "CPO", "PCB", "芯片")) else "重要配套/待验证",
-                f"证据：{evidence_id}；{financial_note}；{research_note}；反证/失效：{item.get('invalidation', '收入暴露不足')}",
+                f"{financial_note}；{research_note}；反证/失效：{item.get('invalidation', '收入暴露不足')}",
             ]
         )
     return rows
@@ -1470,7 +1818,8 @@ def stock_deep_rows(records: list[dict[str, Any]]) -> list[list[Any]]:
         trend = (
             f"现价 {fmt_num(tech.get('price'))}；涨跌幅 {fmt_pct(tech.get('change_pct'))}；"
             f"MA5/10/20/60={fmt_num(tech.get('ma5'))}/{fmt_num(tech.get('ma10'))}/{fmt_num(tech.get('ma20'))}/{fmt_num(tech.get('ma60'))}；"
-            f"20日箱体 {fmt_num(tech.get('low20'))}-{fmt_num(tech.get('high20'))}；{tech.get('trend', '趋势待验证')}"
+            f"20日箱体 {fmt_num(tech.get('low20'))}-{fmt_num(tech.get('high20'))}；{tech.get('trend', '趋势待验证')}；"
+            f"{item.get('fund_trend', '资金趋势：待补公开样本')}"
         )
         rows.append(
             [
@@ -1618,6 +1967,36 @@ def bottleneck_battle_rows(records: list[dict[str, Any]]) -> list[list[Any]]:
     return rows
 
 
+def trade_chart_groups(records: list[dict[str, Any]], *, limit: int = 6) -> list[tuple[str, str, list[dict[str, Any]]]]:
+    by_link: dict[str, list[dict[str, Any]]] = {}
+    for item in records:
+        link = str(item.get("link") or "未分类")
+        by_link.setdefault(link, []).append(item)
+    groups: list[tuple[str, str, list[dict[str, Any]]]] = []
+    seen_symbol_sets: dict[tuple[str, ...], int] = {}
+    for idx, (link, items) in enumerate(by_link.items(), start=1):
+        leaders = sorted(
+            items,
+            key=lambda item: (
+                _growth_score(str(item.get("financial_note") or "")),
+                _float_or_none(item.get("technical", {}).get("risk_reward") if isinstance(item.get("technical"), dict) else None) or 0,
+            ),
+            reverse=True,
+        )[:3]
+        if leaders:
+            symbol_set = tuple(sorted(str(item.get("symbol") or item.get("name") or "") for item in leaders))
+            if symbol_set in seen_symbol_sets:
+                group_idx = seen_symbol_sets[symbol_set]
+                filename, old_link, old_rows = groups[group_idx]
+                groups[group_idx] = (filename, f"{old_link}/{link}", old_rows)
+                continue
+            seen_symbol_sets[symbol_set] = len(groups)
+            groups.append((f"theme-trade-map-{idx}-{slugify(link)}.png", link, leaders))
+        if len(groups) >= limit:
+            break
+    return groups
+
+
 def event_trigger_rows(records: list[dict[str, Any]], payload: dict[str, Any]) -> list[list[Any]]:
     top = records[:8]
     rows: list[list[Any]] = []
@@ -1652,6 +2031,8 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
 
     assets = out_dir / "assets"
     assets.mkdir(parents=True, exist_ok=True)
+    for old_trade_png in assets.glob("theme-trade-map*.png"):
+        old_trade_png.unlink()
     chain_svg = assets / "theme-chain-map.svg"
     bottleneck_svg = assets / "theme-bottleneck-priority.svg"
     chain_png = assets / "theme-chain-map.png"
@@ -1663,14 +2044,16 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
     stock_png = assets / "theme-stock-valuation.png"
     write_stock_snapshot_svg(stock_svg, label, company_records)
     trade_svg = assets / "theme-trade-map.svg"
-    trade_png = assets / "theme-trade-map.png"
     write_trade_map_svg(trade_svg, label, company_records)
     write_chain_png(chain_png, label, chain_map, bottlenecks)
     write_bottleneck_png(bottleneck_png, label, bottlenecks or value_rows_raw)
     write_stock_snapshot_png(stock_png, label, company_records)
-    trade_candidates = [record for record in company_records if current_buy_candidate(record)]
-    if trade_candidates:
-        write_trade_kline_png(trade_png, label, trade_candidates)
+    trade_groups = trade_chart_groups(company_records)
+    trade_charts: list[tuple[str, str, list[dict[str, Any]], dict[str, Any]]] = []
+    for filename, link, rows in trade_groups:
+        index_history = fetch_market_index_history(link, rows)
+        write_trade_kline_png(assets / filename, f"{label} · {link}", rows, index_history)
+        trade_charts.append((filename, link, rows, index_history))
 
     chain_ev = evidence_ref(payload, "ev-chain")
     report_ev = evidence_ref(payload, "ev-report")
@@ -1688,10 +2071,14 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
     absolute_leaders = "、".join(str(row[1]) for row in tier_rows if row[0] == "绝对核心龙头") or top_names
     focus_links = " + ".join(str(item.get("link") or "") for item in bottlenecks[:2] if item.get("link")) or first_link
     bottleneck_scope = "、".join(str(item.get("link") or "") for item in bottlenecks[:5] if item.get("link")) or label
+    report_date = str(payload.get("finished_at") or datetime.now().strftime("%Y-%m-%d"))[:10]
     trade_image_md = (
-        "\n\n![现阶段买入候选K线结构](assets/theme-trade-map.png)"
-        if trade_candidates
-        else "\n\n> 本轮没有通过交易决策与风险收益比门槛的现阶段买入候选，K线支撑/压力图不展开；产业链核心公司仍保留在估值和证据观察表。"
+        "\n\n" + "\n\n".join(
+            f"### {link}核心三公司K线\n\n![{link}核心三公司K线](assets/{filename})\n\n{market_index_caption(index_history)}"
+            for filename, link, _rows, index_history in trade_charts
+        )
+        if trade_charts
+        else "\n\n> 本轮没有取得可绘制K线的核心公司样本；产业链核心公司仍保留在估值和证据观察表。"
     )
     confidence = "中高" if len(company_records) >= 12 and len(bottlenecks) >= 5 else "中等"
 
@@ -1733,7 +2120,7 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
                 item.get("卡脖子程度", "待验证"),
                 item.get("代表A股公司", "NA"),
                 item.get("公司环节地位", "待验证"),
-                item.get("证据口径/备注", chain_ev),
+                item.get("证据口径/备注", "公开产业链与财务/研报口径，待公告和客户认证继续核验"),
             ]
         )
         chain_rows.append(
@@ -1776,7 +2163,7 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             ]
         )
 
-    company_rows = [
+    company_rows = company_mapping_rows_from_records(company_records) if company_records else [
         [
             x.get("公司", "NA"),
             x.get("代码", "NA"),
@@ -1786,67 +2173,53 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             x.get("核心技术/产品", "NA"),
             x.get("卡脖子相关性", "NA"),
             x.get("环节地位", "NA"),
-            x.get("证据与备注", chain_ev),
+            x.get("证据与备注", "公开产业链与财务/研报口径，待公告和客户认证继续核验"),
         ]
         for x in company_map[:8]
+        if "非主线" not in str(x) and "反例" not in str(x)
     ]
-    if not company_rows and company_records:
-        company_rows = company_mapping_rows_from_records(company_records, chain_ev)
 
-    source_rows = []
-    for item in company_records[:6]:
-        source_rows.append(
-            [
-                f"{item.get('name')} 行情、财务、研报补充",
-                "a-stock-data / eastmoney public",
-                payload.get("finished_at", "NA"),
-                "公开数据/Medium",
-                market_ev,
-            ]
-        )
-    for report in (payload.get("industry_reports", []) or [])[:6]:
+    source_rows = [
+        ["产业链与卡口判断", "公开产业链、研报、行情结构化证据", report_date, "Medium", chain_ev],
+        ["核心公司估值/财务/K线", "公开行情、财务快照、公告与研报摘要", report_date, "Medium", market_ev],
+        ["复核与反证条件", "投研复核规则", report_date, "Medium", review_ev],
+    ]
+    for report in (payload.get("industry_reports", []) or [])[:3]:
         if isinstance(report, dict):
             source_rows.append([compact(report.get("title"), 42), report.get("org", "公开研报"), report.get("publish_date") or report.get("date") or "latest", "标题级/Medium", report_ev])
-    for headline in (payload.get("news", {}) or {}).get("headlines", [])[:4]:
+    for headline in (payload.get("news", {}) or {}).get("headlines", [])[:2]:
         if isinstance(headline, dict):
             source_rows.append([compact(headline.get("title"), 42), headline.get("source", "公开资讯"), headline.get("published_at") or "latest", "线索级/Low", evidence_ref(payload, "ev-news")])
-    source_rows.extend(
-        [
-            ["产业链结构化分析", "industry-chain-analysis retained skill", payload.get("finished_at", "NA"), "Medium", chain_ev],
-            ["Agent/投委会复核", "loop review", payload.get("finished_at", "NA"), "Medium", review_ev],
-        ]
-    )
-    for row in provider_rows:
-        source_rows.append([row[0], row[2], payload.get("finished_at", "NA"), f"外部复核/{row[1]}", row[5]])
 
     return "\n\n".join(
         [
-            f"# {label}主题最终报告",
-            f"> 生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  \n> 对标框架：深度研究/每日深度调研式写法；所有可执行结论必须回到 evidence id、订单、产能、价格、估值和反证条件。",
+            f"# {label}主题研究报告",
+            f"> 报告日期：{report_date}  \n> 正文只保留影响投资判断的信息；证据口径以公开行情、公告、财报、研报和产业链复核为主。",
             "## 研究课题\n\n"
-            f"本主题研究的问题不是“AI 是否继续发展”，而是 `{label}` 是否已经从叙事进入供需、订单、价格、资本开支、监管合规或国产替代的可证伪阶段。当前主线聚焦 {bottleneck_scope}。研究排序遵循三步：先看谁直接承接真实需求，再看谁有短期供给/认证/交付约束，最后看估值和股价结构是否允许入场。",
+            f"本报告只回答三个问题：`{label}` 的利润会流向哪些卡口，A股哪些公司真正暴露在这些卡口上，当前价格是否允许执行。当前跟踪范围收敛在 {bottleneck_scope}。",
             "## 一句话结论\n\n"
-            f"强命题：{label} 的研究价值不在泛 AI 标签，而在 `{focus_links}` 是否出现订单、价格、客户认证、收入占比或监管里程碑的硬证据。方向谨慎看多，置信度{confidence}；当前绝对核心候选收敛为：{absolute_leaders}。但只要订单、价格、收入占比或客户认证没有新增证据，就只保持观察，不追高。证据：{chain_ev}。",
+            f"强命题：{label} 的机会不在泛主题，而在 `{focus_links}` 能否持续出现订单、价格、客户认证、收入占比或监管里程碑。方向谨慎看多，置信度{confidence}；当前绝对核心候选为：{absolute_leaders}。没有新增硬证据时，只观察，不追高。",
             "## 市场盘点\n\n"
-            "### 技术突破\n\n- " + "\n- ".join(tech_breakthroughs)
-            + f"\n\n### 产能变化\n\n- {label} 的研究价值来自供给刚性、认证周期、数据/工程闭环、客户导入和资本开支共同决定瓶颈能否持续。当前本轮数据只证明“应跟踪”，尚未证明“已紧缺”。证据：" + chain_ev + "。"
-            + "\n\n### 订单确认\n\n- 本轮尚未读到可直接证明 A股公司新增订单的公告正文；订单确认仍列为下一轮优先验证项。若后续只有研报标题或概念标签，不升级为正文结论。"
-            + "\n\n### 政策 / 监管 / 地缘\n\n- 国产算力、自主可控和供应链安全仍是中期背景变量，但不能替代公司级收入、客户认证和供需数据。"
-            + "\n\n### 市场观点\n\n- " + "\n- ".join(market_review),
+            f"- 需求：AI资本开支仍是背景变量，但只有订单、产能、客户认证和收入占比能把主题变成业绩。\n"
+            f"- 供给：重点看认证周期、良率/交付、关键材料和工程化能力是否造成瓶颈。\n"
+            f"- 价格：股价接近压力位时不追；回到支撑区也要等硬证据同步。\n"
+            f"- 证据密度：硬事实台账仍偏薄，PDF正文级和公告级证据不足，研报标题只作线索。",
             "## 核心逻辑\n\n"
             f"1. 需求侧：AI 应用和模型迭代继续推高 `{label}` 相关需求，但需求强度必须通过订单、客户认证、收入占比、价格趋势或政策里程碑验证。\n"
             f"2. 供给侧：利润更可能集中在短期难扩产、认证周期长、替代路线慢、合规壁垒高或工程化交付难的环节，例如 {bottleneck_scope}。\n"
             "3. A股映射：先判断产业链位置，再核验收入/订单暴露，最后才进入估值和交易条件；不能把行情样本或主题标签直接当作核心标的。",
-            "## 关键数据\n\n" + md_table(["数据", "数值/变化", "来源", "日期", "置信度"], key_data_rows)
-            + "\n\n### 硬事实台账\n\n"
-            + "硬事实台账只承认能改变供需、订单、价格、产能、良率、客户认证或财务兑现判断的信息；标题级线索会显式降级，不用于覆盖更强旧结论。\n\n"
-            + "### 正文级事实摘要\n\n"
-            + fact_summary_bullets(fact_rows)
-            + "\n\n"
-            + md_table(["事实类型", "硬事实/线索", "涉及节点", "涉及公司", "数值/时间", "来源", "证据强度", "交易含义"], fact_rows)
-            + "\n\n### 证据密度评分\n\n"
-            + md_table(["维度", "数量/评分", "口径", "含义"], density_rows)
-            + ("\n\n### 外部复核与数据路由\n\n" + md_table(["来源", "状态", "复用能力", "本轮信息", "降级策略", "证据id"], provider_rows) if provider_rows else ""),
+            "## 关键数据\n\n"
+            + md_table(
+                ["判断项", "当前结论", "投资含义"],
+                [
+                    ["核心卡口", bottleneck_scope, "优先验证订单、价格、客户认证和收入占比"],
+                    ["核心候选", absolute_leaders, "只在买入触发满足时进入交易候选"],
+                    ["财务口径", "核心公司继续跟踪营收同比、归母净利同比、毛利率、预测PE", "财务改善要和订单/客户认证同步才升级"],
+                    ["证据密度", "公告/财报级硬证据不足，研报和新闻只作线索", "不把主题热度等同于买入结论"],
+                    ["正文证据", "硬事实台账不铺长表；PDF正文级证据不足时降级为线索", "避免把内部过程写进正文"],
+                    ["交易纪律", "等待买入触发；风险收益比不足时不追高", "买点、支撑、压力和止损优先于叙事"],
+                ],
+            ),
             "## 产业链跟踪\n\n![产业链图谱](assets/theme-chain-map.png)\n\n"
             + "### 产业链核心环节价值分布\n\n"
             + md_table(
@@ -1856,7 +2229,6 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             + "\n\n### 供需链路跟踪\n\n"
             + md_table(["环节", "事实映射", "供需变化方向", "瓶颈/卡口", "A股映射"], chain_rows)
             + "\n\n### 核心节点三公司校验\n\n"
-            + "每个产业链节点至少保留三家处于当前节点绝对核心地位、且能通过行情/财务/研报进一步跟踪的 A 股公司；少于三家则不得升级为成熟节点。\n\n"
             + md_table(["产业链节点", "核心公司1", "核心公司2", "核心公司3", "升级催化", "失效条件"], node_core_rows)
             + "\n\n### 瓶颈战斗地图\n\n"
             + md_table(["瓶颈节点", "当前三家核心公司", "为什么卡", "升级信号", "反证信号", "节点结论"], battle_rows)
@@ -1864,7 +2236,7 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             + md_table(["候选环节", "不可替代", "供给刚性", "寡头垄断", "机构低配", "反证条件"], bottleneck_standard_rows),
             "## 投资机会挖掘\n\n"
             "### 瓶颈识别\n\n![卡口优先级](assets/theme-bottleneck-priority.png)\n\n"
-            + "\n".join(f"- {idx + 1}. {item.get('link', '候选卡口')}：代表公司 {item.get('companies', '待验证')}；催化 {item.get('catalyst', '订单/公告/客户验证')}；失效条件 {item.get('invalidation', '收入暴露不足')}。证据：{chain_ev}。" for idx, item in enumerate(bottlenecks[:5]))
+            + "\n".join(f"- {idx + 1}. {item.get('link', '候选卡口')}：代表公司 {item.get('companies', '待验证')}；催化 {item.get('catalyst', '订单/公告/客户验证')}；失效条件 {item.get('invalidation', '收入暴露不足')}。" for idx, item in enumerate(bottlenecks[:5]))
             + "\n\n### 可交易标的筛选\n\n- 直接暴露优先于相邻链路；公告/财报证明优先于研报标题；估值赔率优先于短期涨幅。当前所有候选仍需“收入占比/订单/客户认证”三项中的至少一项补强。",
             "## A股可交易标的估值对比\n\n![A股候选估值图](assets/theme-stock-valuation.png)"
             + trade_image_md
@@ -1875,7 +2247,7 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
                 ["公司", "代码", "产业链位置", "估值", "财务质量", "趋势结构", "关键位", "买入条件", "止损/失效", "卖出/目标"],
                 stock_deep_rows(company_records) if company_records else [],
             )
-            + "\n\n这张表的作用是把产业逻辑落到交易纪律：现价接近压力位且风险收益比不足时，即便产业逻辑强，也只能等待回踩或新的订单证据；现价回到支撑区但订单/毛利/收入占比无验证，同样不能升级。",
+            + "\n\n交易判断只看两件事：价格是否到买入触发区，证据是否同步增强。二者缺一，继续等待。",
             "## 产业链 / 竞争格局\n\n"
             + "### A股公司映射与核心地位判断\n\n"
             + md_table(["公司", "代码", "环节", "细分领域", "产业占比/暴露度", "核心技术/产品", "卡脖子相关性", "环节地位", "证据与备注"], company_rows)
@@ -1886,10 +2258,6 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             "### 龙头分层\n\n"
             + md_table(["层级", "公司", "代码", "节点", "入选原因", "升级触发器", "降级/剔除条件"], tier_rows)
             + "\n\n"
-            f"- 核心环节龙头：{bottleneck_scope} 等直接受益且收入暴露可验证的公司；入场条件是订单、价格或客户认证出现增量证据。\n"
-            "- 关键技术突破者：国产替代、工程化交付、合规/数据壁垒或关键产品性能有明确突破的公司；入场条件是从研报线索升级到公告/财报/客户证据。\n"
-            "- 重要配套：基础设施、渠道、交付和生态配套；入场条件是资本开支、客户数和交付量持续确认。\n"
-            "- 待验证概念：仅有 AI 标签或行情异动但缺少收入暴露的公司；默认留在观察池。\n\n"
             "### 事件-交易触发器\n\n"
             + md_table(["公司", "节点", "需要等待的硬证据", "买入触发", "卖出/减仓触发", "反证退出"], trigger_rows),
             "## 风险、反证与退出条件\n\n"
@@ -1897,7 +2265,33 @@ def build_report(payload: dict[str, Any], theme_key: str, out_dir: Path, *, live
             "- 供给反证：替代路线成熟、扩产过快或价格回落，导致卡口缓解。\n"
             "- 估值反证：估值和成交拥挤先于基本面兑现，风险收益比低于 2:1。\n"
             "- 主题反证：新闻/研报热度上升但公司财务、订单和价格信号没有同步改善。",
-            "## 数据来源与证据强度\n\n" + md_table(["结论/数据", "来源", "日期", "置信度", "证据id"], source_rows[:14]),
+            "## 数据来源与证据强度\n\n" + md_table(["结论/数据", "来源", "日期", "置信度"], [row[:4] for row in source_rows[:8]]),
+        ]
+    ) + "\n"
+
+
+def build_agent_report(report: str, payload: dict[str, Any], theme_key: str, payload_file: Path, quality: dict[str, Any]) -> str:
+    selected = enrich_theme_selected(theme_key, chain(payload))
+    evidence_ids = [str(x) for x in payload.get("evidence_ids", []) if isinstance(x, str)]
+    deep = payload.get("theme_deep_report", {}) if isinstance(payload.get("theme_deep_report"), dict) else {}
+    rows = [
+        ["theme_key", theme_key],
+        ["selected_theme", str(selected.get("selected_theme") or theme_key)],
+        ["payload_file", rel(payload_file)],
+        ["finished_at", str(payload.get("finished_at") or "")],
+        ["report_quality", json.dumps(quality, ensure_ascii=False)],
+        ["human_report_chars", str(len(report))],
+        ["human_report_images", str(report.count("!["))],
+    ]
+    provider_rows = provider_insight_rows(payload)
+    return "\n\n".join(
+        [
+            f"# Agent Report · {theme_key}",
+            "## Run Context\n\n" + md_table(["key", "value"], rows),
+            "## Evidence IDs\n\n" + ("\n".join(f"- {item}" for item in evidence_ids) if evidence_ids else "- none"),
+            "## Draft Routing\n\n" + md_table(["key", "value"], [[k, json.dumps(v, ensure_ascii=False) if isinstance(v, (dict, list)) else str(v)] for k, v in deep.items()]),
+            "## Provider Notes\n\n" + (md_table(["来源", "状态", "复用能力", "本轮信息", "降级策略", "证据id"], provider_rows) if provider_rows else "none"),
+            "## Agent Reading Notes\n\n- Human-facing report intentionally omits payload paths, provider internals, and evidence ids.\n- Use this file plus source_data.json for traceability and rerun/debug context.",
         ]
     ) + "\n"
 
@@ -1952,6 +2346,8 @@ def main() -> None:
     report = build_report(payload, theme_key, out_dir, live_fetch=args.live_fetch, pdf_text_live=args.pdf_text)
     canonical_path, draft_path, seeded = write_theme_outputs(report, payload_file, theme_key)
     q = quality(report)
+    agent_report_path = out_dir / "agent_report.md"
+    agent_report_path.write_text(build_agent_report(report, payload, theme_key, payload_file, q), encoding="utf-8")
     source_data = {
         "generated_at": datetime.now().isoformat(),
         "payload_file": rel(payload_file),
@@ -1965,6 +2361,7 @@ def main() -> None:
         json.dumps(
             {
                 "report": rel(canonical_path),
+                "agent_report": rel(agent_report_path),
                 "draft": rel(draft_path),
                 "theme_key": theme_key,
                 "seeded_canonical": seeded,

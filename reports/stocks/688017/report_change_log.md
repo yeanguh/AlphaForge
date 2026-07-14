@@ -137,6 +137,201 @@
 <!-- research-os-curation:stock:688017:full-loop-185510:1 -->
 
 <!-- research-os-curation:stock:688017:theme-pool-212004:1 -->
+
+<!-- research-os-curation:stock:688017:full-loop-170849:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-171111:1 -->
+
+<!-- research-os-curation:stock:688017:full-loop-172346:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-205208:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-205427:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-210438:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-210645:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-211021:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-211437:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-211716:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-211916:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-212408:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-212556:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-213006:1 -->
+
+<!-- research-os-curation:stock:688017:theme-pool-214323:1 -->
+#### 2026-07-14T13:43:34.052613+00:00 · theme-pool-214323 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:30:14.459043+00:00 · theme-pool-213006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:26:03.573751+00:00 · theme-pool-212556 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:24:16.190766+00:00 · theme-pool-212408 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:19:23.089980+00:00 · theme-pool-211916 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:17:23.640999+00:00 · theme-pool-211716 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:14:44.276996+00:00 · theme-pool-211437 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:10:25.546321+00:00 · theme-pool-211021 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:06:52.541010+00:00 · theme-pool-210645 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:04:45.333553+00:00 · theme-pool-210438 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:54:35.274949+00:00 · theme-pool-205427 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:52:17.803747+00:00 · theme-pool-205208 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:25:27.234202+00:00 · full-loop-172346 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:12.642310+00:00 · theme-pool-171111 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:02.466444+00:00 · full-loop-170849 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 518.6366 / PB 19.8735,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：绿的谐波:中信证券股份有限公司关于苏州绿的谐波传动科技股份有限公司募集资金投资项目延期的核查意见
+- 催化:2026年一季度业绩快速增长，人形机器人优势持续巩固;2025年年报及2026年一季报点评：战略卡位具身智能，营收净利表现亮眼。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688017', 'ts_code': '688017.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688017', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': 5118.64, 'small_b…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
 #### 2026-07-13T13:20:05.342583+00:00 · theme-pool-212004 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

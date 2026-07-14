@@ -49,6 +49,48 @@ class ProviderFallbackTest(unittest.TestCase):
         self.assertEqual(len(cached["rows"]), 5)
         self.assertEqual(cached["rows"][-1]["close"], 18.0)
 
+    def test_cached_price_history_refreshes_when_stale(self) -> None:
+        cached = {
+            "symbol": "600519",
+            "source": "local_a_data_hist",
+            "rows": [{"date": "2026-07-09", "open": 10, "close": 11, "high": 12, "low": 9}],
+        }
+        fresh = {
+            "symbol": "600519",
+            "source": "tencent_qfq_kline",
+            "rows": [{"date": "2026-07-14", "open": 12, "close": 13, "high": 14, "low": 11}],
+        }
+        with (
+            mock.patch.object(a_stock_data, "fetch_price_history_fallback", return_value=cached),
+            mock.patch.object(a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(a_stock_data, "fetch_price_history_tushare", side_effect=RuntimeError("tushare down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_tencent", return_value=fresh) as tencent,
+        ):
+            history = a_stock_data.fetch_price_history_cached_or_live("600519")
+
+        self.assertEqual(history["source"], "tencent_qfq_kline")
+        self.assertTrue(history["refreshed_cache"])
+        tencent.assert_called_once()
+
+    def test_cached_price_history_returns_stale_cache_when_refresh_fails(self) -> None:
+        cached = {
+            "symbol": "600519",
+            "source": "local_a_data_hist",
+            "rows": [{"date": "2026-07-09", "open": 10, "close": 11, "high": 12, "low": 9}],
+        }
+        with (
+            mock.patch.object(a_stock_data, "fetch_price_history_fallback", return_value=cached),
+            mock.patch.object(a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(a_stock_data, "fetch_price_history_tushare", side_effect=RuntimeError("tushare down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_tencent", side_effect=RuntimeError("tencent down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_efinance", side_effect=RuntimeError("efinance down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_baostock", side_effect=RuntimeError("baostock down")),
+        ):
+            history = a_stock_data.fetch_price_history_cached_or_live("600519")
+
+        self.assertTrue(history["stale_cache"])
+        self.assertTrue(history["refresh_errors"])
+
     def test_quote_success_writes_local_cache(self) -> None:
         quote = {"symbol": "600519", "name": "贵州茅台", "price": 1800.0, "pe": 25.0, "pb": 8.0, "source": "tencent_finance"}
         with TemporaryDirectory() as tmp, mock.patch.object(a_stock_data, "LOCAL_A_DATA", Path(tmp)):

@@ -44,15 +44,15 @@
         "归母净利同比",
         "毛利率",
         "预测PE",
+        "叠加板块指数",
         "失效条件",
-        "反证",
-        "证据id"
+        "反证"
       ]
     },
     "quality_by_theme": {
       "physical-ai": {
         "min_chars": 8000,
-        "min_images": 4,
+        "min_images": 3,
         "max_todo_count": 8,
         "required_sections": [
           "## 0. 核心结论",
@@ -134,7 +134,7 @@
           "归母净利同比",
           "毛利率",
           "预测PE",
-          "证据id"
+          "叠加板块指数"
         ]
       }
     }

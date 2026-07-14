@@ -101,6 +101,57 @@ def _mentions_any(text: str, terms: tuple[str, ...]) -> bool:
     return any(term in text for term in terms)
 
 
+def _split_md_row(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def _company_set(value: str) -> tuple[str, ...]:
+    names = [
+        name.strip()
+        for name in re.split(r"[、,，/；;]|<br>", value)
+        if name.strip() and "待验证" not in name
+    ]
+    return tuple(sorted(set(names)))
+
+
+def _duplicate_candidate_sets(text: str) -> list[str]:
+    duplicates: list[str] = []
+    lines = text.splitlines()
+    for idx, line in enumerate(lines[:-2]):
+        if not line.lstrip().startswith("|"):
+            continue
+        headers = _split_md_row(line)
+        if not headers or not lines[idx + 1].lstrip().startswith("|"):
+            continue
+        if "核心公司1" in headers and "核心公司2" in headers and "核心公司3" in headers:
+            node_col = headers.index("产业链节点") if "产业链节点" in headers else 0
+            company_cols = [headers.index("核心公司1"), headers.index("核心公司2"), headers.index("核心公司3")]
+        elif "当前三家核心公司" in headers:
+            node_col = headers.index("瓶颈节点") if "瓶颈节点" in headers else 0
+            company_cols = [headers.index("当前三家核心公司")]
+        elif "代表A股公司" in headers:
+            node_col = headers.index("细分领域/关键产品") if "细分领域/关键产品" in headers else 0
+            company_cols = [headers.index("代表A股公司")]
+        else:
+            continue
+        seen: dict[tuple[str, ...], list[str]] = {}
+        for row_line in lines[idx + 2 :]:
+            if not row_line.lstrip().startswith("|"):
+                break
+            cells = _split_md_row(row_line)
+            if len(cells) <= max([node_col, *company_cols]) or set(cells) <= {"---"}:
+                continue
+            companies = _company_set("、".join(cells[col] for col in company_cols))
+            if len(companies) < 3:
+                continue
+            seen.setdefault(companies, []).append(cells[node_col])
+        for companies, nodes in seen.items():
+            unique_nodes = list(dict.fromkeys(nodes))
+            if len(unique_nodes) >= 2:
+                duplicates.append(f"{'、'.join(companies)} => {'、'.join(unique_nodes[:4])}")
+    return duplicates
+
+
 def _theme_policy(root: Path, theme_key: str | None) -> dict[str, Any]:
     policy = _read_json(root / "config" / "report_policy.json")
     theme_report = policy.get("theme_report", {}) if isinstance(policy.get("theme_report"), dict) else {}
@@ -256,6 +307,43 @@ def _review_text_against_policy(
                 "改为 `现阶段买入候选K线结构`，并确保候选来自交易决策和风险收益比门槛。",
             )
         )
+    if "核心三公司K线" in text and "叠加板块指数" not in text:
+        findings.append(
+            _finding(
+                "P1",
+                "K线图缺少板块指数对比说明",
+                "正文出现产业链节点 K 线图，但没有说明叠加的真实市场板块/主题指数。",
+                "每张节点 K 线图下方写明 `叠加板块指数：指数名称 指数代码；来源：tushare.index_daily`；数据缺失时也要显式写成待复核缺口。",
+            )
+        )
+    if "主题指数代理" in text:
+        findings.append(
+            _finding(
+                "P1",
+                "K线图仍使用自建主题指数代理",
+                "正文出现 `主题指数代理`。",
+                "不要用核心公司自行拼指数；改用市场已有指数或板块指数日线，并在正文说明指数名称、代码和来源。",
+            )
+        )
+    duplicate_candidate_sets = _duplicate_candidate_sets(text)
+    if duplicate_candidate_sets:
+        findings.append(
+            _finding(
+                "P2",
+                "多个产业链节点重复使用同一候选公司池",
+                "重复候选: " + "；".join(duplicate_candidate_sets[:4]),
+                "优先按细分节点扩展候选池；缺少可靠扩展标的时合并节点说明，不要在多张表和多张K线图里重复分析同一批股票。",
+            )
+        )
+    if "反例/非产业链样本" in text or "| 非主线 |" in text:
+        findings.append(
+            _finding(
+                "P1",
+                "A股映射表混入非主线反例样本",
+                "正文出现 `非主线` 或 `反例/非产业链样本`。",
+                "读者报告只保留主题相关候选；反例和排除样本放入 agent_report/source_data，不进入 A股公司映射与核心地位判断。",
+            )
+        )
     if "建议买点" in text and "等待买入触发" not in text and "paper_candidate" not in text:
         findings.append(
             _finding(
@@ -357,6 +445,7 @@ def _review_text_against_policy(
         "missing_image_count": len(missing_images),
         "todo_count": todo_count,
         "pending_collect_count": pending_collect_count,
+        "duplicate_candidate_set_count": len(duplicate_candidate_sets),
         "missing_sections": missing_sections,
         "missing_terms": missing_terms,
         "has_company_mapping_table": _has_table_columns(text, _COMPANY_MAPPING_COLUMNS),

@@ -7,85 +7,85 @@
 <text x="46" y="177" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
 <text x="46" y="201" font-size="13" fill="#64748b">002230 · 多智能体编排</text>
 <line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="170" r="12" fill="#2563eb"/>
-<text x="260" y="200" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="175" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="200" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">金山办公</text>
-<text x="46" y="263" font-size="13" fill="#64748b">688111 · 多智能体编排</text>
+<circle cx="593.2" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">39.07</text>
+<text x="609.2" y="175" font-size="13" fill="#111827">41.18</text>
+<text x="1090" y="200" font-size="12" fill="#64748b">44.58</text>
+<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">昆仑万维</text>
+<text x="46" y="263" font-size="13" fill="#64748b">300418 · 多智能体编排</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="232" r="12" fill="#2563eb"/>
-<text x="260" y="262" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="237" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="262" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">用友网络</text>
-<text x="46" y="325" font-size="13" fill="#64748b">600588 · 多智能体编排</text>
+<circle cx="482.0" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">43.33</text>
+<text x="498.0" y="237" font-size="13" fill="#111827">45.93</text>
+<text x="1090" y="262" font-size="12" fill="#64748b">53.53</text>
+<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">拓尔思</text>
+<text x="46" y="325" font-size="13" fill="#64748b">300229 · 多智能体编排</text>
 <line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="294" r="12" fill="#2563eb"/>
-<text x="260" y="324" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="299" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="324" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">泛微网络</text>
-<text x="46" y="387" font-size="13" fill="#64748b">603039 · 多智能体编排</text>
+<circle cx="339.1" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">12.30</text>
+<text x="355.1" y="299" font-size="13" fill="#111827">12.67</text>
+<text x="1090" y="324" font-size="12" fill="#64748b">16.37</text>
+<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">金山办公</text>
+<text x="46" y="387" font-size="13" fill="#64748b">688111 · 企业工作流</text>
 <line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="356" r="12" fill="#2563eb"/>
-<text x="260" y="386" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="361" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="386" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
-<text x="46" y="449" font-size="13" fill="#64748b">002230 · 企业工作流</text>
+<circle cx="454.6" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">216.82</text>
+<text x="470.6" y="361" font-size="13" fill="#111827">222.63</text>
+<text x="1090" y="386" font-size="12" fill="#64748b">242.80</text>
+<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">用友网络</text>
+<text x="46" y="449" font-size="13" fill="#64748b">600588 · 企业工作流</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="418" r="12" fill="#2563eb"/>
-<text x="260" y="448" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="423" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="448" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">金山办公</text>
-<text x="46" y="511" font-size="13" fill="#64748b">688111 · 企业工作流</text>
+<circle cx="544.0" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">8.73</text>
+<text x="560.0" y="423" font-size="13" fill="#111827">9.20</text>
+<text x="1090" y="448" font-size="12" fill="#64748b">10.17</text>
+<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">泛微网络</text>
+<text x="46" y="511" font-size="13" fill="#64748b">603039 · 企业工作流</text>
 <line x1="260" y1="480" x2="1130" y2="480" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="480" r="12" fill="#2563eb"/>
-<text x="260" y="510" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="485" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="510" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">用友网络</text>
-<text x="46" y="573" font-size="13" fill="#64748b">600588 · 企业工作流</text>
+<circle cx="291.9" cy="480" r="12" fill="#2563eb"/>
+<text x="260" y="510" font-size="12" fill="#64748b">30.16</text>
+<text x="307.9" y="485" font-size="13" fill="#111827">30.85</text>
+<text x="1090" y="510" font-size="12" fill="#64748b">48.96</text>
+<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">拓尔思</text>
+<text x="46" y="573" font-size="13" fill="#64748b">300229 · 知识库/RAG</text>
 <line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="542" r="12" fill="#2563eb"/>
-<text x="260" y="572" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="547" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="572" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">泛微网络</text>
-<text x="46" y="635" font-size="13" fill="#64748b">603039 · 企业工作流</text>
+<circle cx="339.1" cy="542" r="12" fill="#2563eb"/>
+<text x="260" y="572" font-size="12" fill="#64748b">12.30</text>
+<text x="355.1" y="547" font-size="13" fill="#111827">12.67</text>
+<text x="1090" y="572" font-size="12" fill="#64748b">16.37</text>
+<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">海天瑞声</text>
+<text x="46" y="635" font-size="13" fill="#64748b">688787 · 知识库/RAG</text>
 <line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="604" r="12" fill="#2563eb"/>
-<text x="260" y="634" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="609" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="634" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
-<text x="46" y="697" font-size="13" fill="#64748b">002230 · 知识库/RAG</text>
+<circle cx="379.9" cy="604" r="12" fill="#2563eb"/>
+<text x="260" y="634" font-size="12" fill="#64748b">112.82</text>
+<text x="395.9" y="609" font-size="13" fill="#111827">120.23</text>
+<text x="1090" y="634" font-size="12" fill="#64748b">166.60</text>
+<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">中科曙光</text>
+<text x="46" y="697" font-size="13" fill="#64748b">603019 · 知识库/RAG</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="666" r="12" fill="#2563eb"/>
-<text x="260" y="696" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="671" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="696" font-size="12" fill="#64748b">1.00</text>
+<circle cx="602.1" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">98.15</text>
+<text x="618.1" y="671" font-size="13" fill="#111827">103.99</text>
+<text x="1090" y="696" font-size="12" fill="#64748b">113.00</text>
 <text x="46" y="735" font-size="16" font-weight="700" fill="#111827">金山办公</text>
-<text x="46" y="759" font-size="13" fill="#64748b">688111 · 知识库/RAG</text>
+<text x="46" y="759" font-size="13" fill="#64748b">688111 · 办公自动化</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="728" r="12" fill="#2563eb"/>
-<text x="260" y="758" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="733" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="758" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">用友网络</text>
-<text x="46" y="821" font-size="13" fill="#64748b">600588 · 知识库/RAG</text>
+<circle cx="454.6" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">216.82</text>
+<text x="470.6" y="733" font-size="13" fill="#111827">222.63</text>
+<text x="1090" y="758" font-size="12" fill="#64748b">242.80</text>
+<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">福昕软件</text>
+<text x="46" y="821" font-size="13" fill="#64748b">688095 · 办公自动化</text>
 <line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="790" r="12" fill="#2563eb"/>
-<text x="260" y="820" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="795" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="820" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">泛微网络</text>
-<text x="46" y="883" font-size="13" fill="#64748b">603039 · 知识库/RAG</text>
+<circle cx="367.8" cy="790" r="12" fill="#2563eb"/>
+<text x="260" y="820" font-size="12" fill="#64748b">53.94</text>
+<text x="383.8" y="795" font-size="13" fill="#111827">55.63</text>
+<text x="1090" y="820" font-size="12" fill="#64748b">67.58</text>
+<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">致远互联</text>
+<text x="46" y="883" font-size="13" fill="#64748b">688369 · 办公自动化</text>
 <line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="852" r="12" fill="#2563eb"/>
-<text x="260" y="882" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="857" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="882" font-size="12" fill="#64748b">1.00</text>
+<circle cx="349.5" cy="852" r="12" fill="#2563eb"/>
+<text x="260" y="882" font-size="12" fill="#64748b">16.95</text>
+<text x="365.5" y="857" font-size="13" fill="#111827">17.55</text>
+<text x="1090" y="882" font-size="12" fill="#64748b">22.78</text>
 </svg>

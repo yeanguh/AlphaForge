@@ -8,6 +8,14 @@ from scripts import generate_theme_deep_report as gen
 
 
 class GenericThemeDeepReportTest(unittest.TestCase):
+    def _index_history(self) -> dict:
+        return {
+            "status": "ok",
+            "code": "931271.CSI",
+            "name": "通信设备主题",
+            "rows": [{"date": f"2026-04-{(idx % 28) + 1:02d}", "close": 100 + idx * 0.2} for idx in range(90)],
+        }
+
     def _payload(self) -> dict:
         return {
             "run_id": "run-A",
@@ -72,7 +80,10 @@ class GenericThemeDeepReportTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             out = root / "reports" / "themes" / "ai-compute-infra"
-            with mock.patch("scripts.generate_theme_deep_report.ROOT", root):
+            with (
+                mock.patch("scripts.generate_theme_deep_report.ROOT", root),
+                mock.patch("scripts.generate_theme_deep_report.fetch_market_index_history", return_value=self._index_history()),
+            ):
                 report = gen.build_report(self._payload(), "ai-compute-infra", out)
 
             self.assertIn("## 一句话结论", report)
@@ -84,11 +95,20 @@ class GenericThemeDeepReportTest(unittest.TestCase):
             self.assertIn("等待买入触发", report)
             self.assertIn("![产业链图谱](assets/theme-chain-map.png)", report)
             self.assertIn("![卡口优先级](assets/theme-bottleneck-priority.png)", report)
-            self.assertIn("本轮没有通过交易决策与风险收益比门槛", report)
-            self.assertNotIn("![核心标的K线结构](assets/theme-trade-map.png)", report)
+            self.assertIn("资金趋势", report)
+            self.assertIn("### CPO/高速光模块核心三公司K线", report)
+            self.assertIn("![CPO/高速光模块核心三公司K线](assets/theme-trade-map-1-cpo.png)", report)
+            self.assertIn("叠加板块指数：通信设备主题 931271.CSI；来源：tushare.index_daily。", report)
+            self.assertNotIn("主题指数代理", report)
             self.assertNotIn("![现阶段买入候选K线结构](assets/theme-trade-map.png)", report)
+            self.assertNotIn("证据id", report)
+            self.assertNotIn("ev-chain", report)
+            self.assertNotIn("payload", report)
+            self.assertNotIn("/Users/", report)
             self.assertTrue((out / "assets" / "theme-chain-map.png").exists())
+            self.assertTrue((out / "assets" / "theme-trade-map-1-cpo.png").exists())
             self.assertTrue(gen.png_has_chart_content(out / "assets" / "theme-chain-map.png"))
+            self.assertTrue(gen.png_has_chart_content(out / "assets" / "theme-trade-map-1-cpo.png"))
             q = gen.quality(report)
             self.assertFalse(q["missing_sections"])
             self.assertGreaterEqual(q["image_count"], 3)
@@ -103,6 +123,30 @@ class GenericThemeDeepReportTest(unittest.TestCase):
             self.assertNotIn("缺少A股九列公司映射表", titles)
             self.assertNotIn("缺少核心环节价值分布表", titles)
             self.assertNotIn("瓶颈判断缺少四标准校验", titles)
+            self.assertNotIn("K线图缺少板块指数对比说明", titles)
+
+    def test_review_flags_trade_chart_without_market_index_caption(self) -> None:
+        text = "## A股可交易标的估值对比\n\n### CPO/高速光模块核心三公司K线\n\n![图](assets/a.png)\n"
+        review = review_report_text(root=Path("/tmp"), text=text, report_path=None, theme_key="ai-compute-infra", policy={})
+
+        titles = {finding["title"] for finding in review["findings"]}
+        self.assertIn("K线图缺少板块指数对比说明", titles)
+
+    def test_agent_report_keeps_trace_context_outside_human_report(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            payload_file = root / "runs" / "2026-07-14" / "theme-pool-x" / "cycle-001" / "themes" / "ai-compute-infra" / "result.json"
+            payload_file.parent.mkdir(parents=True)
+            payload = self._payload()
+            payload_file.write_text("{}", encoding="utf-8")
+            report = "# Human\n"
+
+            with mock.patch("scripts.generate_theme_deep_report.ROOT", root):
+                agent = gen.build_agent_report(report, payload, "ai-compute-infra", payload_file, {"passed": True})
+
+        self.assertIn("## Evidence IDs", agent)
+        self.assertIn("ev-chain-abc", agent)
+        self.assertIn("payload_file", agent)
 
     def test_generic_theme_company_mapping_prefers_theme_candidates(self) -> None:
         payload = self._payload()
@@ -154,7 +198,10 @@ class GenericThemeDeepReportTest(unittest.TestCase):
                     {
                         "name": name,
                         "symbol": symbol,
-                        "supplement": {"price_history": {"rows": history}},
+                        "supplement": {
+                            "price_history": {"rows": history},
+                            "fund_flow": {"rows": [{"main_net_inflow": 1}, {"main_net_inflow": 2}]},
+                        },
                         "technical": {"support": 31.2, "pressure": 39.8},
                     }
                     for name, symbol in [
@@ -166,9 +213,66 @@ class GenericThemeDeepReportTest(unittest.TestCase):
                         ("寒武纪", "688256"),
                     ]
                 ],
+                self._index_history(),
             )
 
             self.assertTrue(gen.png_has_chart_content(png))
+
+    def test_trade_chart_groups_merge_duplicate_symbol_sets(self) -> None:
+        records = [
+            {"link": "智能投研", "name": "恒生电子", "symbol": "600570"},
+            {"link": "智能投研", "name": "同花顺", "symbol": "300033"},
+            {"link": "智能投研", "name": "指南针", "symbol": "300803"},
+            {"link": "金融IT", "name": "恒生电子", "symbol": "600570"},
+            {"link": "金融IT", "name": "同花顺", "symbol": "300033"},
+            {"link": "金融IT", "name": "指南针", "symbol": "300803"},
+            {"link": "数据合规", "name": "安恒信息", "symbol": "688023"},
+            {"link": "数据合规", "name": "启明星辰", "symbol": "002439"},
+            {"link": "数据合规", "name": "深信服", "symbol": "300454"},
+        ]
+
+        groups = gen.trade_chart_groups(records)
+
+        self.assertEqual(len(groups), 2)
+        self.assertEqual(groups[0][1], "智能投研/金融IT")
+        self.assertEqual(groups[1][1], "数据合规")
+
+    def test_generic_blueprint_can_use_node_specific_companies(self) -> None:
+        blueprint = gen.theme_blueprint("ai-healthcare")
+        companies = [item["companies"] for item in blueprint["bottleneck_candidates"]]
+
+        self.assertIn("药明康德、泰格医药、成都先导", companies)
+        self.assertIn("华大智造、诺禾致源、贝瑞基因", companies)
+        self.assertGreater(len(set(companies)), 1)
+
+    def test_generic_blueprints_do_not_repeat_one_company_pool_across_all_nodes(self) -> None:
+        offenders = []
+        for theme_key in gen.GENERIC_THEME_NODES:
+            companies = [item["companies"] for item in gen.theme_blueprint(theme_key)["bottleneck_candidates"]]
+            if len(companies) > 1 and len(set(companies)) == 1:
+                offenders.append(theme_key)
+
+        self.assertEqual(offenders, [])
+
+    def test_fund_trend_prefers_main_net_flow(self) -> None:
+        supplement = {"fund_flow": {"rows": [{"main_net_inflow": -1}, {"main_net_inflow": 3}, {"main_net_inflow": 4}]}}
+
+        self.assertIn("净流入", gen.fund_trend_text(supplement))
+
+    def test_ensure_price_history_live_rejects_stale_source(self) -> None:
+        supplement: dict = {"price_history": {"rows": [{"date": "2026-07-09", "close": 10}]}}
+        stale = {"rows": [{"date": "2026-07-09", "close": 11}]}
+        fresh = {"rows": [{"date": "2026-07-14", "close": 12}]}
+
+        with (
+            mock.patch.object(gen.a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(gen.a_stock_data, "fetch_price_history", return_value=stale),
+            mock.patch.object(gen.a_stock_data, "fetch_price_history_tencent", return_value=fresh),
+        ):
+            gen.ensure_price_history(supplement, "600519", live_fetch=True)
+
+        self.assertEqual(supplement["price_history"], fresh)
+        self.assertIn("price_history_live:600519:stale_before_20260714", supplement["errors"])
 
     def test_current_buy_candidate_requires_explicit_buy_action_when_decisions_exist(self) -> None:
         base = {

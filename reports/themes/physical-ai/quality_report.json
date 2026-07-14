@@ -1,5 +1,5 @@
 {
-  "report": "/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/report.cycle-draft-theme-pool-185420-cycle-001-physical-ai.md",
+  "report": "/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/report.cycle-draft-theme-pool-214323-cycle-001-physical-ai.md",
   "source_data": "/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/source_data.json",
   "passed": true,
   "score": 16,
@@ -20,13 +20,13 @@
     {
       "name": "rendered_visual_assets",
       "passed": true,
-      "evidence": "existing_images=['/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-evidence-density.png', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-chain-map.png', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-stock-valuation.png', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/green-harmonic-revenue-growth.png']; missing_images=[]",
+      "evidence": "existing_images=['/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-evidence-density.png', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-chain-map.png', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-stock-valuation.png']; missing_images=[]",
       "severity": "error"
     },
     {
       "name": "valid_image_files",
       "passed": true,
-      "evidence": "checked=['/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-evidence-density.png: 1300x720', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-chain-map.png: 1600x1350', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-stock-valuation.png: 1500x900', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/green-harmonic-revenue-growth.png: 1200x720']; failures=[]",
+      "evidence": "checked=['/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-evidence-density.png: 1300x720', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-chain-map.png: 1600x1350', '/Users/bytedance/Documents/a-analysis/research-os/reports/themes/physical-ai/assets/physical-ai-stock-valuation.png: 1500x900']; failures=[]",
       "severity": "error"
     },
     {

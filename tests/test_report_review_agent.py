@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from loop_os.domain.report_review_agent import build_report_review
+from loop_os.domain.report_review_agent import build_report_review, review_report_text
 
 
 class ReportReviewAgentTest(unittest.TestCase):
@@ -155,6 +155,36 @@ class ReportReviewAgentTest(unittest.TestCase):
             self.assertNotIn("瓶颈判断缺少四标准校验", titles)
             self.assertNotIn("缺少反证退出条件", titles)
             self.assertNotIn("证据强度缺少 claim-level 来源表", titles)
+
+    def test_review_flags_repeated_candidate_company_pool(self) -> None:
+        text = (
+            "# Demo\n\n"
+            "### 核心节点三公司校验\n\n"
+            "| 产业链节点 | 核心公司1 | 核心公司2 | 核心公司3 | 升级催化 | 失效条件 |\n"
+            "| --- | --- | --- | --- | --- | --- |\n"
+            "| AI制药 | 药明康德 | 迈瑞医疗 | 联影医疗 | 订单 | 反证 |\n"
+            "| 医疗影像 | 药明康德 | 迈瑞医疗 | 联影医疗 | 订单 | 反证 |\n"
+        )
+
+        review = review_report_text(root=Path("/tmp"), text=text, report_path=None, theme_key="demo", policy={})
+
+        titles = {finding["title"] for finding in review["findings"]}
+        self.assertIn("多个产业链节点重复使用同一候选公司池", titles)
+
+    def test_review_flags_non_theme_counterexample_in_mapping(self) -> None:
+        text = (
+            "# Demo\n\n"
+            "## 产业链 / 竞争格局\n\n"
+            "### A股公司映射与核心地位判断\n\n"
+            "| 公司 | 代码 | 环节 | 细分领域 | 产业占比/暴露度 | 核心技术/产品 | 卡脖子相关性 | 环节地位 | 证据与备注 |\n"
+            "| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"
+            "| 贵州茅台 | 600519 | 非主线 | 消费品 | 未披露 | 白酒 | None | 反例/非产业链样本 | 不应进入正文 |\n"
+        )
+
+        review = review_report_text(root=Path("/tmp"), text=text, report_path=None, theme_key="demo", policy={})
+
+        titles = {finding["title"] for finding in review["findings"]}
+        self.assertIn("A股映射表混入非主线反例样本", titles)
 
 
 if __name__ == "__main__":

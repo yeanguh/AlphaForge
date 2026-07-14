@@ -4,22 +4,12 @@
 <text x="48" y="86" font-size="16" fill="#4b5563">PE/PB来自公开行情或补充数据；缺失时保留为待验证，不用估算值填充。</text>
 <text x="56" y="163" font-size="17" font-weight="700" fill="#111827">汇川技术</text>
 <text x="56" y="189" font-size="14" fill="#6b7280">300124</text>
-<rect x="210" y="138" width="820.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
-<text x="1045.0" y="162" font-size="15" fill="#111827">PE 36.7 / PB 5.0</text>
+<rect x="210" y="138" width="387.8" height="34" rx="7" fill="#059669" opacity="0.84"/>
+<text x="612.8" y="162" font-size="15" fill="#111827">PE 36.7 / PB 5.0</text>
 <text x="210" y="195" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
-<text x="56" y="237" font-size="17" font-weight="700" fill="#111827">汇川技术</text>
-<text x="56" y="263" font-size="14" fill="#6b7280">300124</text>
-<rect x="210" y="212" width="820.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
-<text x="1045.0" y="236" font-size="15" fill="#111827">PE 36.7 / PB 5.0</text>
+<text x="56" y="237" font-size="17" font-weight="700" fill="#111827">雷赛智能</text>
+<text x="56" y="263" font-size="14" fill="#6b7280">002979</text>
+<rect x="210" y="212" width="820.0" height="34" rx="7" fill="#ea580c" opacity="0.84"/>
+<text x="1045.0" y="236" font-size="15" fill="#111827">PE 85.2 / PB 10.9</text>
 <text x="210" y="269" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
-<text x="56" y="311" font-size="17" font-weight="700" fill="#111827">汇川技术</text>
-<text x="56" y="337" font-size="14" fill="#6b7280">300124</text>
-<rect x="210" y="286" width="820.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
-<text x="1045.0" y="310" font-size="15" fill="#111827">PE 36.7 / PB 5.0</text>
-<text x="210" y="343" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
-<text x="56" y="385" font-size="17" font-weight="700" fill="#111827">汇川技术</text>
-<text x="56" y="411" font-size="14" fill="#6b7280">300124</text>
-<rect x="210" y="360" width="820.0" height="34" rx="7" fill="#059669" opacity="0.84"/>
-<text x="1045.0" y="384" font-size="15" fill="#111827">PE 36.7 / PB 5.0</text>
-<text x="210" y="417" font-size="14" fill="#4b5563">财务指标未取得可靠公开数据；None</text>
 </svg>

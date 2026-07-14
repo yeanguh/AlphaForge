@@ -4,6 +4,7 @@ from pathlib import Path
 from unittest import mock
 
 from loop_os.domain.evidence_service import write_evidence
+from loop_os.schemas.packet import validate_packet
 from providers.open_source import vibe_research, vibe_trading
 from scripts import generate_physical_ai_chain_report as physical_report
 from scripts import generate_theme_deep_report as theme_report
@@ -72,6 +73,32 @@ class ExternalProviderLoopIntegrationTest(unittest.TestCase):
         self.assertEqual(insights["providers"]["vibe_research"]["status"], "warn")
         self.assertEqual(insights["providers"]["vibe_trading"]["status"], "ok")
         self.assertEqual(insights["providers"]["tradingagents_astock"]["status"], "ok")
+        for packet in insights["providers"].values():
+            self.assertEqual(validate_packet(packet, "ProviderPacket"), [])
+            self.assertFalse(packet["state_mutation_allowed"])
+        self.assertNotIn("vibe_trading_agent", insights["providers"])
+
+    def test_collect_provider_insights_can_run_vibe_trading_agent_sidecar(self) -> None:
+        sidecar_packet = {
+            "provider": "Vibe-Trading Agent",
+            "status": "ok",
+            "source_submodule": "external/Vibe-Trading",
+            "claims": ["Vibe-Trading runtime loaded 86 finance skills."],
+            "errors": [],
+            "state_mutation_allowed": False,
+        }
+        with (
+            mock.patch.dict("os.environ", {"VIBE_TRADING_ENABLED": "1"}),
+            mock.patch("scripts.run_full_loop.vibe_trading.agent_packet", return_value=sidecar_packet) as sidecar,
+        ):
+            insights = collect_provider_insights(_payload(), _pipeline(), {"portfolio_rating": "Hold", "trader_action": "Hold"})
+
+        self.assertEqual(insights["schema_version"], "1.0")
+        self.assertEqual(insights["source_stage"], "external-provider-insights")
+        self.assertEqual(insights["status"], "ok")
+        self.assertEqual(insights["providers"]["vibe_trading_agent"]["status"], "ok")
+        self.assertEqual(validate_packet(insights["providers"]["vibe_trading_agent"], "ProviderPacket"), [])
+        sidecar.assert_called_once()
 
     def test_provider_insights_write_evidence_cards(self) -> None:
         payload = _payload()

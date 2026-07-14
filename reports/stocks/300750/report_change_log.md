@@ -137,6 +137,201 @@
 <!-- research-os-curation:stock:300750:full-loop-185510:1 -->
 
 <!-- research-os-curation:stock:300750:theme-pool-212004:1 -->
+
+<!-- research-os-curation:stock:300750:full-loop-170849:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-171111:1 -->
+
+<!-- research-os-curation:stock:300750:full-loop-172346:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-205208:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-205427:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-210438:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-210645:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-211021:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-211437:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-211716:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-211916:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-212408:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-212556:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-213006:1 -->
+
+<!-- research-os-curation:stock:300750:theme-pool-214323:1 -->
+#### 2026-07-14T13:43:34.025444+00:00 · theme-pool-214323 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:30:14.455652+00:00 · theme-pool-213006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:26:03.525817+00:00 · theme-pool-212556 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:24:16.181401+00:00 · theme-pool-212408 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:19:23.086832+00:00 · theme-pool-211916 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:17:23.636478+00:00 · theme-pool-211716 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:14:44.273818+00:00 · theme-pool-211437 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:10:25.542475+00:00 · theme-pool-211021 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:06:52.537286+00:00 · theme-pool-210645 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T13:04:45.327766+00:00 · theme-pool-210438 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T12:54:35.270808+00:00 · theme-pool-205427 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T12:52:17.774933+00:00 · theme-pool-205208 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T09:25:27.228401+00:00 · full-loop-172346 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:12.639033+00:00 · theme-pool-171111 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:02.460828+00:00 · full-loop-170849 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 21.3247 / PB 4.714,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：宁德时代:H股公告(截至2026年6月30日止股份发行人的证券变动月报表)
+- 催化:技术发布会简析：技术迭代驱动多维增长，补能生态加速布局;产品全面升级，技术创新夯实龙头领先优势。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '300750', 'ts_code': '300750.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '300…
+- 资金面:{'symbol': '300750', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -54688.36, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
 #### 2026-07-13T13:20:05.339286+00:00 · theme-pool-212004 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

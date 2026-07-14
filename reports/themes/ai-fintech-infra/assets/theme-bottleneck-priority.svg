@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="46" y="48" font-size="28" font-weight="800" fill="#111827">AI 金融基础设施：卡口候选优先级</text>
-<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；每个状态变化仍需 evidence id 支撑。</text>
+<text x="46" y="86" font-size="16" fill="#4b5563">评分为研究优先级，不代表已验证收入弹性；状态变化需公开证据支撑。</text>
 <text x="58" y="161" font-size="18" font-weight="700" fill="#111827">1. 智能投研</text>
 <rect x="280" y="135" width="880.0" height="38" rx="8" fill="#4f46e5" opacity="0.88"/>
 <text x="1180.0" y="161" font-size="16" fill="#111827">优先级 4/4</text>

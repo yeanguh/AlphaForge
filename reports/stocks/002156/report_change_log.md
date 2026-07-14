@@ -137,6 +137,201 @@
 <!-- research-os-curation:stock:002156:full-loop-185510:1 -->
 
 <!-- research-os-curation:stock:002156:theme-pool-212004:1 -->
+
+<!-- research-os-curation:stock:002156:full-loop-170849:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-171111:1 -->
+
+<!-- research-os-curation:stock:002156:full-loop-172346:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-205208:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-205427:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-210438:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-210645:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-211021:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-211437:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-211716:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-211916:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-212408:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-212556:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-213006:1 -->
+
+<!-- research-os-curation:stock:002156:theme-pool-214323:1 -->
+#### 2026-07-14T13:43:34.077174+00:00 · theme-pool-214323 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:30:14.510565+00:00 · theme-pool-213006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:26:03.626375+00:00 · theme-pool-212556 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:24:16.217544+00:00 · theme-pool-212408 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:19:23.110402+00:00 · theme-pool-211916 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:17:23.650693+00:00 · theme-pool-211716 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:14:44.286355+00:00 · theme-pool-211437 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:10:25.581060+00:00 · theme-pool-211021 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:06:52.552103+00:00 · theme-pool-210645 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:04:45.353500+00:00 · theme-pool-210438 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:54:35.298168+00:00 · theme-pool-205427 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:52:17.848254+00:00 · theme-pool-205208 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:25:27.256441+00:00 · full-loop-172346 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:12.660756+00:00 · theme-pool-171111 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:02.506224+00:00 · full-loop-170849 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.7044 / PB 7.5471,区间 high,评分 2(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：通富微电:2026年半年度业绩预告
+- 催化:公司信息更新报告：业绩重回增长快车道，资本开支开启新周期;2025年归母净利润增长80%，四季度收入创季度新高。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002156', 'ts_code': '002156.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002156', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -35125.63, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
 #### 2026-07-13T13:20:05.351637+00:00 · theme-pool-212004 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

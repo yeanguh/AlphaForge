@@ -1,24 +1,24 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10T10:58:45.635271+00:00",
+  "updated_at": "2026-07-14T09:25:27.466183+00:00",
   "last_harness": null,
   "last_provider_smoke": null,
   "last_full_loop": {
-    "run_id": "full-loop-185510",
+    "run_id": "full-loop-172346",
     "cycle": 1,
     "status": "ok",
     "errors": [],
-    "finished_at": "2026-07-10T10:58:24.034215+00:00"
+    "finished_at": "2026-07-14T09:25:21.801219+00:00"
   },
   "supervisor": {
     "mode": "bounded",
     "status": "ok",
-    "run_id": "full-loop-185510",
+    "run_id": "full-loop-172346",
     "current_cycle": 1,
-    "last_heartbeat_at": "2026-07-10T10:58:45.635271+00:00",
+    "last_heartbeat_at": "2026-07-14T09:25:27.466183+00:00",
     "consecutive_errors": 0,
     "next_wake_at": null,
     "last_error": null,
-    "run_dir": "runs/2026-07-10/full-loop-185510"
+    "run_dir": "runs/2026-07-14/full-loop-172346"
   }
 }

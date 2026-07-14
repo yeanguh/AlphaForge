@@ -86,6 +86,8 @@ def generate_generic_theme(payload: dict[str, Any], payload_file: Path, theme_ke
     report = generic_report.build_report(payload, theme_key, out_dir)
     canonical_path, draft_path, seeded = generic_report.write_theme_outputs(report, payload_file, theme_key)
     quality = generic_report.quality(report)
+    agent_report_path = out_dir / "agent_report.md"
+    agent_report_path.write_text(generic_report.build_agent_report(report, payload, theme_key, payload_file, quality), encoding="utf-8")
     source_data = {
         "generated_at": datetime.now().isoformat(),
         "payload_file": rel_path(payload_file),
@@ -97,6 +99,7 @@ def generate_generic_theme(payload: dict[str, Any], payload_file: Path, theme_ke
     (out_dir / "source_data.json").write_text(json.dumps(source_data, ensure_ascii=False, indent=2), encoding="utf-8")
     return {
         "report": rel_path(canonical_path),
+        "agent_report": rel_path(agent_report_path),
         "draft": rel_path(draft_path),
         "draft_archive": rel_path(draft_path.parent / "drafts" / (draft_path.name.removeprefix("report.cycle-draft-"))),
         "theme_key": theme_key,
@@ -134,6 +137,11 @@ def run_theme(theme_key: str, base_payload: dict[str, Any], cycle_dir: Path, *, 
         deep_report = generate_generic_theme(payload, payload_file, theme_key)
     payload["theme_deep_report"] = deep_report
     write_json(payload_file, payload)
+    agent_report_path = ROOT / "reports" / "themes" / theme_key / "agent_report.md"
+    agent_report_path.write_text(
+        generic_report.build_agent_report("", payload, theme_key, payload_file, deep_report.get("quality", {}) if isinstance(deep_report, dict) else {}),
+        encoding="utf-8",
+    )
 
     draft_path = ROOT / str(deep_report.get("draft", ""))
     review = build_report_review(

@@ -4,88 +4,88 @@
 <text x="46" y="90" font-size="16" fill="#4b5563">横轴为支撑-现价-压力的相对位置；没有完整K线时用现价/前收降级估算，需后续证据校正。</text>
 <line x1="260" y1="132" x2="1130" y2="132" stroke="#cbd5e1" stroke-width="2"/>
 <text x="252" y="118" font-size="14" fill="#64748b">支撑</text><text x="672" y="118" font-size="14" fill="#64748b">现价</text><text x="1112" y="118" font-size="14" fill="#64748b">压力</text>
-<text x="46" y="177" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
-<text x="46" y="201" font-size="13" fill="#64748b">600570 · 智能投研</text>
+<text x="46" y="177" font-size="16" font-weight="700" fill="#111827">同花顺</text>
+<text x="46" y="201" font-size="13" fill="#64748b">300033 · 智能投研</text>
 <line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="170" r="12" fill="#2563eb"/>
-<text x="260" y="200" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="175" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="200" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">同花顺</text>
-<text x="46" y="263" font-size="13" fill="#64748b">300033 · 智能投研</text>
+<circle cx="281.4" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">216.39</text>
+<text x="297.4" y="175" font-size="13" fill="#111827">217.69</text>
+<text x="1090" y="200" font-size="12" fill="#64748b">269.14</text>
+<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">东方财富</text>
+<text x="46" y="263" font-size="13" fill="#64748b">300059 · 智能投研</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="232" r="12" fill="#2563eb"/>
-<text x="260" y="262" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="237" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="262" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">东方财富</text>
-<text x="46" y="325" font-size="13" fill="#64748b">300059 · 智能投研</text>
+<circle cx="545.0" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">18.45</text>
+<text x="561.0" y="237" font-size="13" fill="#111827">19.60</text>
+<text x="1090" y="262" font-size="12" fill="#64748b">21.96</text>
+<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">指南针</text>
+<text x="46" y="325" font-size="13" fill="#64748b">300803 · 智能投研</text>
 <line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="294" r="12" fill="#2563eb"/>
-<text x="260" y="324" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="299" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="324" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">指南针</text>
-<text x="46" y="387" font-size="13" fill="#64748b">300803 · 智能投研</text>
+<circle cx="283.6" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">78.30</text>
+<text x="299.6" y="299" font-size="13" fill="#111827">79.10</text>
+<text x="1090" y="324" font-size="12" fill="#64748b">107.80</text>
+<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
+<text x="46" y="387" font-size="13" fill="#64748b">600570 · 风控/反欺诈</text>
 <line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="356" r="12" fill="#2563eb"/>
-<text x="260" y="386" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="361" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="386" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
-<text x="46" y="449" font-size="13" fill="#64748b">600570 · 风控/反欺诈</text>
+<circle cx="353.0" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">20.06</text>
+<text x="369.0" y="361" font-size="13" fill="#111827">20.51</text>
+<text x="1090" y="386" font-size="12" fill="#64748b">24.27</text>
+<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">银之杰</text>
+<text x="46" y="449" font-size="13" fill="#64748b">300085 · 风控/反欺诈</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="418" r="12" fill="#2563eb"/>
-<text x="260" y="448" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="423" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="448" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">同花顺</text>
-<text x="46" y="511" font-size="13" fill="#64748b">300033 · 风控/反欺诈</text>
+<circle cx="260.7" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">29.14</text>
+<text x="276.7" y="423" font-size="13" fill="#111827">29.15</text>
+<text x="1090" y="448" font-size="12" fill="#64748b">40.84</text>
+<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">新大陆</text>
+<text x="46" y="511" font-size="13" fill="#64748b">000997 · 风控/反欺诈</text>
 <line x1="260" y1="480" x2="1130" y2="480" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="480" r="12" fill="#2563eb"/>
-<text x="260" y="510" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="485" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="510" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">东方财富</text>
-<text x="46" y="573" font-size="13" fill="#64748b">300059 · 风控/反欺诈</text>
+<circle cx="368.7" cy="480" r="12" fill="#2563eb"/>
+<text x="260" y="510" font-size="12" fill="#64748b">15.16</text>
+<text x="384.7" y="485" font-size="13" fill="#111827">15.61</text>
+<text x="1090" y="510" font-size="12" fill="#64748b">18.76</text>
+<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
+<text x="46" y="573" font-size="13" fill="#64748b">600570 · 金融IT</text>
 <line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="542" r="12" fill="#2563eb"/>
-<text x="260" y="572" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="547" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="572" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">指南针</text>
-<text x="46" y="635" font-size="13" fill="#64748b">300803 · 风控/反欺诈</text>
+<circle cx="353.0" cy="542" r="12" fill="#2563eb"/>
+<text x="260" y="572" font-size="12" fill="#64748b">20.06</text>
+<text x="369.0" y="547" font-size="13" fill="#111827">20.51</text>
+<text x="1090" y="572" font-size="12" fill="#64748b">24.27</text>
+<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">宇信科技</text>
+<text x="46" y="635" font-size="13" fill="#64748b">300674 · 金融IT</text>
 <line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="604" r="12" fill="#2563eb"/>
-<text x="260" y="634" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="609" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="634" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
-<text x="46" y="697" font-size="13" fill="#64748b">600570 · 金融IT</text>
+<circle cx="322.7" cy="604" r="12" fill="#2563eb"/>
+<text x="260" y="634" font-size="12" fill="#64748b">14.12</text>
+<text x="338.7" y="609" font-size="13" fill="#111827">14.36</text>
+<text x="1090" y="634" font-size="12" fill="#64748b">17.45</text>
+<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">长亮科技</text>
+<text x="46" y="697" font-size="13" fill="#64748b">300348 · 金融IT</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="666" r="12" fill="#2563eb"/>
-<text x="260" y="696" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="671" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="696" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="735" font-size="16" font-weight="700" fill="#111827">同花顺</text>
-<text x="46" y="759" font-size="13" fill="#64748b">300033 · 金融IT</text>
+<circle cx="330.2" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">8.07</text>
+<text x="346.2" y="671" font-size="13" fill="#111827">8.25</text>
+<text x="1090" y="696" font-size="12" fill="#64748b">10.30</text>
+<text x="46" y="735" font-size="16" font-weight="700" fill="#111827">拓尔思</text>
+<text x="46" y="759" font-size="13" fill="#64748b">300229 · 数据合规</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="728" r="12" fill="#2563eb"/>
-<text x="260" y="758" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="733" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="758" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">东方财富</text>
-<text x="46" y="821" font-size="13" fill="#64748b">300059 · 金融IT</text>
+<circle cx="339.1" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">12.30</text>
+<text x="355.1" y="733" font-size="13" fill="#111827">12.67</text>
+<text x="1090" y="758" font-size="12" fill="#64748b">16.37</text>
+<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">奇安信</text>
+<text x="46" y="821" font-size="13" fill="#64748b">688561 · 数据合规</text>
 <line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="790" r="12" fill="#2563eb"/>
-<text x="260" y="820" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="795" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="820" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">指南针</text>
-<text x="46" y="883" font-size="13" fill="#64748b">300803 · 金融IT</text>
+<circle cx="601.4" cy="790" r="12" fill="#2563eb"/>
+<text x="260" y="820" font-size="12" fill="#64748b">24.23</text>
+<text x="617.4" y="795" font-size="13" fill="#111827">25.08</text>
+<text x="1090" y="820" font-size="12" fill="#64748b">26.40</text>
+<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">安恒信息</text>
+<text x="46" y="883" font-size="13" fill="#64748b">688023 · 数据合规</text>
 <line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="852" r="12" fill="#2563eb"/>
-<text x="260" y="882" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="857" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="882" font-size="12" fill="#64748b">1.00</text>
+<circle cx="551.5" cy="852" r="12" fill="#2563eb"/>
+<text x="260" y="882" font-size="12" fill="#64748b">33.41</text>
+<text x="567.5" y="857" font-size="13" fill="#111827">35.40</text>
+<text x="1090" y="882" font-size="12" fill="#64748b">39.35</text>
 </svg>

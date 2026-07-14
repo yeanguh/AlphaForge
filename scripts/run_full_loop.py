@@ -20,6 +20,7 @@ from loop_os.domain.industry_chain import analyze_industry_reports
 from loop_os.domain.report_review_agent import build_report_review
 from loop_os.domain.state_update import apply_state_transition
 from loop_os.report_router import resolve_theme_key, route_cycle_reports
+from loop_os.schemas.packet import build_packet
 from loop_os.reporting import write_json, write_markdown_report, write_ops_report
 from providers.open_source import a_stock_data, global_stock_data, investment_news, tradingagents_astock, vibe_research, vibe_trading
 
@@ -357,10 +358,22 @@ def build_committee_review(agent_review: dict[str, Any], trading_review: dict[st
     return combined
 
 
+def _provider_packet(key: str, packet: dict[str, Any]) -> dict[str, Any]:
+    errors = [str(item) for item in packet.get("errors", []) if str(item).strip()] if isinstance(packet.get("errors"), list) else []
+    warnings = [str(item) for item in packet.get("warnings", []) if str(item).strip()] if isinstance(packet.get("warnings"), list) else []
+    fields = dict(packet)
+    fields["provider"] = str(packet.get("provider") or key)
+    fields["freshness"] = "current_cycle"
+    fields["errors"] = errors
+    fields["warnings"] = warnings
+    fields["state_mutation_allowed"] = False
+    return build_packet("ProviderPacket", "external-provider-insights", **fields)
+
+
 def collect_provider_insights(payload_base: dict[str, Any], pipeline: dict[str, Any], trading_review: dict[str, Any]) -> dict[str, Any]:
     """Collect optional external-provider insights without blocking the cycle."""
     insights: dict[str, Any] = {}
-    providers = (
+    providers = [
         ("vibe_research", lambda: vibe_research.research_packet(payload_base, pipeline)),
         ("vibe_trading", lambda: vibe_trading.strategy_packet(payload_base, pipeline)),
         (
@@ -380,7 +393,9 @@ def collect_provider_insights(payload_base: dict[str, Any], pipeline: dict[str, 
                 "state_mutation_allowed": False,
             },
         ),
-    )
+    ]
+    if vibe_trading.agent_enabled():
+        providers.append(("vibe_trading_agent", lambda: vibe_trading.agent_packet(payload_base, pipeline)))
     for key, factory in providers:
         try:
             packet = factory()
@@ -393,9 +408,11 @@ def collect_provider_insights(payload_base: dict[str, Any], pipeline: dict[str, 
                 "errors": [repr(exc)],
                 "state_mutation_allowed": False,
             }
-        insights[key] = packet
+        insights[key] = _provider_packet(key, packet)
     return {
+        "schema_version": "1.0",
         "stage": "external-provider-insights",
+        "source_stage": "external-provider-insights",
         "status": "ok" if all(item.get("status") == "ok" for item in insights.values() if isinstance(item, dict)) else "warn",
         "providers": insights,
         "blocking": False,

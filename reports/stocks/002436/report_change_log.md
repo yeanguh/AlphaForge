@@ -137,6 +137,201 @@
 <!-- research-os-curation:stock:002436:full-loop-185510:1 -->
 
 <!-- research-os-curation:stock:002436:theme-pool-212004:1 -->
+
+<!-- research-os-curation:stock:002436:full-loop-170849:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-171111:1 -->
+
+<!-- research-os-curation:stock:002436:full-loop-172346:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-205208:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-205427:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-210438:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-210645:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-211021:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-211437:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-211716:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-211916:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-212408:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-212556:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-213006:1 -->
+
+<!-- research-os-curation:stock:002436:theme-pool-214323:1 -->
+#### 2026-07-14T13:43:34.061218+00:00 · theme-pool-214323 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:30:14.462188+00:00 · theme-pool-213006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:26:03.578131+00:00 · theme-pool-212556 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:24:16.199792+00:00 · theme-pool-212408 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:19:23.093125+00:00 · theme-pool-211916 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:17:23.644272+00:00 · theme-pool-211716 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:14:44.280006+00:00 · theme-pool-211437 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:10:25.551212+00:00 · theme-pool-211021 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:06:52.544328+00:00 · theme-pool-210645 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T13:04:45.339270+00:00 · theme-pool-210438 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:54:35.282870+00:00 · theme-pool-205427 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T12:52:17.826259+00:00 · theme-pool-205208 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:25:27.241127+00:00 · full-loop-172346 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:12.647132+00:00 · theme-pool-171111 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-14T09:11:02.493972+00:00 · full-loop-170849 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 481.101 / PB 13.0088,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：兴森科技:2026年第二次临时股东会决议公告
+- 催化:2025年年报及2026年一季报点评：行业复苏带动公司业绩大幅增长，盈利能力扭亏为盈;公司事件点评报告：AI算力驱动业绩反转，mSAP工艺突破赋能高端IC载板放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '002436', 'ts_code': '002436.SZ', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '002…
+- 资金面:{'symbol': '002436', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -28512.09, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
 #### 2026-07-13T13:20:05.345595+00:00 · theme-pool-212004 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

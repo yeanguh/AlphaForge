@@ -1,43 +1,9 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10T10:58:26.640701+00:00",
+  "updated_at": "2026-07-14T09:25:21.950624+00:00",
   "positions": [],
   "cash": 1000000.0,
   "reviews": [
-    {
-      "at": "2026-07-09T18:41:52.971344+00:00",
-      "run_id": "full-loop-231019",
-      "cycle": 43,
-      "decision": "needs_more_evidence",
-      "committee_rating": "Underweight",
-      "committee_action": "Hold",
-      "selected_theme": "ai-compute-infra",
-      "position_count": 0,
-      "cash": 1000000.0,
-      "evidence_ids": [
-        "ev-review-98a19e85492c",
-        "ev-decision-98a19e85492c",
-        "ev-tradingagents-98a19e85492c"
-      ],
-      "note": "paper portfolio review only; no automatic real trading"
-    },
-    {
-      "at": "2026-07-09T18:47:11.353112+00:00",
-      "run_id": "full-loop-231019",
-      "cycle": 44,
-      "decision": "needs_more_evidence",
-      "committee_rating": "Underweight",
-      "committee_action": "Hold",
-      "selected_theme": "ai-compute-infra",
-      "position_count": 0,
-      "cash": 1000000.0,
-      "evidence_ids": [
-        "ev-review-e2b82b2f73b1",
-        "ev-decision-e2b82b2f73b1",
-        "ev-tradingagents-e2b82b2f73b1"
-      ],
-      "note": "paper portfolio review only; no automatic real trading"
-    },
     {
       "at": "2026-07-09T18:51:43.004200+00:00",
       "run_id": "full-loop-231019",
@@ -1701,6 +1667,40 @@
         "ev-review-999024420521",
         "ev-decision-999024420521",
         "ev-provider-0e5576aa7563"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-14T09:10:57.322051+00:00",
+      "run_id": "full-loop-170849",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai-compute-infra",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-4142d996ef21",
+        "ev-decision-4142d996ef21",
+        "ev-provider-ac14ecf3af68"
+      ],
+      "note": "paper portfolio review only; no automatic real trading"
+    },
+    {
+      "at": "2026-07-14T09:25:21.950624+00:00",
+      "run_id": "full-loop-172346",
+      "cycle": 1,
+      "decision": "hold_or_reject",
+      "committee_rating": "Underweight",
+      "committee_action": "Hold",
+      "selected_theme": "ai-compute-infra",
+      "position_count": 0,
+      "cash": 1000000.0,
+      "evidence_ids": [
+        "ev-review-abeacda1dadf",
+        "ev-decision-abeacda1dadf",
+        "ev-provider-261dda401abc"
       ],
       "note": "paper portfolio review only; no automatic real trading"
     }

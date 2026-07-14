@@ -12,15 +12,15 @@ providers:
     submodule: skills/global-stock-data
     adapter: providers/open_source/global_stock_data.py
   tradingagents_astock:
-    type: review_provider_smoke_only
+    type: runtime_review_provider
     submodule: external/TradingAgents-astock
     adapter: providers/open_source/tradingagents_astock.py
   vibe_research:
-    type: ui_reference_smoke_only
+    type: runtime_insight_provider
     submodule: external/Vibe-Research
     adapter: providers/open_source/vibe_research.py
   vibe_trading:
-    type: strategy_sandbox_smoke_only
+    type: runtime_insight_provider
     submodule: external/Vibe-Trading
     adapter: providers/open_source/vibe_trading.py
 references:
