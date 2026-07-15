@@ -1,0 +1,85 @@
+config/theme_pool.json
+  s_af29ccc39ded29::t_e55d2cbac24128 62-108
+providers/open_source/a_stock_data.py
+  s_af29ccc39ded29::t_008cd54db19c77 27,80-83,102,110,324,345-353,712-713,721-725,728,746-749,779-780,810-811,860-861,868-871,890,897,1552
+providers/open_source/tushare_provider.py
+  s_af29ccc39ded29::t_625d30237a7716 26,208-250
+reports/themes/ai-fintech-infra/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_5ef9604901733a 45,47-48
+reports/themes/ai-healthcare/agent_report.md
+  s_af29ccc39ded29::t_a924c42580e5db 9,72-73
+reports/themes/ai-healthcare/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_e7f21ca3c8b266 17,19-20,24-26
+reports/themes/ai-healthcare/report.md
+  s_af29ccc39ded29::t_2dc711b2fc5ac4 146-148,150,153,155-157,211
+reports/themes/ai-healthcare/report_change_log.md
+  s_af29ccc39ded29::t_ea7c23849d8bca 34-118
+reports/themes/ai-healthcare/source_data.json
+  s_af29ccc39ded29::t_29525a5dbb1d1f 2-3
+reports/themes/ai-server-chain/assets/theme-bottleneck-priority.svg
+  s_af29ccc39ded29::t_137764b073b4d0 1-17
+reports/themes/ai-server-chain/assets/theme-chain-map.svg
+  s_af29ccc39ded29::t_dd8fad134846cd 1-18
+reports/themes/autonomous-low-altitude/agent_report.md
+  s_af29ccc39ded29::t_1ac28c85a1e5f1 9,72-73
+reports/themes/autonomous-low-altitude/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_38b01c427e6844 45,47-48,59-61,87,89-90
+reports/themes/autonomous-low-altitude/report.md
+  s_af29ccc39ded29::t_1dba9621a7e74a 147,149-157,205,214
+reports/themes/autonomous-low-altitude/report_change_log.md
+  s_af29ccc39ded29::t_9bc806c2cdf2b3 34-118
+reports/themes/autonomous-low-altitude/source_data.json
+  s_af29ccc39ded29::t_ee69db0e2d3862 2-3
+reports/themes/blockchain-ai-payments/agent_report.md
+  s_af29ccc39ded29::t_2f0bb794fbdd97 9,72-73
+reports/themes/blockchain-ai-payments/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_1bf511a6be9138 10,12-13,17,19-20,24,26-27,45,47-48
+reports/themes/blockchain-ai-payments/report.md
+  s_af29ccc39ded29::t_9864d8cab9bd1e 146-149,151,155-157,211,213-215
+reports/themes/blockchain-ai-payments/report_change_log.md
+  s_af29ccc39ded29::t_96fe39445294b4 34-83
+reports/themes/blockchain-ai-payments/source_data.json
+  s_af29ccc39ded29::t_6a609d528dcd99 2-3
+reports/themes/datacenter-power/agent_report.md
+  s_af29ccc39ded29::t_27db34527e5c41 9,11,72-73,76
+reports/themes/datacenter-power/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_2c116fa0f07125 10,12-13,17,19-20,31,33,38-40,45-47,73,75-76,80-83,87,89-90
+reports/themes/datacenter-power/report.md
+  s_af29ccc39ded29::t_4edf90db431f2d 71,73,146-157,205-212
+reports/themes/datacenter-power/report_change_log.md
+  s_af29ccc39ded29::t_24f1c5a05f242c 36-120
+reports/themes/datacenter-power/source_data.json
+  s_af29ccc39ded29::t_3de88122f7f55a 2-3,61
+reports/themes/sovereign-ai/agent_report.md
+  s_af29ccc39ded29::t_da882eb47a4a03 9,11,72-73,76
+reports/themes/sovereign-ai/assets/theme-trade-map.svg
+  s_af29ccc39ded29::t_e4197070028449 17-19,24-26,31-33,38-40,52,54,59,61,66-68
+reports/themes/sovereign-ai/report.md
+  s_af29ccc39ded29::t_0531cca2063f61 70-71,146-150,152-154,206-212
+reports/themes/sovereign-ai/report_change_log.md
+  s_af29ccc39ded29::t_34b071e91f58ae 34-118
+reports/themes/sovereign-ai/source_data.json
+  s_af29ccc39ded29::t_baf79073f0c4b6 2-3,61
+scripts/generate_physical_ai_chain_report.py
+  s_af29ccc39ded29::t_1dd2d559546b2c 1055-1056,1106-1108
+tests/test_provider_fallbacks.py
+  s_af29ccc39ded29::t_f516fb3b3aa5e5 2,39-66,78,82-123,147-170,212,231
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "74ba1b5c14dc7fb9a67a8653bf783f7db2684c54",
+  "prompts": {},
+  "sessions": {
+    "s_af29ccc39ded29": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5fe8-9c77-7081-9308-8f97967acd04",
+        "model": "unknown"
+      },
+      "human_author": "yangyuhang <yangyuhang.yeang@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
