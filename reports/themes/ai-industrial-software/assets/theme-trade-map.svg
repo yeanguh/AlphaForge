@@ -28,10 +28,10 @@
 <text x="46" y="363" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
 <text x="46" y="387" font-size="13" fill="#64748b">002230 · 工业Copilot</text>
 <line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="593.2" cy="356" r="12" fill="#2563eb"/>
-<text x="260" y="386" font-size="12" fill="#64748b">39.07</text>
-<text x="609.2" y="361" font-size="13" fill="#111827">41.18</text>
-<text x="1090" y="386" font-size="12" fill="#64748b">44.58</text>
+<circle cx="608.0" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">38.98</text>
+<text x="624.0" y="361" font-size="13" fill="#111827">41.18</text>
+<text x="1090" y="386" font-size="12" fill="#64748b">44.48</text>
 <text x="46" y="425" font-size="16" font-weight="700" fill="#111827">中控技术</text>
 <text x="46" y="449" font-size="13" fill="#64748b">688777 · 工业Copilot</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
@@ -56,10 +56,10 @@
 <text x="46" y="611" font-size="16" font-weight="700" fill="#111827">凌云光</text>
 <text x="46" y="635" font-size="13" fill="#64748b">688400 · 机器视觉</text>
 <line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="327.9" cy="604" r="12" fill="#2563eb"/>
+<circle cx="328.2" cy="604" r="12" fill="#2563eb"/>
 <text x="260" y="634" font-size="12" fill="#64748b">50.03</text>
-<text x="343.9" y="609" font-size="13" fill="#111827">51.90</text>
-<text x="1090" y="634" font-size="12" fill="#64748b">73.98</text>
+<text x="344.2" y="609" font-size="13" fill="#111827">51.90</text>
+<text x="1090" y="634" font-size="12" fill="#64748b">73.88</text>
 <text x="46" y="673" font-size="16" font-weight="700" fill="#111827">天准科技</text>
 <text x="46" y="697" font-size="13" fill="#64748b">688003 · 机器视觉</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
@@ -70,9 +70,9 @@
 <text x="46" y="735" font-size="16" font-weight="700" fill="#111827">汇川技术</text>
 <text x="46" y="759" font-size="13" fill="#64748b">300124 · PLC/自动化</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="345.2" cy="728" r="12" fill="#2563eb"/>
-<text x="260" y="758" font-size="12" fill="#64748b">63.20</text>
-<text x="361.2" y="733" font-size="13" fill="#111827">64.32</text>
+<circle cx="337.2" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">58.85</text>
+<text x="353.2" y="733" font-size="13" fill="#111827">60.25</text>
 <text x="1090" y="758" font-size="12" fill="#64748b">74.63</text>
 <text x="46" y="797" font-size="16" font-weight="700" fill="#111827">信捷电气</text>
 <text x="46" y="821" font-size="13" fill="#64748b">603416 · PLC/自动化</text>
@@ -84,8 +84,8 @@
 <text x="46" y="859" font-size="16" font-weight="700" fill="#111827">雷赛智能</text>
 <text x="46" y="883" font-size="13" fill="#64748b">002979 · PLC/自动化</text>
 <line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="331.6" cy="852" r="12" fill="#2563eb"/>
-<text x="260" y="882" font-size="12" fill="#64748b">64.12</text>
-<text x="347.6" y="857" font-size="13" fill="#111827">65.14</text>
-<text x="1090" y="882" font-size="12" fill="#64748b">76.51</text>
+<circle cx="371.9" cy="852" r="12" fill="#2563eb"/>
+<text x="260" y="882" font-size="12" fill="#64748b">59.16</text>
+<text x="387.9" y="857" font-size="13" fill="#111827">61.35</text>
+<text x="1090" y="882" font-size="12" fill="#64748b">76.20</text>
 </svg>

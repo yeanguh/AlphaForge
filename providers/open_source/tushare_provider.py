@@ -23,6 +23,7 @@ API_CATALOG: dict[str, list[str]] = {
         "bak_basic",
     ],
     "market": [
+        "pro_bar",
         "daily",
         "weekly",
         "monthly",
@@ -200,6 +201,49 @@ def query(
             "fields": [],
             "params": dict(params or {}),
             "error": message,
+            "checked_at": _now_iso(),
+        }
+
+
+def query_pro_bar(
+    ts_code: str,
+    *,
+    start_date: str,
+    end_date: str,
+    adj: str = "qfq",
+    limit: int | None = None,
+    safe: bool = True,
+) -> dict[str, Any]:
+    try:
+        token = os.environ.get(TOKEN_ENV)
+        if not token:
+            raise RuntimeError(f"{TOKEN_ENV} is not configured")
+        ts = _import_tushare()
+        ts.set_token(token)
+        df = ts.pro_bar(ts_code=normalize_ts_code(ts_code), start_date=start_date, end_date=end_date, adj=adj)
+        rows = _df_to_rows(df, limit=limit)
+        return {
+            "provider": PROVIDER_NAME,
+            "api": "pro_bar",
+            "status": "ok" if _row_count(df) else "ok_empty",
+            "row_count": _row_count(df),
+            "rows": rows,
+            "fields": list(rows[0].keys()) if rows else [],
+            "params": {"ts_code": normalize_ts_code(ts_code), "start_date": start_date, "end_date": end_date, "adj": adj},
+            "checked_at": _now_iso(),
+        }
+    except Exception as exc:  # noqa: BLE001 - provider boundary
+        if not safe:
+            raise
+        return {
+            "provider": PROVIDER_NAME,
+            "api": "pro_bar",
+            "status": "error",
+            "row_count": 0,
+            "rows": [],
+            "fields": [],
+            "params": {"ts_code": normalize_ts_code(ts_code), "start_date": start_date, "end_date": end_date, "adj": adj},
+            "error": str(exc),
             "checked_at": _now_iso(),
         }
 

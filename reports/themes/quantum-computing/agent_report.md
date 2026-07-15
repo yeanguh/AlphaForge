@@ -6,9 +6,9 @@
 | --- | --- |
 | theme_key | quantum-computing |
 | selected_theme | quantum-computing |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/quantum-computing/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/quantum-computing/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
-| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18622} |
+| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18623} |
 | human_report_chars | 0 |
 | human_report_images | 0 |
 
@@ -69,11 +69,11 @@
 | --- | --- |
 | report | reports/themes/quantum-computing/report.md |
 | agent_report | reports/themes/quantum-computing/agent_report.md |
-| draft | reports/themes/quantum-computing/report.cycle-draft-theme-pool-214323-cycle-001-quantum-computing.md |
-| draft_archive | reports/themes/quantum-computing/drafts/theme-pool-214323-cycle-001-quantum-computing.md |
+| draft | reports/themes/quantum-computing/report.cycle-draft-theme-pool-104606-cycle-001-quantum-computing.md |
+| draft_archive | reports/themes/quantum-computing/drafts/theme-pool-104606-cycle-001-quantum-computing.md |
 | theme_key | quantum-computing |
 | seeded_canonical | False |
-| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18622} |
+| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18623} |
 | returncode | 0 |
 
 ## Provider Notes

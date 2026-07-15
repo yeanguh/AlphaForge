@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T21:43:45.660136",
-  "payload_file": "runs/2026-07-14/theme-pool-214323/cycle-001/themes/agentic-ai/result.json",
+  "generated_at": "2026-07-15T10:46:57.060570",
+  "payload_file": "runs/2026-07-15/theme-pool-104606/cycle-001/themes/agentic-ai/result.json",
   "theme_key": "agentic-ai",
   "selected_theme": "agentic-ai",
   "evidence_ids": [
@@ -58,6 +58,6 @@
     "missing_sections": [],
     "image_count": 7,
     "todo_count": 0,
-    "char_count": 18805
+    "char_count": 18806
   }
 }

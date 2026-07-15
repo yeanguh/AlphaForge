@@ -31,6 +31,56 @@
 <!-- research-os-curation:theme:space-defense-ai:theme-pool-213006:1 -->
 
 <!-- research-os-curation:theme:space-defense-ai:theme-pool-214323:1 -->
+
+<!-- research-os-curation:theme:space-defense-ai:theme-pool-101418:1 -->
+
+<!-- research-os-curation:theme:space-defense-ai:theme-pool-101833:1 -->
+
+<!-- research-os-curation:theme:space-defense-ai:theme-pool-102550:1 -->
+
+<!-- research-os-curation:theme:space-defense-ai:theme-pool-103636:1 -->
+
+<!-- research-os-curation:theme:space-defense-ai:theme-pool-104606:1 -->
+#### 2026-07-15T02:48:49.850885+00:00 · theme-pool-104606 cycle 1  · 观察池
+
+- 增量强度:55;本轮状态:`ok`。
+- 资讯线索:OpenAI《How Deutsche Telekom is rewiring telecommunications with AI》(待验证)。
+- 资讯线索:OpenAI《Getting started with ChatGPT》(待验证)。
+- 资讯线索:OpenAI《GPT-5.6 is now the preferred model in Microsoft 365 Copilot》(待验证)。
+- 资讯线索:Google Research《SensorFM: Towards a general intelligence and interface for wearable health data》(待验证)。
+
+#### 2026-07-15T02:39:08.468763+00:00 · theme-pool-103636 cycle 1  · 观察池
+
+- 增量强度:55;本轮状态:`ok`。
+- 资讯线索:OpenAI《How Deutsche Telekom is rewiring telecommunications with AI》(待验证)。
+- 资讯线索:OpenAI《Getting started with ChatGPT》(待验证)。
+- 资讯线索:OpenAI《GPT-5.6 is now the preferred model in Microsoft 365 Copilot》(待验证)。
+- 资讯线索:Google Research《SensorFM: Towards a general intelligence and interface for wearable health data》(待验证)。
+
+#### 2026-07-15T02:29:35.858720+00:00 · theme-pool-102550 cycle 1  · 观察池
+
+- 增量强度:55;本轮状态:`ok`。
+- 资讯线索:OpenAI《How Deutsche Telekom is rewiring telecommunications with AI》(待验证)。
+- 资讯线索:OpenAI《Getting started with ChatGPT》(待验证)。
+- 资讯线索:OpenAI《GPT-5.6 is now the preferred model in Microsoft 365 Copilot》(待验证)。
+- 资讯线索:Google Research《SensorFM: Towards a general intelligence and interface for wearable health data》(待验证)。
+
+#### 2026-07-15T02:22:14.526349+00:00 · theme-pool-101833 cycle 1  · 观察池
+
+- 增量强度:55;本轮状态:`ok`。
+- 资讯线索:OpenAI《How Deutsche Telekom is rewiring telecommunications with AI》(待验证)。
+- 资讯线索:OpenAI《Getting started with ChatGPT》(待验证)。
+- 资讯线索:OpenAI《GPT-5.6 is now the preferred model in Microsoft 365 Copilot》(待验证)。
+- 资讯线索:Google Research《SensorFM: Towards a general intelligence and interface for wearable health data》(待验证)。
+
+#### 2026-07-15T02:16:37.100058+00:00 · theme-pool-101418 cycle 1  · 观察池
+
+- 增量强度:55;本轮状态:`ok`。
+- 资讯线索:OpenAI《How Deutsche Telekom is rewiring telecommunications with AI》(待验证)。
+- 资讯线索:OpenAI《Getting started with ChatGPT》(待验证)。
+- 资讯线索:OpenAI《GPT-5.6 is now the preferred model in Microsoft 365 Copilot》(待验证)。
+- 资讯线索:Google Research《SensorFM: Towards a general intelligence and interface for wearable health data》(待验证)。
+
 #### 2026-07-14T13:44:24.552017+00:00 · theme-pool-214323 cycle 1  · 观察池
 
 - 增量强度:55;本轮状态:`ok`。

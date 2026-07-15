@@ -35,9 +35,9 @@
 <text x="46" y="425" font-size="16" font-weight="700" fill="#111827">深信服</text>
 <text x="46" y="449" font-size="13" fill="#64748b">300454 · 模型安全</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="648.1" cy="418" r="12" fill="#2563eb"/>
+<circle cx="648.2" cy="418" r="12" fill="#2563eb"/>
 <text x="260" y="448" font-size="12" fill="#64748b">98.39</text>
-<text x="664.1" y="423" font-size="13" fill="#111827">105.97</text>
+<text x="664.2" y="423" font-size="13" fill="#111827">105.97</text>
 <text x="1090" y="448" font-size="12" fill="#64748b">115.38</text>
 <text x="46" y="487" font-size="16" font-weight="700" fill="#111827">安恒信息</text>
 <text x="46" y="511" font-size="13" fill="#64748b">688023 · 模型安全</text>

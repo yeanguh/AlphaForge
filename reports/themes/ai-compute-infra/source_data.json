@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T21:43:33.848006",
-  "payload_file": "runs/2026-07-14/theme-pool-214323/cycle-001/themes/ai-compute-infra/result.json",
+  "generated_at": "2026-07-15T10:46:26.266801",
+  "payload_file": "runs/2026-07-15/theme-pool-104606/cycle-001/themes/ai-compute-infra/result.json",
   "theme_key": "ai-compute-infra",
   "selected_theme": "ai-compute-infra",
   "evidence_ids": [
@@ -58,6 +58,6 @@
     "missing_sections": [],
     "image_count": 9,
     "todo_count": 0,
-    "char_count": 29699
+    "char_count": 29706
   }
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T21:44:17.103362",
-  "payload_file": "runs/2026-07-14/theme-pool-214323/cycle-001/themes/quantum-computing/result.json",
+  "generated_at": "2026-07-15T10:48:34.150712",
+  "payload_file": "runs/2026-07-15/theme-pool-104606/cycle-001/themes/quantum-computing/result.json",
   "theme_key": "quantum-computing",
   "selected_theme": "quantum-computing",
   "evidence_ids": [
@@ -58,6 +58,6 @@
     "missing_sections": [],
     "image_count": 7,
     "todo_count": 0,
-    "char_count": 18622
+    "char_count": 18623
   }
 }

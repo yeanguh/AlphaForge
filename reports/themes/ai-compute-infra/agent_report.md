@@ -6,9 +6,9 @@
 | --- | --- |
 | theme_key | ai-compute-infra |
 | selected_theme | ai-compute-infra |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/ai-compute-infra/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/ai-compute-infra/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
-| report_quality | {"passed": true, "missing_sections": [], "image_count": 9, "todo_count": 0, "char_count": 29699} |
+| report_quality | {"passed": true, "missing_sections": [], "image_count": 9, "todo_count": 0, "char_count": 29706} |
 | human_report_chars | 0 |
 | human_report_images | 0 |
 
@@ -69,11 +69,11 @@
 | --- | --- |
 | report | reports/themes/ai-compute-infra/report.md |
 | agent_report | reports/themes/ai-compute-infra/agent_report.md |
-| draft | reports/themes/ai-compute-infra/report.cycle-draft-theme-pool-214323-cycle-001-ai-compute-infra.md |
-| draft_archive | reports/themes/ai-compute-infra/drafts/theme-pool-214323-cycle-001-ai-compute-infra.md |
+| draft | reports/themes/ai-compute-infra/report.cycle-draft-theme-pool-104606-cycle-001-ai-compute-infra.md |
+| draft_archive | reports/themes/ai-compute-infra/drafts/theme-pool-104606-cycle-001-ai-compute-infra.md |
 | theme_key | ai-compute-infra |
 | seeded_canonical | False |
-| quality | {"passed": true, "missing_sections": [], "image_count": 9, "todo_count": 0, "char_count": 29699} |
+| quality | {"passed": true, "missing_sections": [], "image_count": 9, "todo_count": 0, "char_count": 29706} |
 | returncode | 0 |
 
 ## Provider Notes

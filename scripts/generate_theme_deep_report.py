@@ -32,6 +32,15 @@ KNOWN_A_SHARE_SYMBOLS = {
     "彤程新材": "603650",
     "光迅科技": "002281",
     "天孚通信": "300394",
+    "华工科技": "000988",
+    "源杰科技": "688498",
+    "长光华芯": "688048",
+    "仕佳光子": "688313",
+    "华丰科技": "688629",
+    "立讯精密": "002475",
+    "沃尔核材": "002130",
+    "罗博特科": "300757",
+    "光库科技": "300620",
     "浪潮信息": "000977",
     "紫光股份": "000938",
     "中科曙光": "603019",
@@ -156,6 +165,8 @@ KNOWN_A_SHARE_SYMBOLS = {
 }
 
 MARKET_INDEX_BY_LINK = [
+    (("NPO", "光引擎", "硅光", "光芯片", "光互连"), "931271.CSI", "通信设备主题"),
+    (("连接器", "线模组"), "931271.CSI", "通信设备主题"),
     (("CPO", "光模块", "通信"), "931271.CSI", "通信设备主题"),
     (("PCB", "印制电路"), "932666.CSI", "PCB"),
     (("服务器", "组装", "供应链"), "931688.CSI", "中证算力"),
@@ -268,6 +279,8 @@ AI_COMPUTE_HIGH_BETA = {
 
 GENERIC_THEME_COMPANIES = {
     "datacenter-power": "英维克、申菱环境、高澜股份、工业富联",
+    "ai-server-chain": "工业富联、浪潮信息、中科曙光、沪电股份",
+    "huawei-npo-optical-interconnect": "光迅科技、华工科技、华丰科技、立讯精密",
     "agentic-ai": "科大讯飞、金山办公、用友网络、泛微网络",
     "sovereign-ai": "寒武纪、海光信息、龙芯中科、中科曙光",
     "ai-security-governance": "三六零、启明星辰、深信服、安恒信息",
@@ -284,6 +297,8 @@ GENERIC_THEME_COMPANIES = {
 
 GENERIC_THEME_NODES = {
     "datacenter-power": ["电力接入/变压器", "液冷/温控", "UPS/储能/燃气轮机", "数据中心运维"],
+    "ai-server-chain": ["GPU/国产算力芯片", "整机ODM/AI整柜", "PCB/CCL", "光互连/液冷电源"],
+    "huawei-npo-optical-interconnect": ["NPO光引擎", "硅光/InP光芯片", "高速连接器/线模组", "封装耦合与测试"],
     "agentic-ai": ["多智能体编排", "企业工作流", "知识库/RAG", "办公自动化"],
     "sovereign-ai": ["国产AI芯片", "国产CPU/GPU", "服务器整机", "软件生态适配"],
     "ai-security-governance": ["身份权限", "模型安全", "内容溯源/水印", "数据合规审计"],
@@ -304,6 +319,18 @@ GENERIC_THEME_NODE_COMPANIES = {
         "液冷/温控": "英维克、申菱环境、高澜股份",
         "UPS/储能/燃气轮机": "科华数据、科士达、阳光电源",
         "数据中心运维": "润泽科技、奥飞数据、数据港",
+    },
+    "ai-server-chain": {
+        "GPU/国产算力芯片": "海光信息、寒武纪、龙芯中科",
+        "整机ODM/AI整柜": "工业富联、浪潮信息、中科曙光",
+        "PCB/CCL": "沪电股份、深南电路、胜宏科技",
+        "光互连/液冷电源": "中际旭创、新易盛、英维克",
+    },
+    "huawei-npo-optical-interconnect": {
+        "NPO光引擎": "光迅科技、华工科技、天孚通信",
+        "硅光/InP光芯片": "源杰科技、长光华芯、仕佳光子",
+        "高速连接器/线模组": "华丰科技、立讯精密、沃尔核材",
+        "封装耦合与测试": "罗博特科、光库科技、天孚通信",
     },
     "agentic-ai": {
         "多智能体编排": "科大讯飞、昆仑万维、拓尔思",
@@ -627,9 +654,11 @@ def technical_snapshot(quote: dict[str, Any], supplement: dict[str, Any]) -> dic
     highs = [x for x in highs if x is not None]
     lows = [_float_or_none(row.get("low")) for row in rows]
     lows = [x for x in lows if x is not None]
-    price = _float_or_none(quote.get("price")) or (closes[-1] if closes else None)
+    expected_date = a_stock_data.latest_expected_trade_date()
+    last_row = rows[-1] if rows and a_stock_data._compact_date(rows[-1].get("date")) == expected_date else {}
+    price = _float_or_none(last_row.get("close")) or _float_or_none(quote.get("price")) or (closes[-1] if closes else None)
     prev_close = _float_or_none(quote.get("prev_close"))
-    change_pct = _float_or_none(quote.get("change_pct"))
+    change_pct = _float_or_none(last_row.get("change_pct")) if last_row else _float_or_none(quote.get("change_pct"))
     ma5 = _avg(closes[-5:])
     ma10 = _avg(closes[-10:])
     ma20 = _avg(closes[-20:])
@@ -1634,8 +1663,8 @@ def ensure_price_history(supplement: dict[str, Any], symbol: str, *, live_fetch:
         return
     expected_date = a_stock_data.latest_expected_trade_date()
     if price_history_rows(supplement):
-        history = {"rows": price_history_rows(supplement)}
-        if not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
+        history = supplement.get("price_history", {}) if isinstance(supplement.get("price_history"), dict) else {"rows": price_history_rows(supplement)}
+        if history.get("source") == a_stock_data.TUSHARE_QFQ_SOURCE and not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
             return
     errors = supplement.setdefault("errors", [])
     if not live_fetch:
@@ -1702,6 +1731,7 @@ def bottleneck_company_records(selected: dict[str, Any], payload: dict[str, Any]
     records: list[dict[str, Any]] = []
     bottlenecks = selected.get("bottleneck_candidates", [])
     bottlenecks = [x for x in bottlenecks if isinstance(x, dict)] if isinstance(bottlenecks, list) else []
+    seen_company_keys: set[str] = set()
     for item in bottlenecks[:6]:
         companies = str(item.get("companies") or "")
         for raw_name in companies.replace("、", ",").replace("，", ",").split(","):
@@ -1709,6 +1739,10 @@ def bottleneck_company_records(selected: dict[str, Any], payload: dict[str, Any]
             if not name:
                 continue
             symbol = KNOWN_A_SHARE_SYMBOLS.get(name, "")
+            company_key = symbol or name
+            if company_key in seen_company_keys:
+                continue
+            seen_company_keys.add(company_key)
             quote = quote_from_payload(payload, name, symbol) or quote_by_name.get(name, {})
             supplement = supplement_from_payload(payload, symbol)
             if not quote or not supplement:

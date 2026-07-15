@@ -6,9 +6,9 @@
 | --- | --- |
 | theme_key | ai-industrial-software |
 | selected_theme | ai-industrial-software |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/ai-industrial-software/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/ai-industrial-software/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
-| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18572} |
+| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18573} |
 | human_report_chars | 0 |
 | human_report_images | 0 |
 
@@ -69,11 +69,11 @@
 | --- | --- |
 | report | reports/themes/ai-industrial-software/report.md |
 | agent_report | reports/themes/ai-industrial-software/agent_report.md |
-| draft | reports/themes/ai-industrial-software/report.cycle-draft-theme-pool-214323-cycle-001-ai-industrial-software.md |
-| draft_archive | reports/themes/ai-industrial-software/drafts/theme-pool-214323-cycle-001-ai-industrial-software.md |
+| draft | reports/themes/ai-industrial-software/report.cycle-draft-theme-pool-104606-cycle-001-ai-industrial-software.md |
+| draft_archive | reports/themes/ai-industrial-software/drafts/theme-pool-104606-cycle-001-ai-industrial-software.md |
 | theme_key | ai-industrial-software |
 | seeded_canonical | False |
-| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18572} |
+| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18573} |
 | returncode | 0 |
 
 ## Provider Notes

@@ -1,79 +1,63 @@
 {
-  "theme": "huawei-npo-optical-interconnect",
-  "generated_at": "2026-07-10",
-  "scope": "中国NPO近封装光互连产业链与A股映射",
-  "sources": [
-    {
-      "tool": "web",
-      "function_or_path": "IT之家 2026-07-09",
-      "subject": "华为联合伙伴启动OPEN NPO项目",
-      "status": "ok",
-      "confidence": "Medium",
-      "url": "https://www.ithome.com/0/974/717.htm"
-    },
-    {
-      "tool": "web",
-      "function_or_path": "第一财经快讯 2026-07-09",
-      "subject": "国内首个近封装光学NPO光互连MSA",
-      "status": "ok",
-      "confidence": "Medium",
-      "url": "https://www.yicai.com/brief/103267910.html"
-    },
-    {
-      "tool": "web",
-      "function_or_path": "TrendForce 2026-04-20",
-      "subject": "AI光收发器市场与组件瓶颈",
-      "status": "ok",
-      "confidence": "Medium",
-      "url": "https://www.trendforce.com/presscenter/news/20260420-13017.html"
-    },
-    {
-      "tool": "web",
-      "function_or_path": "LightCounting April 2026 Market Forecast newsletter",
-      "subject": "以太网光模块增长与InP EML/激光芯片瓶颈",
-      "status": "ok",
-      "confidence": "Medium",
-      "url": "https://www.lightcounting.com/newsletter/en/april-2026-market-forecast-379"
-    },
-    {
-      "tool": "web",
-      "function_or_path": "OIF Implementation Agreements page",
-      "subject": "CPO/ELSFP等光互连标准化背景",
-      "status": "ok",
-      "confidence": "Medium",
-      "url": "https://www.oiforum.com/technical-work/implementation-agreements-ias/"
-    },
-    {
-      "tool": "filing",
-      "function_or_path": "巨潮资讯 光迅科技2025年年度报告摘要",
-      "subject": "光迅科技高速光模块、AOC与数据中心产品",
-      "status": "ok",
-      "confidence": "High",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225148211.PDF"
-    },
-    {
-      "tool": "filing",
-      "function_or_path": "巨潮资讯 华工科技2025年年度报告",
-      "subject": "华工科技/华工正源光模块、硅光、3.2T CPO/NPO相关能力披露",
-      "status": "ok",
-      "confidence": "High",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-03-26/1225031509.PDF"
-    },
-    {
-      "tool": "company/news",
-      "function_or_path": "东方财富财富号 2026-07-09",
-      "subject": "华丰科技NPO电连接器专题分享",
-      "status": "partial",
-      "confidence": "Medium",
-      "url": "https://caifuhao.eastmoney.com/news/20260709214137521728580"
-    },
-    {
-      "tool": "public-data",
-      "function_or_path": "scripts/check_data_sources.py",
-      "subject": "本地公开行情/公告适配器健康检查",
-      "status": "partial",
-      "confidence": "Medium",
-      "detail": "akshare/baostock/adata/efinance not installed; SEC available. No stock-level valuation or technical follow-through performed."
-    }
-  ]
+  "generated_at": "2026-07-15T11:00:18.791332",
+  "payload_file": "runs/2026-07-15/theme-pool-110006/cycle-001/themes/huawei-npo-optical-interconnect/result.json",
+  "theme_key": "huawei-npo-optical-interconnect",
+  "selected_theme": "huawei-npo-optical-interconnect",
+  "evidence_ids": [
+    "ev-market-cn-ecb303304235",
+    "ev-market-cn-d4c86ae5c02b",
+    "ev-market-cn-ccd39752789f",
+    "ev-market-cn-4d409fe59d88",
+    "ev-market-cn-afdb102bd839",
+    "ev-market-cn-c4e56d6d6648",
+    "ev-market-cn-1fa949b63c6b",
+    "ev-market-global-128640804af8",
+    "ev-market-global-049c731e195e",
+    "ev-market-global-93f7d79441df",
+    "ev-news-7f9615eac28a",
+    "ev-news-e0ad687da034",
+    "ev-news-6f89f1d5a93c",
+    "ev-news-56ea934023aa",
+    "ev-news-4e396b73bccf",
+    "ev-news-d1ab609c1779",
+    "ev-news-e33635acc647",
+    "ev-news-d27c8e271749",
+    "ev-news-2f377a3f3d4f",
+    "ev-news-834887c59d8c",
+    "ev-news-c841f9db1351",
+    "ev-news-d3bc57d6ecb4",
+    "ev-report-8346fa7ee2b3",
+    "ev-report-1e1f36b6d1b8",
+    "ev-report-689f1ef93928",
+    "ev-report-cbc3c442c306",
+    "ev-report-8287c40181e9",
+    "ev-report-96a5d34de039",
+    "ev-report-59ffe24e262d",
+    "ev-report-a2a3aa81ae57",
+    "ev-report-789a0ba698c9",
+    "ev-report-d99fa4e3628d",
+    "ev-report-1272fa7b171d",
+    "ev-report-44f334357981",
+    "ev-chain-0c8e4c6d6364",
+    "ev-stock-supplement-ecb303304235",
+    "ev-stock-supplement-d4c86ae5c02b",
+    "ev-stock-supplement-ccd39752789f",
+    "ev-stock-supplement-4d409fe59d88",
+    "ev-stock-supplement-afdb102bd839",
+    "ev-stock-supplement-c4e56d6d6648",
+    "ev-stock-supplement-1fa949b63c6b",
+    "ev-tradingagents-abeacda1dadf",
+    "ev-provider-2aad6f37552f",
+    "ev-provider-a01c47616610",
+    "ev-provider-261dda401abc",
+    "ev-decision-abeacda1dadf",
+    "ev-review-abeacda1dadf"
+  ],
+  "quality": {
+    "passed": true,
+    "missing_sections": [],
+    "image_count": 7,
+    "todo_count": 0,
+    "char_count": 18189
+  }
 }

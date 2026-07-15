@@ -14,30 +14,30 @@
 <text x="46" y="239" font-size="16" font-weight="700" fill="#111827">海光信息</text>
 <text x="46" y="263" font-size="13" fill="#64748b">688041 · 国产AI芯片</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="601.2" cy="232" r="12" fill="#2563eb"/>
-<text x="260" y="262" font-size="12" fill="#64748b">343.00</text>
-<text x="617.2" y="237" font-size="13" fill="#111827">363.46</text>
+<circle cx="298.9" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">338.31</text>
+<text x="314.9" y="237" font-size="13" fill="#111827">340.85</text>
 <text x="1090" y="262" font-size="12" fill="#64748b">395.17</text>
 <text x="46" y="301" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
 <text x="46" y="325" font-size="13" fill="#64748b">688047 · 国产AI芯片</text>
 <line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="599.0" cy="294" r="12" fill="#2563eb"/>
-<text x="260" y="324" font-size="12" fill="#64748b">144.34</text>
-<text x="615.0" y="299" font-size="13" fill="#111827">149.91</text>
+<circle cx="448.1" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">127.00</text>
+<text x="464.1" y="299" font-size="13" fill="#111827">133.84</text>
 <text x="1090" y="324" font-size="12" fill="#64748b">158.63</text>
 <text x="46" y="363" font-size="16" font-weight="700" fill="#111827">海光信息</text>
 <text x="46" y="387" font-size="13" fill="#64748b">688041 · 国产CPU/GPU</text>
 <line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="601.2" cy="356" r="12" fill="#2563eb"/>
-<text x="260" y="386" font-size="12" fill="#64748b">343.00</text>
-<text x="617.2" y="361" font-size="13" fill="#111827">363.46</text>
+<circle cx="298.9" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">338.31</text>
+<text x="314.9" y="361" font-size="13" fill="#111827">340.85</text>
 <text x="1090" y="386" font-size="12" fill="#64748b">395.17</text>
 <text x="46" y="425" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
 <text x="46" y="449" font-size="13" fill="#64748b">688047 · 国产CPU/GPU</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="599.0" cy="418" r="12" fill="#2563eb"/>
-<text x="260" y="448" font-size="12" fill="#64748b">144.34</text>
-<text x="615.0" y="423" font-size="13" fill="#111827">149.91</text>
+<circle cx="448.1" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">127.00</text>
+<text x="464.1" y="423" font-size="13" fill="#111827">133.84</text>
 <text x="1090" y="448" font-size="12" fill="#64748b">158.63</text>
 <text x="46" y="487" font-size="16" font-weight="700" fill="#111827">景嘉微</text>
 <text x="46" y="511" font-size="13" fill="#64748b">300474 · 国产CPU/GPU</text>
@@ -49,23 +49,23 @@
 <text x="46" y="549" font-size="16" font-weight="700" fill="#111827">中科曙光</text>
 <text x="46" y="573" font-size="13" fill="#64748b">603019 · 服务器整机</text>
 <line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="602.1" cy="542" r="12" fill="#2563eb"/>
+<circle cx="479.7" cy="542" r="12" fill="#2563eb"/>
 <text x="260" y="572" font-size="12" fill="#64748b">98.15</text>
-<text x="618.1" y="547" font-size="13" fill="#111827">103.99</text>
+<text x="495.7" y="547" font-size="13" fill="#111827">101.90</text>
 <text x="1090" y="572" font-size="12" fill="#64748b">113.00</text>
 <text x="46" y="611" font-size="16" font-weight="700" fill="#111827">浪潮信息</text>
 <text x="46" y="635" font-size="13" fill="#64748b">000977 · 服务器整机</text>
 <line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="679.7" cy="604" r="12" fill="#2563eb"/>
+<circle cx="623.9" cy="604" r="12" fill="#2563eb"/>
 <text x="260" y="634" font-size="12" fill="#64748b">78.17</text>
-<text x="695.7" y="609" font-size="13" fill="#111827">85.99</text>
+<text x="639.9" y="609" font-size="13" fill="#111827">84.95</text>
 <text x="1090" y="634" font-size="12" fill="#64748b">94.38</text>
 <text x="46" y="673" font-size="16" font-weight="700" fill="#111827">工业富联</text>
 <text x="46" y="697" font-size="13" fill="#64748b">601138 · 服务器整机</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="480.5" cy="666" r="12" fill="#2563eb"/>
-<text x="260" y="696" font-size="12" fill="#64748b">66.01</text>
-<text x="496.5" y="671" font-size="13" fill="#111827">69.53</text>
+<circle cx="453.9" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">61.50</text>
+<text x="469.9" y="671" font-size="13" fill="#111827">65.60</text>
 <text x="1090" y="696" font-size="12" fill="#64748b">79.90</text>
 <text x="46" y="735" font-size="16" font-weight="700" fill="#111827">中国软件</text>
 <text x="46" y="759" font-size="13" fill="#64748b">600536 · 软件生态适配</text>

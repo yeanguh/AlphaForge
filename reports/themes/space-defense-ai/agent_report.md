@@ -6,7 +6,7 @@
 | --- | --- |
 | theme_key | space-defense-ai |
 | selected_theme | space-defense-ai |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/space-defense-ai/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/space-defense-ai/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
 | report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18242} |
 | human_report_chars | 0 |
@@ -69,8 +69,8 @@
 | --- | --- |
 | report | reports/themes/space-defense-ai/report.md |
 | agent_report | reports/themes/space-defense-ai/agent_report.md |
-| draft | reports/themes/space-defense-ai/report.cycle-draft-theme-pool-214323-cycle-001-space-defense-ai.md |
-| draft_archive | reports/themes/space-defense-ai/drafts/theme-pool-214323-cycle-001-space-defense-ai.md |
+| draft | reports/themes/space-defense-ai/report.cycle-draft-theme-pool-104606-cycle-001-space-defense-ai.md |
+| draft_archive | reports/themes/space-defense-ai/drafts/theme-pool-104606-cycle-001-space-defense-ai.md |
 | theme_key | space-defense-ai |
 | seeded_canonical | False |
 | quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18242} |

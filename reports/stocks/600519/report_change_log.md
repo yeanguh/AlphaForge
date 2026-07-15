@@ -167,6 +167,123 @@
 <!-- research-os-curation:stock:600519:theme-pool-213006:1 -->
 
 <!-- research-os-curation:stock:600519:theme-pool-214323:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-101418:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-101833:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-102550:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-103636:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-104343:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-104606:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-105349:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-105907:1 -->
+
+<!-- research-os-curation:stock:600519:theme-pool-110006:1 -->
+#### 2026-07-15T03:00:18.901623+00:00 · theme-pool-110006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:59:19.562984+00:00 · theme-pool-105907 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:54:03.012399+00:00 · theme-pool-105349 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:46:26.389696+00:00 · theme-pool-104606 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:44:03.671686+00:00 · theme-pool-104343 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:36:56.217844+00:00 · theme-pool-103636 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:26:16.464942+00:00 · theme-pool-102550 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:19:01.482090+00:00 · theme-pool-101833 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
+#### 2026-07-15T02:14:26.689163+00:00 · theme-pool-101418 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 18.3606 / PB 5.6062,区间 normal,评分 4(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：贵州茅台:贵州茅台2025年年度权益分派实施公告
+- 催化:2025年年报及2026年一季报点评：顺势出清舒缓压力巩固优势稳健前行;公司事件点评报告：i茅台持续发力，改革效果初显。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '600519', 'ts_code': '600519.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '600…
+- 资金面:{'symbol': '600519', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -97287.27, 'small…
+- 决策框架:动作 `watch`,通过条件 5,最小风险收益比 2.0。
+
 #### 2026-07-14T13:43:34.016794+00:00 · theme-pool-214323 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

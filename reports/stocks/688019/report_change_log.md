@@ -167,6 +167,123 @@
 <!-- research-os-curation:stock:688019:theme-pool-213006:1 -->
 
 <!-- research-os-curation:stock:688019:theme-pool-214323:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-101418:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-101833:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-102550:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-103636:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-104343:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-104606:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-105349:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-105907:1 -->
+
+<!-- research-os-curation:stock:688019:theme-pool-110006:1 -->
+#### 2026-07-15T03:00:18.956280+00:00 · theme-pool-110006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:59:19.575353+00:00 · theme-pool-105907 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:54:03.049871+00:00 · theme-pool-105349 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:46:26.421119+00:00 · theme-pool-104606 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:44:03.692309+00:00 · theme-pool-104343 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:36:56.255823+00:00 · theme-pool-103636 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:26:16.499438+00:00 · theme-pool-102550 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:19:01.494012+00:00 · theme-pool-101833 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:14:26.705535+00:00 · theme-pool-101418 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 81.1792 / PB 14.551,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：安集科技:《安集微电子科技(上海)股份有限公司董事、高级管理人员及核心技术人员持有公司股份及其变动管理制度(草案)》(H股发行并上市后适用)
+- 催化:公司深度报告：抛光液市占率稳步攀升，“3+1”平台打开增长加速空间;业绩持续高增长，看好公司系列产品不断放量。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688019', 'ts_code': '688019.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688019', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -2074.68, 'small_…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
 #### 2026-07-14T13:43:34.069145+00:00 · theme-pool-214323 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

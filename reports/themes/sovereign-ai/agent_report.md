@@ -6,9 +6,9 @@
 | --- | --- |
 | theme_key | sovereign-ai |
 | selected_theme | sovereign-ai |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/sovereign-ai/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/sovereign-ai/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
-| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 20509} |
+| report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 20518} |
 | human_report_chars | 0 |
 | human_report_images | 0 |
 
@@ -69,11 +69,11 @@
 | --- | --- |
 | report | reports/themes/sovereign-ai/report.md |
 | agent_report | reports/themes/sovereign-ai/agent_report.md |
-| draft | reports/themes/sovereign-ai/report.cycle-draft-theme-pool-214323-cycle-001-sovereign-ai.md |
-| draft_archive | reports/themes/sovereign-ai/drafts/theme-pool-214323-cycle-001-sovereign-ai.md |
+| draft | reports/themes/sovereign-ai/report.cycle-draft-theme-pool-104606-cycle-001-sovereign-ai.md |
+| draft_archive | reports/themes/sovereign-ai/drafts/theme-pool-104606-cycle-001-sovereign-ai.md |
 | theme_key | sovereign-ai |
 | seeded_canonical | False |
-| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 20509} |
+| quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 20518} |
 | returncode | 0 |
 
 ## Provider Notes

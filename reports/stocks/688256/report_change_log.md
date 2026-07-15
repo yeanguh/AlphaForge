@@ -167,6 +167,123 @@
 <!-- research-os-curation:stock:688256:theme-pool-213006:1 -->
 
 <!-- research-os-curation:stock:688256:theme-pool-214323:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-101418:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-101833:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-102550:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-103636:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-104343:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-104606:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-105349:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-105907:1 -->
+
+<!-- research-os-curation:stock:688256:theme-pool-110006:1 -->
+#### 2026-07-15T03:00:18.977566+00:00 · theme-pool-110006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:59:19.582540+00:00 · theme-pool-105907 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:54:03.069442+00:00 · theme-pool-105349 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:46:26.426959+00:00 · theme-pool-104606 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:44:03.699364+00:00 · theme-pool-104343 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:36:56.296542+00:00 · theme-pool-103636 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:26:16.506432+00:00 · theme-pool-102550 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:19:01.499984+00:00 · theme-pool-101833 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
+#### 2026-07-15T02:14:26.715990+00:00 · theme-pool-101418 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 估值快照:PE 326.2896 / PB 68.8758,区间 high,评分 1(PE/PB current snapshot + Vibe-Research historical valuation percentile)。
+- 商业模式:公告样本：寒武纪:股票交易风险提示公告
+- 催化:AI Agent时代来临，国产算力支撑AI建设;公司简评报告：全年业绩高增，关注下一代思元芯片商业化落地。
+- 风险:近30日未上龙虎榜或龙虎榜数据为空，席位确认不足。
+- 基本面:{'symbol': '688256', 'ts_code': '688256.SH', 'source': 'tushare_priority', 'upstream_provider': 'tushare', 'name': '688…
+- 资金面:{'symbol': '688256', 'source': 'tushare_priority', 'rows': [{'date': '2026-01-13', 'main_net_inflow': -225617.7, 'small…
+- 决策框架:动作 `reject_or_wait`,通过条件 3,最小风险收益比 2.0。
+
 #### 2026-07-14T13:43:34.093282+00:00 · theme-pool-214323 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

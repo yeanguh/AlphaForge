@@ -6,7 +6,7 @@
 | --- | --- |
 | theme_key | ai-commercialization |
 | selected_theme | ai-commercialization |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/ai-commercialization/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/ai-commercialization/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
 | report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18583} |
 | human_report_chars | 0 |
@@ -69,8 +69,8 @@
 | --- | --- |
 | report | reports/themes/ai-commercialization/report.md |
 | agent_report | reports/themes/ai-commercialization/agent_report.md |
-| draft | reports/themes/ai-commercialization/report.cycle-draft-theme-pool-214323-cycle-001-ai-commercialization.md |
-| draft_archive | reports/themes/ai-commercialization/drafts/theme-pool-214323-cycle-001-ai-commercialization.md |
+| draft | reports/themes/ai-commercialization/report.cycle-draft-theme-pool-104606-cycle-001-ai-commercialization.md |
+| draft_archive | reports/themes/ai-commercialization/drafts/theme-pool-104606-cycle-001-ai-commercialization.md |
 | theme_key | ai-commercialization |
 | seeded_canonical | False |
 | quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18583} |

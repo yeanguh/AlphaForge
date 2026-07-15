@@ -7,9 +7,9 @@
 <text x="46" y="177" font-size="16" font-weight="700" fill="#111827">工业富联</text>
 <text x="46" y="201" font-size="13" fill="#64748b">601138 · AI PC/手机</text>
 <line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="480.5" cy="170" r="12" fill="#2563eb"/>
-<text x="260" y="200" font-size="12" fill="#64748b">66.01</text>
-<text x="496.5" y="175" font-size="13" fill="#111827">69.53</text>
+<circle cx="453.9" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">61.50</text>
+<text x="469.9" y="175" font-size="13" fill="#111827">65.60</text>
 <text x="1090" y="200" font-size="12" fill="#64748b">79.90</text>
 <text x="46" y="239" font-size="16" font-weight="700" fill="#111827">闻泰科技</text>
 <text x="46" y="263" font-size="13" fill="#64748b">600745 · AI PC/手机</text>
@@ -63,17 +63,17 @@
 <text x="46" y="673" font-size="16" font-weight="700" fill="#111827">龙芯中科</text>
 <text x="46" y="697" font-size="13" fill="#64748b">688047 · NPU/SoC</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="599.0" cy="666" r="12" fill="#2563eb"/>
-<text x="260" y="696" font-size="12" fill="#64748b">144.34</text>
-<text x="615.0" y="671" font-size="13" fill="#111827">149.91</text>
+<circle cx="448.1" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">127.00</text>
+<text x="464.1" y="671" font-size="13" fill="#111827">133.84</text>
 <text x="1090" y="696" font-size="12" fill="#64748b">158.63</text>
 <text x="46" y="735" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
 <text x="46" y="759" font-size="13" fill="#64748b">002230 · 端侧模型部署</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="593.2" cy="728" r="12" fill="#2563eb"/>
-<text x="260" y="758" font-size="12" fill="#64748b">39.07</text>
-<text x="609.2" y="733" font-size="13" fill="#111827">41.18</text>
-<text x="1090" y="758" font-size="12" fill="#64748b">44.58</text>
+<circle cx="608.0" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">38.98</text>
+<text x="624.0" y="733" font-size="13" fill="#111827">41.18</text>
+<text x="1090" y="758" font-size="12" fill="#64748b">44.48</text>
 <text x="46" y="797" font-size="16" font-weight="700" fill="#111827">紫光股份</text>
 <text x="46" y="821" font-size="13" fill="#64748b">000938 · 端侧模型部署</text>
 <line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>

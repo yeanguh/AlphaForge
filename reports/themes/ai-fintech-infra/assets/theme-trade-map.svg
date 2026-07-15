@@ -42,10 +42,10 @@
 <text x="46" y="487" font-size="16" font-weight="700" fill="#111827">新大陆</text>
 <text x="46" y="511" font-size="13" fill="#64748b">000997 · 风控/反欺诈</text>
 <line x1="260" y1="480" x2="1130" y2="480" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="368.7" cy="480" r="12" fill="#2563eb"/>
+<circle cx="377.2" cy="480" r="12" fill="#2563eb"/>
 <text x="260" y="510" font-size="12" fill="#64748b">15.16</text>
-<text x="384.7" y="485" font-size="13" fill="#111827">15.61</text>
-<text x="1090" y="510" font-size="12" fill="#64748b">18.76</text>
+<text x="393.2" y="485" font-size="13" fill="#111827">15.61</text>
+<text x="1090" y="510" font-size="12" fill="#64748b">18.50</text>
 <text x="46" y="549" font-size="16" font-weight="700" fill="#111827">恒生电子</text>
 <text x="46" y="573" font-size="13" fill="#64748b">600570 · 金融IT</text>
 <line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T21:43:38.035142",
-  "payload_file": "runs/2026-07-14/theme-pool-214323/cycle-001/themes/datacenter-power/result.json",
+  "generated_at": "2026-07-15T10:46:38.559116",
+  "payload_file": "runs/2026-07-15/theme-pool-104606/cycle-001/themes/datacenter-power/result.json",
   "theme_key": "datacenter-power",
   "selected_theme": "datacenter-power",
   "evidence_ids": [
@@ -58,6 +58,6 @@
     "missing_sections": [],
     "image_count": 7,
     "todo_count": 0,
-    "char_count": 19253
+    "char_count": 19255
   }
 }

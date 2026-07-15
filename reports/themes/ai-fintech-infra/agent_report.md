@@ -6,7 +6,7 @@
 | --- | --- |
 | theme_key | ai-fintech-infra |
 | selected_theme | ai-fintech-infra |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/ai-fintech-infra/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/ai-fintech-infra/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
 | report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18294} |
 | human_report_chars | 0 |
@@ -69,8 +69,8 @@
 | --- | --- |
 | report | reports/themes/ai-fintech-infra/report.md |
 | agent_report | reports/themes/ai-fintech-infra/agent_report.md |
-| draft | reports/themes/ai-fintech-infra/report.cycle-draft-theme-pool-214323-cycle-001-ai-fintech-infra.md |
-| draft_archive | reports/themes/ai-fintech-infra/drafts/theme-pool-214323-cycle-001-ai-fintech-infra.md |
+| draft | reports/themes/ai-fintech-infra/report.cycle-draft-theme-pool-104606-cycle-001-ai-fintech-infra.md |
+| draft_archive | reports/themes/ai-fintech-infra/drafts/theme-pool-104606-cycle-001-ai-fintech-infra.md |
 | theme_key | ai-fintech-infra |
 | seeded_canonical | False |
 | quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18294} |

@@ -14,16 +14,16 @@
 <text x="46" y="239" font-size="16" font-weight="700" fill="#111827">泰格医药</text>
 <text x="46" y="263" font-size="13" fill="#64748b">300347 · AI制药</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="771.0" cy="232" r="12" fill="#2563eb"/>
+<circle cx="786.5" cy="232" r="12" fill="#2563eb"/>
 <text x="260" y="262" font-size="12" fill="#64748b">45.91</text>
-<text x="787.0" y="237" font-size="13" fill="#111827">48.70</text>
-<text x="1090" y="262" font-size="12" fill="#64748b">50.66</text>
+<text x="802.5" y="237" font-size="13" fill="#111827">48.70</text>
+<text x="1090" y="262" font-size="12" fill="#64748b">50.52</text>
 <text x="46" y="301" font-size="16" font-weight="700" fill="#111827">成都先导</text>
 <text x="46" y="325" font-size="13" fill="#64748b">688222 · AI制药</text>
 <line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="826.1" cy="294" r="12" fill="#2563eb"/>
-<text x="260" y="324" font-size="12" fill="#64748b">31.55</text>
-<text x="842.1" y="299" font-size="13" fill="#111827">35.52</text>
+<circle cx="826.8" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">31.54</text>
+<text x="842.8" y="299" font-size="13" fill="#111827">35.52</text>
 <text x="1090" y="324" font-size="12" fill="#64748b">37.65</text>
 <text x="46" y="363" font-size="16" font-weight="700" fill="#111827">联影医疗</text>
 <text x="46" y="387" font-size="13" fill="#64748b">688271 · 医疗影像</text>

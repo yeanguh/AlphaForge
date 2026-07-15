@@ -1052,7 +1052,8 @@ def ensure_history(supp: dict[str, Any], symbol: str, *, live_fetch: bool = Fals
     expected_date = a_stock_data.latest_expected_trade_date()
     rows = supp.get("price_history", {}).get("rows", []) if isinstance(supp.get("price_history"), dict) else []
     if rows:
-        if not a_stock_data.price_history_is_stale({"rows": rows}, expected_date=expected_date):
+        history = supp.get("price_history", {}) if isinstance(supp.get("price_history"), dict) else {"rows": rows}
+        if history.get("source") == a_stock_data.TUSHARE_QFQ_SOURCE and not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
             return
     if not live_fetch:
         try:
@@ -1102,7 +1103,9 @@ def technical_structure(quote: dict[str, Any], supp: dict[str, Any]) -> dict[str
     highs_all = [float(r["high"]) for r in clean]
     lows_all = [float(r["low"]) for r in clean]
     volumes = [float(r["volume"]) for r in clean if isinstance(r.get("volume"), (int, float))]
-    price = quote.get("price")
+    expected_date = a_stock_data.latest_expected_trade_date()
+    last_row = clean[-1] if clean and a_stock_data._compact_date(clean[-1].get("date")) == expected_date else {}
+    price = last_row.get("close") if last_row else quote.get("price")
     if not isinstance(price, (int, float)) and closes:
         price = closes[-1]
     price = float(price) if isinstance(price, (int, float)) else None

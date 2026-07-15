@@ -7,16 +7,16 @@
 <text x="46" y="177" font-size="16" font-weight="700" fill="#111827">科大讯飞</text>
 <text x="46" y="201" font-size="13" fill="#64748b">002230 · 垂直行业模型</text>
 <line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="593.2" cy="170" r="12" fill="#2563eb"/>
-<text x="260" y="200" font-size="12" fill="#64748b">39.07</text>
-<text x="609.2" y="175" font-size="13" fill="#111827">41.18</text>
-<text x="1090" y="200" font-size="12" fill="#64748b">44.58</text>
+<circle cx="608.0" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">38.98</text>
+<text x="624.0" y="175" font-size="13" fill="#111827">41.18</text>
+<text x="1090" y="200" font-size="12" fill="#64748b">44.48</text>
 <text x="46" y="239" font-size="16" font-weight="700" fill="#111827">金山办公</text>
 <text x="46" y="263" font-size="13" fill="#64748b">688111 · 垂直行业模型</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="454.6" cy="232" r="12" fill="#2563eb"/>
-<text x="260" y="262" font-size="12" fill="#64748b">216.82</text>
-<text x="470.6" y="237" font-size="13" fill="#111827">222.63</text>
+<circle cx="473.4" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">216.07</text>
+<text x="489.4" y="237" font-size="13" fill="#111827">222.63</text>
 <text x="1090" y="262" font-size="12" fill="#64748b">242.80</text>
 <text x="46" y="301" font-size="16" font-weight="700" fill="#111827">昆仑万维</text>
 <text x="46" y="325" font-size="13" fill="#64748b">300418 · 垂直行业模型</text>
@@ -35,9 +35,9 @@
 <text x="46" y="425" font-size="16" font-weight="700" fill="#111827">金山办公</text>
 <text x="46" y="449" font-size="13" fill="#64748b">688111 · 企业SaaS</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="454.6" cy="418" r="12" fill="#2563eb"/>
-<text x="260" y="448" font-size="12" fill="#64748b">216.82</text>
-<text x="470.6" y="423" font-size="13" fill="#111827">222.63</text>
+<circle cx="473.4" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">216.07</text>
+<text x="489.4" y="423" font-size="13" fill="#111827">222.63</text>
 <text x="1090" y="448" font-size="12" fill="#64748b">242.80</text>
 <text x="46" y="487" font-size="16" font-weight="700" fill="#111827">泛微网络</text>
 <text x="46" y="511" font-size="13" fill="#64748b">603039 · 企业SaaS</text>
@@ -63,10 +63,10 @@
 <text x="46" y="673" font-size="16" font-weight="700" fill="#111827">蓝色光标</text>
 <text x="46" y="697" font-size="13" fill="#64748b">300058 · 营销/内容生产</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="374.4" cy="666" r="12" fill="#2563eb"/>
+<circle cx="374.6" cy="666" r="12" fill="#2563eb"/>
 <text x="260" y="696" font-size="12" fill="#64748b">11.86</text>
-<text x="390.4" y="671" font-size="13" fill="#111827">12.42</text>
-<text x="1090" y="696" font-size="12" fill="#64748b">16.12</text>
+<text x="390.6" y="671" font-size="13" fill="#111827">12.42</text>
+<text x="1090" y="696" font-size="12" fill="#64748b">16.11</text>
 <text x="46" y="735" font-size="16" font-weight="700" fill="#111827">值得买</text>
 <text x="46" y="759" font-size="13" fill="#64748b">300785 · ROI/留存</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
@@ -77,10 +77,10 @@
 <text x="46" y="797" font-size="16" font-weight="700" fill="#111827">天下秀</text>
 <text x="46" y="821" font-size="13" fill="#64748b">600556 · ROI/留存</text>
 <line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="318.7" cy="790" r="12" fill="#2563eb"/>
+<circle cx="319.3" cy="790" r="12" fill="#2563eb"/>
 <text x="260" y="820" font-size="12" fill="#64748b">4.18</text>
-<text x="334.7" y="795" font-size="13" fill="#111827">4.24</text>
-<text x="1090" y="820" font-size="12" fill="#64748b">5.07</text>
+<text x="335.3" y="795" font-size="13" fill="#111827">4.24</text>
+<text x="1090" y="820" font-size="12" fill="#64748b">5.06</text>
 <text x="46" y="859" font-size="16" font-weight="700" fill="#111827">遥望科技</text>
 <text x="46" y="883" font-size="13" fill="#64748b">002291 · ROI/留存</text>
 <line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>

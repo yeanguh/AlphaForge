@@ -24,6 +24,7 @@ LOCAL_A_DATA = Path(os.environ.get("RESEARCH_OS_A_DATA_DIR", ROOT / "data" / "lo
 PROVIDER_NAME = "a-stock-data"
 PROVIDER_SUBMODULE = "skills/a-stock-data"
 TUSHARE_SOURCE = "tushare_priority"
+TUSHARE_QFQ_SOURCE = "tushare_qfq_pro_bar"
 _VIBE_ASTOCK_MODULE = None
 
 
@@ -76,6 +77,10 @@ def _history_cache_path(symbol: str) -> Path:
     return LOCAL_A_DATA / "hist" / f"{symbol}.csv"
 
 
+def _history_cache_meta_path(symbol: str) -> Path:
+    return LOCAL_A_DATA / "hist" / f"{symbol}.json"
+
+
 def _quote_cache_path(symbol: str) -> Path:
     return LOCAL_A_DATA / "quote" / f"{symbol}.json"
 
@@ -94,7 +99,7 @@ def _date_from_compact(value: str) -> datetime | None:
 def latest_expected_trade_date(now: datetime | None = None) -> str:
     now = now or datetime.now()
     candidate = now.date()
-    if now.weekday() >= 5 or now.time() < dt_time(15, 30):
+    if now.weekday() >= 5 or now.time() <= dt_time(15, 0):
         candidate = candidate - timedelta(days=1)
     while candidate.weekday() >= 5:
         candidate = candidate - timedelta(days=1)
@@ -102,7 +107,7 @@ def latest_expected_trade_date(now: datetime | None = None) -> str:
     try:
         cal = tushare_provider.query(
             "trade_cal",
-            {"exchange": "SSE", "start_date": (candidate - timedelta(days=10)).strftime("%Y%m%d"), "end_date": now.strftime("%Y%m%d")},
+            {"exchange": "SSE", "start_date": (candidate - timedelta(days=10)).strftime("%Y%m%d"), "end_date": fallback},
             "cal_date,is_open,pretrade_date",
             limit=15,
         )
@@ -316,7 +321,7 @@ def _history_rows_usable(rows: list[dict], *, min_rows: int = 20) -> bool:
     return len(usable) >= min_rows
 
 
-def _write_price_history_cache(symbol: str, rows: list[dict]) -> None:
+def _write_price_history_cache(symbol: str, rows: list[dict], *, source: str = "unknown", adjustment: str = "qfq") -> None:
     if not _history_rows_usable(rows, min_rows=5):
         return
     path = _history_cache_path(symbol)
@@ -337,6 +342,15 @@ def _write_price_history_cache(symbol: str, rows: list[dict]) -> None:
                     "涨跌幅": row.get("change_pct"),
                 }
             )
+    _history_cache_meta_path(symbol).write_text(
+        json.dumps(
+            {"symbol": symbol, "source": source, "adjustment": adjustment, "cached_at": datetime.now().isoformat()},
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
 
 
 def _tencent_a_quote(symbol: str = "600519") -> dict:
@@ -695,8 +709,8 @@ def fetch_price_history(symbol: str, days: int = 120) -> dict:
             )
     if not parsed:
         raise RuntimeError(f"Eastmoney kline returned empty data for {symbol}")
-    _write_price_history_cache(symbol, parsed)
-    return {"symbol": symbol, "source": "eastmoney_kline", "rows": parsed}
+    _write_price_history_cache(symbol, parsed, source="eastmoney_qfq_kline")
+    return {"symbol": symbol, "source": "eastmoney_qfq_kline", "adjustment": "qfq", "rows": parsed}
 
 
 def fetch_price_history_tushare(symbol: str, days: int = 120) -> dict:
@@ -704,13 +718,14 @@ def fetch_price_history_tushare(symbol: str, days: int = 120) -> dict:
     end = datetime.now()
     start = end - timedelta(days=max(days * 2, 240))
     rows = _tushare_rows_or_raise(
-        tushare_provider.query(
-            "daily",
-            {"ts_code": code, "start_date": _date_to_tushare(start), "end_date": _date_to_tushare(end)},
-            "ts_code,trade_date,open,high,low,close,vol,amount,pct_chg",
+        tushare_provider.query_pro_bar(
+            code,
+            start_date=_date_to_tushare(start),
+            end_date=_date_to_tushare(end),
+            adj="qfq",
             limit=days,
         ),
-        "daily",
+        "pro_bar",
     )
     parsed = [
         {
@@ -728,9 +743,10 @@ def fetch_price_history_tushare(symbol: str, days: int = 120) -> dict:
     parsed = [row for row in parsed if row.get("date")]
     parsed.sort(key=lambda row: str(row.get("date")))
     if not _history_rows_usable(parsed, min_rows=min(5, days)):
-        raise RuntimeError(f"Tushare daily history unusable for {symbol}")
-    _write_price_history_cache(symbol, parsed)
-    return {"symbol": symbol, "source": TUSHARE_SOURCE, "rows": parsed[-days:], "upstream_provider": "tushare"}
+        raise RuntimeError(f"Tushare qfq history unusable for {symbol}")
+    rows_out = parsed[-days:]
+    _write_price_history_cache(symbol, rows_out, source=TUSHARE_QFQ_SOURCE)
+    return {"symbol": symbol, "source": TUSHARE_QFQ_SOURCE, "adjustment": "qfq", "rows": rows_out, "upstream_provider": "tushare"}
 
 
 def fetch_price_history_tencent(symbol: str, days: int = 120) -> dict:
@@ -760,8 +776,8 @@ def fetch_price_history_tencent(symbol: str, days: int = 120) -> dict:
             )
     if not parsed:
         raise RuntimeError(f"Tencent kline returned empty data for {symbol}")
-    _write_price_history_cache(symbol, parsed)
-    return {"symbol": symbol, "source": "tencent_qfq_kline", "rows": parsed}
+    _write_price_history_cache(symbol, parsed, source="tencent_qfq_kline")
+    return {"symbol": symbol, "source": "tencent_qfq_kline", "adjustment": "qfq", "rows": parsed}
 
 
 def fetch_price_history_efinance(symbol: str, days: int = 120) -> dict:
@@ -791,8 +807,8 @@ def fetch_price_history_efinance(symbol: str, days: int = 120) -> dict:
         )
     if not _history_rows_usable(parsed):
         raise RuntimeError(f"efinance history unusable for {symbol}")
-    _write_price_history_cache(symbol, parsed)
-    return {"symbol": symbol, "source": "efinance_quote_history", "rows": parsed}
+    _write_price_history_cache(symbol, parsed, source="efinance_qfq_quote_history")
+    return {"symbol": symbol, "source": "efinance_qfq_quote_history", "adjustment": "qfq", "rows": parsed}
 
 
 def fetch_price_history_baostock(symbol: str, days: int = 120) -> dict:
@@ -841,14 +857,18 @@ def fetch_price_history_baostock(symbol: str, days: int = 120) -> dict:
         )
     if not _history_rows_usable(parsed):
         raise RuntimeError(f"baostock history unusable for {symbol}")
-    _write_price_history_cache(symbol, parsed)
-    return {"symbol": symbol, "source": "baostock_qfq_kline", "rows": parsed}
+    _write_price_history_cache(symbol, parsed, source="baostock_qfq_kline")
+    return {"symbol": symbol, "source": "baostock_qfq_kline", "adjustment": "qfq", "rows": parsed}
 
 
 def fetch_price_history_fallback(symbol: str, days: int = 120) -> dict:
     path = _history_cache_path(symbol)
     if not path.exists():
         raise RuntimeError(f"local hist missing for {symbol}: {path}")
+    meta_path = _history_cache_meta_path(symbol)
+    meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+    if meta.get("adjustment") != "qfq":
+        raise RuntimeError(f"local hist adjustment is not qfq for {symbol}: {path}")
     parsed = []
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
@@ -867,14 +887,14 @@ def fetch_price_history_fallback(symbol: str, days: int = 120) -> dict:
     rows = parsed[-days:]
     if not _history_rows_usable(rows, min_rows=min(5, days)):
         raise RuntimeError(f"local hist unusable for {symbol}: {path}")
-    return {"symbol": symbol, "source": "local_a_data_hist", "rows": rows}
+    return {"symbol": symbol, "source": "local_a_data_hist", "adjustment": "qfq", "rows": rows}
 
 
 def fetch_price_history_cached_or_live(symbol: str, days: int = 120, *, max_lag_days: int = 0) -> dict:
     cached: dict | None = None
     try:
         cached = fetch_price_history_fallback(symbol, days=days)
-        if not _history_is_stale(cached, max_lag_days=max_lag_days):
+        if not _history_is_stale(cached, max_lag_days=max_lag_days) and cached.get("source") == TUSHARE_QFQ_SOURCE:
             return cached
     except Exception:
         cached = None
@@ -1529,7 +1549,7 @@ def smoke(live: bool = False) -> ProviderResult:
             {
                 "path": _display_path(SUBMODULE),
                 "skill": _display_path(skill_path),
-                "adapter_strategy": "tushare -> tencent/eastmoney -> efinance/baostock -> configured local a-data cache",
+                "adapter_strategy": "tushare qfq -> tencent/eastmoney qfq -> efinance/baostock qfq -> configured qfq local cache",
                 "local_data_dir": _display_path(LOCAL_A_DATA),
             },
         )

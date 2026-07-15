@@ -31,6 +31,87 @@
 <!-- research-os-curation:weekly:theme-pool-213006:1 -->
 
 <!-- research-os-curation:weekly:theme-pool-214323:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-101418:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-101833:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-102550:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-103636:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-104343:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-104606:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-105349:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-105907:1 -->
+
+<!-- research-os-curation:weekly:theme-pool-110006:1 -->
+#### 2026-07-15T03:00:18.981916+00:00 · theme-pool-110006 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`huawei-npo-optical-interconnect`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:59:19.590702+00:00 · theme-pool-105907 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`huawei-npo-optical-interconnect`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:54:03.078338+00:00 · theme-pool-105349 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-server-chain`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:needs_improvement;P1=2,P2=3。
+
+#### 2026-07-15T02:46:26.429537+00:00 · theme-pool-104606 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:44:03.703569+00:00 · theme-pool-104343 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:36:56.305624+00:00 · theme-pool-103636 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:26:16.509042+00:00 · theme-pool-102550 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:19:01.502041+00:00 · theme-pool-101833 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
+#### 2026-07-15T02:14:26.719573+00:00 · theme-pool-101418 cycle 1
+
+- 增量强度:55;本轮状态:`ok`。
+- 主题:`ai-compute-infra`(分数 11)。
+- 复核结论:本地确定性评审用于验证 loop 输出完整性；正式投委会式 LLM debate 后续通过投委会复核模块接入。
+- 报告质量复核:pass;P1=0,P2=0。
+
 #### 2026-07-14T13:43:34.099600+00:00 · theme-pool-214323 cycle 1
 
 - 增量强度:55;本轮状态:`ok`。

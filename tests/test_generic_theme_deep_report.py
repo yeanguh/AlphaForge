@@ -176,6 +176,34 @@ class GenericThemeDeepReportTest(unittest.TestCase):
         self.assertIn("申菱环境", mapping_section)
         self.assertNotIn("贵州茅台", mapping_section)
 
+    def test_new_theme_pool_topics_have_specific_candidates(self) -> None:
+        self.assertEqual(gen.theme_meta("ai-server-chain")["label"], "AI 算力服务器产业链")
+        self.assertEqual(gen.theme_meta("huawei-npo-optical-interconnect")["label"], "华为 NPO 近封装光互连")
+        for key in ("ai-server-chain", "huawei-npo-optical-interconnect"):
+            blueprint = gen.theme_blueprint(key)
+            text = str(blueprint)
+            self.assertNotIn("待验证核心公司A", text)
+            self.assertGreaterEqual(len(blueprint["bottleneck_candidates"]), 4)
+
+    def test_huawei_npo_candidates_resolve_to_symbols_and_index(self) -> None:
+        for name in ("华工科技", "源杰科技", "长光华芯", "仕佳光子", "华丰科技", "立讯精密", "沃尔核材", "罗博特科", "光库科技"):
+            self.assertRegex(gen.KNOWN_A_SHARE_SYMBOLS.get(name, ""), r"^\d{6}$")
+        self.assertEqual(gen.market_index_for_link("NPO光引擎")[:2], ("931271.CSI", "通信设备主题"))
+        self.assertEqual(gen.market_index_for_link("高速连接器/线模组")[:2], ("931271.CSI", "通信设备主题"))
+
+    def test_bottleneck_company_records_dedupes_repeated_symbols(self) -> None:
+        payload = self._payload()
+        selected = gen.enrich_theme_selected("huawei-npo-optical-interconnect", {"selected_theme": "huawei-npo-optical-interconnect"})
+        with (
+            mock.patch.object(gen, "quote_from_payload", return_value={}),
+            mock.patch.object(gen, "supplement_from_payload", return_value={}),
+            mock.patch.object(gen, "live_company_data", return_value=({}, {}, [])),
+            mock.patch.object(gen, "ensure_price_history"),
+        ):
+            records = gen.bottleneck_company_records(selected, payload)
+        symbols = [row["symbol"] for row in records]
+        self.assertEqual(len(symbols), len(set(symbols)))
+
     def test_trade_kline_png_has_candle_content(self) -> None:
         history = []
         for idx in range(90):
@@ -217,6 +245,43 @@ class GenericThemeDeepReportTest(unittest.TestCase):
             )
 
             self.assertTrue(gen.png_has_chart_content(png))
+
+    def test_ensure_price_history_refreshes_non_tushare_history(self) -> None:
+        supplement = {
+            "price_history": {
+                "source": "tencent_qfq_kline",
+                "adjustment": "qfq",
+                "rows": [{"date": "2026-07-14", "open": 10, "close": 11, "high": 12, "low": 9}],
+            }
+        }
+        fresh = {
+            "source": "tushare_qfq_pro_bar",
+            "adjustment": "qfq",
+            "rows": [{"date": "2026-07-14", "open": 12, "close": 13, "high": 14, "low": 11}],
+        }
+        with (
+            mock.patch.object(gen.a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(gen.a_stock_data, "fetch_price_history_cached_or_live", return_value=fresh) as fetcher,
+        ):
+            gen.ensure_price_history(supplement, "600519", live_fetch=False)
+
+        self.assertEqual(supplement["price_history"]["source"], "tushare_qfq_pro_bar")
+        fetcher.assert_called_once_with("600519")
+
+    def test_technical_snapshot_prefers_expected_close_over_realtime_quote(self) -> None:
+        supplement = {
+            "price_history": {
+                "rows": [
+                    {"date": "2026-07-11", "open": 8, "close": 9, "high": 10, "low": 7},
+                    {"date": "2026-07-14", "open": 10, "close": 11, "high": 12, "low": 9, "change_pct": 1.2},
+                ]
+            }
+        }
+        with mock.patch.object(gen.a_stock_data, "latest_expected_trade_date", return_value="20260714"):
+            tech = gen.technical_snapshot({"price": 99, "change_pct": 9.9}, supplement)
+
+        self.assertEqual(tech["price"], 11.0)
+        self.assertEqual(tech["change_pct"], 1.2)
 
     def test_trade_chart_groups_merge_duplicate_symbol_sets(self) -> None:
         records = [

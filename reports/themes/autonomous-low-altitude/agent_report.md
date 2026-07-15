@@ -6,7 +6,7 @@
 | --- | --- |
 | theme_key | autonomous-low-altitude |
 | selected_theme | autonomous-low-altitude |
-| payload_file | runs/2026-07-14/theme-pool-214323/cycle-001/themes/autonomous-low-altitude/result.json |
+| payload_file | runs/2026-07-15/theme-pool-104606/cycle-001/themes/autonomous-low-altitude/result.json |
 | finished_at | 2026-07-14T09:25:27.125747+00:00 |
 | report_quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18531} |
 | human_report_chars | 0 |
@@ -69,8 +69,8 @@
 | --- | --- |
 | report | reports/themes/autonomous-low-altitude/report.md |
 | agent_report | reports/themes/autonomous-low-altitude/agent_report.md |
-| draft | reports/themes/autonomous-low-altitude/report.cycle-draft-theme-pool-214323-cycle-001-autonomous-low-altitude.md |
-| draft_archive | reports/themes/autonomous-low-altitude/drafts/theme-pool-214323-cycle-001-autonomous-low-altitude.md |
+| draft | reports/themes/autonomous-low-altitude/report.cycle-draft-theme-pool-104606-cycle-001-autonomous-low-altitude.md |
+| draft_archive | reports/themes/autonomous-low-altitude/drafts/theme-pool-104606-cycle-001-autonomous-low-altitude.md |
 | theme_key | autonomous-low-altitude |
 | seeded_canonical | False |
 | quality | {"passed": true, "missing_sections": [], "image_count": 7, "todo_count": 0, "char_count": 18531} |

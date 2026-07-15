@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T21:43:49.798836",
-  "payload_file": "runs/2026-07-14/theme-pool-214323/cycle-001/themes/sovereign-ai/result.json",
+  "generated_at": "2026-07-15T10:47:09.587468",
+  "payload_file": "runs/2026-07-15/theme-pool-104606/cycle-001/themes/sovereign-ai/result.json",
   "theme_key": "sovereign-ai",
   "selected_theme": "sovereign-ai",
   "evidence_ids": [
@@ -58,6 +58,6 @@
     "missing_sections": [],
     "image_count": 7,
     "todo_count": 0,
-    "char_count": 20509
+    "char_count": 20518
   }
 }
