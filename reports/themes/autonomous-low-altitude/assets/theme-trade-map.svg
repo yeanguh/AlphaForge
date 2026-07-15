@@ -4,88 +4,88 @@
 <text x="46" y="90" font-size="16" fill="#4b5563">横轴为支撑-现价-压力的相对位置；没有完整K线时用现价/前收降级估算，需后续证据校正。</text>
 <line x1="260" y1="132" x2="1130" y2="132" stroke="#cbd5e1" stroke-width="2"/>
 <text x="252" y="118" font-size="14" fill="#64748b">支撑</text><text x="672" y="118" font-size="14" fill="#64748b">现价</text><text x="1112" y="118" font-size="14" fill="#64748b">压力</text>
-<text x="46" y="177" font-size="16" font-weight="700" fill="#111827">中无人机</text>
-<text x="46" y="201" font-size="13" fill="#64748b">688297 · 智能驾驶</text>
+<text x="46" y="177" font-size="16" font-weight="700" fill="#111827">德赛西威</text>
+<text x="46" y="201" font-size="13" fill="#64748b">002920 · 智能驾驶</text>
 <line x1="260" y1="170" x2="1130" y2="170" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="170" r="12" fill="#2563eb"/>
-<text x="260" y="200" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="175" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="200" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">航天彩虹</text>
-<text x="46" y="263" font-size="13" fill="#64748b">002389 · 智能驾驶</text>
+<circle cx="493.5" cy="170" r="12" fill="#2563eb"/>
+<text x="260" y="200" font-size="12" fill="#64748b">76.93</text>
+<text x="509.5" y="175" font-size="13" fill="#111827">80.80</text>
+<text x="1090" y="200" font-size="12" fill="#64748b">91.35</text>
+<text x="46" y="239" font-size="16" font-weight="700" fill="#111827">中科创达</text>
+<text x="46" y="263" font-size="13" fill="#64748b">300496 · 智能驾驶</text>
 <line x1="260" y1="232" x2="1130" y2="232" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="232" r="12" fill="#2563eb"/>
-<text x="260" y="262" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="237" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="262" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">万丰奥威</text>
-<text x="46" y="325" font-size="13" fill="#64748b">002085 · 智能驾驶</text>
+<circle cx="368.1" cy="232" r="12" fill="#2563eb"/>
+<text x="260" y="262" font-size="12" fill="#64748b">51.91</text>
+<text x="384.1" y="237" font-size="13" fill="#111827">53.72</text>
+<text x="1090" y="262" font-size="12" fill="#64748b">66.48</text>
+<text x="46" y="301" font-size="16" font-weight="700" fill="#111827">四维图新</text>
+<text x="46" y="325" font-size="13" fill="#64748b">002405 · 智能驾驶</text>
 <line x1="260" y1="294" x2="1130" y2="294" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="294" r="12" fill="#2563eb"/>
-<text x="260" y="324" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="299" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="324" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">宗申动力</text>
-<text x="46" y="387" font-size="13" fill="#64748b">001696 · 智能驾驶</text>
+<circle cx="336.2" cy="294" r="12" fill="#2563eb"/>
+<text x="260" y="324" font-size="12" fill="#64748b">6.10</text>
+<text x="352.2" y="299" font-size="13" fill="#111827">6.22</text>
+<text x="1090" y="324" font-size="12" fill="#64748b">7.47</text>
+<text x="46" y="363" font-size="16" font-weight="700" fill="#111827">中无人机</text>
+<text x="46" y="387" font-size="13" fill="#64748b">688297 · eVTOL/无人机</text>
 <line x1="260" y1="356" x2="1130" y2="356" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="356" r="12" fill="#2563eb"/>
-<text x="260" y="386" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="361" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="386" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">中无人机</text>
-<text x="46" y="449" font-size="13" fill="#64748b">688297 · eVTOL/无人机</text>
+<circle cx="351.3" cy="356" r="12" fill="#2563eb"/>
+<text x="260" y="386" font-size="12" fill="#64748b">39.02</text>
+<text x="367.3" y="361" font-size="13" fill="#111827">39.95</text>
+<text x="1090" y="386" font-size="12" fill="#64748b">47.88</text>
+<text x="46" y="425" font-size="16" font-weight="700" fill="#111827">航天彩虹</text>
+<text x="46" y="449" font-size="13" fill="#64748b">002389 · eVTOL/无人机</text>
 <line x1="260" y1="418" x2="1130" y2="418" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="418" r="12" fill="#2563eb"/>
-<text x="260" y="448" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="423" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="448" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">航天彩虹</text>
-<text x="46" y="511" font-size="13" fill="#64748b">002389 · eVTOL/无人机</text>
+<circle cx="365.9" cy="418" r="12" fill="#2563eb"/>
+<text x="260" y="448" font-size="12" fill="#64748b">16.57</text>
+<text x="381.9" y="423" font-size="13" fill="#111827">16.90</text>
+<text x="1090" y="448" font-size="12" fill="#64748b">19.28</text>
+<text x="46" y="487" font-size="16" font-weight="700" fill="#111827">万丰奥威</text>
+<text x="46" y="511" font-size="13" fill="#64748b">002085 · eVTOL/无人机</text>
 <line x1="260" y1="480" x2="1130" y2="480" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="480" r="12" fill="#2563eb"/>
-<text x="260" y="510" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="485" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="510" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">万丰奥威</text>
-<text x="46" y="573" font-size="13" fill="#64748b">002085 · eVTOL/无人机</text>
+<circle cx="284.1" cy="480" r="12" fill="#2563eb"/>
+<text x="260" y="510" font-size="12" fill="#64748b">10.00</text>
+<text x="300.1" y="485" font-size="13" fill="#111827">10.10</text>
+<text x="1090" y="510" font-size="12" fill="#64748b">13.61</text>
+<text x="46" y="549" font-size="16" font-weight="700" fill="#111827">均胜电子</text>
+<text x="46" y="573" font-size="13" fill="#64748b">600699 · 感知/控制</text>
 <line x1="260" y1="542" x2="1130" y2="542" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="542" r="12" fill="#2563eb"/>
-<text x="260" y="572" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="547" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="572" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">宗申动力</text>
-<text x="46" y="635" font-size="13" fill="#64748b">001696 · eVTOL/无人机</text>
+<circle cx="296.3" cy="542" r="12" fill="#2563eb"/>
+<text x="260" y="572" font-size="12" fill="#64748b">20.06</text>
+<text x="312.3" y="547" font-size="13" fill="#111827">20.29</text>
+<text x="1090" y="572" font-size="12" fill="#64748b">25.58</text>
+<text x="46" y="611" font-size="16" font-weight="700" fill="#111827">保隆科技</text>
+<text x="46" y="635" font-size="13" fill="#64748b">603197 · 感知/控制</text>
 <line x1="260" y1="604" x2="1130" y2="604" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="604" r="12" fill="#2563eb"/>
-<text x="260" y="634" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="609" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="634" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">中无人机</text>
-<text x="46" y="697" font-size="13" fill="#64748b">688297 · 感知/控制</text>
+<circle cx="693.8" cy="604" r="12" fill="#2563eb"/>
+<text x="260" y="634" font-size="12" fill="#64748b">28.50</text>
+<text x="709.8" y="609" font-size="13" fill="#111827">29.62</text>
+<text x="1090" y="634" font-size="12" fill="#64748b">30.75</text>
+<text x="46" y="673" font-size="16" font-weight="700" fill="#111827">华测导航</text>
+<text x="46" y="697" font-size="13" fill="#64748b">300627 · 感知/控制</text>
 <line x1="260" y1="666" x2="1130" y2="666" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="666" r="12" fill="#2563eb"/>
-<text x="260" y="696" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="671" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="696" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="735" font-size="16" font-weight="700" fill="#111827">航天彩虹</text>
-<text x="46" y="759" font-size="13" fill="#64748b">002389 · 感知/控制</text>
+<circle cx="402.8" cy="666" r="12" fill="#2563eb"/>
+<text x="260" y="696" font-size="12" fill="#64748b">26.62</text>
+<text x="418.8" y="671" font-size="13" fill="#111827">27.37</text>
+<text x="1090" y="696" font-size="12" fill="#64748b">31.19</text>
+<text x="46" y="735" font-size="16" font-weight="700" fill="#111827">莱斯信息</text>
+<text x="46" y="759" font-size="13" fill="#64748b">688631 · 低空基础设施</text>
 <line x1="260" y1="728" x2="1130" y2="728" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="728" r="12" fill="#2563eb"/>
-<text x="260" y="758" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="733" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="758" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">万丰奥威</text>
-<text x="46" y="821" font-size="13" fill="#64748b">002085 · 感知/控制</text>
+<circle cx="324.5" cy="728" r="12" fill="#2563eb"/>
+<text x="260" y="758" font-size="12" fill="#64748b">38.73</text>
+<text x="340.5" y="733" font-size="13" fill="#111827">39.62</text>
+<text x="1090" y="758" font-size="12" fill="#64748b">50.74</text>
+<text x="46" y="797" font-size="16" font-weight="700" fill="#111827">四川九洲</text>
+<text x="46" y="821" font-size="13" fill="#64748b">000801 · 低空基础设施</text>
 <line x1="260" y1="790" x2="1130" y2="790" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
 <circle cx="260.0" cy="790" r="12" fill="#2563eb"/>
-<text x="260" y="820" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="795" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="820" font-size="12" fill="#64748b">1.00</text>
-<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">宗申动力</text>
-<text x="46" y="883" font-size="13" fill="#64748b">001696 · 感知/控制</text>
+<text x="260" y="820" font-size="12" fill="#64748b">10.96</text>
+<text x="276.0" y="795" font-size="13" fill="#111827">10.96</text>
+<text x="1090" y="820" font-size="12" fill="#64748b">13.60</text>
+<text x="46" y="859" font-size="16" font-weight="700" fill="#111827">深城交</text>
+<text x="46" y="883" font-size="13" fill="#64748b">301091 · 低空基础设施</text>
 <line x1="260" y1="852" x2="1130" y2="852" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
-<circle cx="260.0" cy="852" r="12" fill="#2563eb"/>
-<text x="260" y="882" font-size="12" fill="#64748b">0.00</text>
-<text x="276.0" y="857" font-size="13" fill="#111827">NA</text>
-<text x="1090" y="882" font-size="12" fill="#64748b">1.00</text>
+<circle cx="323.3" cy="852" r="12" fill="#2563eb"/>
+<text x="260" y="882" font-size="12" fill="#64748b">14.66</text>
+<text x="339.3" y="857" font-size="13" fill="#111827">14.93</text>
+<text x="1090" y="882" font-size="12" fill="#64748b">18.37</text>
 </svg>

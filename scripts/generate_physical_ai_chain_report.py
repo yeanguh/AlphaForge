@@ -1049,12 +1049,15 @@ def write_bar_svg(path: Path, rows: list[tuple[str, float, str]], title: str) ->
 
 
 def ensure_history(supp: dict[str, Any], symbol: str, *, live_fetch: bool = False) -> None:
+    expected_date = a_stock_data.latest_expected_trade_date()
     rows = supp.get("price_history", {}).get("rows", []) if isinstance(supp.get("price_history"), dict) else []
     if rows:
-        return
+        history = supp.get("price_history", {}) if isinstance(supp.get("price_history"), dict) else {"rows": rows}
+        if history.get("source") == a_stock_data.TUSHARE_QFQ_SOURCE and not a_stock_data.price_history_is_stale(history, expected_date=expected_date):
+            return
     if not live_fetch:
         try:
-            fetched = a_stock_data.fetch_price_history_fallback(symbol)
+            fetched = a_stock_data.fetch_price_history_cached_or_live(symbol)
             fetched_rows = fetched.get("rows", []) if isinstance(fetched, dict) else []
             if fetched_rows:
                 supp["price_history"] = fetched
@@ -1072,8 +1075,10 @@ def ensure_history(supp: dict[str, Any], symbol: str, *, live_fetch: bool = Fals
             fetched = fetcher(symbol)
             fetched_rows = fetched.get("rows", []) if isinstance(fetched, dict) else []
             if fetched_rows:
-                supp["price_history"] = fetched
-                return
+                if not a_stock_data.price_history_is_stale(fetched, expected_date=expected_date):
+                    supp["price_history"] = fetched
+                    return
+                supp.setdefault("errors", []).append(f"{label}:stale_before_{expected_date}")
         except Exception as exc:  # noqa: BLE001
             supp.setdefault("errors", []).append(f"{label}: {exc!r}")
 
@@ -1098,7 +1103,9 @@ def technical_structure(quote: dict[str, Any], supp: dict[str, Any]) -> dict[str
     highs_all = [float(r["high"]) for r in clean]
     lows_all = [float(r["low"]) for r in clean]
     volumes = [float(r["volume"]) for r in clean if isinstance(r.get("volume"), (int, float))]
-    price = quote.get("price")
+    expected_date = a_stock_data.latest_expected_trade_date()
+    last_row = clean[-1] if clean and a_stock_data._compact_date(clean[-1].get("date")) == expected_date else {}
+    price = last_row.get("close") if last_row else quote.get("price")
     if not isinstance(price, (int, float)) and closes:
         price = closes[-1]
     price = float(price) if isinstance(price, (int, float)) else None
@@ -1616,9 +1623,6 @@ def main() -> None:
             "高" if item in announcements else "中-高",
             source_url(item),
         ])
-    for row in provider_rows:
-        source_rows.append([row[0], row[2], payload.get("finished_at", ""), f"外部复核/{row[1]}", row[5]])
-
     source_entries = [
         {
             "claim": "绿的谐波最新公告包含股票交易风险提示，是高估值核心候选需要等待证据的关键反证线索",
@@ -1710,7 +1714,7 @@ def main() -> None:
         f"2. 绿的谐波仍是精密传动主研究位，但 PE {fmt(focus_quote.get('pe'))} 已经把远期成长打得很满；如果后续没有机器人订单、客户认证或收入占比证据，它只能是高波动卡口股，不是无条件龙头。\n"
         f"3. 核心跟踪标的不应只剩一只。本报告把 {selected_names} 作为上游核心部件主线跟踪，并把公司分为绝对核心龙头、高弹性二线和主题观察三层；只有“产业证据 + 股价位置”同时转强，才进入可执行机会。\n"
         "4. 买点不能靠一句“机器人量产”判断，必须同时满足三件事：订单/客户/收入证据补强、估值消化到可解释区间、价格结构从单边下跌转为企稳修复。否则只是主题波动，不是产业链买点，风险收益比不成立。\n"
-        "5. 宁德时代、贵州茅台等样本不能被混入主线。宁德时代可作为工程机械电动化和储能资本开支的侧面验证，贵州茅台只能作为市场风险偏好温度计，不能提供物理 AI 产业链证据。",
+        "5. 只有主题热度、缺少机器人订单/客户认证/收入占比的样本不能进入主线；相邻链路只作为需求侧辅助验证，不进入核心公司映射。",
         "## 1. 研究对象、边界与口径\n\n" + md_table(
             ["项目", "定义"],
             [
@@ -1739,8 +1743,7 @@ def main() -> None:
         + "\n\n"
         + md_table(["事实类型", "硬事实/线索", "涉及节点", "涉及公司", "数值/时间", "来源", "证据强度", "交易含义"], hard_fact_table_rows)
         + f"\n\n### 证据密度评分\n\n![证据密度评分](assets/{density_png.name})\n\n"
-        + md_table(["维度", "数量/评分", "口径", "含义"], density_rows)
-        + ("\n\n### 外部复核与数据路由\n\n" + md_table(["来源", "状态", "复用能力", "本轮信息", "降级策略", "证据id"], provider_rows) if provider_rows else ""),
+        + md_table(["维度", "数量/评分", "口径", "含义"], density_rows),
         "## 3. 产业链全景图谱\n\n![产业链投研拆解图](assets/physical-ai-chain-map.png)\n\n"
         "### 核心节点三公司校验\n\n"
         + md_table(["产业链节点", "至少三家核心受益/候选公司", "为什么重要", "反证风险"], node_three_rows)
@@ -1777,6 +1780,15 @@ def main() -> None:
                 ["伺服/电机/控制器", "供应商较多但高端产品分化", "中；需要客户和场景适配", "替代较减速器更容易", "是，但壁垒分化", "重要配套"],
                 ["本体与系统集成", "竞争者较多", "中；工程交付为主", "替代较多", "是，但利润池可能分散", "普通受益/核心需验证"],
                 ["新能源/储能", "龙头集中但不在主链", "长", "与机器人核心部件替代关系弱", "间接", "相邻链路"],
+            ],
+        )
+        + "\n\n### 瓶颈四标准校验\n\n"
+        + md_table(
+            ["候选环节", "不可替代", "供给刚性", "寡头垄断", "机构低配", "反证条件"],
+            [
+                ["减速器/丝杠", "高", "中高", "中", "待核验", "客户切换加快、替代供应商通过认证、订单和收入占比不兑现"],
+                ["伺服/电机/控制器", "中", "中", "中低", "待核验", "价格竞争加剧、毛利率下行、客户认证不能转为订单"],
+                ["本体与系统集成", "中低", "中", "中低", "待核验", "整机竞争分散、交付利润率不足、核心部件外采导致利润外流"],
             ],
         ),
         "## 7. A股公司映射与核心地位判断\n\n" + md_table(

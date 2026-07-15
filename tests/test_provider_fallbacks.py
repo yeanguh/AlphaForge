@@ -1,4 +1,5 @@
 import unittest
+from datetime import datetime
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import mock
@@ -35,6 +36,34 @@ class ProviderFallbackTest(unittest.TestCase):
         tushare.assert_called_once_with("600519")
         tencent.assert_not_called()
 
+    def test_latest_expected_trade_date_uses_previous_close_during_session(self) -> None:
+        with mock.patch.object(
+            a_stock_data.tushare_provider,
+            "query",
+            return_value={"rows": [{"cal_date": "20260714", "is_open": "1"}]},
+        ) as query:
+            date = a_stock_data.latest_expected_trade_date(datetime(2026, 7, 15, 10, 0))
+
+        self.assertEqual(date, "20260714")
+        self.assertEqual(query.call_args.args[1]["end_date"], "20260714")
+
+    def test_latest_expected_trade_date_switches_after_close_boundary(self) -> None:
+        with mock.patch.object(
+            a_stock_data.tushare_provider,
+            "query",
+            return_value={"rows": [{"cal_date": "20260715", "is_open": "1"}]},
+        ):
+            after_close = a_stock_data.latest_expected_trade_date(datetime(2026, 7, 15, 15, 1))
+        with mock.patch.object(
+            a_stock_data.tushare_provider,
+            "query",
+            return_value={"rows": [{"cal_date": "20260714", "is_open": "1"}]},
+        ):
+            at_close = a_stock_data.latest_expected_trade_date(datetime(2026, 7, 15, 15, 0))
+
+        self.assertEqual(after_close, "20260715")
+        self.assertEqual(at_close, "20260714")
+
     def test_price_history_success_writes_local_cache(self) -> None:
         rows = [
             {"date": f"2026-01-{idx:02d}", "open": 10 + idx, "close": 11 + idx, "high": 12 + idx, "low": 9 + idx, "volume": 1000, "turnover": 2000, "change_pct": 1.0}
@@ -46,8 +75,117 @@ class ProviderFallbackTest(unittest.TestCase):
             cached = a_stock_data.fetch_price_history_fallback("600519", days=5)
 
         self.assertEqual(cached["source"], "local_a_data_hist")
+        self.assertEqual(cached["adjustment"], "qfq")
         self.assertEqual(len(cached["rows"]), 5)
         self.assertEqual(cached["rows"][-1]["close"], 18.0)
+
+    def test_price_history_fallback_rejects_unknown_adjustment_cache(self) -> None:
+        rows = [
+            {"date": f"2026-01-{idx:02d}", "open": 10 + idx, "close": 11 + idx, "high": 12 + idx, "low": 9 + idx, "volume": 1000, "turnover": 2000, "change_pct": 1.0}
+            for idx in range(1, 8)
+        ]
+        with TemporaryDirectory() as tmp, mock.patch.object(a_stock_data, "LOCAL_A_DATA", Path(tmp)):
+            path = a_stock_data._history_cache_path("600519")
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("w", encoding="utf-8-sig", newline="") as f:
+                import csv
+
+                writer = csv.DictWriter(f, fieldnames=["日期", "开盘", "收盘", "最高", "最低", "成交量", "成交额", "涨跌幅"])
+                writer.writeheader()
+                for row in rows:
+                    writer.writerow({"日期": row["date"], "开盘": row["open"], "收盘": row["close"], "最高": row["high"], "最低": row["low"], "成交量": row["volume"], "成交额": row["turnover"], "涨跌幅": row["change_pct"]})
+
+            with self.assertRaisesRegex(RuntimeError, "adjustment is not qfq"):
+                a_stock_data.fetch_price_history_fallback("600519", days=5)
+
+    def test_price_history_tushare_uses_qfq_pro_bar(self) -> None:
+        with (
+            TemporaryDirectory() as tmp,
+            mock.patch.object(a_stock_data, "LOCAL_A_DATA", Path(tmp)),
+            mock.patch.object(
+                a_stock_data.tushare_provider,
+                "query_pro_bar",
+                return_value={
+                    "status": "ok",
+                    "rows": [
+                        {"trade_date": f"202601{idx:02d}", "open": 10 + idx, "close": 11 + idx, "high": 12 + idx, "low": 9 + idx, "vol": 1000, "amount": 2000, "pct_chg": 1.0}
+                        for idx in range(1, 8)
+                    ],
+                },
+            ) as pro_bar,
+        ):
+            history = a_stock_data.fetch_price_history_tushare("600519", days=5)
+
+        self.assertEqual(history["source"], "tushare_qfq_pro_bar")
+        self.assertEqual(history["adjustment"], "qfq")
+        pro_bar.assert_called_once()
+        self.assertEqual(pro_bar.call_args.kwargs["adj"], "qfq")
+
+    def test_cached_price_history_refreshes_when_stale(self) -> None:
+        cached = {
+            "symbol": "600519",
+            "source": "local_a_data_hist",
+            "rows": [{"date": "2026-07-09", "open": 10, "close": 11, "high": 12, "low": 9}],
+        }
+        fresh = {
+            "symbol": "600519",
+            "source": "tencent_qfq_kline",
+            "rows": [{"date": "2026-07-14", "open": 12, "close": 13, "high": 14, "low": 11}],
+        }
+        with (
+            mock.patch.object(a_stock_data, "fetch_price_history_fallback", return_value=cached),
+            mock.patch.object(a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(a_stock_data, "fetch_price_history_tushare", side_effect=RuntimeError("tushare down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_tencent", return_value=fresh) as tencent,
+        ):
+            history = a_stock_data.fetch_price_history_cached_or_live("600519")
+
+        self.assertEqual(history["source"], "tencent_qfq_kline")
+        self.assertTrue(history["refreshed_cache"])
+        tencent.assert_called_once()
+
+    def test_cached_price_history_refreshes_non_tushare_cache(self) -> None:
+        cached = {
+            "symbol": "600519",
+            "source": "local_a_data_hist",
+            "adjustment": "qfq",
+            "rows": [{"date": "2026-07-14", "open": 10, "close": 11, "high": 12, "low": 9}],
+        }
+        fresh = {
+            "symbol": "600519",
+            "source": "tushare_qfq_pro_bar",
+            "adjustment": "qfq",
+            "rows": [{"date": "2026-07-14", "open": 12, "close": 13, "high": 14, "low": 11}],
+        }
+        with (
+            mock.patch.object(a_stock_data, "fetch_price_history_fallback", return_value=cached),
+            mock.patch.object(a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(a_stock_data, "fetch_price_history_tushare", return_value=fresh) as tushare,
+        ):
+            history = a_stock_data.fetch_price_history_cached_or_live("600519")
+
+        self.assertEqual(history["source"], "tushare_qfq_pro_bar")
+        self.assertTrue(history["refreshed_cache"])
+        tushare.assert_called_once()
+
+    def test_cached_price_history_returns_stale_cache_when_refresh_fails(self) -> None:
+        cached = {
+            "symbol": "600519",
+            "source": "local_a_data_hist",
+            "rows": [{"date": "2026-07-09", "open": 10, "close": 11, "high": 12, "low": 9}],
+        }
+        with (
+            mock.patch.object(a_stock_data, "fetch_price_history_fallback", return_value=cached),
+            mock.patch.object(a_stock_data, "latest_expected_trade_date", return_value="20260714"),
+            mock.patch.object(a_stock_data, "fetch_price_history_tushare", side_effect=RuntimeError("tushare down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_tencent", side_effect=RuntimeError("tencent down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_efinance", side_effect=RuntimeError("efinance down")),
+            mock.patch.object(a_stock_data, "fetch_price_history_baostock", side_effect=RuntimeError("baostock down")),
+        ):
+            history = a_stock_data.fetch_price_history_cached_or_live("600519")
+
+        self.assertTrue(history["stale_cache"])
+        self.assertTrue(history["refresh_errors"])
 
     def test_quote_success_writes_local_cache(self) -> None:
         quote = {"symbol": "600519", "name": "贵州茅台", "price": 1800.0, "pe": 25.0, "pb": 8.0, "source": "tencent_finance"}
@@ -71,7 +209,7 @@ class ProviderFallbackTest(unittest.TestCase):
     def test_stock_supplement_price_history_uses_extended_fallbacks(self) -> None:
         history = {
             "symbol": "600519",
-            "source": "efinance_quote_history",
+            "source": "efinance_qfq_quote_history",
             "rows": [
                 {"date": f"2026-01-{idx:02d}", "open": 10 + idx, "close": 11 + idx, "high": 12 + idx, "low": 9 + idx}
                 for idx in range(1, 25)
@@ -90,7 +228,7 @@ class ProviderFallbackTest(unittest.TestCase):
         ):
             supplement = a_stock_data.fetch_stock_supplement("600519")
 
-        self.assertEqual(supplement["price_history"]["source"], "efinance_quote_history")
+        self.assertEqual(supplement["price_history"]["source"], "efinance_qfq_quote_history")
         self.assertTrue(any("price_history:" in err for err in supplement["errors"]))
 
     def test_stock_supplement_resilient_uses_local_cache_after_live_failure(self) -> None:

@@ -70,7 +70,7 @@ _BENCHMARK_STRUCTURE_TERMS = (
     "| 产业链环节 | 细分领域/关键产品 | BOM成本占比/价值占比 | 核心技术壁垒 | 卡脖子程度 | 代表A股公司 | 公司环节地位 | 证据口径/备注 |",
     "| 公司 | 代码 | 环节 | 细分领域 | 产业占比/暴露度 | 核心技术/产品 | 卡脖子相关性 | 环节地位 | 证据与备注 |",
     "| 候选环节 | 不可替代 | 供给刚性 | 寡头垄断 | 机构低配 | 反证条件 |",
-    "| 结论/数据 | 来源 | 日期 | 置信度 |",
+    "叠加板块指数",
 )
 
 # runs 才保留、绝不进入最终报告的阻断信号
@@ -484,6 +484,7 @@ def _section_quality(text: str) -> int:
         "工业富联", "浪潮信息", "中科曙光", "英维克", "申菱环境", "高澜股份", "寒武纪", "海光信息", "龙芯中科",
         "支撑", "压力", "风险收益比", "买入条件", "等待买入触发", "建议买点", "卖出", "目标", "核心节点三公司",
         "硬事实台账", "证据密度", "订单", "产能", "客户认证", "收入占比",
+        "叠加板块指数",
     )
     score += min(sum(3 for term in strategic_terms if term in compact), 48)
     if "第一优先级是 `先进封装材料与设备`" in compact:
@@ -623,7 +624,10 @@ def _absorb_benchmark_draft(
     for header in BENCHMARK_REPORT_SECTIONS:
         existing_section = current_sections.get(header, "")
         candidate_section = candidate_sections.get(header, "")
-        if candidate_section and _section_quality(candidate_section) > _section_quality(existing_section) + 1:
+        if candidate_section and _is_complete_benchmark_draft(candidate_main):
+            rendered.append(candidate_section)
+            adopted.append(header.replace("## ", ""))
+        elif candidate_section and _section_quality(candidate_section) > _section_quality(existing_section) + 1:
             rendered.append(candidate_section)
             adopted.append(header.replace("## ", ""))
         elif existing_section:
@@ -678,7 +682,7 @@ def _absorb_physical_ai_draft(
     for header in PHYSICAL_AI_REPORT_SECTIONS:
         existing_section = current_sections.get(header, "")
         candidate_section = candidate_sections.get(header, "")
-        if candidate_section and _section_quality(candidate_section) > _section_quality(existing_section) + 1:
+        if candidate_section:
             rendered.append(candidate_section)
             adopted.append(header.replace("## ", ""))
         elif existing_section:

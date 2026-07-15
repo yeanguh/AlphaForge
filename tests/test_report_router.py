@@ -222,7 +222,7 @@ class ReportRouterTest(unittest.TestCase):
             encoding="utf-8",
         )
         (report.parent / "assets").mkdir()
-        for name in ("theme-chain-map.svg", "theme-bottleneck-priority.svg", "theme-stock-valuation.svg"):
+        for name in ("theme-chain-map.svg", "theme-bottleneck-priority.svg", "theme-stock-valuation.svg", "theme-trade-map-1-group.svg"):
             (report.parent / "assets" / name).write_text("<svg></svg>", encoding="utf-8")
         draft = self.root / "runs" / "run-A" / "cycle-001" / "deep-draft.md"
         draft.write_text(
@@ -241,7 +241,7 @@ class ReportRouterTest(unittest.TestCase):
             "| --- | --- | --- | --- | --- | --- |\n"
             "| 先进封装材料与设备 | 待验证 | 是 | 待验证 | 待验证 | 收入暴露不足 |\n\n"
             "## 投资机会挖掘\n\n### 瓶颈识别\n\n![卡口优先级](assets/theme-bottleneck-priority.svg)\n\n- 先进封装材料与设备是第一候选。\n\n### 可交易标的筛选\n\n- 直接暴露优先。\n\n"
-            "## A股可交易标的估值对比\n\n![A股候选估值图](assets/theme-stock-valuation.svg)\n\n| 公司 | 代码 | 产业链位置 | 当前估值 | 财务/订单信号 | 催化 | 买点条件 | 失效条件 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 兴森科技 | 002436 | 封装基板 | 待验证 | 待公告验证 | 订单 | 放量 | 无收入暴露 |\n\n"
+            "## A股可交易标的估值对比\n\n![A股候选估值图](assets/theme-stock-valuation.svg)\n\n### 先进封装材料与设备核心三公司K线\n\n![先进封装材料与设备核心三公司K线](assets/theme-trade-map-1-group.svg)\n\n叠加板块指数：半导体材料设备 931743.CSI；来源：tushare.index_daily。\n\n| 公司 | 代码 | 产业链位置 | 当前估值 | 财务/订单信号 | 催化 | 买点条件 | 失效条件 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 兴森科技 | 002436 | 封装基板 | 待验证 | 待公告验证 | 订单 | 放量 | 无收入暴露 |\n\n"
             "## 核心个股交易跟踪\n\n| 公司 | 代码 | 产业链位置 | 估值 | 财务质量 | 趋势结构 | 关键位 | 建议买点 | 止损/失效 | 建议卖点/目标 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 兴森科技 | 002436 | 封装基板 | PE 50 | 营收同比 10% | 短线强势；风险收益比2.0 | 支撑 10；压力 12 | 建议买点：10附近企稳 | 跌破10 | 建议卖点：接近12 |\n\n"
             "## 产业链 / 竞争格局\n\n### A股公司映射与核心地位判断\n\n"
             "| 公司 | 代码 | 环节 | 细分领域 | 产业占比/暴露度 | 核心技术/产品 | 卡脖子相关性 | 环节地位 | 证据与备注 |\n"

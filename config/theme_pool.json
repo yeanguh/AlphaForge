@@ -59,6 +59,53 @@
       ],
       "label": "数据中心电力与能源约束"
     },
+    "ai-server-chain": {
+      "tier": "core",
+      "aliases": [
+        "ai_server_chain",
+        "ai服务器",
+        "算力服务器",
+        "gpu服务器",
+        "ai整柜",
+        "智算集群"
+      ],
+      "discovery_keywords": [
+        "AI服务器",
+        "算力服务器",
+        "GPU服务器",
+        "AI整柜",
+        "智算集群",
+        "ODM",
+        "PCB",
+        "CCL",
+        "液冷",
+        "光互连"
+      ],
+      "label": "AI 算力服务器产业链"
+    },
+    "huawei-npo-optical-interconnect": {
+      "tier": "watch",
+      "aliases": [
+        "huawei_npo",
+        "npo光互连",
+        "near package optics",
+        "open npo",
+        "华为npo",
+        "近封装光学"
+      ],
+      "discovery_keywords": [
+        "华为NPO",
+        "OPEN NPO",
+        "NPO光互连",
+        "Near Package Optics",
+        "近封装光学",
+        "光引擎",
+        "硅光",
+        "高速连接器",
+        "CPO"
+      ],
+      "label": "华为 NPO 近封装光互连"
+    },
     "physical-ai": {
       "tier": "core",
       "aliases": [

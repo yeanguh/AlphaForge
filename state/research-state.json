@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10T10:58:26.640701+00:00",
+  "updated_at": "2026-07-14T09:25:21.950624+00:00",
   "loops": {
     "full_loop": {
       "status": "ok",
-      "last_run_id": "full-loop-185510",
+      "last_run_id": "full-loop-172346",
       "last_cycle": 1,
-      "last_run_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_run_at": "2026-07-14T09:25:21.950624+00:00",
       "next_action": "continue_loop",
       "evidence_count": 48
     }
@@ -942,30 +942,20 @@
       "id": "theme-58d68f50f6c7",
       "name": "ai-compute-infra",
       "status": "tracking",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
-      "signal_count": 18,
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
+      "signal_count": 11,
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "run_industry_chain_validation",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "signal_count": 12
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "signal_count": 12
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -1055,6 +1045,16 @@
           "at": "2026-07-10T10:58:26.640701+00:00",
           "cycle": 1,
           "signal_count": 18
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "signal_count": 11
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "signal_count": 11
         }
       ]
     },
@@ -1062,30 +1062,20 @@
       "id": "theme-2ef8f81a6858",
       "name": "agentic-ai",
       "status": "tracking",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
-      "signal_count": 2,
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
+      "signal_count": 8,
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "run_industry_chain_validation",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "signal_count": 3
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "signal_count": 3
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -1175,37 +1165,37 @@
           "at": "2026-07-10T10:58:26.640701+00:00",
           "cycle": 1,
           "signal_count": 2
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "signal_count": 8
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "signal_count": 8
         }
       ]
     },
     {
       "id": "theme-0c4ab3919c34",
       "name": "ai-industrial-software",
-      "status": "discovered",
-      "last_seen_at": "2026-07-09T21:49:04.875384+00:00",
-      "signal_count": 1,
+      "status": "tracking",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
+      "signal_count": 2,
       "evidence_ids": [
-        "ev-market-cn-8fd9f00888b7",
-        "ev-market-cn-1586f85025e6",
-        "ev-market-cn-c52a8df55e2f",
-        "ev-market-cn-ca96184a7e68",
-        "ev-market-cn-d31ca00576d0",
-        "ev-market-cn-8210c69dd0fd",
-        "ev-market-cn-c17a59d2bba0",
-        "ev-market-global-0922d575b249"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "run_industry_chain_validation",
       "history": [
-        {
-          "at": "2026-07-09T20:16:49.616446+00:00",
-          "cycle": 62,
-          "signal_count": 1
-        },
-        {
-          "at": "2026-07-09T20:21:41.634080+00:00",
-          "cycle": 63,
-          "signal_count": 1
-        },
         {
           "at": "2026-07-09T20:26:51.961940+00:00",
           "cycle": 64,
@@ -1295,6 +1285,16 @@
           "at": "2026-07-09T21:49:04.875384+00:00",
           "cycle": 1,
           "signal_count": 1
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "signal_count": 2
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "signal_count": 2
         }
       ]
     },
@@ -1565,6 +1565,36 @@
           "at": "2026-07-10T10:58:26.640701+00:00",
           "cycle": 1,
           "signal_count": 1
+        }
+      ]
+    },
+    {
+      "id": "theme-7a7126367db5",
+      "name": "space-defense-ai",
+      "status": "tracking",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
+      "signal_count": 3,
+      "evidence_ids": [
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
+      ],
+      "next_action": "run_industry_chain_validation",
+      "history": [
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "signal_count": 3
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "signal_count": 3
         }
       ]
     }

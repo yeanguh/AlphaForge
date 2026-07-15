@@ -21,6 +21,39 @@ uv run python scripts/run_harness.py --live
 
 输出会写入 `runs/YYYY-MM-DD/`。
 
+## 可选 Vibe-Trading agent runtime
+
+Vibe-Trading 的完整 agent/API/MCP 依赖较重，并且与默认 A 股增强依赖 `mootdx` 的 `httpx` 版本约束冲突，所以不并入默认 `uv.lock`。需要运行 upstream agent 能力时，使用独立的 uv requirements：
+
+```bash
+PYTHONPATH=external/Vibe-Trading/agent \
+  uv run --no-project --with-requirements requirements/vibe-trading.txt \
+  python - <<'PY'
+from src.agent.skills import SkillsLoader
+import api_server
+import mcp_server
+print(len(SkillsLoader().skills), api_server.app.title, mcp_server.APP_VERSION)
+PY
+```
+
+若要把依赖装进当前 `.venv`：
+
+```bash
+uv pip install --python .venv/bin/python -r requirements/vibe-trading.txt
+uv pip install --python .venv/bin/python --no-deps -e external/Vibe-Trading
+```
+
+在完整 loop 中默认不会启动 Vibe-Trading sidecar。需要启用时设置：
+
+```bash
+VIBE_TRADING_ENABLED=1 VIBE_TRADING_TIMEOUT_SECONDS=60 \
+  uv run python scripts/run_full_loop.py --max-cycles 1 --agent-mode deterministic
+```
+
+启用后，`providers/open_source/vibe_trading.py` 会用 subprocess 运行 `scripts/run_vibe_trading_agent.py`，输出写入 `research_pipeline.provider_insights.providers.vibe_trading_agent`，并由 evidence service 生成 provider evidence card；sidecar 失败只返回 `warn`，不会中断主 loop。
+
+`requirements/vibe-trading.txt` 由 `uv pip compile requirements/vibe-trading.in --output-file requirements/vibe-trading.txt --python-version 3.12` 生成。当前刻意排除了 `smartmoneyconcepts`，因为它的 PyPI 依赖链会拉取元数据损坏的 `zigzag==0.3.2`；这只影响 SMC 信号 skill，不影响 Vibe-Trading 的 CLI、API、MCP、skills loader、数据 loader、回测和 shadow account 主体能力。
+
 报告类产物统一写入 `reports/`（方案 A：主题池是 loop 持续沉淀的最终知识库）：
 
 - `reports/themes/<theme>/report.md`：**canonical final reports**——由每日 loop 持续精炼的最终研报，是最终研究资产。每篇可带 `assets/`（图片）。主题键与 `config/theme_pool.json` 一致（如 `physical-ai`）。

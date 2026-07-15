@@ -1,39 +1,27 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10T10:58:26.640701+00:00",
+  "updated_at": "2026-07-14T09:25:21.950624+00:00",
   "watchlist": [
     {
       "id": "watch-fa16fa948a40",
       "symbol": "600519",
       "name": "贵州茅台",
       "status": "watching",
-      "last_price": 1204.98,
+      "last_price": 1214.88,
       "valuation_band": "normal",
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "collect_fundamental_and_catalyst_evidence",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "watching",
-          "price": 1182.19
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "watching",
-          "price": 1182.2
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -141,6 +129,18 @@
           "cycle": 1,
           "status": "watching",
           "price": 1204.98
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1214.88
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 1214.88
         }
       ],
       "decision_gate": {
@@ -170,34 +170,22 @@
       "id": "watch-e3d2cefa133a",
       "symbol": "300750",
       "name": "宁德时代",
-      "status": "rejected",
-      "last_price": 348.76,
+      "status": "watching",
+      "last_price": 364.01,
       "valuation_band": "normal",
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
-      "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "next_action": "collect_fundamental_and_catalyst_evidence",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "watching",
-          "price": 375.34
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "watching",
-          "price": 375.52
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -305,18 +293,30 @@
           "cycle": 1,
           "status": "rejected",
           "price": 348.76
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 364.01
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "watching",
+          "price": 364.01
         }
       ],
       "decision_gate": {
         "symbol": "300750",
         "name": "宁德时代",
-        "action": "reject_or_wait",
-        "passed_conditions": 4,
+        "action": "watch",
+        "passed_conditions": 5,
         "conditions": {
           "clear_thesis": true,
           "public_evidence": true,
           "valuation_not_extreme": true,
-          "technical_not_broken": false,
+          "technical_not_broken": true,
           "risk_reward_ok": true
         },
         "six_questions": [
@@ -333,35 +333,23 @@
     {
       "id": "watch-bd36aba207f8",
       "symbol": "688017",
-      "name": "XD绿的谐",
+      "name": "绿的谐波",
       "status": "rejected",
-      "last_price": 405.0,
+      "last_price": 386.87,
       "valuation_band": "high",
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 385.11
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 386.0
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -469,11 +457,23 @@
           "cycle": 1,
           "status": "rejected",
           "price": 405.0
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 386.87
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 386.87
         }
       ],
       "decision_gate": {
         "symbol": "688017",
-        "name": "XD绿的谐",
+        "name": "绿的谐波",
         "action": "reject_or_wait",
         "passed_conditions": 3,
         "conditions": {
@@ -499,18 +499,18 @@
       "symbol": "002436",
       "name": "兴森科技",
       "status": "rejected",
-      "last_price": 41.13,
+      "last_price": 40.85,
       "valuation_band": "high",
       "decision_gate": {
         "symbol": "002436",
         "name": "兴森科技",
         "action": "reject_or_wait",
-        "passed_conditions": 2,
+        "passed_conditions": 3,
         "conditions": {
           "clear_thesis": true,
           "public_evidence": true,
           "valuation_not_extreme": false,
-          "technical_not_broken": false,
+          "technical_not_broken": true,
           "risk_reward_ok": false
         },
         "six_questions": [
@@ -524,30 +524,18 @@
         "min_risk_reward": 2.0
       },
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 46.0
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 45.6
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -655,6 +643,18 @@
           "cycle": 1,
           "status": "rejected",
           "price": 41.13
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 40.85
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 40.85
         }
       ]
     },
@@ -663,18 +663,18 @@
       "symbol": "688019",
       "name": "安集科技",
       "status": "rejected",
-      "last_price": 312.8,
+      "last_price": 293.5,
       "valuation_band": "high",
       "decision_gate": {
         "symbol": "688019",
         "name": "安集科技",
         "action": "reject_or_wait",
-        "passed_conditions": 2,
+        "passed_conditions": 3,
         "conditions": {
           "clear_thesis": true,
           "public_evidence": true,
           "valuation_not_extreme": false,
-          "technical_not_broken": false,
+          "technical_not_broken": true,
           "risk_reward_ok": false
         },
         "six_questions": [
@@ -688,30 +688,18 @@
         "min_risk_reward": 2.0
       },
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 344.0
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 344.0
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -819,6 +807,18 @@
           "cycle": 1,
           "status": "rejected",
           "price": 312.8
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 293.5
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 293.5
         }
       ]
     },
@@ -827,7 +827,7 @@
       "symbol": "002156",
       "name": "通富微电",
       "status": "rejected",
-      "last_price": 70.95,
+      "last_price": 77.87,
       "valuation_band": "high",
       "decision_gate": {
         "symbol": "002156",
@@ -852,30 +852,18 @@
         "min_risk_reward": 2.0
       },
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 76.0
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 74.0
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -983,6 +971,18 @@
           "cycle": 1,
           "status": "rejected",
           "price": 70.95
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 77.87
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 77.87
         }
       ]
     },
@@ -991,18 +991,18 @@
       "symbol": "688256",
       "name": "寒武纪",
       "status": "rejected",
-      "last_price": 1400.0,
+      "last_price": 1411.0,
       "valuation_band": "high",
       "decision_gate": {
         "symbol": "688256",
         "name": "寒武纪",
         "action": "reject_or_wait",
-        "passed_conditions": 2,
+        "passed_conditions": 3,
         "conditions": {
           "clear_thesis": true,
           "public_evidence": true,
           "valuation_not_extreme": false,
-          "technical_not_broken": false,
+          "technical_not_broken": true,
           "risk_reward_ok": false
         },
         "six_questions": [
@@ -1016,30 +1016,18 @@
         "min_risk_reward": 2.0
       },
       "evidence_ids": [
-        "ev-market-cn-64380868de36",
-        "ev-market-cn-8b7a58b86be6",
-        "ev-market-cn-8d4cc5765363",
-        "ev-market-cn-1b8130643d30",
-        "ev-market-cn-0eecea9949a5",
-        "ev-market-cn-120ccd4002db",
-        "ev-market-cn-0a8062a7163a",
-        "ev-market-global-1ce6b7dbfef4"
+        "ev-market-cn-ecb303304235",
+        "ev-market-cn-d4c86ae5c02b",
+        "ev-market-cn-ccd39752789f",
+        "ev-market-cn-4d409fe59d88",
+        "ev-market-cn-afdb102bd839",
+        "ev-market-cn-c4e56d6d6648",
+        "ev-market-cn-1fa949b63c6b",
+        "ev-market-global-128640804af8"
       ],
       "next_action": "wait_for_valuation_or_fundamental_confirmation",
-      "last_seen_at": "2026-07-10T10:58:26.640701+00:00",
+      "last_seen_at": "2026-07-14T09:25:21.950624+00:00",
       "history": [
-        {
-          "at": "2026-07-10T01:22:32.570678+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 1542.98
-        },
-        {
-          "at": "2026-07-10T01:26:44.413241+00:00",
-          "cycle": 1,
-          "status": "rejected",
-          "price": 1542.98
-        },
         {
           "at": "2026-07-10T01:31:08.385144+00:00",
           "cycle": 2,
@@ -1147,6 +1135,18 @@
           "cycle": 1,
           "status": "rejected",
           "price": 1400.0
+        },
+        {
+          "at": "2026-07-14T09:10:57.322051+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 1411.0
+        },
+        {
+          "at": "2026-07-14T09:25:21.950624+00:00",
+          "cycle": 1,
+          "status": "rejected",
+          "price": 1411.0
         }
       ]
     }
